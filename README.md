@@ -61,6 +61,8 @@ func main() {
 
 The same code is in `example_test.go`, so `make test` checks that it compiles.
 
+The full API is in the [Go reference](https://pkg.go.dev/github.com/psyb0t/go-postgrid); from inside your module, `go doc github.com/psyb0t/go-postgrid` prints the same.
+
 The client covers all operations in the published document, including contacts, templates, letters, postcards, cheques, self mailers, campaigns, mailing lists, reports, webhooks and address verification. Method names come from the spec's operation IDs.
 
 ## Auth
@@ -80,9 +82,9 @@ make generate
 `gen.go` declares the steps, so `make generate` is just `go generate ./...`:
 
 - `scripts/fetch-spec.sh` downloads [PostGrid's Node SDK metadata](https://raw.githubusercontent.com/postgrid/postgrid-node/main/.stats.yml), reads `openapi_spec_url` and downloads that document to `api/openapi.yaml`. Stainless hosts it at a URL containing a content hash, so the URL changes as the spec changes.
-- oapi-codegen runs with `config.yaml` against the complete OpenAPI 3.0.0 document. `scripts/patch-spec.sh` calls a YAML tool under `internal/cmd/patch-spec` that collapses repeated identical references in four mail creation response unions. Without this patch, oapi-codegen emits duplicate Go methods. The wire schema and all operations are preserved.
+- `scripts/patch-spec.sh` runs the YAML tool in `internal/cmd/patch-spec` through `go tool`, which writes `api/openapi.patched.yaml` from the OpenAPI 3.0.0 document and collapses repeated identical references in four mail creation response unions. Without this patch, oapi-codegen emits duplicate Go methods. The wire schema and all operations are preserved.
 - The patch also moves the shared search parameter's inline string branch into a named schema, avoiding an undefined `N0` type while preserving text and structured search.
-- The config maps `number` to `float64` instead of oapi-codegen's default `float32`.
+- oapi-codegen runs with `config.yaml` against `api/openapi.patched.yaml`. The config maps `number` to `float64` instead of oapi-codegen's default `float32`.
 
 `.github/workflows/regen.yml` does the same every day in CI. When the new spec changes the client, it runs `make lint`, `make test` and `make sec`. If a check fails, Claude edits the code and the checks run again, up to three times, and a review step reads the result. A passing change is committed with a CHANGELOG entry and tagged as the next release: a patch version for fixes and additions, a minor version for breaking changes.
 
