@@ -1,0 +1,15 @@
+package: postgrid
+generate:
+  client: true
+  models: true
+output: client.gen.go
+output-options:
+  resolve-type-name-collisions: true
+  # Unformatted numbers default to float32 in oapi-codegen. Use float64 to
+  # preserve precision for amounts and other numeric fields.
+  type-mapping:
+    number:
+      default:
+        type: float64
+compatibility:
+  always-prefix-enum-values: true
