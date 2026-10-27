@@ -14,7 +14,7 @@ The patch also names the inline text branch of the shared search parameter to pr
 
 ## Stack
 
-- Go 1.26.9.
+- Go 1.26.10.
 - oapi-codegen, pinned as a `tool` dependency in `go.mod`.
 - Runtime: `github.com/oapi-codegen/runtime`.
 
