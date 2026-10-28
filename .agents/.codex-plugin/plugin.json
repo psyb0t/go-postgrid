@@ -1,6 +1,6 @@
 {
   "name": "go-postgrid",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Unofficial Go client for PostGrid print and mail and address verification, generated from the published OpenAPI document.",
   "author": {
     "name": "psyb0t",
