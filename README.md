@@ -81,8 +81,8 @@ make generate
 
 `gen.go` declares the steps, so `make generate` is just `go generate ./...`:
 
-- `scripts/fetch-spec.sh` downloads [PostGrid's Node SDK metadata](https://raw.githubusercontent.com/postgrid/postgrid-node/main/.stats.yml), reads `openapi_spec_url` and downloads that document to `api/openapi.yaml`. Stainless hosts it at a URL containing a content hash, so the URL changes as the spec changes.
-- `scripts/patch-spec.sh` runs the YAML tool in `internal/cmd/patch-spec` through `go tool`, which writes `api/openapi.patched.yaml` from the OpenAPI 3.0.0 document and collapses repeated identical references in four mail creation response unions. Without this patch, oapi-codegen emits duplicate Go methods. The wire schema and all operations are preserved.
+- `scripts/fetch-spec.sh` downloads the [OpenAPI document published by PostGrid](https://guides.postgrid.com/api/openapi.yaml) to `api/openapi.yaml`.
+- `scripts/patch-spec.sh` runs the YAML tool in `internal/cmd/patch-spec` through `go tool`, which writes `api/openapi.patched.yaml` from the OpenAPI 3.0.0 document. It collapses singleton reference unions and repeated identical references in mail creation responses. This preserves direct access to response fields and avoids duplicate generated methods without changing the wire schema or removing operations.
 - The patch also moves the shared search parameter's inline string branch into a named schema, avoiding an undefined `N0` type while preserving text and structured search.
 - oapi-codegen runs with `config.yaml` against `api/openapi.patched.yaml`. The config maps `number` to `float64` instead of oapi-codegen's default `float32`.
 

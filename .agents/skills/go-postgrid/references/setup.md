@@ -59,8 +59,8 @@ The spec documents HTTP 429 responses. Back off when rate limited. The generated
 
 ## Spec source
 
-The source is the `openapi_spec_url` in `https://raw.githubusercontent.com/postgrid/postgrid-node/main/.stats.yml`. The downloaded document identifies itself as PostGrid Address Verification API version 1.0, OpenAPI 3.0.0, and includes print and mail operations too. The document declares no license or terms-of-service field.
+The source is [PostGrid's published OpenAPI document](https://guides.postgrid.com/api/openapi.yaml). It identifies itself as PostGrid Address Verification API version 1.0, OpenAPI 3.0.0, and includes print and mail operations too. The document declares no license or terms-of-service field.
 
-The generation pipeline collapses four repeated identical `anyOf` response references before code generation. These redundant unions otherwise produce duplicate Go methods. No operations are removed.
+The generation pipeline collapses singleton reference unions and repeated identical `anyOf` references before code generation. This preserves direct response fields and avoids duplicate Go methods. No operations are removed.
 
 The patch also names the shared search parameter's inline text branch. Use `ListParamsSearch.FromListSearchText` for text search; `FromStructuredSearchQuery` retains the structured branch.

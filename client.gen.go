@@ -18,6 +18,30 @@ import (
 	openapi_types "github.com/oapi-codegen/runtime/types"
 )
 
+// Defines values for AccuracyStatementStatus.
+const (
+	AccuracyStatementStatusDraft      AccuracyStatementStatus = "draft"
+	AccuracyStatementStatusFailed     AccuracyStatementStatus = "failed"
+	AccuracyStatementStatusGenerated  AccuracyStatementStatus = "generated"
+	AccuracyStatementStatusGenerating AccuracyStatementStatus = "generating"
+)
+
+// Valid indicates whether the value is a known member of the AccuracyStatementStatus enum.
+func (e AccuracyStatementStatus) Valid() bool {
+	switch e {
+	case AccuracyStatementStatusDraft:
+		return true
+	case AccuracyStatementStatusFailed:
+		return true
+	case AccuracyStatementStatusGenerated:
+		return true
+	case AccuracyStatementStatusGenerating:
+		return true
+	default:
+		return false
+	}
+}
+
 // Defines values for AddressPlacement.
 const (
 	AddressPlacementInsertBlankPage AddressPlacement = "insert_blank_page"
@@ -486,6 +510,177 @@ func (e CurrencyCode) Valid() bool {
 	}
 }
 
+// Defines values for CustomEnvelopeObject.
+const (
+	CustomEnvelopeObjectCustomEnvelope CustomEnvelopeObject = "custom_envelope"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopeObject enum.
+func (e CustomEnvelopeObject) Valid() bool {
+	switch e {
+	case CustomEnvelopeObjectCustomEnvelope:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopeListObject.
+const (
+	CustomEnvelopeListObjectList CustomEnvelopeListObject = "list"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopeListObject enum.
+func (e CustomEnvelopeListObject) Valid() bool {
+	switch e {
+	case CustomEnvelopeListObjectList:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopeLowInventoryThresholdType.
+const (
+	CustomEnvelopeLowInventoryThresholdTypeFixed      CustomEnvelopeLowInventoryThresholdType = "fixed"
+	CustomEnvelopeLowInventoryThresholdTypePercentage CustomEnvelopeLowInventoryThresholdType = "percentage"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopeLowInventoryThresholdType enum.
+func (e CustomEnvelopeLowInventoryThresholdType) Valid() bool {
+	switch e {
+	case CustomEnvelopeLowInventoryThresholdTypeFixed:
+		return true
+	case CustomEnvelopeLowInventoryThresholdTypePercentage:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopeOrderObject.
+const (
+	CustomEnvelopeOrderObjectCustomEnvelopeOrder CustomEnvelopeOrderObject = "custom_envelope_order"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopeOrderObject enum.
+func (e CustomEnvelopeOrderObject) Valid() bool {
+	switch e {
+	case CustomEnvelopeOrderObjectCustomEnvelopeOrder:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopeOrderListObject.
+const (
+	CustomEnvelopeOrderListObjectList CustomEnvelopeOrderListObject = "list"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopeOrderListObject enum.
+func (e CustomEnvelopeOrderListObject) Valid() bool {
+	switch e {
+	case CustomEnvelopeOrderListObjectList:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopeOrderStatus.
+const (
+	CustomEnvelopeOrderStatusCancelled  CustomEnvelopeOrderStatus = "cancelled"
+	CustomEnvelopeOrderStatusFilled     CustomEnvelopeOrderStatus = "filled"
+	CustomEnvelopeOrderStatusInProgress CustomEnvelopeOrderStatus = "in_progress"
+	CustomEnvelopeOrderStatusPlaced     CustomEnvelopeOrderStatus = "placed"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopeOrderStatus enum.
+func (e CustomEnvelopeOrderStatus) Valid() bool {
+	switch e {
+	case CustomEnvelopeOrderStatusCancelled:
+		return true
+	case CustomEnvelopeOrderStatusFilled:
+		return true
+	case CustomEnvelopeOrderStatusInProgress:
+		return true
+	case CustomEnvelopeOrderStatusPlaced:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopeRejectionReason.
+const (
+	CustomEnvelopeRejectionReasonContentOverlappingRestrictedRegion CustomEnvelopeRejectionReason = "content_overlapping_restricted_region"
+	CustomEnvelopeRejectionReasonIncompleteImage                    CustomEnvelopeRejectionReason = "incomplete_image"
+	CustomEnvelopeRejectionReasonInternalError                      CustomEnvelopeRejectionReason = "internal_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopeRejectionReason enum.
+func (e CustomEnvelopeRejectionReason) Valid() bool {
+	switch e {
+	case CustomEnvelopeRejectionReasonContentOverlappingRestrictedRegion:
+		return true
+	case CustomEnvelopeRejectionReasonIncompleteImage:
+		return true
+	case CustomEnvelopeRejectionReasonInternalError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopeStatus.
+const (
+	CustomEnvelopeStatusApproved CustomEnvelopeStatus = "approved"
+	CustomEnvelopeStatusPending  CustomEnvelopeStatus = "pending"
+	CustomEnvelopeStatusRejected CustomEnvelopeStatus = "rejected"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopeStatus enum.
+func (e CustomEnvelopeStatus) Valid() bool {
+	switch e {
+	case CustomEnvelopeStatusApproved:
+		return true
+	case CustomEnvelopeStatusPending:
+		return true
+	case CustomEnvelopeStatusRejected:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopeType.
+const (
+	CustomEnvelopeTypeN6x9LargeWindow      CustomEnvelopeType = "6x9_large_window"
+	CustomEnvelopeTypeN9x12SingleWindow    CustomEnvelopeType = "9x12_single_window"
+	CustomEnvelopeTypeStandardDoubleWindow CustomEnvelopeType = "standard_double_window"
+	CustomEnvelopeTypeStandardLargeWindow  CustomEnvelopeType = "standard_large_window"
+	CustomEnvelopeTypeStandardSingleWindow CustomEnvelopeType = "standard_single_window"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopeType enum.
+func (e CustomEnvelopeType) Valid() bool {
+	switch e {
+	case CustomEnvelopeTypeN6x9LargeWindow:
+		return true
+	case CustomEnvelopeTypeN9x12SingleWindow:
+		return true
+	case CustomEnvelopeTypeStandardDoubleWindow:
+		return true
+	case CustomEnvelopeTypeStandardLargeWindow:
+		return true
+	case CustomEnvelopeTypeStandardSingleWindow:
+		return true
+	default:
+		return false
+	}
+}
+
 // Defines values for DeletedResponseDeleted.
 const (
 	DeletedResponseDeletedTrue DeletedResponseDeleted = true
@@ -495,6 +690,75 @@ const (
 func (e DeletedResponseDeleted) Valid() bool {
 	switch e {
 	case DeletedResponseDeletedTrue:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentObject.
+const (
+	DocumentObjectDocument DocumentObject = "document"
+)
+
+// Valid indicates whether the value is a known member of the DocumentObject enum.
+func (e DocumentObject) Valid() bool {
+	switch e {
+	case DocumentObjectDocument:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentErrorType.
+const (
+	DocumentErrorTypeInternalError   DocumentErrorType = "internal_error"
+	DocumentErrorTypeProcessingError DocumentErrorType = "processing_error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentErrorType enum.
+func (e DocumentErrorType) Valid() bool {
+	switch e {
+	case DocumentErrorTypeInternalError:
+		return true
+	case DocumentErrorTypeProcessingError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentListObject.
+const (
+	DocumentListObjectList DocumentListObject = "list"
+)
+
+// Valid indicates whether the value is a known member of the DocumentListObject enum.
+func (e DocumentListObject) Valid() bool {
+	switch e {
+	case DocumentListObjectList:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentStatus.
+const (
+	DocumentStatusFailed     DocumentStatus = "failed"
+	DocumentStatusGenerated  DocumentStatus = "generated"
+	DocumentStatusGenerating DocumentStatus = "generating"
+)
+
+// Valid indicates whether the value is a known member of the DocumentStatus enum.
+func (e DocumentStatus) Valid() bool {
+	switch e {
+	case DocumentStatusFailed:
+		return true
+	case DocumentStatusGenerated:
+		return true
+	case DocumentStatusGenerating:
 		return true
 	default:
 		return false
@@ -1185,6 +1449,21 @@ func (e ReportExportObject) Valid() bool {
 	}
 }
 
+// Defines values for ReportExportListObject.
+const (
+	ReportExportListObjectList ReportExportListObject = "list"
+)
+
+// Valid indicates whether the value is a known member of the ReportExportListObject enum.
+func (e ReportExportListObject) Valid() bool {
+	switch e {
+	case ReportExportListObjectList:
+		return true
+	default:
+		return false
+	}
+}
+
 // Defines values for ReportListObject.
 const (
 	ReportListObjectList ReportListObject = "list"
@@ -1194,6 +1473,21 @@ const (
 func (e ReportListObject) Valid() bool {
 	switch e {
 	case ReportListObjectList:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ReportSampleObject.
+const (
+	ReportSampleObjectReportSample ReportSampleObject = "report_sample"
+)
+
+// Valid indicates whether the value is a known member of the ReportSampleObject enum.
+func (e ReportSampleObject) Valid() bool {
+	switch e {
+	case ReportSampleObjectReportSample:
 		return true
 	default:
 		return false
@@ -1302,6 +1596,33 @@ func (e ReturnEnvelopeOrderStatus) Valid() bool {
 	}
 }
 
+// Defines values for ScheduleFrequencyUnit.
+const (
+	ScheduleFrequencyUnitD ScheduleFrequencyUnit = "d"
+	ScheduleFrequencyUnitH ScheduleFrequencyUnit = "h"
+	ScheduleFrequencyUnitM ScheduleFrequencyUnit = "m"
+	ScheduleFrequencyUnitW ScheduleFrequencyUnit = "w"
+	ScheduleFrequencyUnitY ScheduleFrequencyUnit = "y"
+)
+
+// Valid indicates whether the value is a known member of the ScheduleFrequencyUnit enum.
+func (e ScheduleFrequencyUnit) Valid() bool {
+	switch e {
+	case ScheduleFrequencyUnitD:
+		return true
+	case ScheduleFrequencyUnitH:
+		return true
+	case ScheduleFrequencyUnitM:
+		return true
+	case ScheduleFrequencyUnitW:
+		return true
+	case ScheduleFrequencyUnitY:
+		return true
+	default:
+		return false
+	}
+}
+
 // Defines values for SelfMailerObject.
 const (
 	SelfMailerObjectSelfMailer SelfMailerObject = "self_mailer"
@@ -1311,6 +1632,24 @@ const (
 func (e SelfMailerObject) Valid() bool {
 	switch e {
 	case SelfMailerObjectSelfMailer:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for SelfMailerBuiltInPremiumPaperID.
+const (
+	SelfMailerBuiltInPremiumPaperIDPremiumPaperSelfMailerStandard100lb SelfMailerBuiltInPremiumPaperID = "premium_paper_self_mailer_standard_100lb"
+	SelfMailerBuiltInPremiumPaperIDStandard                            SelfMailerBuiltInPremiumPaperID = "standard"
+)
+
+// Valid indicates whether the value is a known member of the SelfMailerBuiltInPremiumPaperID enum.
+func (e SelfMailerBuiltInPremiumPaperID) Valid() bool {
+	switch e {
+	case SelfMailerBuiltInPremiumPaperIDPremiumPaperSelfMailerStandard100lb:
+		return true
+	case SelfMailerBuiltInPremiumPaperIDStandard:
 		return true
 	default:
 		return false
@@ -1392,6 +1731,42 @@ const (
 func (e SnapPackSize) Valid() bool {
 	switch e {
 	case SnapPackSizeN85x11BifoldV:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for StandardBatchStructuredAddressAccuracyStatementInclusion.
+const (
+	StandardBatchStructuredAddressAccuracyStatementInclusionExclude StandardBatchStructuredAddressAccuracyStatementInclusion = "exclude"
+	StandardBatchStructuredAddressAccuracyStatementInclusionInclude StandardBatchStructuredAddressAccuracyStatementInclusion = "include"
+)
+
+// Valid indicates whether the value is a known member of the StandardBatchStructuredAddressAccuracyStatementInclusion enum.
+func (e StandardBatchStructuredAddressAccuracyStatementInclusion) Valid() bool {
+	switch e {
+	case StandardBatchStructuredAddressAccuracyStatementInclusionExclude:
+		return true
+	case StandardBatchStructuredAddressAccuracyStatementInclusionInclude:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for StandardBatchStructuredAddressCountry.
+const (
+	StandardBatchStructuredAddressCountryCa StandardBatchStructuredAddressCountry = "ca"
+	StandardBatchStructuredAddressCountryUs StandardBatchStructuredAddressCountry = "us"
+)
+
+// Valid indicates whether the value is a known member of the StandardBatchStructuredAddressCountry enum.
+func (e StandardBatchStructuredAddressCountry) Valid() bool {
+	switch e {
+	case StandardBatchStructuredAddressCountryCa:
+		return true
+	case StandardBatchStructuredAddressCountryUs:
 		return true
 	default:
 		return false
@@ -1499,7 +1874,6 @@ func (e TargetedListBuildAutocompleteResponseObject) Valid() bool {
 
 // Defines values for TargetedListBuildErrorType.
 const (
-	TargetedListBuildErrorTypeInsufficientCredits  TargetedListBuildErrorType = "insufficient_credits"
 	TargetedListBuildErrorTypeInternalServiceError TargetedListBuildErrorType = "internal_service_error"
 	TargetedListBuildErrorTypeNotEnoughInfoToQuote TargetedListBuildErrorType = "not_enough_info_to_quote"
 )
@@ -1507,8 +1881,6 @@ const (
 // Valid indicates whether the value is a known member of the TargetedListBuildErrorType enum.
 func (e TargetedListBuildErrorType) Valid() bool {
 	switch e {
-	case TargetedListBuildErrorTypeInsufficientCredits:
-		return true
 	case TargetedListBuildErrorTypeInternalServiceError:
 		return true
 	case TargetedListBuildErrorTypeNotEnoughInfoToQuote:
@@ -1614,6 +1986,57 @@ const (
 func (e TemplateListObject) Valid() bool {
 	switch e {
 	case TemplateListObjectList:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ThumbnailObject.
+const (
+	ThumbnailObjectThumbnail ThumbnailObject = "thumbnail"
+)
+
+// Valid indicates whether the value is a known member of the ThumbnailObject enum.
+func (e ThumbnailObject) Valid() bool {
+	switch e {
+	case ThumbnailObjectThumbnail:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ThumbnailListObject.
+const (
+	ThumbnailListObjectList ThumbnailListObject = "list"
+)
+
+// Valid indicates whether the value is a known member of the ThumbnailListObject enum.
+func (e ThumbnailListObject) Valid() bool {
+	switch e {
+	case ThumbnailListObjectList:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ThumbnailStatus.
+const (
+	ThumbnailStatusFailed     ThumbnailStatus = "failed"
+	ThumbnailStatusGenerated  ThumbnailStatus = "generated"
+	ThumbnailStatusGenerating ThumbnailStatus = "generating"
+)
+
+// Valid indicates whether the value is a known member of the ThumbnailStatus enum.
+func (e ThumbnailStatus) Valid() bool {
+	switch e {
+	case ThumbnailStatusFailed:
+		return true
+	case ThumbnailStatusGenerated:
+		return true
+	case ThumbnailStatusGenerating:
 		return true
 	default:
 		return false
@@ -1869,6 +2292,258 @@ func (e USConsumerOccupation) Valid() bool {
 	}
 }
 
+// Defines values for USPSReturnReason.
+const (
+	USPSReturnReasonAttemptedNotKnown                                                                USPSReturnReason = "attempted_not_known"
+	USPSReturnReasonBoxClosedNoOrder                                                                 USPSReturnReason = "box_closed_no_order"
+	USPSReturnReasonDeceased                                                                         USPSReturnReason = "deceased"
+	USPSReturnReasonDeliverySuspendedToCommercialMailReceivingAgency                                 USPSReturnReason = "delivery_suspended_to_commercial_mail_receiving_agency"
+	USPSReturnReasonIllegible                                                                        USPSReturnReason = "illegible"
+	USPSReturnReasonInDispute                                                                        USPSReturnReason = "in_dispute"
+	USPSReturnReasonInsufficientAddress                                                              USPSReturnReason = "insufficient_address"
+	USPSReturnReasonMovedLeftNoAddress                                                               USPSReturnReason = "moved_left_no_address"
+	USPSReturnReasonNoMailReceptacle                                                                 USPSReturnReason = "no_mail_receptacle"
+	USPSReturnReasonNoSuchNumber                                                                     USPSReturnReason = "no_such_number"
+	USPSReturnReasonNoSuchOfficeInState                                                              USPSReturnReason = "no_such_office_in_state"
+	USPSReturnReasonNoSuchStreet                                                                     USPSReturnReason = "no_such_street"
+	USPSReturnReasonNotDeliverableAsAddressedUnableToForward                                         USPSReturnReason = "not_deliverable_as_addressed_unable_to_forward"
+	USPSReturnReasonOutsideDeliveryLimits                                                            USPSReturnReason = "outside_delivery_limits"
+	USPSReturnReasonRefused                                                                          USPSReturnReason = "refused"
+	USPSReturnReasonReturnedForBetterAddress                                                         USPSReturnReason = "returned_for_better_address"
+	USPSReturnReasonReturnedForPostage                                                               USPSReturnReason = "returned_for_postage"
+	USPSReturnReasonReturnedToSenderDueToAddresseeSViolationOfPostalFalseRepresentationAndLotteryLaw USPSReturnReason = "returned_to_sender_due_to_addressee_s_violation_of_postal_false_representation_and_lottery_law"
+	USPSReturnReasonReturnedToSenderDueToAddresseeSViolationOfPostalFalseRepresentationLaw           USPSReturnReason = "returned_to_sender_due_to_addressee_s_violation_of_postal_false_representation_law"
+	USPSReturnReasonReturnedToSenderDueToAddresseeSViolationOfPostalLotteryLaw                       USPSReturnReason = "returned_to_sender_due_to_addressee_s_violation_of_postal_lottery_law"
+	USPSReturnReasonReturnedToSenderMailpieceContainsNonmailableContents                             USPSReturnReason = "returned_to_sender_mailpiece_contains_nonmailable_contents"
+	USPSReturnReasonTemporarilyAway                                                                  USPSReturnReason = "temporarily_away"
+	USPSReturnReasonUnclaimed                                                                        USPSReturnReason = "unclaimed"
+	USPSReturnReasonUndeliverableAsAddressedMissingPmbOrSign                                         USPSReturnReason = "undeliverable_as_addressed_missing_pmb_or_sign"
+	USPSReturnReasonVacant                                                                           USPSReturnReason = "vacant"
+)
+
+// Valid indicates whether the value is a known member of the USPSReturnReason enum.
+func (e USPSReturnReason) Valid() bool {
+	switch e {
+	case USPSReturnReasonAttemptedNotKnown:
+		return true
+	case USPSReturnReasonBoxClosedNoOrder:
+		return true
+	case USPSReturnReasonDeceased:
+		return true
+	case USPSReturnReasonDeliverySuspendedToCommercialMailReceivingAgency:
+		return true
+	case USPSReturnReasonIllegible:
+		return true
+	case USPSReturnReasonInDispute:
+		return true
+	case USPSReturnReasonInsufficientAddress:
+		return true
+	case USPSReturnReasonMovedLeftNoAddress:
+		return true
+	case USPSReturnReasonNoMailReceptacle:
+		return true
+	case USPSReturnReasonNoSuchNumber:
+		return true
+	case USPSReturnReasonNoSuchOfficeInState:
+		return true
+	case USPSReturnReasonNoSuchStreet:
+		return true
+	case USPSReturnReasonNotDeliverableAsAddressedUnableToForward:
+		return true
+	case USPSReturnReasonOutsideDeliveryLimits:
+		return true
+	case USPSReturnReasonRefused:
+		return true
+	case USPSReturnReasonReturnedForBetterAddress:
+		return true
+	case USPSReturnReasonReturnedForPostage:
+		return true
+	case USPSReturnReasonReturnedToSenderDueToAddresseeSViolationOfPostalFalseRepresentationAndLotteryLaw:
+		return true
+	case USPSReturnReasonReturnedToSenderDueToAddresseeSViolationOfPostalFalseRepresentationLaw:
+		return true
+	case USPSReturnReasonReturnedToSenderDueToAddresseeSViolationOfPostalLotteryLaw:
+		return true
+	case USPSReturnReasonReturnedToSenderMailpieceContainsNonmailableContents:
+		return true
+	case USPSReturnReasonTemporarilyAway:
+		return true
+	case USPSReturnReasonUnclaimed:
+		return true
+	case USPSReturnReasonUndeliverableAsAddressedMissingPmbOrSign:
+		return true
+	case USPSReturnReasonVacant:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for USStateCode.
+const (
+	USStateCodeAK USStateCode = "AK"
+	USStateCodeAL USStateCode = "AL"
+	USStateCodeAR USStateCode = "AR"
+	USStateCodeAZ USStateCode = "AZ"
+	USStateCodeCA USStateCode = "CA"
+	USStateCodeCO USStateCode = "CO"
+	USStateCodeCT USStateCode = "CT"
+	USStateCodeDC USStateCode = "DC"
+	USStateCodeDE USStateCode = "DE"
+	USStateCodeFL USStateCode = "FL"
+	USStateCodeGA USStateCode = "GA"
+	USStateCodeHI USStateCode = "HI"
+	USStateCodeIA USStateCode = "IA"
+	USStateCodeID USStateCode = "ID"
+	USStateCodeIL USStateCode = "IL"
+	USStateCodeIN USStateCode = "IN"
+	USStateCodeKS USStateCode = "KS"
+	USStateCodeKY USStateCode = "KY"
+	USStateCodeLA USStateCode = "LA"
+	USStateCodeMA USStateCode = "MA"
+	USStateCodeMD USStateCode = "MD"
+	USStateCodeME USStateCode = "ME"
+	USStateCodeMI USStateCode = "MI"
+	USStateCodeMN USStateCode = "MN"
+	USStateCodeMO USStateCode = "MO"
+	USStateCodeMS USStateCode = "MS"
+	USStateCodeMT USStateCode = "MT"
+	USStateCodeNC USStateCode = "NC"
+	USStateCodeND USStateCode = "ND"
+	USStateCodeNE USStateCode = "NE"
+	USStateCodeNH USStateCode = "NH"
+	USStateCodeNJ USStateCode = "NJ"
+	USStateCodeNM USStateCode = "NM"
+	USStateCodeNV USStateCode = "NV"
+	USStateCodeNY USStateCode = "NY"
+	USStateCodeOH USStateCode = "OH"
+	USStateCodeOK USStateCode = "OK"
+	USStateCodeOR USStateCode = "OR"
+	USStateCodePA USStateCode = "PA"
+	USStateCodeRI USStateCode = "RI"
+	USStateCodeSC USStateCode = "SC"
+	USStateCodeSD USStateCode = "SD"
+	USStateCodeTN USStateCode = "TN"
+	USStateCodeTX USStateCode = "TX"
+	USStateCodeUT USStateCode = "UT"
+	USStateCodeVA USStateCode = "VA"
+	USStateCodeVT USStateCode = "VT"
+	USStateCodeWA USStateCode = "WA"
+	USStateCodeWI USStateCode = "WI"
+	USStateCodeWV USStateCode = "WV"
+	USStateCodeWY USStateCode = "WY"
+)
+
+// Valid indicates whether the value is a known member of the USStateCode enum.
+func (e USStateCode) Valid() bool {
+	switch e {
+	case USStateCodeAK:
+		return true
+	case USStateCodeAL:
+		return true
+	case USStateCodeAR:
+		return true
+	case USStateCodeAZ:
+		return true
+	case USStateCodeCA:
+		return true
+	case USStateCodeCO:
+		return true
+	case USStateCodeCT:
+		return true
+	case USStateCodeDC:
+		return true
+	case USStateCodeDE:
+		return true
+	case USStateCodeFL:
+		return true
+	case USStateCodeGA:
+		return true
+	case USStateCodeHI:
+		return true
+	case USStateCodeIA:
+		return true
+	case USStateCodeID:
+		return true
+	case USStateCodeIL:
+		return true
+	case USStateCodeIN:
+		return true
+	case USStateCodeKS:
+		return true
+	case USStateCodeKY:
+		return true
+	case USStateCodeLA:
+		return true
+	case USStateCodeMA:
+		return true
+	case USStateCodeMD:
+		return true
+	case USStateCodeME:
+		return true
+	case USStateCodeMI:
+		return true
+	case USStateCodeMN:
+		return true
+	case USStateCodeMO:
+		return true
+	case USStateCodeMS:
+		return true
+	case USStateCodeMT:
+		return true
+	case USStateCodeNC:
+		return true
+	case USStateCodeND:
+		return true
+	case USStateCodeNE:
+		return true
+	case USStateCodeNH:
+		return true
+	case USStateCodeNJ:
+		return true
+	case USStateCodeNM:
+		return true
+	case USStateCodeNV:
+		return true
+	case USStateCodeNY:
+		return true
+	case USStateCodeOH:
+		return true
+	case USStateCodeOK:
+		return true
+	case USStateCodeOR:
+		return true
+	case USStateCodePA:
+		return true
+	case USStateCodeRI:
+		return true
+	case USStateCodeSC:
+		return true
+	case USStateCodeSD:
+		return true
+	case USStateCodeTN:
+		return true
+	case USStateCodeTX:
+		return true
+	case USStateCodeUT:
+		return true
+	case USStateCodeVA:
+		return true
+	case USStateCodeVT:
+		return true
+	case USStateCodeWA:
+		return true
+	case USStateCodeWI:
+		return true
+	case USStateCodeWV:
+		return true
+	case USStateCodeWY:
+		return true
+	default:
+		return false
+	}
+}
+
 // Defines values for VirtualMailboxObject.
 const (
 	VirtualMailboxObjectVirtualMailbox VirtualMailboxObject = "virtual_mailbox"
@@ -1973,8 +2648,13 @@ const (
 	WebhookEventTypeCampaignUpdated            WebhookEventType = "campaign.updated"
 	WebhookEventTypeChequeCreated              WebhookEventType = "cheque.created"
 	WebhookEventTypeChequeUpdated              WebhookEventType = "cheque.updated"
+	WebhookEventTypeContactCreated             WebhookEventType = "contact.created"
+	WebhookEventTypeContactUpdated             WebhookEventType = "contact.updated"
+	WebhookEventTypeDocumentCreated            WebhookEventType = "document.created"
+	WebhookEventTypeDocumentUpdated            WebhookEventType = "document.updated"
 	WebhookEventTypeLetterCreated              WebhookEventType = "letter.created"
 	WebhookEventTypeLetterUpdated              WebhookEventType = "letter.updated"
+	WebhookEventTypePostalStatementCreated     WebhookEventType = "postal_statement.created"
 	WebhookEventTypePostcardCreated            WebhookEventType = "postcard.created"
 	WebhookEventTypePostcardUpdated            WebhookEventType = "postcard.updated"
 	WebhookEventTypeReturnEnvelopeOrderCreated WebhookEventType = "return_envelope_order.created"
@@ -2002,9 +2682,19 @@ func (e WebhookEventType) Valid() bool {
 		return true
 	case WebhookEventTypeChequeUpdated:
 		return true
+	case WebhookEventTypeContactCreated:
+		return true
+	case WebhookEventTypeContactUpdated:
+		return true
+	case WebhookEventTypeDocumentCreated:
+		return true
+	case WebhookEventTypeDocumentUpdated:
+		return true
 	case WebhookEventTypeLetterCreated:
 		return true
 	case WebhookEventTypeLetterUpdated:
+		return true
+	case WebhookEventTypePostalStatementCreated:
 		return true
 	case WebhookEventTypePostcardCreated:
 		return true
@@ -6993,6 +7683,2676 @@ const (
 func (e ContactsGet500JSONResponseBodyObject) Valid() bool {
 	switch e {
 	case ContactsGet500JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesList400JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesList400JSONResponseBodyErrorTypeValidationError CustomEnvelopesList400JSONResponseBodyErrorType = "validation_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesList400JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesList400JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesList400JSONResponseBodyErrorTypeValidationError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesList400JSONResponseBodyObject.
+const (
+	CustomEnvelopesList400JSONResponseBodyObjectError CustomEnvelopesList400JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesList400JSONResponseBodyObject enum.
+func (e CustomEnvelopesList400JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesList400JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesList401JSONResponseBody0ErrorType.
+const (
+	CustomEnvelopesList401JSONResponseBody0ErrorTypePermissionMissingError CustomEnvelopesList401JSONResponseBody0ErrorType = "permission_missing_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesList401JSONResponseBody0ErrorType enum.
+func (e CustomEnvelopesList401JSONResponseBody0ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesList401JSONResponseBody0ErrorTypePermissionMissingError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesList401JSONResponseBody0Object.
+const (
+	CustomEnvelopesList401JSONResponseBody0ObjectError CustomEnvelopesList401JSONResponseBody0Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesList401JSONResponseBody0Object enum.
+func (e CustomEnvelopesList401JSONResponseBody0Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesList401JSONResponseBody0ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesList401JSONResponseBody1ErrorType.
+const (
+	CustomEnvelopesList401JSONResponseBody1ErrorTypeMissingAuthError CustomEnvelopesList401JSONResponseBody1ErrorType = "missing_auth_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesList401JSONResponseBody1ErrorType enum.
+func (e CustomEnvelopesList401JSONResponseBody1ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesList401JSONResponseBody1ErrorTypeMissingAuthError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesList401JSONResponseBody1Object.
+const (
+	CustomEnvelopesList401JSONResponseBody1ObjectError CustomEnvelopesList401JSONResponseBody1Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesList401JSONResponseBody1Object enum.
+func (e CustomEnvelopesList401JSONResponseBody1Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesList401JSONResponseBody1ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesList429JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesList429JSONResponseBodyErrorTypeRateLimitExceededError CustomEnvelopesList429JSONResponseBodyErrorType = "rate_limit_exceeded_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesList429JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesList429JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesList429JSONResponseBodyErrorTypeRateLimitExceededError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesList429JSONResponseBodyObject.
+const (
+	CustomEnvelopesList429JSONResponseBodyObjectError CustomEnvelopesList429JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesList429JSONResponseBodyObject enum.
+func (e CustomEnvelopesList429JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesList429JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesList500JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesList500JSONResponseBodyErrorTypeInternalServerError CustomEnvelopesList500JSONResponseBodyErrorType = "internal_server_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesList500JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesList500JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesList500JSONResponseBodyErrorTypeInternalServerError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesList500JSONResponseBodyObject.
+const (
+	CustomEnvelopesList500JSONResponseBodyObjectError CustomEnvelopesList500JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesList500JSONResponseBodyObject enum.
+func (e CustomEnvelopesList500JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesList500JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart400JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart400JSONResponseBodyErrorTypeValidationError CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart400JSONResponseBodyErrorType = "validation_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart400JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart400JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart400JSONResponseBodyErrorTypeValidationError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart400JSONResponseBodyObject.
+const (
+	CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart400JSONResponseBodyObjectError CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart400JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart400JSONResponseBodyObject enum.
+func (e CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart400JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart400JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0ErrorType.
+const (
+	CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0ErrorTypeMissingAuthError CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0ErrorType = "missing_auth_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0ErrorType enum.
+func (e CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0ErrorTypeMissingAuthError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0Object.
+const (
+	CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0ObjectError CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0Object enum.
+func (e CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1ErrorType.
+const (
+	CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1ErrorTypePermissionMissingError CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1ErrorType = "permission_missing_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1ErrorType enum.
+func (e CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1ErrorTypePermissionMissingError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1Object.
+const (
+	CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1ObjectError CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1Object enum.
+func (e CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart404JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart404JSONResponseBodyErrorTypeNotFoundError CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart404JSONResponseBodyErrorType = "not_found_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart404JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart404JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart404JSONResponseBodyErrorTypeNotFoundError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart404JSONResponseBodyObject.
+const (
+	CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart404JSONResponseBodyObjectError CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart404JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart404JSONResponseBodyObject enum.
+func (e CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart404JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart404JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart422JSONResponseBodyObject.
+const (
+	CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart422JSONResponseBodyObjectError CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart422JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart422JSONResponseBodyObject enum.
+func (e CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart422JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart422JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart429JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart429JSONResponseBodyErrorTypeRateLimitExceededError CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart429JSONResponseBodyErrorType = "rate_limit_exceeded_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart429JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart429JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart429JSONResponseBodyErrorTypeRateLimitExceededError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart429JSONResponseBodyObject.
+const (
+	CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart429JSONResponseBodyObjectError CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart429JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart429JSONResponseBodyObject enum.
+func (e CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart429JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart429JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart500JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart500JSONResponseBodyErrorTypeInternalServerError CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart500JSONResponseBodyErrorType = "internal_server_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart500JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart500JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart500JSONResponseBodyErrorTypeInternalServerError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart500JSONResponseBodyObject.
+const (
+	CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart500JSONResponseBodyObjectError CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart500JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart500JSONResponseBodyObject enum.
+func (e CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart500JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart500JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesGet401JSONResponseBody0ErrorType.
+const (
+	CustomEnvelopesGet401JSONResponseBody0ErrorTypeMissingAuthError CustomEnvelopesGet401JSONResponseBody0ErrorType = "missing_auth_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesGet401JSONResponseBody0ErrorType enum.
+func (e CustomEnvelopesGet401JSONResponseBody0ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesGet401JSONResponseBody0ErrorTypeMissingAuthError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesGet401JSONResponseBody0Object.
+const (
+	CustomEnvelopesGet401JSONResponseBody0ObjectError CustomEnvelopesGet401JSONResponseBody0Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesGet401JSONResponseBody0Object enum.
+func (e CustomEnvelopesGet401JSONResponseBody0Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesGet401JSONResponseBody0ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesGet401JSONResponseBody1ErrorType.
+const (
+	CustomEnvelopesGet401JSONResponseBody1ErrorTypePermissionMissingError CustomEnvelopesGet401JSONResponseBody1ErrorType = "permission_missing_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesGet401JSONResponseBody1ErrorType enum.
+func (e CustomEnvelopesGet401JSONResponseBody1ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesGet401JSONResponseBody1ErrorTypePermissionMissingError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesGet401JSONResponseBody1Object.
+const (
+	CustomEnvelopesGet401JSONResponseBody1ObjectError CustomEnvelopesGet401JSONResponseBody1Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesGet401JSONResponseBody1Object enum.
+func (e CustomEnvelopesGet401JSONResponseBody1Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesGet401JSONResponseBody1ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesGet404JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesGet404JSONResponseBodyErrorTypeNotFoundError CustomEnvelopesGet404JSONResponseBodyErrorType = "not_found_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesGet404JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesGet404JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesGet404JSONResponseBodyErrorTypeNotFoundError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesGet404JSONResponseBodyObject.
+const (
+	CustomEnvelopesGet404JSONResponseBodyObjectError CustomEnvelopesGet404JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesGet404JSONResponseBodyObject enum.
+func (e CustomEnvelopesGet404JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesGet404JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesGet422JSONResponseBodyObject.
+const (
+	CustomEnvelopesGet422JSONResponseBodyObjectError CustomEnvelopesGet422JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesGet422JSONResponseBodyObject enum.
+func (e CustomEnvelopesGet422JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesGet422JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesGet429JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesGet429JSONResponseBodyErrorTypeRateLimitExceededError CustomEnvelopesGet429JSONResponseBodyErrorType = "rate_limit_exceeded_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesGet429JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesGet429JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesGet429JSONResponseBodyErrorTypeRateLimitExceededError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesGet429JSONResponseBodyObject.
+const (
+	CustomEnvelopesGet429JSONResponseBodyObjectError CustomEnvelopesGet429JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesGet429JSONResponseBodyObject enum.
+func (e CustomEnvelopesGet429JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesGet429JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesGet500JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesGet500JSONResponseBodyErrorTypeInternalServerError CustomEnvelopesGet500JSONResponseBodyErrorType = "internal_server_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesGet500JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesGet500JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesGet500JSONResponseBodyErrorTypeInternalServerError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesGet500JSONResponseBodyObject.
+const (
+	CustomEnvelopesGet500JSONResponseBodyObjectError CustomEnvelopesGet500JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesGet500JSONResponseBodyObject enum.
+func (e CustomEnvelopesGet500JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesGet500JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesListOrders400JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesListOrders400JSONResponseBodyErrorTypeValidationError CustomEnvelopesListOrders400JSONResponseBodyErrorType = "validation_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesListOrders400JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesListOrders400JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesListOrders400JSONResponseBodyErrorTypeValidationError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesListOrders400JSONResponseBodyObject.
+const (
+	CustomEnvelopesListOrders400JSONResponseBodyObjectError CustomEnvelopesListOrders400JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesListOrders400JSONResponseBodyObject enum.
+func (e CustomEnvelopesListOrders400JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesListOrders400JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesListOrders401JSONResponseBody0ErrorType.
+const (
+	CustomEnvelopesListOrders401JSONResponseBody0ErrorTypePermissionMissingError CustomEnvelopesListOrders401JSONResponseBody0ErrorType = "permission_missing_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesListOrders401JSONResponseBody0ErrorType enum.
+func (e CustomEnvelopesListOrders401JSONResponseBody0ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesListOrders401JSONResponseBody0ErrorTypePermissionMissingError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesListOrders401JSONResponseBody0Object.
+const (
+	CustomEnvelopesListOrders401JSONResponseBody0ObjectError CustomEnvelopesListOrders401JSONResponseBody0Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesListOrders401JSONResponseBody0Object enum.
+func (e CustomEnvelopesListOrders401JSONResponseBody0Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesListOrders401JSONResponseBody0ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesListOrders401JSONResponseBody1ErrorType.
+const (
+	CustomEnvelopesListOrders401JSONResponseBody1ErrorTypeMissingAuthError CustomEnvelopesListOrders401JSONResponseBody1ErrorType = "missing_auth_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesListOrders401JSONResponseBody1ErrorType enum.
+func (e CustomEnvelopesListOrders401JSONResponseBody1ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesListOrders401JSONResponseBody1ErrorTypeMissingAuthError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesListOrders401JSONResponseBody1Object.
+const (
+	CustomEnvelopesListOrders401JSONResponseBody1ObjectError CustomEnvelopesListOrders401JSONResponseBody1Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesListOrders401JSONResponseBody1Object enum.
+func (e CustomEnvelopesListOrders401JSONResponseBody1Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesListOrders401JSONResponseBody1ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesListOrders429JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesListOrders429JSONResponseBodyErrorTypeRateLimitExceededError CustomEnvelopesListOrders429JSONResponseBodyErrorType = "rate_limit_exceeded_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesListOrders429JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesListOrders429JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesListOrders429JSONResponseBodyErrorTypeRateLimitExceededError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesListOrders429JSONResponseBodyObject.
+const (
+	CustomEnvelopesListOrders429JSONResponseBodyObjectError CustomEnvelopesListOrders429JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesListOrders429JSONResponseBodyObject enum.
+func (e CustomEnvelopesListOrders429JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesListOrders429JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesListOrders500JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesListOrders500JSONResponseBodyErrorTypeInternalServerError CustomEnvelopesListOrders500JSONResponseBodyErrorType = "internal_server_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesListOrders500JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesListOrders500JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesListOrders500JSONResponseBodyErrorTypeInternalServerError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesListOrders500JSONResponseBodyObject.
+const (
+	CustomEnvelopesListOrders500JSONResponseBodyObjectError CustomEnvelopesListOrders500JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesListOrders500JSONResponseBodyObject enum.
+func (e CustomEnvelopesListOrders500JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesListOrders500JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateOrder400JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesCreateOrder400JSONResponseBodyErrorTypeValidationError CustomEnvelopesCreateOrder400JSONResponseBodyErrorType = "validation_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateOrder400JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesCreateOrder400JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateOrder400JSONResponseBodyErrorTypeValidationError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateOrder400JSONResponseBodyObject.
+const (
+	CustomEnvelopesCreateOrder400JSONResponseBodyObjectError CustomEnvelopesCreateOrder400JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateOrder400JSONResponseBodyObject enum.
+func (e CustomEnvelopesCreateOrder400JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateOrder400JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateOrder401JSONResponseBody0ErrorType.
+const (
+	CustomEnvelopesCreateOrder401JSONResponseBody0ErrorTypeMissingAuthError CustomEnvelopesCreateOrder401JSONResponseBody0ErrorType = "missing_auth_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateOrder401JSONResponseBody0ErrorType enum.
+func (e CustomEnvelopesCreateOrder401JSONResponseBody0ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateOrder401JSONResponseBody0ErrorTypeMissingAuthError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateOrder401JSONResponseBody0Object.
+const (
+	CustomEnvelopesCreateOrder401JSONResponseBody0ObjectError CustomEnvelopesCreateOrder401JSONResponseBody0Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateOrder401JSONResponseBody0Object enum.
+func (e CustomEnvelopesCreateOrder401JSONResponseBody0Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateOrder401JSONResponseBody0ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateOrder401JSONResponseBody1ErrorType.
+const (
+	CustomEnvelopesCreateOrder401JSONResponseBody1ErrorTypePermissionMissingError CustomEnvelopesCreateOrder401JSONResponseBody1ErrorType = "permission_missing_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateOrder401JSONResponseBody1ErrorType enum.
+func (e CustomEnvelopesCreateOrder401JSONResponseBody1ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateOrder401JSONResponseBody1ErrorTypePermissionMissingError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateOrder401JSONResponseBody1Object.
+const (
+	CustomEnvelopesCreateOrder401JSONResponseBody1ObjectError CustomEnvelopesCreateOrder401JSONResponseBody1Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateOrder401JSONResponseBody1Object enum.
+func (e CustomEnvelopesCreateOrder401JSONResponseBody1Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateOrder401JSONResponseBody1ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateOrder404JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesCreateOrder404JSONResponseBodyErrorTypeNotFoundError CustomEnvelopesCreateOrder404JSONResponseBodyErrorType = "not_found_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateOrder404JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesCreateOrder404JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateOrder404JSONResponseBodyErrorTypeNotFoundError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateOrder404JSONResponseBodyObject.
+const (
+	CustomEnvelopesCreateOrder404JSONResponseBodyObjectError CustomEnvelopesCreateOrder404JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateOrder404JSONResponseBodyObject enum.
+func (e CustomEnvelopesCreateOrder404JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateOrder404JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateOrder422JSONResponseBodyObject.
+const (
+	CustomEnvelopesCreateOrder422JSONResponseBodyObjectError CustomEnvelopesCreateOrder422JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateOrder422JSONResponseBodyObject enum.
+func (e CustomEnvelopesCreateOrder422JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateOrder422JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateOrder429JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesCreateOrder429JSONResponseBodyErrorTypeRateLimitExceededError CustomEnvelopesCreateOrder429JSONResponseBodyErrorType = "rate_limit_exceeded_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateOrder429JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesCreateOrder429JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateOrder429JSONResponseBodyErrorTypeRateLimitExceededError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateOrder429JSONResponseBodyObject.
+const (
+	CustomEnvelopesCreateOrder429JSONResponseBodyObjectError CustomEnvelopesCreateOrder429JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateOrder429JSONResponseBodyObject enum.
+func (e CustomEnvelopesCreateOrder429JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateOrder429JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateOrder500JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesCreateOrder500JSONResponseBodyErrorTypeInternalServerError CustomEnvelopesCreateOrder500JSONResponseBodyErrorType = "internal_server_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateOrder500JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesCreateOrder500JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateOrder500JSONResponseBodyErrorTypeInternalServerError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCreateOrder500JSONResponseBodyObject.
+const (
+	CustomEnvelopesCreateOrder500JSONResponseBodyObjectError CustomEnvelopesCreateOrder500JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCreateOrder500JSONResponseBodyObject enum.
+func (e CustomEnvelopesCreateOrder500JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesCreateOrder500JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCancelOrderParamsExpand.
+const (
+	CustomEnvelopesCancelOrderParamsExpandCustomEnvelope CustomEnvelopesCancelOrderParamsExpand = "customEnvelope"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCancelOrderParamsExpand enum.
+func (e CustomEnvelopesCancelOrderParamsExpand) Valid() bool {
+	switch e {
+	case CustomEnvelopesCancelOrderParamsExpandCustomEnvelope:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCancelOrder401JSONResponseBody0ErrorType.
+const (
+	CustomEnvelopesCancelOrder401JSONResponseBody0ErrorTypeMissingAuthError CustomEnvelopesCancelOrder401JSONResponseBody0ErrorType = "missing_auth_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCancelOrder401JSONResponseBody0ErrorType enum.
+func (e CustomEnvelopesCancelOrder401JSONResponseBody0ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesCancelOrder401JSONResponseBody0ErrorTypeMissingAuthError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCancelOrder401JSONResponseBody0Object.
+const (
+	CustomEnvelopesCancelOrder401JSONResponseBody0ObjectError CustomEnvelopesCancelOrder401JSONResponseBody0Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCancelOrder401JSONResponseBody0Object enum.
+func (e CustomEnvelopesCancelOrder401JSONResponseBody0Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesCancelOrder401JSONResponseBody0ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCancelOrder401JSONResponseBody1ErrorType.
+const (
+	CustomEnvelopesCancelOrder401JSONResponseBody1ErrorTypePermissionMissingError CustomEnvelopesCancelOrder401JSONResponseBody1ErrorType = "permission_missing_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCancelOrder401JSONResponseBody1ErrorType enum.
+func (e CustomEnvelopesCancelOrder401JSONResponseBody1ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesCancelOrder401JSONResponseBody1ErrorTypePermissionMissingError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCancelOrder401JSONResponseBody1Object.
+const (
+	CustomEnvelopesCancelOrder401JSONResponseBody1ObjectError CustomEnvelopesCancelOrder401JSONResponseBody1Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCancelOrder401JSONResponseBody1Object enum.
+func (e CustomEnvelopesCancelOrder401JSONResponseBody1Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesCancelOrder401JSONResponseBody1ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCancelOrder404JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesCancelOrder404JSONResponseBodyErrorTypeNotFoundError CustomEnvelopesCancelOrder404JSONResponseBodyErrorType = "not_found_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCancelOrder404JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesCancelOrder404JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesCancelOrder404JSONResponseBodyErrorTypeNotFoundError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCancelOrder404JSONResponseBodyObject.
+const (
+	CustomEnvelopesCancelOrder404JSONResponseBodyObjectError CustomEnvelopesCancelOrder404JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCancelOrder404JSONResponseBodyObject enum.
+func (e CustomEnvelopesCancelOrder404JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesCancelOrder404JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCancelOrder422JSONResponseBody0Object.
+const (
+	CustomEnvelopesCancelOrder422JSONResponseBody0ObjectError CustomEnvelopesCancelOrder422JSONResponseBody0Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCancelOrder422JSONResponseBody0Object enum.
+func (e CustomEnvelopesCancelOrder422JSONResponseBody0Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesCancelOrder422JSONResponseBody0ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCancelOrder422JSONResponseBody1ErrorType.
+const (
+	CustomEnvelopesCancelOrder422JSONResponseBody1ErrorTypeCustomEnvelopeOrderCancelFailedError CustomEnvelopesCancelOrder422JSONResponseBody1ErrorType = "custom_envelope_order_cancel_failed_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCancelOrder422JSONResponseBody1ErrorType enum.
+func (e CustomEnvelopesCancelOrder422JSONResponseBody1ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesCancelOrder422JSONResponseBody1ErrorTypeCustomEnvelopeOrderCancelFailedError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCancelOrder422JSONResponseBody1Object.
+const (
+	CustomEnvelopesCancelOrder422JSONResponseBody1ObjectError CustomEnvelopesCancelOrder422JSONResponseBody1Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCancelOrder422JSONResponseBody1Object enum.
+func (e CustomEnvelopesCancelOrder422JSONResponseBody1Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesCancelOrder422JSONResponseBody1ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCancelOrder429JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesCancelOrder429JSONResponseBodyErrorTypeRateLimitExceededError CustomEnvelopesCancelOrder429JSONResponseBodyErrorType = "rate_limit_exceeded_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCancelOrder429JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesCancelOrder429JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesCancelOrder429JSONResponseBodyErrorTypeRateLimitExceededError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCancelOrder429JSONResponseBodyObject.
+const (
+	CustomEnvelopesCancelOrder429JSONResponseBodyObjectError CustomEnvelopesCancelOrder429JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCancelOrder429JSONResponseBodyObject enum.
+func (e CustomEnvelopesCancelOrder429JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesCancelOrder429JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCancelOrder500JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesCancelOrder500JSONResponseBodyErrorTypeInternalServerError CustomEnvelopesCancelOrder500JSONResponseBodyErrorType = "internal_server_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCancelOrder500JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesCancelOrder500JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesCancelOrder500JSONResponseBodyErrorTypeInternalServerError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesCancelOrder500JSONResponseBodyObject.
+const (
+	CustomEnvelopesCancelOrder500JSONResponseBodyObjectError CustomEnvelopesCancelOrder500JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesCancelOrder500JSONResponseBodyObject enum.
+func (e CustomEnvelopesCancelOrder500JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesCancelOrder500JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesGetOrderParamsExpand.
+const (
+	CustomEnvelopesGetOrderParamsExpandCustomEnvelope CustomEnvelopesGetOrderParamsExpand = "customEnvelope"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesGetOrderParamsExpand enum.
+func (e CustomEnvelopesGetOrderParamsExpand) Valid() bool {
+	switch e {
+	case CustomEnvelopesGetOrderParamsExpandCustomEnvelope:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesGetOrder401JSONResponseBody0ErrorType.
+const (
+	CustomEnvelopesGetOrder401JSONResponseBody0ErrorTypeMissingAuthError CustomEnvelopesGetOrder401JSONResponseBody0ErrorType = "missing_auth_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesGetOrder401JSONResponseBody0ErrorType enum.
+func (e CustomEnvelopesGetOrder401JSONResponseBody0ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesGetOrder401JSONResponseBody0ErrorTypeMissingAuthError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesGetOrder401JSONResponseBody0Object.
+const (
+	CustomEnvelopesGetOrder401JSONResponseBody0ObjectError CustomEnvelopesGetOrder401JSONResponseBody0Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesGetOrder401JSONResponseBody0Object enum.
+func (e CustomEnvelopesGetOrder401JSONResponseBody0Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesGetOrder401JSONResponseBody0ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesGetOrder401JSONResponseBody1ErrorType.
+const (
+	CustomEnvelopesGetOrder401JSONResponseBody1ErrorTypePermissionMissingError CustomEnvelopesGetOrder401JSONResponseBody1ErrorType = "permission_missing_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesGetOrder401JSONResponseBody1ErrorType enum.
+func (e CustomEnvelopesGetOrder401JSONResponseBody1ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesGetOrder401JSONResponseBody1ErrorTypePermissionMissingError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesGetOrder401JSONResponseBody1Object.
+const (
+	CustomEnvelopesGetOrder401JSONResponseBody1ObjectError CustomEnvelopesGetOrder401JSONResponseBody1Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesGetOrder401JSONResponseBody1Object enum.
+func (e CustomEnvelopesGetOrder401JSONResponseBody1Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesGetOrder401JSONResponseBody1ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesGetOrder404JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesGetOrder404JSONResponseBodyErrorTypeNotFoundError CustomEnvelopesGetOrder404JSONResponseBodyErrorType = "not_found_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesGetOrder404JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesGetOrder404JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesGetOrder404JSONResponseBodyErrorTypeNotFoundError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesGetOrder404JSONResponseBodyObject.
+const (
+	CustomEnvelopesGetOrder404JSONResponseBodyObjectError CustomEnvelopesGetOrder404JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesGetOrder404JSONResponseBodyObject enum.
+func (e CustomEnvelopesGetOrder404JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesGetOrder404JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesGetOrder422JSONResponseBodyObject.
+const (
+	CustomEnvelopesGetOrder422JSONResponseBodyObjectError CustomEnvelopesGetOrder422JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesGetOrder422JSONResponseBodyObject enum.
+func (e CustomEnvelopesGetOrder422JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesGetOrder422JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesGetOrder429JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesGetOrder429JSONResponseBodyErrorTypeRateLimitExceededError CustomEnvelopesGetOrder429JSONResponseBodyErrorType = "rate_limit_exceeded_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesGetOrder429JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesGetOrder429JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesGetOrder429JSONResponseBodyErrorTypeRateLimitExceededError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesGetOrder429JSONResponseBodyObject.
+const (
+	CustomEnvelopesGetOrder429JSONResponseBodyObjectError CustomEnvelopesGetOrder429JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesGetOrder429JSONResponseBodyObject enum.
+func (e CustomEnvelopesGetOrder429JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesGetOrder429JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesGetOrder500JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesGetOrder500JSONResponseBodyErrorTypeInternalServerError CustomEnvelopesGetOrder500JSONResponseBodyErrorType = "internal_server_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesGetOrder500JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesGetOrder500JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesGetOrder500JSONResponseBodyErrorTypeInternalServerError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesGetOrder500JSONResponseBodyObject.
+const (
+	CustomEnvelopesGetOrder500JSONResponseBodyObjectError CustomEnvelopesGetOrder500JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesGetOrder500JSONResponseBodyObject enum.
+func (e CustomEnvelopesGetOrder500JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesGetOrder500JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesFillTestOrderParamsExpand.
+const (
+	CustomEnvelopesFillTestOrderParamsExpandCustomEnvelope CustomEnvelopesFillTestOrderParamsExpand = "customEnvelope"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesFillTestOrderParamsExpand enum.
+func (e CustomEnvelopesFillTestOrderParamsExpand) Valid() bool {
+	switch e {
+	case CustomEnvelopesFillTestOrderParamsExpandCustomEnvelope:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesFillTestOrder400JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesFillTestOrder400JSONResponseBodyErrorTypeValidationError CustomEnvelopesFillTestOrder400JSONResponseBodyErrorType = "validation_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesFillTestOrder400JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesFillTestOrder400JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesFillTestOrder400JSONResponseBodyErrorTypeValidationError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesFillTestOrder400JSONResponseBodyObject.
+const (
+	CustomEnvelopesFillTestOrder400JSONResponseBodyObjectError CustomEnvelopesFillTestOrder400JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesFillTestOrder400JSONResponseBodyObject enum.
+func (e CustomEnvelopesFillTestOrder400JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesFillTestOrder400JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesFillTestOrder401JSONResponseBody0ErrorType.
+const (
+	CustomEnvelopesFillTestOrder401JSONResponseBody0ErrorTypeMissingAuthError CustomEnvelopesFillTestOrder401JSONResponseBody0ErrorType = "missing_auth_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesFillTestOrder401JSONResponseBody0ErrorType enum.
+func (e CustomEnvelopesFillTestOrder401JSONResponseBody0ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesFillTestOrder401JSONResponseBody0ErrorTypeMissingAuthError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesFillTestOrder401JSONResponseBody0Object.
+const (
+	CustomEnvelopesFillTestOrder401JSONResponseBody0ObjectError CustomEnvelopesFillTestOrder401JSONResponseBody0Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesFillTestOrder401JSONResponseBody0Object enum.
+func (e CustomEnvelopesFillTestOrder401JSONResponseBody0Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesFillTestOrder401JSONResponseBody0ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesFillTestOrder401JSONResponseBody1ErrorType.
+const (
+	CustomEnvelopesFillTestOrder401JSONResponseBody1ErrorTypePermissionMissingError CustomEnvelopesFillTestOrder401JSONResponseBody1ErrorType = "permission_missing_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesFillTestOrder401JSONResponseBody1ErrorType enum.
+func (e CustomEnvelopesFillTestOrder401JSONResponseBody1ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesFillTestOrder401JSONResponseBody1ErrorTypePermissionMissingError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesFillTestOrder401JSONResponseBody1Object.
+const (
+	CustomEnvelopesFillTestOrder401JSONResponseBody1ObjectError CustomEnvelopesFillTestOrder401JSONResponseBody1Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesFillTestOrder401JSONResponseBody1Object enum.
+func (e CustomEnvelopesFillTestOrder401JSONResponseBody1Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesFillTestOrder401JSONResponseBody1ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesFillTestOrder404JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesFillTestOrder404JSONResponseBodyErrorTypeNotFoundError CustomEnvelopesFillTestOrder404JSONResponseBodyErrorType = "not_found_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesFillTestOrder404JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesFillTestOrder404JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesFillTestOrder404JSONResponseBodyErrorTypeNotFoundError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesFillTestOrder404JSONResponseBodyObject.
+const (
+	CustomEnvelopesFillTestOrder404JSONResponseBodyObjectError CustomEnvelopesFillTestOrder404JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesFillTestOrder404JSONResponseBodyObject enum.
+func (e CustomEnvelopesFillTestOrder404JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesFillTestOrder404JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesFillTestOrder422JSONResponseBody0Object.
+const (
+	CustomEnvelopesFillTestOrder422JSONResponseBody0ObjectError CustomEnvelopesFillTestOrder422JSONResponseBody0Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesFillTestOrder422JSONResponseBody0Object enum.
+func (e CustomEnvelopesFillTestOrder422JSONResponseBody0Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesFillTestOrder422JSONResponseBody0ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesFillTestOrder422JSONResponseBody1ErrorType.
+const (
+	CustomEnvelopesFillTestOrder422JSONResponseBody1ErrorTypeCustomEnvelopeOrderFillFailedError CustomEnvelopesFillTestOrder422JSONResponseBody1ErrorType = "custom_envelope_order_fill_failed_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesFillTestOrder422JSONResponseBody1ErrorType enum.
+func (e CustomEnvelopesFillTestOrder422JSONResponseBody1ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesFillTestOrder422JSONResponseBody1ErrorTypeCustomEnvelopeOrderFillFailedError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesFillTestOrder422JSONResponseBody1Object.
+const (
+	CustomEnvelopesFillTestOrder422JSONResponseBody1ObjectError CustomEnvelopesFillTestOrder422JSONResponseBody1Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesFillTestOrder422JSONResponseBody1Object enum.
+func (e CustomEnvelopesFillTestOrder422JSONResponseBody1Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesFillTestOrder422JSONResponseBody1ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesFillTestOrder422JSONResponseBody2ErrorType.
+const (
+	CustomEnvelopesFillTestOrder422JSONResponseBody2ErrorTypeCustomEnvelopeOrderFillNotApprovedError CustomEnvelopesFillTestOrder422JSONResponseBody2ErrorType = "custom_envelope_order_fill_not_approved_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesFillTestOrder422JSONResponseBody2ErrorType enum.
+func (e CustomEnvelopesFillTestOrder422JSONResponseBody2ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesFillTestOrder422JSONResponseBody2ErrorTypeCustomEnvelopeOrderFillNotApprovedError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesFillTestOrder422JSONResponseBody2Object.
+const (
+	CustomEnvelopesFillTestOrder422JSONResponseBody2ObjectError CustomEnvelopesFillTestOrder422JSONResponseBody2Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesFillTestOrder422JSONResponseBody2Object enum.
+func (e CustomEnvelopesFillTestOrder422JSONResponseBody2Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesFillTestOrder422JSONResponseBody2ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesFillTestOrder422JSONResponseBody3ErrorType.
+const (
+	CustomEnvelopesFillTestOrder422JSONResponseBody3ErrorTypeCustomEnvelopeOrderCannotFillLiveError CustomEnvelopesFillTestOrder422JSONResponseBody3ErrorType = "custom_envelope_order_cannot_fill_live_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesFillTestOrder422JSONResponseBody3ErrorType enum.
+func (e CustomEnvelopesFillTestOrder422JSONResponseBody3ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesFillTestOrder422JSONResponseBody3ErrorTypeCustomEnvelopeOrderCannotFillLiveError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesFillTestOrder422JSONResponseBody3Object.
+const (
+	CustomEnvelopesFillTestOrder422JSONResponseBody3ObjectError CustomEnvelopesFillTestOrder422JSONResponseBody3Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesFillTestOrder422JSONResponseBody3Object enum.
+func (e CustomEnvelopesFillTestOrder422JSONResponseBody3Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesFillTestOrder422JSONResponseBody3ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesFillTestOrder429JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesFillTestOrder429JSONResponseBodyErrorTypeRateLimitExceededError CustomEnvelopesFillTestOrder429JSONResponseBodyErrorType = "rate_limit_exceeded_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesFillTestOrder429JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesFillTestOrder429JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesFillTestOrder429JSONResponseBodyErrorTypeRateLimitExceededError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesFillTestOrder429JSONResponseBodyObject.
+const (
+	CustomEnvelopesFillTestOrder429JSONResponseBodyObjectError CustomEnvelopesFillTestOrder429JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesFillTestOrder429JSONResponseBodyObject enum.
+func (e CustomEnvelopesFillTestOrder429JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesFillTestOrder429JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesFillTestOrder500JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesFillTestOrder500JSONResponseBodyErrorTypeInternalServerError CustomEnvelopesFillTestOrder500JSONResponseBodyErrorType = "internal_server_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesFillTestOrder500JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesFillTestOrder500JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesFillTestOrder500JSONResponseBodyErrorTypeInternalServerError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesFillTestOrder500JSONResponseBodyObject.
+const (
+	CustomEnvelopesFillTestOrder500JSONResponseBodyObjectError CustomEnvelopesFillTestOrder500JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesFillTestOrder500JSONResponseBodyObject enum.
+func (e CustomEnvelopesFillTestOrder500JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesFillTestOrder500JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesProgressTestOrder400JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesProgressTestOrder400JSONResponseBodyErrorTypeValidationError CustomEnvelopesProgressTestOrder400JSONResponseBodyErrorType = "validation_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesProgressTestOrder400JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesProgressTestOrder400JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesProgressTestOrder400JSONResponseBodyErrorTypeValidationError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesProgressTestOrder400JSONResponseBodyObject.
+const (
+	CustomEnvelopesProgressTestOrder400JSONResponseBodyObjectError CustomEnvelopesProgressTestOrder400JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesProgressTestOrder400JSONResponseBodyObject enum.
+func (e CustomEnvelopesProgressTestOrder400JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesProgressTestOrder400JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesProgressTestOrder401JSONResponseBody0ErrorType.
+const (
+	CustomEnvelopesProgressTestOrder401JSONResponseBody0ErrorTypeMissingAuthError CustomEnvelopesProgressTestOrder401JSONResponseBody0ErrorType = "missing_auth_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesProgressTestOrder401JSONResponseBody0ErrorType enum.
+func (e CustomEnvelopesProgressTestOrder401JSONResponseBody0ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesProgressTestOrder401JSONResponseBody0ErrorTypeMissingAuthError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesProgressTestOrder401JSONResponseBody0Object.
+const (
+	CustomEnvelopesProgressTestOrder401JSONResponseBody0ObjectError CustomEnvelopesProgressTestOrder401JSONResponseBody0Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesProgressTestOrder401JSONResponseBody0Object enum.
+func (e CustomEnvelopesProgressTestOrder401JSONResponseBody0Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesProgressTestOrder401JSONResponseBody0ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesProgressTestOrder401JSONResponseBody1ErrorType.
+const (
+	CustomEnvelopesProgressTestOrder401JSONResponseBody1ErrorTypePermissionMissingError CustomEnvelopesProgressTestOrder401JSONResponseBody1ErrorType = "permission_missing_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesProgressTestOrder401JSONResponseBody1ErrorType enum.
+func (e CustomEnvelopesProgressTestOrder401JSONResponseBody1ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesProgressTestOrder401JSONResponseBody1ErrorTypePermissionMissingError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesProgressTestOrder401JSONResponseBody1Object.
+const (
+	CustomEnvelopesProgressTestOrder401JSONResponseBody1ObjectError CustomEnvelopesProgressTestOrder401JSONResponseBody1Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesProgressTestOrder401JSONResponseBody1Object enum.
+func (e CustomEnvelopesProgressTestOrder401JSONResponseBody1Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesProgressTestOrder401JSONResponseBody1ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesProgressTestOrder404JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesProgressTestOrder404JSONResponseBodyErrorTypeNotFoundError CustomEnvelopesProgressTestOrder404JSONResponseBodyErrorType = "not_found_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesProgressTestOrder404JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesProgressTestOrder404JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesProgressTestOrder404JSONResponseBodyErrorTypeNotFoundError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesProgressTestOrder404JSONResponseBodyObject.
+const (
+	CustomEnvelopesProgressTestOrder404JSONResponseBodyObjectError CustomEnvelopesProgressTestOrder404JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesProgressTestOrder404JSONResponseBodyObject enum.
+func (e CustomEnvelopesProgressTestOrder404JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesProgressTestOrder404JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesProgressTestOrder422JSONResponseBody0Object.
+const (
+	CustomEnvelopesProgressTestOrder422JSONResponseBody0ObjectError CustomEnvelopesProgressTestOrder422JSONResponseBody0Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesProgressTestOrder422JSONResponseBody0Object enum.
+func (e CustomEnvelopesProgressTestOrder422JSONResponseBody0Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesProgressTestOrder422JSONResponseBody0ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesProgressTestOrder422JSONResponseBody1ErrorType.
+const (
+	CustomEnvelopesProgressTestOrder422JSONResponseBody1ErrorTypeCustomEnvelopeOrderProgressFailedError CustomEnvelopesProgressTestOrder422JSONResponseBody1ErrorType = "custom_envelope_order_progress_failed_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesProgressTestOrder422JSONResponseBody1ErrorType enum.
+func (e CustomEnvelopesProgressTestOrder422JSONResponseBody1ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesProgressTestOrder422JSONResponseBody1ErrorTypeCustomEnvelopeOrderProgressFailedError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesProgressTestOrder422JSONResponseBody1Object.
+const (
+	CustomEnvelopesProgressTestOrder422JSONResponseBody1ObjectError CustomEnvelopesProgressTestOrder422JSONResponseBody1Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesProgressTestOrder422JSONResponseBody1Object enum.
+func (e CustomEnvelopesProgressTestOrder422JSONResponseBody1Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesProgressTestOrder422JSONResponseBody1ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesProgressTestOrder422JSONResponseBody2ErrorType.
+const (
+	CustomEnvelopesProgressTestOrder422JSONResponseBody2ErrorTypeCustomEnvelopeOrderCannotProgressLiveError CustomEnvelopesProgressTestOrder422JSONResponseBody2ErrorType = "custom_envelope_order_cannot_progress_live_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesProgressTestOrder422JSONResponseBody2ErrorType enum.
+func (e CustomEnvelopesProgressTestOrder422JSONResponseBody2ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesProgressTestOrder422JSONResponseBody2ErrorTypeCustomEnvelopeOrderCannotProgressLiveError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesProgressTestOrder422JSONResponseBody2Object.
+const (
+	CustomEnvelopesProgressTestOrder422JSONResponseBody2ObjectError CustomEnvelopesProgressTestOrder422JSONResponseBody2Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesProgressTestOrder422JSONResponseBody2Object enum.
+func (e CustomEnvelopesProgressTestOrder422JSONResponseBody2Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesProgressTestOrder422JSONResponseBody2ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesProgressTestOrder429JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesProgressTestOrder429JSONResponseBodyErrorTypeRateLimitExceededError CustomEnvelopesProgressTestOrder429JSONResponseBodyErrorType = "rate_limit_exceeded_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesProgressTestOrder429JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesProgressTestOrder429JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesProgressTestOrder429JSONResponseBodyErrorTypeRateLimitExceededError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesProgressTestOrder429JSONResponseBodyObject.
+const (
+	CustomEnvelopesProgressTestOrder429JSONResponseBodyObjectError CustomEnvelopesProgressTestOrder429JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesProgressTestOrder429JSONResponseBodyObject enum.
+func (e CustomEnvelopesProgressTestOrder429JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesProgressTestOrder429JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesProgressTestOrder500JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesProgressTestOrder500JSONResponseBodyErrorTypeInternalServerError CustomEnvelopesProgressTestOrder500JSONResponseBodyErrorType = "internal_server_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesProgressTestOrder500JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesProgressTestOrder500JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesProgressTestOrder500JSONResponseBodyErrorTypeInternalServerError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesProgressTestOrder500JSONResponseBodyObject.
+const (
+	CustomEnvelopesProgressTestOrder500JSONResponseBodyObjectError CustomEnvelopesProgressTestOrder500JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesProgressTestOrder500JSONResponseBodyObject enum.
+func (e CustomEnvelopesProgressTestOrder500JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesProgressTestOrder500JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesClearThreshold401JSONResponseBody0ErrorType.
+const (
+	CustomEnvelopesClearThreshold401JSONResponseBody0ErrorTypeMissingAuthError CustomEnvelopesClearThreshold401JSONResponseBody0ErrorType = "missing_auth_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesClearThreshold401JSONResponseBody0ErrorType enum.
+func (e CustomEnvelopesClearThreshold401JSONResponseBody0ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesClearThreshold401JSONResponseBody0ErrorTypeMissingAuthError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesClearThreshold401JSONResponseBody0Object.
+const (
+	CustomEnvelopesClearThreshold401JSONResponseBody0ObjectError CustomEnvelopesClearThreshold401JSONResponseBody0Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesClearThreshold401JSONResponseBody0Object enum.
+func (e CustomEnvelopesClearThreshold401JSONResponseBody0Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesClearThreshold401JSONResponseBody0ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesClearThreshold401JSONResponseBody1ErrorType.
+const (
+	CustomEnvelopesClearThreshold401JSONResponseBody1ErrorTypePermissionMissingError CustomEnvelopesClearThreshold401JSONResponseBody1ErrorType = "permission_missing_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesClearThreshold401JSONResponseBody1ErrorType enum.
+func (e CustomEnvelopesClearThreshold401JSONResponseBody1ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesClearThreshold401JSONResponseBody1ErrorTypePermissionMissingError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesClearThreshold401JSONResponseBody1Object.
+const (
+	CustomEnvelopesClearThreshold401JSONResponseBody1ObjectError CustomEnvelopesClearThreshold401JSONResponseBody1Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesClearThreshold401JSONResponseBody1Object enum.
+func (e CustomEnvelopesClearThreshold401JSONResponseBody1Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesClearThreshold401JSONResponseBody1ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesClearThreshold404JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesClearThreshold404JSONResponseBodyErrorTypeNotFoundError CustomEnvelopesClearThreshold404JSONResponseBodyErrorType = "not_found_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesClearThreshold404JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesClearThreshold404JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesClearThreshold404JSONResponseBodyErrorTypeNotFoundError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesClearThreshold404JSONResponseBodyObject.
+const (
+	CustomEnvelopesClearThreshold404JSONResponseBodyObjectError CustomEnvelopesClearThreshold404JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesClearThreshold404JSONResponseBodyObject enum.
+func (e CustomEnvelopesClearThreshold404JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesClearThreshold404JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesClearThreshold422JSONResponseBodyObject.
+const (
+	CustomEnvelopesClearThreshold422JSONResponseBodyObjectError CustomEnvelopesClearThreshold422JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesClearThreshold422JSONResponseBodyObject enum.
+func (e CustomEnvelopesClearThreshold422JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesClearThreshold422JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesClearThreshold429JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesClearThreshold429JSONResponseBodyErrorTypeRateLimitExceededError CustomEnvelopesClearThreshold429JSONResponseBodyErrorType = "rate_limit_exceeded_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesClearThreshold429JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesClearThreshold429JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesClearThreshold429JSONResponseBodyErrorTypeRateLimitExceededError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesClearThreshold429JSONResponseBodyObject.
+const (
+	CustomEnvelopesClearThreshold429JSONResponseBodyObjectError CustomEnvelopesClearThreshold429JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesClearThreshold429JSONResponseBodyObject enum.
+func (e CustomEnvelopesClearThreshold429JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesClearThreshold429JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesClearThreshold500JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesClearThreshold500JSONResponseBodyErrorTypeInternalServerError CustomEnvelopesClearThreshold500JSONResponseBodyErrorType = "internal_server_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesClearThreshold500JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesClearThreshold500JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesClearThreshold500JSONResponseBodyErrorTypeInternalServerError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesClearThreshold500JSONResponseBodyObject.
+const (
+	CustomEnvelopesClearThreshold500JSONResponseBodyObjectError CustomEnvelopesClearThreshold500JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesClearThreshold500JSONResponseBodyObject enum.
+func (e CustomEnvelopesClearThreshold500JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesClearThreshold500JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesSetThreshold400JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesSetThreshold400JSONResponseBodyErrorTypeValidationError CustomEnvelopesSetThreshold400JSONResponseBodyErrorType = "validation_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesSetThreshold400JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesSetThreshold400JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesSetThreshold400JSONResponseBodyErrorTypeValidationError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesSetThreshold400JSONResponseBodyObject.
+const (
+	CustomEnvelopesSetThreshold400JSONResponseBodyObjectError CustomEnvelopesSetThreshold400JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesSetThreshold400JSONResponseBodyObject enum.
+func (e CustomEnvelopesSetThreshold400JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesSetThreshold400JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesSetThreshold401JSONResponseBody0ErrorType.
+const (
+	CustomEnvelopesSetThreshold401JSONResponseBody0ErrorTypeMissingAuthError CustomEnvelopesSetThreshold401JSONResponseBody0ErrorType = "missing_auth_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesSetThreshold401JSONResponseBody0ErrorType enum.
+func (e CustomEnvelopesSetThreshold401JSONResponseBody0ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesSetThreshold401JSONResponseBody0ErrorTypeMissingAuthError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesSetThreshold401JSONResponseBody0Object.
+const (
+	CustomEnvelopesSetThreshold401JSONResponseBody0ObjectError CustomEnvelopesSetThreshold401JSONResponseBody0Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesSetThreshold401JSONResponseBody0Object enum.
+func (e CustomEnvelopesSetThreshold401JSONResponseBody0Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesSetThreshold401JSONResponseBody0ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesSetThreshold401JSONResponseBody1ErrorType.
+const (
+	CustomEnvelopesSetThreshold401JSONResponseBody1ErrorTypePermissionMissingError CustomEnvelopesSetThreshold401JSONResponseBody1ErrorType = "permission_missing_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesSetThreshold401JSONResponseBody1ErrorType enum.
+func (e CustomEnvelopesSetThreshold401JSONResponseBody1ErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesSetThreshold401JSONResponseBody1ErrorTypePermissionMissingError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesSetThreshold401JSONResponseBody1Object.
+const (
+	CustomEnvelopesSetThreshold401JSONResponseBody1ObjectError CustomEnvelopesSetThreshold401JSONResponseBody1Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesSetThreshold401JSONResponseBody1Object enum.
+func (e CustomEnvelopesSetThreshold401JSONResponseBody1Object) Valid() bool {
+	switch e {
+	case CustomEnvelopesSetThreshold401JSONResponseBody1ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesSetThreshold404JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesSetThreshold404JSONResponseBodyErrorTypeNotFoundError CustomEnvelopesSetThreshold404JSONResponseBodyErrorType = "not_found_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesSetThreshold404JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesSetThreshold404JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesSetThreshold404JSONResponseBodyErrorTypeNotFoundError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesSetThreshold404JSONResponseBodyObject.
+const (
+	CustomEnvelopesSetThreshold404JSONResponseBodyObjectError CustomEnvelopesSetThreshold404JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesSetThreshold404JSONResponseBodyObject enum.
+func (e CustomEnvelopesSetThreshold404JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesSetThreshold404JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesSetThreshold422JSONResponseBodyObject.
+const (
+	CustomEnvelopesSetThreshold422JSONResponseBodyObjectError CustomEnvelopesSetThreshold422JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesSetThreshold422JSONResponseBodyObject enum.
+func (e CustomEnvelopesSetThreshold422JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesSetThreshold422JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesSetThreshold429JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesSetThreshold429JSONResponseBodyErrorTypeRateLimitExceededError CustomEnvelopesSetThreshold429JSONResponseBodyErrorType = "rate_limit_exceeded_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesSetThreshold429JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesSetThreshold429JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesSetThreshold429JSONResponseBodyErrorTypeRateLimitExceededError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesSetThreshold429JSONResponseBodyObject.
+const (
+	CustomEnvelopesSetThreshold429JSONResponseBodyObjectError CustomEnvelopesSetThreshold429JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesSetThreshold429JSONResponseBodyObject enum.
+func (e CustomEnvelopesSetThreshold429JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesSetThreshold429JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesSetThreshold500JSONResponseBodyErrorType.
+const (
+	CustomEnvelopesSetThreshold500JSONResponseBodyErrorTypeInternalServerError CustomEnvelopesSetThreshold500JSONResponseBodyErrorType = "internal_server_error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesSetThreshold500JSONResponseBodyErrorType enum.
+func (e CustomEnvelopesSetThreshold500JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case CustomEnvelopesSetThreshold500JSONResponseBodyErrorTypeInternalServerError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CustomEnvelopesSetThreshold500JSONResponseBodyObject.
+const (
+	CustomEnvelopesSetThreshold500JSONResponseBodyObjectError CustomEnvelopesSetThreshold500JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the CustomEnvelopesSetThreshold500JSONResponseBodyObject enum.
+func (e CustomEnvelopesSetThreshold500JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case CustomEnvelopesSetThreshold500JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsList400JSONResponseBodyErrorType.
+const (
+	DocumentsList400JSONResponseBodyErrorTypeValidationError DocumentsList400JSONResponseBodyErrorType = "validation_error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsList400JSONResponseBodyErrorType enum.
+func (e DocumentsList400JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case DocumentsList400JSONResponseBodyErrorTypeValidationError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsList400JSONResponseBodyObject.
+const (
+	DocumentsList400JSONResponseBodyObjectError DocumentsList400JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsList400JSONResponseBodyObject enum.
+func (e DocumentsList400JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case DocumentsList400JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsList401JSONResponseBody0ErrorType.
+const (
+	DocumentsList401JSONResponseBody0ErrorTypePermissionMissingError DocumentsList401JSONResponseBody0ErrorType = "permission_missing_error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsList401JSONResponseBody0ErrorType enum.
+func (e DocumentsList401JSONResponseBody0ErrorType) Valid() bool {
+	switch e {
+	case DocumentsList401JSONResponseBody0ErrorTypePermissionMissingError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsList401JSONResponseBody0Object.
+const (
+	DocumentsList401JSONResponseBody0ObjectError DocumentsList401JSONResponseBody0Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsList401JSONResponseBody0Object enum.
+func (e DocumentsList401JSONResponseBody0Object) Valid() bool {
+	switch e {
+	case DocumentsList401JSONResponseBody0ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsList401JSONResponseBody1ErrorType.
+const (
+	DocumentsList401JSONResponseBody1ErrorTypeMissingAuthError DocumentsList401JSONResponseBody1ErrorType = "missing_auth_error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsList401JSONResponseBody1ErrorType enum.
+func (e DocumentsList401JSONResponseBody1ErrorType) Valid() bool {
+	switch e {
+	case DocumentsList401JSONResponseBody1ErrorTypeMissingAuthError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsList401JSONResponseBody1Object.
+const (
+	DocumentsList401JSONResponseBody1ObjectError DocumentsList401JSONResponseBody1Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsList401JSONResponseBody1Object enum.
+func (e DocumentsList401JSONResponseBody1Object) Valid() bool {
+	switch e {
+	case DocumentsList401JSONResponseBody1ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsList429JSONResponseBodyErrorType.
+const (
+	DocumentsList429JSONResponseBodyErrorTypeRateLimitExceededError DocumentsList429JSONResponseBodyErrorType = "rate_limit_exceeded_error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsList429JSONResponseBodyErrorType enum.
+func (e DocumentsList429JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case DocumentsList429JSONResponseBodyErrorTypeRateLimitExceededError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsList429JSONResponseBodyObject.
+const (
+	DocumentsList429JSONResponseBodyObjectError DocumentsList429JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsList429JSONResponseBodyObject enum.
+func (e DocumentsList429JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case DocumentsList429JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsList500JSONResponseBodyErrorType.
+const (
+	DocumentsList500JSONResponseBodyErrorTypeInternalServerError DocumentsList500JSONResponseBodyErrorType = "internal_server_error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsList500JSONResponseBodyErrorType enum.
+func (e DocumentsList500JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case DocumentsList500JSONResponseBodyErrorTypeInternalServerError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsList500JSONResponseBodyObject.
+const (
+	DocumentsList500JSONResponseBodyObjectError DocumentsList500JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsList500JSONResponseBodyObject enum.
+func (e DocumentsList500JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case DocumentsList500JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsCreate400JSONResponseBodyErrorType.
+const (
+	DocumentsCreate400JSONResponseBodyErrorTypeValidationError DocumentsCreate400JSONResponseBodyErrorType = "validation_error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsCreate400JSONResponseBodyErrorType enum.
+func (e DocumentsCreate400JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case DocumentsCreate400JSONResponseBodyErrorTypeValidationError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsCreate400JSONResponseBodyObject.
+const (
+	DocumentsCreate400JSONResponseBodyObjectError DocumentsCreate400JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsCreate400JSONResponseBodyObject enum.
+func (e DocumentsCreate400JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case DocumentsCreate400JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsCreate401JSONResponseBody0ErrorType.
+const (
+	DocumentsCreate401JSONResponseBody0ErrorTypeMissingAuthError DocumentsCreate401JSONResponseBody0ErrorType = "missing_auth_error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsCreate401JSONResponseBody0ErrorType enum.
+func (e DocumentsCreate401JSONResponseBody0ErrorType) Valid() bool {
+	switch e {
+	case DocumentsCreate401JSONResponseBody0ErrorTypeMissingAuthError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsCreate401JSONResponseBody0Object.
+const (
+	DocumentsCreate401JSONResponseBody0ObjectError DocumentsCreate401JSONResponseBody0Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsCreate401JSONResponseBody0Object enum.
+func (e DocumentsCreate401JSONResponseBody0Object) Valid() bool {
+	switch e {
+	case DocumentsCreate401JSONResponseBody0ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsCreate401JSONResponseBody1ErrorType.
+const (
+	DocumentsCreate401JSONResponseBody1ErrorTypePermissionMissingError DocumentsCreate401JSONResponseBody1ErrorType = "permission_missing_error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsCreate401JSONResponseBody1ErrorType enum.
+func (e DocumentsCreate401JSONResponseBody1ErrorType) Valid() bool {
+	switch e {
+	case DocumentsCreate401JSONResponseBody1ErrorTypePermissionMissingError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsCreate401JSONResponseBody1Object.
+const (
+	DocumentsCreate401JSONResponseBody1ObjectError DocumentsCreate401JSONResponseBody1Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsCreate401JSONResponseBody1Object enum.
+func (e DocumentsCreate401JSONResponseBody1Object) Valid() bool {
+	switch e {
+	case DocumentsCreate401JSONResponseBody1ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsCreate404JSONResponseBodyErrorType.
+const (
+	DocumentsCreate404JSONResponseBodyErrorTypeNotFoundError DocumentsCreate404JSONResponseBodyErrorType = "not_found_error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsCreate404JSONResponseBodyErrorType enum.
+func (e DocumentsCreate404JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case DocumentsCreate404JSONResponseBodyErrorTypeNotFoundError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsCreate404JSONResponseBodyObject.
+const (
+	DocumentsCreate404JSONResponseBodyObjectError DocumentsCreate404JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsCreate404JSONResponseBodyObject enum.
+func (e DocumentsCreate404JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case DocumentsCreate404JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsCreate422JSONResponseBodyObject.
+const (
+	DocumentsCreate422JSONResponseBodyObjectError DocumentsCreate422JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsCreate422JSONResponseBodyObject enum.
+func (e DocumentsCreate422JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case DocumentsCreate422JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsCreate429JSONResponseBodyErrorType.
+const (
+	DocumentsCreate429JSONResponseBodyErrorTypeRateLimitExceededError DocumentsCreate429JSONResponseBodyErrorType = "rate_limit_exceeded_error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsCreate429JSONResponseBodyErrorType enum.
+func (e DocumentsCreate429JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case DocumentsCreate429JSONResponseBodyErrorTypeRateLimitExceededError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsCreate429JSONResponseBodyObject.
+const (
+	DocumentsCreate429JSONResponseBodyObjectError DocumentsCreate429JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsCreate429JSONResponseBodyObject enum.
+func (e DocumentsCreate429JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case DocumentsCreate429JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsCreate500JSONResponseBodyErrorType.
+const (
+	DocumentsCreate500JSONResponseBodyErrorTypeInternalServerError DocumentsCreate500JSONResponseBodyErrorType = "internal_server_error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsCreate500JSONResponseBodyErrorType enum.
+func (e DocumentsCreate500JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case DocumentsCreate500JSONResponseBodyErrorTypeInternalServerError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsCreate500JSONResponseBodyObject.
+const (
+	DocumentsCreate500JSONResponseBodyObjectError DocumentsCreate500JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsCreate500JSONResponseBodyObject enum.
+func (e DocumentsCreate500JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case DocumentsCreate500JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsGet401JSONResponseBody0ErrorType.
+const (
+	DocumentsGet401JSONResponseBody0ErrorTypeMissingAuthError DocumentsGet401JSONResponseBody0ErrorType = "missing_auth_error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsGet401JSONResponseBody0ErrorType enum.
+func (e DocumentsGet401JSONResponseBody0ErrorType) Valid() bool {
+	switch e {
+	case DocumentsGet401JSONResponseBody0ErrorTypeMissingAuthError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsGet401JSONResponseBody0Object.
+const (
+	DocumentsGet401JSONResponseBody0ObjectError DocumentsGet401JSONResponseBody0Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsGet401JSONResponseBody0Object enum.
+func (e DocumentsGet401JSONResponseBody0Object) Valid() bool {
+	switch e {
+	case DocumentsGet401JSONResponseBody0ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsGet401JSONResponseBody1ErrorType.
+const (
+	DocumentsGet401JSONResponseBody1ErrorTypePermissionMissingError DocumentsGet401JSONResponseBody1ErrorType = "permission_missing_error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsGet401JSONResponseBody1ErrorType enum.
+func (e DocumentsGet401JSONResponseBody1ErrorType) Valid() bool {
+	switch e {
+	case DocumentsGet401JSONResponseBody1ErrorTypePermissionMissingError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsGet401JSONResponseBody1Object.
+const (
+	DocumentsGet401JSONResponseBody1ObjectError DocumentsGet401JSONResponseBody1Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsGet401JSONResponseBody1Object enum.
+func (e DocumentsGet401JSONResponseBody1Object) Valid() bool {
+	switch e {
+	case DocumentsGet401JSONResponseBody1ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsGet404JSONResponseBodyErrorType.
+const (
+	DocumentsGet404JSONResponseBodyErrorTypeNotFoundError DocumentsGet404JSONResponseBodyErrorType = "not_found_error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsGet404JSONResponseBodyErrorType enum.
+func (e DocumentsGet404JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case DocumentsGet404JSONResponseBodyErrorTypeNotFoundError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsGet404JSONResponseBodyObject.
+const (
+	DocumentsGet404JSONResponseBodyObjectError DocumentsGet404JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsGet404JSONResponseBodyObject enum.
+func (e DocumentsGet404JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case DocumentsGet404JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsGet422JSONResponseBodyObject.
+const (
+	DocumentsGet422JSONResponseBodyObjectError DocumentsGet422JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsGet422JSONResponseBodyObject enum.
+func (e DocumentsGet422JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case DocumentsGet422JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsGet429JSONResponseBodyErrorType.
+const (
+	DocumentsGet429JSONResponseBodyErrorTypeRateLimitExceededError DocumentsGet429JSONResponseBodyErrorType = "rate_limit_exceeded_error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsGet429JSONResponseBodyErrorType enum.
+func (e DocumentsGet429JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case DocumentsGet429JSONResponseBodyErrorTypeRateLimitExceededError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsGet429JSONResponseBodyObject.
+const (
+	DocumentsGet429JSONResponseBodyObjectError DocumentsGet429JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsGet429JSONResponseBodyObject enum.
+func (e DocumentsGet429JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case DocumentsGet429JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsGet500JSONResponseBodyErrorType.
+const (
+	DocumentsGet500JSONResponseBodyErrorTypeInternalServerError DocumentsGet500JSONResponseBodyErrorType = "internal_server_error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsGet500JSONResponseBodyErrorType enum.
+func (e DocumentsGet500JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case DocumentsGet500JSONResponseBodyErrorTypeInternalServerError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for DocumentsGet500JSONResponseBodyObject.
+const (
+	DocumentsGet500JSONResponseBodyObjectError DocumentsGet500JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the DocumentsGet500JSONResponseBodyObject enum.
+func (e DocumentsGet500JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case DocumentsGet500JSONResponseBodyObjectError:
 		return true
 	default:
 		return false
@@ -12414,6 +15774,201 @@ func (e ReportsRunAdHocSample500JSONResponseBodyObject) Valid() bool {
 	}
 }
 
+// Defines values for ReportsPreviewSchedule400JSONResponseBodyErrorType.
+const (
+	ReportsPreviewSchedule400JSONResponseBodyErrorTypeValidationError ReportsPreviewSchedule400JSONResponseBodyErrorType = "validation_error"
+)
+
+// Valid indicates whether the value is a known member of the ReportsPreviewSchedule400JSONResponseBodyErrorType enum.
+func (e ReportsPreviewSchedule400JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case ReportsPreviewSchedule400JSONResponseBodyErrorTypeValidationError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ReportsPreviewSchedule400JSONResponseBodyObject.
+const (
+	ReportsPreviewSchedule400JSONResponseBodyObjectError ReportsPreviewSchedule400JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the ReportsPreviewSchedule400JSONResponseBodyObject enum.
+func (e ReportsPreviewSchedule400JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case ReportsPreviewSchedule400JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ReportsPreviewSchedule401JSONResponseBody0ErrorType.
+const (
+	ReportsPreviewSchedule401JSONResponseBody0ErrorTypeMissingAuthError ReportsPreviewSchedule401JSONResponseBody0ErrorType = "missing_auth_error"
+)
+
+// Valid indicates whether the value is a known member of the ReportsPreviewSchedule401JSONResponseBody0ErrorType enum.
+func (e ReportsPreviewSchedule401JSONResponseBody0ErrorType) Valid() bool {
+	switch e {
+	case ReportsPreviewSchedule401JSONResponseBody0ErrorTypeMissingAuthError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ReportsPreviewSchedule401JSONResponseBody0Object.
+const (
+	ReportsPreviewSchedule401JSONResponseBody0ObjectError ReportsPreviewSchedule401JSONResponseBody0Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the ReportsPreviewSchedule401JSONResponseBody0Object enum.
+func (e ReportsPreviewSchedule401JSONResponseBody0Object) Valid() bool {
+	switch e {
+	case ReportsPreviewSchedule401JSONResponseBody0ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ReportsPreviewSchedule401JSONResponseBody1ErrorType.
+const (
+	ReportsPreviewSchedule401JSONResponseBody1ErrorTypePermissionMissingError ReportsPreviewSchedule401JSONResponseBody1ErrorType = "permission_missing_error"
+)
+
+// Valid indicates whether the value is a known member of the ReportsPreviewSchedule401JSONResponseBody1ErrorType enum.
+func (e ReportsPreviewSchedule401JSONResponseBody1ErrorType) Valid() bool {
+	switch e {
+	case ReportsPreviewSchedule401JSONResponseBody1ErrorTypePermissionMissingError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ReportsPreviewSchedule401JSONResponseBody1Object.
+const (
+	ReportsPreviewSchedule401JSONResponseBody1ObjectError ReportsPreviewSchedule401JSONResponseBody1Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the ReportsPreviewSchedule401JSONResponseBody1Object enum.
+func (e ReportsPreviewSchedule401JSONResponseBody1Object) Valid() bool {
+	switch e {
+	case ReportsPreviewSchedule401JSONResponseBody1ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ReportsPreviewSchedule404JSONResponseBodyErrorType.
+const (
+	ReportsPreviewSchedule404JSONResponseBodyErrorTypeNotFoundError ReportsPreviewSchedule404JSONResponseBodyErrorType = "not_found_error"
+)
+
+// Valid indicates whether the value is a known member of the ReportsPreviewSchedule404JSONResponseBodyErrorType enum.
+func (e ReportsPreviewSchedule404JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case ReportsPreviewSchedule404JSONResponseBodyErrorTypeNotFoundError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ReportsPreviewSchedule404JSONResponseBodyObject.
+const (
+	ReportsPreviewSchedule404JSONResponseBodyObjectError ReportsPreviewSchedule404JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the ReportsPreviewSchedule404JSONResponseBodyObject enum.
+func (e ReportsPreviewSchedule404JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case ReportsPreviewSchedule404JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ReportsPreviewSchedule422JSONResponseBodyObject.
+const (
+	ReportsPreviewSchedule422JSONResponseBodyObjectError ReportsPreviewSchedule422JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the ReportsPreviewSchedule422JSONResponseBodyObject enum.
+func (e ReportsPreviewSchedule422JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case ReportsPreviewSchedule422JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ReportsPreviewSchedule429JSONResponseBodyErrorType.
+const (
+	ReportsPreviewSchedule429JSONResponseBodyErrorTypeRateLimitExceededError ReportsPreviewSchedule429JSONResponseBodyErrorType = "rate_limit_exceeded_error"
+)
+
+// Valid indicates whether the value is a known member of the ReportsPreviewSchedule429JSONResponseBodyErrorType enum.
+func (e ReportsPreviewSchedule429JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case ReportsPreviewSchedule429JSONResponseBodyErrorTypeRateLimitExceededError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ReportsPreviewSchedule429JSONResponseBodyObject.
+const (
+	ReportsPreviewSchedule429JSONResponseBodyObjectError ReportsPreviewSchedule429JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the ReportsPreviewSchedule429JSONResponseBodyObject enum.
+func (e ReportsPreviewSchedule429JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case ReportsPreviewSchedule429JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ReportsPreviewSchedule500JSONResponseBodyErrorType.
+const (
+	ReportsPreviewSchedule500JSONResponseBodyErrorTypeInternalServerError ReportsPreviewSchedule500JSONResponseBodyErrorType = "internal_server_error"
+)
+
+// Valid indicates whether the value is a known member of the ReportsPreviewSchedule500JSONResponseBodyErrorType enum.
+func (e ReportsPreviewSchedule500JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case ReportsPreviewSchedule500JSONResponseBodyErrorTypeInternalServerError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ReportsPreviewSchedule500JSONResponseBodyObject.
+const (
+	ReportsPreviewSchedule500JSONResponseBodyObjectError ReportsPreviewSchedule500JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the ReportsPreviewSchedule500JSONResponseBodyObject enum.
+func (e ReportsPreviewSchedule500JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case ReportsPreviewSchedule500JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
 // Defines values for ReportsDeleteReport401JSONResponseBody0ErrorType.
 const (
 	ReportsDeleteReport401JSONResponseBody0ErrorTypeMissingAuthError ReportsDeleteReport401JSONResponseBody0ErrorType = "missing_auth_error"
@@ -13128,6 +16683,156 @@ const (
 func (e ReportsRunSavedReportSample500JSONResponseBodyObject) Valid() bool {
 	switch e {
 	case ReportsRunSavedReportSample500JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ReportsListReportExports400JSONResponseBodyErrorType.
+const (
+	ReportsListReportExports400JSONResponseBodyErrorTypeValidationError ReportsListReportExports400JSONResponseBodyErrorType = "validation_error"
+)
+
+// Valid indicates whether the value is a known member of the ReportsListReportExports400JSONResponseBodyErrorType enum.
+func (e ReportsListReportExports400JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case ReportsListReportExports400JSONResponseBodyErrorTypeValidationError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ReportsListReportExports400JSONResponseBodyObject.
+const (
+	ReportsListReportExports400JSONResponseBodyObjectError ReportsListReportExports400JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the ReportsListReportExports400JSONResponseBodyObject enum.
+func (e ReportsListReportExports400JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case ReportsListReportExports400JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ReportsListReportExports401JSONResponseBody0ErrorType.
+const (
+	ReportsListReportExports401JSONResponseBody0ErrorTypePermissionMissingError ReportsListReportExports401JSONResponseBody0ErrorType = "permission_missing_error"
+)
+
+// Valid indicates whether the value is a known member of the ReportsListReportExports401JSONResponseBody0ErrorType enum.
+func (e ReportsListReportExports401JSONResponseBody0ErrorType) Valid() bool {
+	switch e {
+	case ReportsListReportExports401JSONResponseBody0ErrorTypePermissionMissingError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ReportsListReportExports401JSONResponseBody0Object.
+const (
+	ReportsListReportExports401JSONResponseBody0ObjectError ReportsListReportExports401JSONResponseBody0Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the ReportsListReportExports401JSONResponseBody0Object enum.
+func (e ReportsListReportExports401JSONResponseBody0Object) Valid() bool {
+	switch e {
+	case ReportsListReportExports401JSONResponseBody0ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ReportsListReportExports401JSONResponseBody1ErrorType.
+const (
+	ReportsListReportExports401JSONResponseBody1ErrorTypeMissingAuthError ReportsListReportExports401JSONResponseBody1ErrorType = "missing_auth_error"
+)
+
+// Valid indicates whether the value is a known member of the ReportsListReportExports401JSONResponseBody1ErrorType enum.
+func (e ReportsListReportExports401JSONResponseBody1ErrorType) Valid() bool {
+	switch e {
+	case ReportsListReportExports401JSONResponseBody1ErrorTypeMissingAuthError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ReportsListReportExports401JSONResponseBody1Object.
+const (
+	ReportsListReportExports401JSONResponseBody1ObjectError ReportsListReportExports401JSONResponseBody1Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the ReportsListReportExports401JSONResponseBody1Object enum.
+func (e ReportsListReportExports401JSONResponseBody1Object) Valid() bool {
+	switch e {
+	case ReportsListReportExports401JSONResponseBody1ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ReportsListReportExports429JSONResponseBodyErrorType.
+const (
+	ReportsListReportExports429JSONResponseBodyErrorTypeRateLimitExceededError ReportsListReportExports429JSONResponseBodyErrorType = "rate_limit_exceeded_error"
+)
+
+// Valid indicates whether the value is a known member of the ReportsListReportExports429JSONResponseBodyErrorType enum.
+func (e ReportsListReportExports429JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case ReportsListReportExports429JSONResponseBodyErrorTypeRateLimitExceededError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ReportsListReportExports429JSONResponseBodyObject.
+const (
+	ReportsListReportExports429JSONResponseBodyObjectError ReportsListReportExports429JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the ReportsListReportExports429JSONResponseBodyObject enum.
+func (e ReportsListReportExports429JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case ReportsListReportExports429JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ReportsListReportExports500JSONResponseBodyErrorType.
+const (
+	ReportsListReportExports500JSONResponseBodyErrorTypeInternalServerError ReportsListReportExports500JSONResponseBodyErrorType = "internal_server_error"
+)
+
+// Valid indicates whether the value is a known member of the ReportsListReportExports500JSONResponseBodyErrorType enum.
+func (e ReportsListReportExports500JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case ReportsListReportExports500JSONResponseBodyErrorTypeInternalServerError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ReportsListReportExports500JSONResponseBodyObject.
+const (
+	ReportsListReportExports500JSONResponseBodyObjectError ReportsListReportExports500JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the ReportsListReportExports500JSONResponseBodyObject enum.
+func (e ReportsListReportExports500JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case ReportsListReportExports500JSONResponseBodyObjectError:
 		return true
 	default:
 		return false
@@ -19389,6 +23094,21 @@ func (e TargetedListBuildsConfirm422JSONResponseBody1Object) Valid() bool {
 	}
 }
 
+// Defines values for TargetedListBuildsConfirm422JSONResponseBody2ErrorType.
+const (
+	TargetedListBuildsConfirm422JSONResponseBody2ErrorTypeInsufficientFundsError TargetedListBuildsConfirm422JSONResponseBody2ErrorType = "insufficient_funds_error"
+)
+
+// Valid indicates whether the value is a known member of the TargetedListBuildsConfirm422JSONResponseBody2ErrorType enum.
+func (e TargetedListBuildsConfirm422JSONResponseBody2ErrorType) Valid() bool {
+	switch e {
+	case TargetedListBuildsConfirm422JSONResponseBody2ErrorTypeInsufficientFundsError:
+		return true
+	default:
+		return false
+	}
+}
+
 // Defines values for TargetedListBuildsConfirm422JSONResponseBody2Object.
 const (
 	TargetedListBuildsConfirm422JSONResponseBody2ObjectError TargetedListBuildsConfirm422JSONResponseBody2Object = "error"
@@ -19398,6 +23118,21 @@ const (
 func (e TargetedListBuildsConfirm422JSONResponseBody2Object) Valid() bool {
 	switch e {
 	case TargetedListBuildsConfirm422JSONResponseBody2ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for TargetedListBuildsConfirm422JSONResponseBody3Object.
+const (
+	TargetedListBuildsConfirm422JSONResponseBody3ObjectError TargetedListBuildsConfirm422JSONResponseBody3Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the TargetedListBuildsConfirm422JSONResponseBody3Object enum.
+func (e TargetedListBuildsConfirm422JSONResponseBody3Object) Valid() bool {
+	switch e {
+	case TargetedListBuildsConfirm422JSONResponseBody3ObjectError:
 		return true
 	default:
 		return false
@@ -20898,6 +24633,381 @@ const (
 func (e TemplatesUpdate500JSONResponseBodyObject) Valid() bool {
 	switch e {
 	case TemplatesUpdate500JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for TemplatesCopy400JSONResponseBodyErrorType.
+const (
+	TemplatesCopy400JSONResponseBodyErrorTypeValidationError TemplatesCopy400JSONResponseBodyErrorType = "validation_error"
+)
+
+// Valid indicates whether the value is a known member of the TemplatesCopy400JSONResponseBodyErrorType enum.
+func (e TemplatesCopy400JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case TemplatesCopy400JSONResponseBodyErrorTypeValidationError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for TemplatesCopy400JSONResponseBodyObject.
+const (
+	TemplatesCopy400JSONResponseBodyObjectError TemplatesCopy400JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the TemplatesCopy400JSONResponseBodyObject enum.
+func (e TemplatesCopy400JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case TemplatesCopy400JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for TemplatesCopy401JSONResponseBody0ErrorType.
+const (
+	TemplatesCopy401JSONResponseBody0ErrorTypeMissingAuthError TemplatesCopy401JSONResponseBody0ErrorType = "missing_auth_error"
+)
+
+// Valid indicates whether the value is a known member of the TemplatesCopy401JSONResponseBody0ErrorType enum.
+func (e TemplatesCopy401JSONResponseBody0ErrorType) Valid() bool {
+	switch e {
+	case TemplatesCopy401JSONResponseBody0ErrorTypeMissingAuthError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for TemplatesCopy401JSONResponseBody0Object.
+const (
+	TemplatesCopy401JSONResponseBody0ObjectError TemplatesCopy401JSONResponseBody0Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the TemplatesCopy401JSONResponseBody0Object enum.
+func (e TemplatesCopy401JSONResponseBody0Object) Valid() bool {
+	switch e {
+	case TemplatesCopy401JSONResponseBody0ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for TemplatesCopy401JSONResponseBody1ErrorType.
+const (
+	TemplatesCopy401JSONResponseBody1ErrorTypePermissionMissingError TemplatesCopy401JSONResponseBody1ErrorType = "permission_missing_error"
+)
+
+// Valid indicates whether the value is a known member of the TemplatesCopy401JSONResponseBody1ErrorType enum.
+func (e TemplatesCopy401JSONResponseBody1ErrorType) Valid() bool {
+	switch e {
+	case TemplatesCopy401JSONResponseBody1ErrorTypePermissionMissingError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for TemplatesCopy401JSONResponseBody1Object.
+const (
+	TemplatesCopy401JSONResponseBody1ObjectError TemplatesCopy401JSONResponseBody1Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the TemplatesCopy401JSONResponseBody1Object enum.
+func (e TemplatesCopy401JSONResponseBody1Object) Valid() bool {
+	switch e {
+	case TemplatesCopy401JSONResponseBody1ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for TemplatesCopy404JSONResponseBodyErrorType.
+const (
+	TemplatesCopy404JSONResponseBodyErrorTypeNotFoundError TemplatesCopy404JSONResponseBodyErrorType = "not_found_error"
+)
+
+// Valid indicates whether the value is a known member of the TemplatesCopy404JSONResponseBodyErrorType enum.
+func (e TemplatesCopy404JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case TemplatesCopy404JSONResponseBodyErrorTypeNotFoundError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for TemplatesCopy404JSONResponseBodyObject.
+const (
+	TemplatesCopy404JSONResponseBodyObjectError TemplatesCopy404JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the TemplatesCopy404JSONResponseBodyObject enum.
+func (e TemplatesCopy404JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case TemplatesCopy404JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for TemplatesCopy422JSONResponseBodyObject.
+const (
+	TemplatesCopy422JSONResponseBodyObjectError TemplatesCopy422JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the TemplatesCopy422JSONResponseBodyObject enum.
+func (e TemplatesCopy422JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case TemplatesCopy422JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for TemplatesCopy429JSONResponseBodyErrorType.
+const (
+	TemplatesCopy429JSONResponseBodyErrorTypeRateLimitExceededError TemplatesCopy429JSONResponseBodyErrorType = "rate_limit_exceeded_error"
+)
+
+// Valid indicates whether the value is a known member of the TemplatesCopy429JSONResponseBodyErrorType enum.
+func (e TemplatesCopy429JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case TemplatesCopy429JSONResponseBodyErrorTypeRateLimitExceededError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for TemplatesCopy429JSONResponseBodyObject.
+const (
+	TemplatesCopy429JSONResponseBodyObjectError TemplatesCopy429JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the TemplatesCopy429JSONResponseBodyObject enum.
+func (e TemplatesCopy429JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case TemplatesCopy429JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for TemplatesCopy500JSONResponseBodyErrorType.
+const (
+	TemplatesCopy500JSONResponseBodyErrorTypeInternalServerError TemplatesCopy500JSONResponseBodyErrorType = "internal_server_error"
+)
+
+// Valid indicates whether the value is a known member of the TemplatesCopy500JSONResponseBodyErrorType enum.
+func (e TemplatesCopy500JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case TemplatesCopy500JSONResponseBodyErrorTypeInternalServerError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for TemplatesCopy500JSONResponseBodyObject.
+const (
+	TemplatesCopy500JSONResponseBodyObjectError TemplatesCopy500JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the TemplatesCopy500JSONResponseBodyObject enum.
+func (e TemplatesCopy500JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case TemplatesCopy500JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ThumbnailsGet400JSONResponseBodyErrorType.
+const (
+	ThumbnailsGet400JSONResponseBodyErrorTypeValidationError ThumbnailsGet400JSONResponseBodyErrorType = "validation_error"
+)
+
+// Valid indicates whether the value is a known member of the ThumbnailsGet400JSONResponseBodyErrorType enum.
+func (e ThumbnailsGet400JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case ThumbnailsGet400JSONResponseBodyErrorTypeValidationError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ThumbnailsGet400JSONResponseBodyObject.
+const (
+	ThumbnailsGet400JSONResponseBodyObjectError ThumbnailsGet400JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the ThumbnailsGet400JSONResponseBodyObject enum.
+func (e ThumbnailsGet400JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case ThumbnailsGet400JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ThumbnailsGet401JSONResponseBodyErrorType.
+const (
+	ThumbnailsGet401JSONResponseBodyErrorTypeMissingAuthError ThumbnailsGet401JSONResponseBodyErrorType = "missing_auth_error"
+)
+
+// Valid indicates whether the value is a known member of the ThumbnailsGet401JSONResponseBodyErrorType enum.
+func (e ThumbnailsGet401JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case ThumbnailsGet401JSONResponseBodyErrorTypeMissingAuthError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ThumbnailsGet401JSONResponseBodyObject.
+const (
+	ThumbnailsGet401JSONResponseBodyObjectError ThumbnailsGet401JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the ThumbnailsGet401JSONResponseBodyObject enum.
+func (e ThumbnailsGet401JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case ThumbnailsGet401JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ThumbnailsGet403JSONResponseBody0ErrorType.
+const (
+	ThumbnailsGet403JSONResponseBody0ErrorTypeTemplateThumbnailsDisabledError ThumbnailsGet403JSONResponseBody0ErrorType = "template_thumbnails_disabled_error"
+)
+
+// Valid indicates whether the value is a known member of the ThumbnailsGet403JSONResponseBody0ErrorType enum.
+func (e ThumbnailsGet403JSONResponseBody0ErrorType) Valid() bool {
+	switch e {
+	case ThumbnailsGet403JSONResponseBody0ErrorTypeTemplateThumbnailsDisabledError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ThumbnailsGet403JSONResponseBody0Object.
+const (
+	ThumbnailsGet403JSONResponseBody0ObjectError ThumbnailsGet403JSONResponseBody0Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the ThumbnailsGet403JSONResponseBody0Object enum.
+func (e ThumbnailsGet403JSONResponseBody0Object) Valid() bool {
+	switch e {
+	case ThumbnailsGet403JSONResponseBody0ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ThumbnailsGet403JSONResponseBody1ErrorType.
+const (
+	ThumbnailsGet403JSONResponseBody1ErrorTypePermissionMissingError ThumbnailsGet403JSONResponseBody1ErrorType = "permission_missing_error"
+)
+
+// Valid indicates whether the value is a known member of the ThumbnailsGet403JSONResponseBody1ErrorType enum.
+func (e ThumbnailsGet403JSONResponseBody1ErrorType) Valid() bool {
+	switch e {
+	case ThumbnailsGet403JSONResponseBody1ErrorTypePermissionMissingError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ThumbnailsGet403JSONResponseBody1Object.
+const (
+	ThumbnailsGet403JSONResponseBody1ObjectError ThumbnailsGet403JSONResponseBody1Object = "error"
+)
+
+// Valid indicates whether the value is a known member of the ThumbnailsGet403JSONResponseBody1Object enum.
+func (e ThumbnailsGet403JSONResponseBody1Object) Valid() bool {
+	switch e {
+	case ThumbnailsGet403JSONResponseBody1ObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ThumbnailsGet429JSONResponseBodyErrorType.
+const (
+	ThumbnailsGet429JSONResponseBodyErrorTypeRateLimitExceededError ThumbnailsGet429JSONResponseBodyErrorType = "rate_limit_exceeded_error"
+)
+
+// Valid indicates whether the value is a known member of the ThumbnailsGet429JSONResponseBodyErrorType enum.
+func (e ThumbnailsGet429JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case ThumbnailsGet429JSONResponseBodyErrorTypeRateLimitExceededError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ThumbnailsGet429JSONResponseBodyObject.
+const (
+	ThumbnailsGet429JSONResponseBodyObjectError ThumbnailsGet429JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the ThumbnailsGet429JSONResponseBodyObject enum.
+func (e ThumbnailsGet429JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case ThumbnailsGet429JSONResponseBodyObjectError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ThumbnailsGet500JSONResponseBodyErrorType.
+const (
+	ThumbnailsGet500JSONResponseBodyErrorTypeInternalServerError ThumbnailsGet500JSONResponseBodyErrorType = "internal_server_error"
+)
+
+// Valid indicates whether the value is a known member of the ThumbnailsGet500JSONResponseBodyErrorType enum.
+func (e ThumbnailsGet500JSONResponseBodyErrorType) Valid() bool {
+	switch e {
+	case ThumbnailsGet500JSONResponseBodyErrorTypeInternalServerError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ThumbnailsGet500JSONResponseBodyObject.
+const (
+	ThumbnailsGet500JSONResponseBodyObjectError ThumbnailsGet500JSONResponseBodyObject = "error"
+)
+
+// Valid indicates whether the value is a known member of the ThumbnailsGet500JSONResponseBodyObject enum.
+func (e ThumbnailsGet500JSONResponseBodyObject) Valid() bool {
+	switch e {
+	case ThumbnailsGet500JSONResponseBodyObjectError:
 		return true
 	default:
 		return false
@@ -24369,6 +28479,78 @@ func (e WebhooksListInvocations500JSONResponseBodyObject) Valid() bool {
 	}
 }
 
+// Defines values for AccuracyStatementsList200JSONResponseBodyStatus.
+const (
+	AccuracyStatementsList200JSONResponseBodyStatusError   AccuracyStatementsList200JSONResponseBodyStatus = "error"
+	AccuracyStatementsList200JSONResponseBodyStatusSuccess AccuracyStatementsList200JSONResponseBodyStatus = "success"
+)
+
+// Valid indicates whether the value is a known member of the AccuracyStatementsList200JSONResponseBodyStatus enum.
+func (e AccuracyStatementsList200JSONResponseBodyStatus) Valid() bool {
+	switch e {
+	case AccuracyStatementsList200JSONResponseBodyStatusError:
+		return true
+	case AccuracyStatementsList200JSONResponseBodyStatusSuccess:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for AccuracyStatementsCreate201JSONResponseBodyStatus.
+const (
+	AccuracyStatementsCreate201JSONResponseBodyStatusError   AccuracyStatementsCreate201JSONResponseBodyStatus = "error"
+	AccuracyStatementsCreate201JSONResponseBodyStatusSuccess AccuracyStatementsCreate201JSONResponseBodyStatus = "success"
+)
+
+// Valid indicates whether the value is a known member of the AccuracyStatementsCreate201JSONResponseBodyStatus enum.
+func (e AccuracyStatementsCreate201JSONResponseBodyStatus) Valid() bool {
+	switch e {
+	case AccuracyStatementsCreate201JSONResponseBodyStatusError:
+		return true
+	case AccuracyStatementsCreate201JSONResponseBodyStatusSuccess:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for AccuracyStatementsGet200JSONResponseBodyStatus.
+const (
+	AccuracyStatementsGet200JSONResponseBodyStatusError   AccuracyStatementsGet200JSONResponseBodyStatus = "error"
+	AccuracyStatementsGet200JSONResponseBodyStatusSuccess AccuracyStatementsGet200JSONResponseBodyStatus = "success"
+)
+
+// Valid indicates whether the value is a known member of the AccuracyStatementsGet200JSONResponseBodyStatus enum.
+func (e AccuracyStatementsGet200JSONResponseBodyStatus) Valid() bool {
+	switch e {
+	case AccuracyStatementsGet200JSONResponseBodyStatusError:
+		return true
+	case AccuracyStatementsGet200JSONResponseBodyStatusSuccess:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for AccuracyStatementsGenerate200JSONResponseBodyStatus.
+const (
+	AccuracyStatementsGenerate200JSONResponseBodyStatusError   AccuracyStatementsGenerate200JSONResponseBodyStatus = "error"
+	AccuracyStatementsGenerate200JSONResponseBodyStatusSuccess AccuracyStatementsGenerate200JSONResponseBodyStatus = "success"
+)
+
+// Valid indicates whether the value is a known member of the AccuracyStatementsGenerate200JSONResponseBodyStatus enum.
+func (e AccuracyStatementsGenerate200JSONResponseBodyStatus) Valid() bool {
+	switch e {
+	case AccuracyStatementsGenerate200JSONResponseBodyStatusError:
+		return true
+	case AccuracyStatementsGenerate200JSONResponseBodyStatusSuccess:
+		return true
+	default:
+		return false
+	}
+}
+
 // Defines values for StandardAPIGetLookupInfo200JSONResponseBodyStatus.
 const (
 	StandardAPIGetLookupInfo200JSONResponseBodyStatusError   StandardAPIGetLookupInfo200JSONResponseBodyStatus = "error"
@@ -24666,6 +28848,54 @@ type APIKey struct {
 	// Value The value of the API key.
 	Value string `json:"value"`
 }
+
+// AccuracyStatement defines model for AccuracyStatement.
+type AccuracyStatement struct {
+	// CanadaPost The customer this Canada Post SERP statement certifies.
+	CanadaPost CanadaPostCustomer `json:"canadaPost"`
+
+	// CreatedAt The UTC time at which this statement was created.
+	CreatedAt *time.Time `json:"createdAt,omitempty"`
+
+	// Description An optional description for the statement.
+	Description *string `json:"description,omitempty"`
+
+	// File A signed URL to download the generated statement.
+	File *string `json:"file,omitempty"`
+
+	// Id A unique ID prefixed with `acc_stmt_`.
+	Id *string `json:"id,omitempty"`
+
+	// Organization The ID of the organization that owns this statement.
+	Organization *string `json:"organization,omitempty"`
+
+	// Status The current processing status of the statement.
+	Status *AccuracyStatementStatus `json:"status,omitempty"`
+
+	// UpdatedAt The UTC time at which this statement was last updated.
+	UpdatedAt *time.Time `json:"updatedAt,omitempty"`
+}
+
+// AccuracyStatementCreate defines model for AccuracyStatementCreate.
+type AccuracyStatementCreate struct {
+	// CanadaPost The customer this Canada Post SERP statement certifies.
+	CanadaPost CanadaPostCustomer `json:"canadaPost"`
+
+	// Description An optional description for the statement.
+	Description *string `json:"description,omitempty"`
+}
+
+// AccuracyStatementList defines model for AccuracyStatementList.
+type AccuracyStatementList struct {
+	// Count The total number of statements belonging to the organization.
+	Count int `json:"count"`
+
+	// Data The requested statements.
+	Data []AccuracyStatement `json:"data"`
+}
+
+// AccuracyStatementStatus defines model for AccuracyStatementStatus.
+type AccuracyStatementStatus string
 
 // AdHocReportSampleCreate Model for creating an ad-hoc SQL query.
 type AdHocReportSampleCreate struct {
@@ -25233,8 +29463,18 @@ type BoxChequeCreate struct {
 	Amount int32 `json:"amount"`
 
 	// BankAccount The bank account (ID or reference) from which the cheque amount is drawn.
-	BankAccount string               `json:"bankAccount"`
-	From        BoxChequeCreate_From `json:"from"`
+	BankAccount string `json:"bankAccount"`
+
+	// From A contact provided in one of two ways:
+	//
+	// - an **inline contact body** with the same fields you would use to create a
+	// contact (there is no need to create the contact first), or
+	// - the **ID of an existing contact** (e.g. `contact_123`).
+	//
+	// You never send the full stored contact object (with `id`, `object`,
+	// `addressStatus`, `createdAt`, etc.) here — that shape is only ever returned
+	// in responses.
+	From ContactCreateOrID `json:"from"`
 
 	// LogoURL A URL to a logo for the cheque (optional).
 	LogoURL *string `json:"logoURL,omitempty"`
@@ -25249,24 +29489,18 @@ type BoxChequeCreate struct {
 	MessageTemplate *string `json:"messageTemplate,omitempty"`
 
 	// Number The cheque number.
-	Number int32              `json:"number"`
-	To     BoxChequeCreate_To `json:"to"`
-}
+	Number int32 `json:"number"`
 
-// BoxChequeCreateFrom1 defines model for BoxChequeCreate.From.1.
-type BoxChequeCreateFrom1 = string
-
-// BoxChequeCreate_From defines model for BoxChequeCreate.From.
-type BoxChequeCreate_From struct {
-	union json.RawMessage
-}
-
-// BoxChequeCreateTo1 defines model for BoxChequeCreate.To.1.
-type BoxChequeCreateTo1 = string
-
-// BoxChequeCreate_To defines model for BoxChequeCreate.To.
-type BoxChequeCreate_To struct {
-	union json.RawMessage
+	// To A contact provided in one of two ways:
+	//
+	// - an **inline contact body** with the same fields you would use to create a
+	// contact (there is no need to create the contact first), or
+	// - the **ID of an existing contact** (e.g. `contact_123`).
+	//
+	// You never send the full stored contact object (with `id`, `object`,
+	// `addressStatus`, `createdAt`, etc.) here — that shape is only ever returned
+	// in responses.
+	To ContactCreateOrID `json:"to"`
 }
 
 // BoxCreate defines model for BoxCreate.
@@ -25278,7 +29512,7 @@ type BoxCreate struct {
 	Description *string `json:"description,omitempty"`
 
 	// From The 'from' (sender) of the entire box. Accepts inline ContactCreate or a contactID.
-	From BoxCreate_From `json:"from"`
+	From ContactCreateOrID `json:"from"`
 
 	// MailingClass The mailing class of this order. If not provided, automatically set to `first_class`.
 	MailingClass *OrderMailingClass `json:"mailingClass,omitempty"`
@@ -25293,23 +29527,7 @@ type BoxCreate struct {
 	SendDate *time.Time `json:"sendDate,omitempty"`
 
 	// To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-	To BoxCreate_To `json:"to"`
-}
-
-// BoxCreateFrom1 defines model for BoxCreate.From.1.
-type BoxCreateFrom1 = string
-
-// BoxCreate_From The 'from' (sender) of the entire box. Accepts inline ContactCreate or a contactID.
-type BoxCreate_From struct {
-	union json.RawMessage
-}
-
-// BoxCreateTo1 defines model for BoxCreate.To.1.
-type BoxCreateTo1 = string
-
-// BoxCreate_To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-type BoxCreate_To struct {
-	union json.RawMessage
+	To ContactCreateOrID `json:"to"`
 }
 
 // BoxList A list of Boxes.
@@ -25401,6 +29619,7 @@ type CampaignChequeFields struct {
 	// LetterSettings Settings for the attached letter (e.g., color printing).
 	LetterSettings *struct {
 		// Color Whether to print the attached letter in color.
+		// Deprecated: this property has been marked as deprecated upstream, but no `x-deprecated-reason` was set
 		Color *bool `json:"color,omitempty"`
 	} `json:"letterSettings,omitempty"`
 
@@ -25455,6 +29674,7 @@ type CampaignChequeFieldsCreate struct {
 	// LetterSettings Settings for the attached letter (e.g., color printing).
 	LetterSettings *struct {
 		// Color Whether to print the attached letter in color.
+		// Deprecated: this property has been marked as deprecated upstream, but no `x-deprecated-reason` was set
 		Color *bool `json:"color,omitempty"`
 	} `json:"letterSettings,omitempty"`
 
@@ -25942,6 +30162,36 @@ type CampaignUpdate struct {
 	SnapPack *CampaignSnapPackFieldsCreate `json:"snapPack,omitempty"`
 }
 
+// CanadaPostCustomer The customer a Canada Post SERP statement certifies, printed in the
+// statement's customer block. Canada Post requires the customer's own company
+// name, mailing address and Canada Post customer number. PostGrid is printed
+// as the service bureau.
+type CanadaPostCustomer struct {
+	// CustomerAddress The customer's mailing address. If omitted, PostGrid's address is printed instead.
+	CustomerAddress *struct {
+		// City The city of the address.
+		City string `json:"city"`
+
+		// Line1 The first line of the address.
+		Line1 string `json:"line1"`
+
+		// Line2 The second line of the address.
+		Line2 *string `json:"line2,omitempty"`
+
+		// PostalOrZip The postal code or ZIP code of the address.
+		PostalOrZip string `json:"postalOrZip"`
+
+		// ProvinceOrState The province or state of the address.
+		ProvinceOrState string `json:"provinceOrState"`
+	} `json:"customerAddress,omitempty"`
+
+	// CustomerName The customer's company name.
+	CustomerName string `json:"customerName"`
+
+	// CustomerNumber The customer's 7-digit Canada Post customer number. Leading zeros are accepted and removed.
+	CustomerNumber string `json:"customerNumber"`
+}
+
 // CancelReason defines model for CancelReason.
 type CancelReason string
 
@@ -26116,7 +30366,7 @@ type ChequeCreate struct {
 	Envelope *ChequeCreate_Envelope `json:"envelope,omitempty"`
 
 	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-	From ChequeCreate_From `json:"from"`
+	From ContactCreateOrID `json:"from"`
 
 	// LetterHTML The raw HTML content for a letter attached to the cheque, if any. You can supply _either_ this, `letterTemplate`, or `letterPDF`, but not more than one.
 	LetterHTML *string `json:"letterHTML,omitempty"`
@@ -26152,7 +30402,7 @@ type ChequeCreate struct {
 	Number *int32 `json:"number,omitempty"`
 
 	// RedirectTo Providing this inserts a blank page at the start of the cheque with the recipient you provide here. This leaves the cheque that follows intact, which means you can use this to intercept at cheque at the redirected address and then mail it forward to the final recipient yourself. One use case for this is signing cheques at your office before mailing them out yourself.
-	RedirectTo *ChequeCreate_RedirectTo `json:"redirectTo,omitempty"`
+	RedirectTo *ContactCreateOrID `json:"redirectTo,omitempty"`
 
 	// ReturnEnvelope The return envelope (ID) sent out with the cheque, if any. Note that you must first order return envelopes using the Return Envelopes API.
 	ReturnEnvelope *string `json:"returnEnvelope,omitempty"`
@@ -26164,7 +30414,7 @@ type ChequeCreate struct {
 	Size *ChequeSize `json:"size,omitempty"`
 
 	// To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-	To ChequeCreate_To `json:"to"`
+	To ContactCreateOrID `json:"to"`
 }
 
 // ChequeCreateCurrencyCode0 defines model for ChequeCreate.CurrencyCode.0.
@@ -26189,35 +30439,11 @@ type ChequeCreate_Envelope struct {
 	union json.RawMessage
 }
 
-// ChequeCreateFrom1 defines model for ChequeCreate.From.1.
-type ChequeCreateFrom1 = string
-
-// ChequeCreate_From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-type ChequeCreate_From struct {
-	union json.RawMessage
-}
-
 // ChequeCreateLetterPDF0 defines model for ChequeCreate.LetterPDF.0.
 type ChequeCreateLetterPDF0 = string
 
 // ChequeCreate_LetterPDF A URL pointing to a PDF for the letter attached to the cheque, or the PDF file itself when uploaded via a multipart form request. You can supply _either_ this, `letterHTML`, or `letterTemplate`, but not more than one.
 type ChequeCreate_LetterPDF struct {
-	union json.RawMessage
-}
-
-// ChequeCreateRedirectTo1 defines model for ChequeCreate.RedirectTo.1.
-type ChequeCreateRedirectTo1 = string
-
-// ChequeCreate_RedirectTo Providing this inserts a blank page at the start of the cheque with the recipient you provide here. This leaves the cheque that follows intact, which means you can use this to intercept at cheque at the redirected address and then mail it forward to the final recipient yourself. One use case for this is signing cheques at your office before mailing them out yourself.
-type ChequeCreate_RedirectTo struct {
-	union json.RawMessage
-}
-
-// ChequeCreateTo1 defines model for ChequeCreate.To.1.
-type ChequeCreateTo1 = string
-
-// ChequeCreate_To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-type ChequeCreate_To struct {
 	union json.RawMessage
 }
 
@@ -26242,7 +30468,7 @@ type ChequeCreateMultiPart struct {
 	Envelope *ChequeCreateMultiPart_Envelope `json:"envelope,omitempty"`
 
 	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-	From ChequeCreateMultiPart_From `json:"from"`
+	From ContactCreateOrID `json:"from"`
 
 	// LetterHTML The raw HTML content for a letter attached to the cheque, if any. You can supply _either_ this, `letterTemplate`, or `letterPDF`, but not more than one.
 	LetterHTML *string `json:"letterHTML,omitempty"`
@@ -26278,7 +30504,7 @@ type ChequeCreateMultiPart struct {
 	Number *int32 `json:"number,omitempty"`
 
 	// RedirectTo Providing this inserts a blank page at the start of the cheque with the recipient you provide here. This leaves the cheque that follows intact, which means you can use this to intercept at cheque at the redirected address and then mail it forward to the final recipient yourself. One use case for this is signing cheques at your office before mailing them out yourself.
-	RedirectTo *ChequeCreateMultiPart_RedirectTo `json:"redirectTo,omitempty"`
+	RedirectTo *ContactCreateOrID `json:"redirectTo,omitempty"`
 
 	// ReturnEnvelope The return envelope (ID) sent out with the cheque, if any. Note that you must first order return envelopes using the Return Envelopes API.
 	ReturnEnvelope *string `json:"returnEnvelope,omitempty"`
@@ -26290,7 +30516,7 @@ type ChequeCreateMultiPart struct {
 	Size *ChequeSize `json:"size,omitempty"`
 
 	// To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-	To ChequeCreateMultiPart_To `json:"to"`
+	To ContactCreateOrID `json:"to"`
 }
 
 // ChequeCreateMultiPartCurrencyCode0 defines model for ChequeCreateMultiPart.CurrencyCode.0.
@@ -26315,35 +30541,11 @@ type ChequeCreateMultiPart_Envelope struct {
 	union json.RawMessage
 }
 
-// ChequeCreateMultiPartFrom1 defines model for ChequeCreateMultiPart.From.1.
-type ChequeCreateMultiPartFrom1 = string
-
-// ChequeCreateMultiPart_From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-type ChequeCreateMultiPart_From struct {
-	union json.RawMessage
-}
-
 // ChequeCreateMultiPartLetterPDF0 defines model for ChequeCreateMultiPart.LetterPDF.0.
 type ChequeCreateMultiPartLetterPDF0 = string
 
 // ChequeCreateMultiPart_LetterPDF A URL pointing to a PDF for the letter attached to the cheque, or the PDF file itself when uploaded via a multipart form request. You can supply _either_ this, `letterHTML`, or `letterTemplate`, but not more than one.
 type ChequeCreateMultiPart_LetterPDF struct {
-	union json.RawMessage
-}
-
-// ChequeCreateMultiPartRedirectTo1 defines model for ChequeCreateMultiPart.RedirectTo.1.
-type ChequeCreateMultiPartRedirectTo1 = string
-
-// ChequeCreateMultiPart_RedirectTo Providing this inserts a blank page at the start of the cheque with the recipient you provide here. This leaves the cheque that follows intact, which means you can use this to intercept at cheque at the redirected address and then mail it forward to the final recipient yourself. One use case for this is signing cheques at your office before mailing them out yourself.
-type ChequeCreateMultiPart_RedirectTo struct {
-	union json.RawMessage
-}
-
-// ChequeCreateMultiPartTo1 defines model for ChequeCreateMultiPart.To.1.
-type ChequeCreateMultiPartTo1 = string
-
-// ChequeCreateMultiPart_To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-type ChequeCreateMultiPart_To struct {
 	union json.RawMessage
 }
 
@@ -26545,6 +30747,22 @@ type ContactCreate struct {
 	union json.RawMessage
 }
 
+// ContactCreateOrID A contact provided in one of two ways:
+//
+// - an **inline contact body** with the same fields you would use to create a
+// contact (there is no need to create the contact first), or
+// - the **ID of an existing contact** (e.g. `contact_123`).
+//
+// You never send the full stored contact object (with `id`, `object`,
+// `addressStatus`, `createdAt`, etc.) here — that shape is only ever returned
+// in responses.
+type ContactCreateOrID struct {
+	union json.RawMessage
+}
+
+// ContactCreateOrID1 defines model for ContactCreateOrID.1.
+type ContactCreateOrID1 = string
+
 // ContactCreateWithCompanyName defines model for ContactCreateWithCompanyName.
 type ContactCreateWithCompanyName struct {
 	// AddressLine1 The first line of the contact's address.
@@ -26557,8 +30775,8 @@ type ContactCreateWithCompanyName struct {
 	City        *string `json:"city,omitempty"`
 	CompanyName string  `json:"companyName"`
 
-	// CountryCode The ISO 3611-1 country code of the contact's address.
-	CountryCode string `json:"countryCode"`
+	// CountryCode The ISO 3611-1 country code of the contact's address. If omitted, your organization's default country code is used.
+	CountryCode *string `json:"countryCode,omitempty"`
 
 	// Description An optional string describing this resource. Will be visible in the API and the dashboard.
 	Description *string `json:"description,omitempty"`
@@ -26611,8 +30829,8 @@ type ContactCreateWithFirstName struct {
 	// CompanyName Company name of the contact.
 	CompanyName *string `json:"companyName,omitempty"`
 
-	// CountryCode The ISO 3611-1 country code of the contact's address.
-	CountryCode string `json:"countryCode"`
+	// CountryCode The ISO 3611-1 country code of the contact's address. If omitted, your organization's default country code is used.
+	CountryCode *string `json:"countryCode,omitempty"`
 
 	// Description An optional string describing this resource. Will be visible in the API and the dashboard.
 	Description *string `json:"description,omitempty"`
@@ -26652,6 +30870,218 @@ type ContactCreateWithFirstName struct {
 // CurrencyCode Enum representing the supported currency codes.
 type CurrencyCode string
 
+// CustomEnvelope defines model for CustomEnvelope.
+type CustomEnvelope struct {
+	// Available The quantity of custom envelopes available to use in your orders
+	// immediately. This increases when a custom envelope order is filled and
+	// decreases as you send orders which include this custom envelope.
+	Available *int32 `json:"available,omitempty"`
+
+	// CreatedAt The UTC time at which this resource was created.
+	CreatedAt *time.Time `json:"createdAt,omitempty"`
+
+	// Description An optional string describing this resource. Will be visible in the API and the dashboard.
+	Description *string `json:"description,omitempty"`
+
+	// EnvelopeType The type of the custom envelope.
+	EnvelopeType *CustomEnvelopeType `json:"envelopeType,omitempty"`
+
+	// Id A unique ID prefixed with custom_envelope_
+	Id *string `json:"id,omitempty"`
+
+	// Live `true` if this is a live mode resource else `false`.
+	Live *bool `json:"live,omitempty"`
+
+	// LowInventoryThreshold The low-inventory threshold for this custom envelope. Only returned once
+	// a threshold has been set.
+	LowInventoryThreshold *CustomEnvelopeLowInventoryThreshold `json:"lowInventoryThreshold,omitempty"`
+
+	// Metadata See the section on Metadata.
+	Metadata *map[string]interface{} `json:"metadata,omitempty"`
+
+	// Object Always `custom_envelope`.
+	Object *CustomEnvelopeObject `json:"object,omitempty"`
+
+	// RejectionReason Why the artwork was rejected. Only returned when `status` is `rejected`.
+	RejectionReason *CustomEnvelopeRejectionReason `json:"rejectionReason,omitempty"`
+
+	// Status The review status of the custom envelope's artwork. You can only order
+	// and use custom envelopes that are `approved`.
+	Status *CustomEnvelopeStatus `json:"status,omitempty"`
+
+	// UpdatedAt The UTC time at which this resource was last updated.
+	UpdatedAt *time.Time `json:"updatedAt,omitempty"`
+
+	// Url A signed URL to the PDF of the custom envelope's artwork.
+	Url *string `json:"url,omitempty"`
+}
+
+// CustomEnvelopeObject Always `custom_envelope`.
+type CustomEnvelopeObject string
+
+// CustomEnvelopeCreate defines model for CustomEnvelopeCreate.
+type CustomEnvelopeCreate struct {
+	// Description An optional string describing this resource. Will be visible in the API and the dashboard.
+	Description *string `json:"description,omitempty"`
+
+	// EnvelopeType The type of the custom envelope.
+	EnvelopeType CustomEnvelopeType `json:"envelopeType"`
+
+	// Metadata See the section on Metadata.
+	Metadata *map[string]interface{} `json:"metadata,omitempty"`
+
+	// Pdf A URL pointing to the PDF of the custom envelope's artwork, or the PDF
+	// file itself. The PDF must have exactly two pages (front and back) at the
+	// dimensions of the chosen `envelopeType`.
+	Pdf CustomEnvelopeCreate_Pdf `json:"pdf"`
+}
+
+// CustomEnvelopeCreatePdf0 defines model for CustomEnvelopeCreate.Pdf.0.
+type CustomEnvelopeCreatePdf0 = string
+
+// CustomEnvelopeCreate_Pdf A URL pointing to the PDF of the custom envelope's artwork, or the PDF
+// file itself. The PDF must have exactly two pages (front and back) at the
+// dimensions of the chosen `envelopeType`.
+type CustomEnvelopeCreate_Pdf struct {
+	union json.RawMessage
+}
+
+// CustomEnvelopeCreateMultiPart defines model for CustomEnvelopeCreateMultiPart.
+type CustomEnvelopeCreateMultiPart struct {
+	// Description An optional string describing this resource. Will be visible in the API and the dashboard.
+	Description *string `json:"description,omitempty"`
+
+	// EnvelopeType The type of the custom envelope.
+	EnvelopeType CustomEnvelopeType `json:"envelopeType"`
+
+	// Metadata See the section on Metadata.
+	Metadata *map[string]interface{} `json:"metadata,omitempty"`
+
+	// Pdf A URL pointing to the PDF of the custom envelope's artwork, or the PDF
+	// file itself. The PDF must have exactly two pages (front and back) at the
+	// dimensions of the chosen `envelopeType`.
+	Pdf CustomEnvelopeCreateMultiPart_Pdf `json:"pdf"`
+}
+
+// CustomEnvelopeCreateMultiPartPdf0 defines model for CustomEnvelopeCreateMultiPart.Pdf.0.
+type CustomEnvelopeCreateMultiPartPdf0 = string
+
+// CustomEnvelopeCreateMultiPart_Pdf A URL pointing to the PDF of the custom envelope's artwork, or the PDF
+// file itself. The PDF must have exactly two pages (front and back) at the
+// dimensions of the chosen `envelopeType`.
+type CustomEnvelopeCreateMultiPart_Pdf struct {
+	union json.RawMessage
+}
+
+// CustomEnvelopeList defines model for CustomEnvelopeList.
+type CustomEnvelopeList struct {
+	Data       []CustomEnvelope         `json:"data"`
+	Limit      int32                    `json:"limit"`
+	Object     CustomEnvelopeListObject `json:"object"`
+	Skip       int32                    `json:"skip"`
+	TotalCount int32                    `json:"totalCount"`
+}
+
+// CustomEnvelopeListObject defines model for CustomEnvelopeList.Object.
+type CustomEnvelopeListObject string
+
+// CustomEnvelopeLowInventoryThreshold A low-inventory threshold. When the available quantity of a custom envelope
+// drops to or below the threshold, we send a low-inventory alert email to the
+// Admins of your organization.
+//
+// An alert can only be sent once at least one order for the custom envelope
+// has been filled. Once an alert is sent, we don't send another until a new
+// order is filled or you change the threshold.
+type CustomEnvelopeLowInventoryThreshold struct {
+	// Type How `value` is interpreted.
+	Type CustomEnvelopeLowInventoryThresholdType `json:"type"`
+
+	// Value A whole number. For `fixed` this is an available quantity and must be 1
+	// or greater. For `percentage` this is a percentage of the quantity of the
+	// last filled order and must be between 1 and 100.
+	Value int32 `json:"value"`
+}
+
+// CustomEnvelopeLowInventoryThresholdType How the value of a low-inventory threshold is interpreted.
+type CustomEnvelopeLowInventoryThresholdType string
+
+// CustomEnvelopeOrder defines model for CustomEnvelopeOrder.
+type CustomEnvelopeOrder struct {
+	// CreatedAt The UTC time at which this resource was created.
+	CreatedAt *time.Time `json:"createdAt,omitempty"`
+
+	// CustomEnvelope The ID of the custom envelope that this order replenishes. Expanded into
+	// the full custom envelope object on the individual order retrieval, fill
+	// and cancellation endpoints when `expand[]=customEnvelope` is supplied.
+	CustomEnvelope *CustomEnvelopeOrder_CustomEnvelope `json:"customEnvelope,omitempty"`
+
+	// Description An optional string describing this resource. Will be visible in the API and the dashboard.
+	Description *string `json:"description,omitempty"`
+
+	// Id A unique ID prefixed with custom_envelope_order_
+	Id *string `json:"id,omitempty"`
+
+	// Live `true` if this is a live mode resource else `false`.
+	Live *bool `json:"live,omitempty"`
+
+	// Metadata See the section on Metadata.
+	Metadata *map[string]interface{} `json:"metadata,omitempty"`
+
+	// Object Always `custom_envelope_order`.
+	Object *CustomEnvelopeOrderObject `json:"object,omitempty"`
+
+	// QuantityFilled The quantity of custom envelopes that were filled for this order. Only
+	// returned once the order's status is `filled`.
+	QuantityFilled *int32 `json:"quantityFilled,omitempty"`
+
+	// QuantityOrdered The quantity of custom envelopes ordered. Minimum 5000.
+	QuantityOrdered int32 `json:"quantityOrdered"`
+
+	// Status The status of this order.
+	Status *CustomEnvelopeOrderStatus `json:"status,omitempty"`
+
+	// UpdatedAt The UTC time at which this resource was last updated.
+	UpdatedAt *time.Time `json:"updatedAt,omitempty"`
+}
+
+// CustomEnvelopeOrderCustomEnvelope0 defines model for CustomEnvelopeOrder.CustomEnvelope.0.
+type CustomEnvelopeOrderCustomEnvelope0 = string
+
+// CustomEnvelopeOrder_CustomEnvelope The ID of the custom envelope that this order replenishes. Expanded into
+// the full custom envelope object on the individual order retrieval, fill
+// and cancellation endpoints when `expand[]=customEnvelope` is supplied.
+type CustomEnvelopeOrder_CustomEnvelope struct {
+	union json.RawMessage
+}
+
+// CustomEnvelopeOrderObject Always `custom_envelope_order`.
+type CustomEnvelopeOrderObject string
+
+// CustomEnvelopeOrderList defines model for CustomEnvelopeOrderList.
+type CustomEnvelopeOrderList struct {
+	Data       []CustomEnvelopeOrder         `json:"data"`
+	Limit      int32                         `json:"limit"`
+	Object     CustomEnvelopeOrderListObject `json:"object"`
+	Skip       int32                         `json:"skip"`
+	TotalCount int32                         `json:"totalCount"`
+}
+
+// CustomEnvelopeOrderListObject defines model for CustomEnvelopeOrderList.Object.
+type CustomEnvelopeOrderListObject string
+
+// CustomEnvelopeOrderStatus The status of a custom envelope order.
+type CustomEnvelopeOrderStatus string
+
+// CustomEnvelopeRejectionReason Why the artwork of a custom envelope was rejected.
+type CustomEnvelopeRejectionReason string
+
+// CustomEnvelopeStatus The review status of a custom envelope's artwork.
+type CustomEnvelopeStatus string
+
+// CustomEnvelopeType The type of a custom envelope. This determines the envelope's size and the
+// windows that your artwork must leave clear.
+type CustomEnvelopeType string
+
 // DeletedResponse Generic response for delete operations.
 type DeletedResponse struct {
 	// Deleted Indicates the resource was successfully deleted.
@@ -26676,6 +31106,88 @@ type DigitalOnly struct {
 
 	// Watermark Text to be displayed as a watermark on the digital cheque.
 	Watermark string `json:"watermark"`
+}
+
+// Document defines model for Document.
+type Document struct {
+	// CreatedAt The UTC time at which this resource was created.
+	CreatedAt *time.Time `json:"createdAt,omitempty"`
+
+	// Description An optional string describing this resource. Will be visible in the API and the dashboard.
+	Description *string `json:"description,omitempty"`
+
+	// Error Present when `status` is `failed`, describing why generation failed.
+	Error *DocumentError `json:"error,omitempty"`
+
+	// Id A unique ID prefixed with document_
+	Id *string `json:"id,omitempty"`
+
+	// Live `true` if this is a live mode resource else `false`.
+	Live *bool `json:"live,omitempty"`
+
+	// Metadata See the section on Metadata.
+	Metadata *map[string]interface{} `json:"metadata,omitempty"`
+
+	// Object Always `document`.
+	Object *DocumentObject `json:"object,omitempty"`
+
+	// Status The status of this document.
+	Status *DocumentStatus `json:"status,omitempty"`
+
+	// Template The template object to produce this document. Same object passed in creation.
+	Template *DocumentTemplateSource `json:"template,omitempty"`
+
+	// UpdatedAt The UTC time at which this resource was last updated.
+	UpdatedAt *time.Time `json:"updatedAt,omitempty"`
+
+	// Url A signed URL to download the generated PDF. Only present once `status`
+	// is `generated`.
+	Url *string `json:"url,omitempty"`
+}
+
+// DocumentObject Always `document`.
+type DocumentObject string
+
+// DocumentCreate defines model for DocumentCreate.
+type DocumentCreate struct {
+	// Template The template to render.
+	Template DocumentTemplateSource `json:"template"`
+}
+
+// DocumentError Present when a document's `status` is `failed`.
+type DocumentError struct {
+	// Message A human readable message describing the error.
+	Message string `json:"message"`
+
+	// Type A stable machine-friendly identifier for the error.
+	Type DocumentErrorType `json:"type"`
+}
+
+// DocumentErrorType A stable machine-friendly identifier for why a document failed to generate.
+type DocumentErrorType string
+
+// DocumentList defines model for DocumentList.
+type DocumentList struct {
+	Data       []Document         `json:"data"`
+	Limit      int32              `json:"limit"`
+	Object     DocumentListObject `json:"object"`
+	Skip       int32              `json:"skip"`
+	TotalCount int32              `json:"totalCount"`
+}
+
+// DocumentListObject defines model for DocumentList.Object.
+type DocumentListObject string
+
+// DocumentStatus The status of a document.
+type DocumentStatus string
+
+// DocumentTemplateSource The ID of the template to render and the data merged into its `{{Variable}}` placeholders.
+type DocumentTemplateSource struct {
+	// Id The ID of the template rendered to produce this document.
+	Id string `json:"id"`
+
+	// MergeVariables The data merged into the template's `{{Variable}}` placeholders.
+	MergeVariables *map[string]interface{} `json:"mergeVariables,omitempty"`
 }
 
 // EmailPreferences A set of preferences for how a user should receive emails.
@@ -26860,10 +31372,45 @@ type IntlAddressPreview struct {
 	Type *string `json:"type,omitempty"`
 }
 
+// IntlBatchAddressInput defines model for IntlBatchAddressInput.
+type IntlBatchAddressInput struct {
+	union json.RawMessage
+}
+
+// IntlBatchAddressInput0 defines model for IntlBatchAddressInput.0.
+type IntlBatchAddressInput0 = string
+
 // IntlBatchInput defines model for IntlBatchInput.
 type IntlBatchInput struct {
-	// Addresses Array of addresses to verify. Each item can be a freeform string or a structured address object.
-	Addresses []AddressInput `json:"addresses"`
+	// Addresses Array of addresses to verify. Each item is a freeform string or the structured address fields themselves.
+	Addresses []IntlBatchAddressInput `json:"addresses"`
+}
+
+// IntlBatchStructuredAddress The structured fields of one batch item.
+type IntlBatchStructuredAddress struct {
+	// City The city, town, or locality of the address.
+	City *string `json:"city,omitempty"`
+
+	// Country The country code (ISO 3166-1 alpha-2 or alpha-3).
+	Country *string `json:"country,omitempty"`
+
+	// Line1 The first line of the address (e.g., street address, building, etc.).
+	Line1 string `json:"line1"`
+
+	// Line2 The second line of the address (e.g., apartment, suite, etc.).
+	Line2 *string `json:"line2,omitempty"`
+
+	// Line3 The third line of the address (e.g., additional locality or delivery info).
+	Line3 *string `json:"line3,omitempty"`
+
+	// Line4 The fourth line of the address (e.g., further address details).
+	Line4 *string `json:"line4,omitempty"`
+
+	// PostalOrZip The postal or ZIP code.
+	PostalOrZip *string `json:"postalOrZip,omitempty"`
+
+	// ProvinceOrState The administrative area (e.g., state, province, region).
+	ProvinceOrState *string `json:"provinceOrState,omitempty"`
 }
 
 // IntlBatchVerificationResult defines model for IntlBatchVerificationResult.
@@ -27124,7 +31671,7 @@ type LetterCreateFormMultiPart struct {
 	Envelope *string `json:"envelope,omitempty"`
 
 	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-	From LetterCreateFormMultiPart_From `json:"from"`
+	From ContactCreateOrID `json:"from"`
 
 	// Html The HTML content for the letter. You can supply _either_ this or `template` but not both.
 	Html *string `json:"html,omitempty"`
@@ -27171,15 +31718,7 @@ type LetterCreateFormMultiPart struct {
 	Template *string `json:"template,omitempty"`
 
 	// To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-	To LetterCreateFormMultiPart_To `json:"to"`
-}
-
-// LetterCreateFormMultiPartFrom1 defines model for LetterCreateFormMultiPart.From.1.
-type LetterCreateFormMultiPartFrom1 = string
-
-// LetterCreateFormMultiPart_From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-type LetterCreateFormMultiPart_From struct {
-	union json.RawMessage
+	To ContactCreateOrID `json:"to"`
 }
 
 // LetterCreateFormMultiPartPdf0 defines model for LetterCreateFormMultiPart.Pdf.0.
@@ -27192,14 +31731,6 @@ type LetterCreateFormMultiPart_Pdf struct {
 
 // LetterCreateFormMultiPartPerforatedPage If specified, indicates which letter page is perforated. Currently, only the first page can be perforated.
 type LetterCreateFormMultiPartPerforatedPage float64
-
-// LetterCreateFormMultiPartTo1 defines model for LetterCreateFormMultiPart.To.1.
-type LetterCreateFormMultiPartTo1 = string
-
-// LetterCreateFormMultiPart_To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-type LetterCreateFormMultiPart_To struct {
-	union json.RawMessage
-}
 
 // LetterCreateWithHTML defines model for LetterCreateWithHTML.
 type LetterCreateWithHTML struct {
@@ -27222,7 +31753,7 @@ type LetterCreateWithHTML struct {
 	Envelope *string `json:"envelope,omitempty"`
 
 	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-	From LetterCreateWithHTML_From `json:"from"`
+	From ContactCreateOrID `json:"from"`
 
 	// Html The HTML content for the letter. You can supply _either_ this or `template` but not both.
 	Html string `json:"html"`
@@ -27263,27 +31794,11 @@ type LetterCreateWithHTML struct {
 	Size *LetterSize `json:"size,omitempty"`
 
 	// To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-	To LetterCreateWithHTML_To `json:"to"`
-}
-
-// LetterCreateWithHTMLFrom1 defines model for LetterCreateWithHTML.From.1.
-type LetterCreateWithHTMLFrom1 = string
-
-// LetterCreateWithHTML_From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-type LetterCreateWithHTML_From struct {
-	union json.RawMessage
+	To ContactCreateOrID `json:"to"`
 }
 
 // LetterCreateWithHTMLPerforatedPage If specified, indicates which letter page is perforated. Currently, only the first page can be perforated.
 type LetterCreateWithHTMLPerforatedPage float64
-
-// LetterCreateWithHTMLTo1 defines model for LetterCreateWithHTML.To.1.
-type LetterCreateWithHTMLTo1 = string
-
-// LetterCreateWithHTML_To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-type LetterCreateWithHTML_To struct {
-	union json.RawMessage
-}
 
 // LetterCreateWithPDF defines model for LetterCreateWithPDF.
 type LetterCreateWithPDF struct {
@@ -27306,7 +31821,7 @@ type LetterCreateWithPDF struct {
 	Envelope *string `json:"envelope,omitempty"`
 
 	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-	From LetterCreateWithPDF_From `json:"from"`
+	From ContactCreateOrID `json:"from"`
 
 	// MailingClass The mailing class of this order. If not provided, automatically set to `first_class`.
 	MailingClass *OrderMailingClass `json:"mailingClass,omitempty"`
@@ -27347,15 +31862,7 @@ type LetterCreateWithPDF struct {
 	Size *LetterSize `json:"size,omitempty"`
 
 	// To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-	To LetterCreateWithPDF_To `json:"to"`
-}
-
-// LetterCreateWithPDFFrom1 defines model for LetterCreateWithPDF.From.1.
-type LetterCreateWithPDFFrom1 = string
-
-// LetterCreateWithPDF_From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-type LetterCreateWithPDF_From struct {
-	union json.RawMessage
+	To ContactCreateOrID `json:"to"`
 }
 
 // LetterCreateWithPDFPdf0 defines model for LetterCreateWithPDF.Pdf.0.
@@ -27368,14 +31875,6 @@ type LetterCreateWithPDF_Pdf struct {
 
 // LetterCreateWithPDFPerforatedPage If specified, indicates which letter page is perforated. Currently, only the first page can be perforated.
 type LetterCreateWithPDFPerforatedPage float64
-
-// LetterCreateWithPDFTo1 defines model for LetterCreateWithPDF.To.1.
-type LetterCreateWithPDFTo1 = string
-
-// LetterCreateWithPDF_To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-type LetterCreateWithPDF_To struct {
-	union json.RawMessage
-}
 
 // LetterCreateWithTemplate defines model for LetterCreateWithTemplate.
 type LetterCreateWithTemplate struct {
@@ -27398,7 +31897,7 @@ type LetterCreateWithTemplate struct {
 	Envelope *string `json:"envelope,omitempty"`
 
 	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-	From LetterCreateWithTemplate_From `json:"from"`
+	From ContactCreateOrID `json:"from"`
 
 	// MailingClass The mailing class of this order. If not provided, automatically set to `first_class`.
 	MailingClass *OrderMailingClass `json:"mailingClass,omitempty"`
@@ -27439,27 +31938,11 @@ type LetterCreateWithTemplate struct {
 	Template string `json:"template"`
 
 	// To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-	To LetterCreateWithTemplate_To `json:"to"`
-}
-
-// LetterCreateWithTemplateFrom1 defines model for LetterCreateWithTemplate.From.1.
-type LetterCreateWithTemplateFrom1 = string
-
-// LetterCreateWithTemplate_From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-type LetterCreateWithTemplate_From struct {
-	union json.RawMessage
+	To ContactCreateOrID `json:"to"`
 }
 
 // LetterCreateWithTemplatePerforatedPage If specified, indicates which letter page is perforated. Currently, only the first page can be perforated.
 type LetterCreateWithTemplatePerforatedPage float64
-
-// LetterCreateWithTemplateTo1 defines model for LetterCreateWithTemplate.To.1.
-type LetterCreateWithTemplateTo1 = string
-
-// LetterCreateWithTemplate_To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-type LetterCreateWithTemplate_To struct {
-	union json.RawMessage
-}
 
 // LetterEnvelopeType The type of envelope used for the letter.
 type LetterEnvelopeType string
@@ -27477,7 +31960,8 @@ type LetterList struct {
 type LetterListObject string
 
 // LetterPlacement Enum representing where a letter attached to a cheque is placed relative to
-// the cheque page.
+// the cheque page. The `before_cheque` placement is available on request,
+// e-mail support@postgrid.com for access.
 type LetterPlacement string
 
 // LetterPremiumPaperID defines model for LetterPremiumPaperID.
@@ -27983,7 +32467,7 @@ type PostcardCreateFormMultiPart struct {
 	Description *string `json:"description,omitempty"`
 
 	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`. Unlike other order types, the sender address is optional for postcards.
-	From *PostcardCreateFormMultiPart_From `json:"from,omitempty"`
+	From *ContactCreateOrID `json:"from,omitempty"`
 
 	// FrontHTML The HTML content for the front of the postcard. You can supply _either_ this or `frontTemplate` but not both.
 	FrontHTML *string `json:"frontHTML,omitempty"`
@@ -28023,15 +32507,7 @@ type PostcardCreateFormMultiPart struct {
 	Size PostcardSize `json:"size"`
 
 	// To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-	To PostcardCreateFormMultiPart_To `json:"to"`
-}
-
-// PostcardCreateFormMultiPartFrom1 defines model for PostcardCreateFormMultiPart.From.1.
-type PostcardCreateFormMultiPartFrom1 = string
-
-// PostcardCreateFormMultiPart_From The contact information of the sender. You can pass contact information inline here just like you can for the `to`. Unlike other order types, the sender address is optional for postcards.
-type PostcardCreateFormMultiPart_From struct {
-	union json.RawMessage
+	To ContactCreateOrID `json:"to"`
 }
 
 // PostcardCreateFormMultiPartPdf0 defines model for PostcardCreateFormMultiPart.Pdf.0.
@@ -28039,14 +32515,6 @@ type PostcardCreateFormMultiPartPdf0 = string
 
 // PostcardCreateFormMultiPart_Pdf A 2 page PDF file upload or URL (front, then back). Cannot be combined with the HTML or template fields.
 type PostcardCreateFormMultiPart_Pdf struct {
-	union json.RawMessage
-}
-
-// PostcardCreateFormMultiPartTo1 defines model for PostcardCreateFormMultiPart.To.1.
-type PostcardCreateFormMultiPartTo1 = string
-
-// PostcardCreateFormMultiPart_To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-type PostcardCreateFormMultiPart_To struct {
 	union json.RawMessage
 }
 
@@ -28059,7 +32527,7 @@ type PostcardCreateWithHTML struct {
 	Description *string `json:"description,omitempty"`
 
 	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`. Unlike other order types, the sender address is optional for postcards.
-	From *PostcardCreateWithHTML_From `json:"from,omitempty"`
+	From *ContactCreateOrID `json:"from,omitempty"`
 
 	// FrontHTML The HTML content for the front of the postcard. You can supply _either_ this or `frontTemplate` but not both.
 	FrontHTML string `json:"frontHTML"`
@@ -28093,23 +32561,7 @@ type PostcardCreateWithHTML struct {
 	Size PostcardSize `json:"size"`
 
 	// To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-	To PostcardCreateWithHTML_To `json:"to"`
-}
-
-// PostcardCreateWithHTMLFrom1 defines model for PostcardCreateWithHTML.From.1.
-type PostcardCreateWithHTMLFrom1 = string
-
-// PostcardCreateWithHTML_From The contact information of the sender. You can pass contact information inline here just like you can for the `to`. Unlike other order types, the sender address is optional for postcards.
-type PostcardCreateWithHTML_From struct {
-	union json.RawMessage
-}
-
-// PostcardCreateWithHTMLTo1 defines model for PostcardCreateWithHTML.To.1.
-type PostcardCreateWithHTMLTo1 = string
-
-// PostcardCreateWithHTML_To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-type PostcardCreateWithHTML_To struct {
-	union json.RawMessage
+	To ContactCreateOrID `json:"to"`
 }
 
 // PostcardCreateWithPDFFile defines model for PostcardCreateWithPDFFile.
@@ -28118,7 +32570,7 @@ type PostcardCreateWithPDFFile struct {
 	Description *string `json:"description,omitempty"`
 
 	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`. Unlike other order types, the sender address is optional for postcards.
-	From *PostcardCreateWithPDFFile_From `json:"from,omitempty"`
+	From *ContactCreateOrID `json:"from,omitempty"`
 
 	// MailingClass The mailing class of this order. If not provided, automatically set to `first_class`.
 	MailingClass *OrderMailingClass `json:"mailingClass,omitempty"`
@@ -28152,23 +32604,7 @@ type PostcardCreateWithPDFFile struct {
 	Size PostcardSize `json:"size"`
 
 	// To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-	To PostcardCreateWithPDFFile_To `json:"to"`
-}
-
-// PostcardCreateWithPDFFileFrom1 defines model for PostcardCreateWithPDFFile.From.1.
-type PostcardCreateWithPDFFileFrom1 = string
-
-// PostcardCreateWithPDFFile_From The contact information of the sender. You can pass contact information inline here just like you can for the `to`. Unlike other order types, the sender address is optional for postcards.
-type PostcardCreateWithPDFFile_From struct {
-	union json.RawMessage
-}
-
-// PostcardCreateWithPDFFileTo1 defines model for PostcardCreateWithPDFFile.To.1.
-type PostcardCreateWithPDFFileTo1 = string
-
-// PostcardCreateWithPDFFile_To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-type PostcardCreateWithPDFFile_To struct {
-	union json.RawMessage
+	To ContactCreateOrID `json:"to"`
 }
 
 // PostcardCreateWithPDFURL defines model for PostcardCreateWithPDFURL.
@@ -28177,7 +32613,7 @@ type PostcardCreateWithPDFURL struct {
 	Description *string `json:"description,omitempty"`
 
 	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`. Unlike other order types, the sender address is optional for postcards.
-	From *PostcardCreateWithPDFURL_From `json:"from,omitempty"`
+	From *ContactCreateOrID `json:"from,omitempty"`
 
 	// MailingClass The mailing class of this order. If not provided, automatically set to `first_class`.
 	MailingClass *OrderMailingClass `json:"mailingClass,omitempty"`
@@ -28211,23 +32647,7 @@ type PostcardCreateWithPDFURL struct {
 	Size PostcardSize `json:"size"`
 
 	// To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-	To PostcardCreateWithPDFURL_To `json:"to"`
-}
-
-// PostcardCreateWithPDFURLFrom1 defines model for PostcardCreateWithPDFURL.From.1.
-type PostcardCreateWithPDFURLFrom1 = string
-
-// PostcardCreateWithPDFURL_From The contact information of the sender. You can pass contact information inline here just like you can for the `to`. Unlike other order types, the sender address is optional for postcards.
-type PostcardCreateWithPDFURL_From struct {
-	union json.RawMessage
-}
-
-// PostcardCreateWithPDFURLTo1 defines model for PostcardCreateWithPDFURL.To.1.
-type PostcardCreateWithPDFURLTo1 = string
-
-// PostcardCreateWithPDFURL_To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-type PostcardCreateWithPDFURL_To struct {
-	union json.RawMessage
+	To ContactCreateOrID `json:"to"`
 }
 
 // PostcardCreateWithTemplate defines model for PostcardCreateWithTemplate.
@@ -28239,7 +32659,7 @@ type PostcardCreateWithTemplate struct {
 	Description *string `json:"description,omitempty"`
 
 	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`. Unlike other order types, the sender address is optional for postcards.
-	From *PostcardCreateWithTemplate_From `json:"from,omitempty"`
+	From *ContactCreateOrID `json:"from,omitempty"`
 
 	// FrontTemplate The template ID for the front of the postcard. You can supply _either_ this or `frontHTML` but not both.
 	FrontTemplate string `json:"frontTemplate"`
@@ -28273,23 +32693,7 @@ type PostcardCreateWithTemplate struct {
 	Size PostcardSize `json:"size"`
 
 	// To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-	To PostcardCreateWithTemplate_To `json:"to"`
-}
-
-// PostcardCreateWithTemplateFrom1 defines model for PostcardCreateWithTemplate.From.1.
-type PostcardCreateWithTemplateFrom1 = string
-
-// PostcardCreateWithTemplate_From The contact information of the sender. You can pass contact information inline here just like you can for the `to`. Unlike other order types, the sender address is optional for postcards.
-type PostcardCreateWithTemplate_From struct {
-	union json.RawMessage
-}
-
-// PostcardCreateWithTemplateTo1 defines model for PostcardCreateWithTemplate.To.1.
-type PostcardCreateWithTemplateTo1 = string
-
-// PostcardCreateWithTemplate_To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-type PostcardCreateWithTemplate_To struct {
-	union json.RawMessage
+	To ContactCreateOrID `json:"to"`
 }
 
 // PostcardList defines model for PostcardList.
@@ -28353,6 +32757,9 @@ type Report struct {
 	// Object Always `report`.
 	Object ReportObject `json:"object"`
 
+	// Schedule The report's schedule, if it runs automatically.
+	Schedule *ReportSchedule `json:"schedule,omitempty"`
+
 	// SqlQuery The SQL query defining the report.
 	SqlQuery string `json:"sqlQuery"`
 
@@ -28376,7 +32783,22 @@ type ReportBase struct {
 }
 
 // ReportCreate Model for creating a new Report.
-type ReportCreate = ReportBase
+type ReportCreate struct {
+	// Description An optional user-friendly description for the report.
+	Description *string `json:"description,omitempty"`
+
+	// Metadata Optional key-value metadata associated with the report.
+	Metadata *map[string]string `json:"metadata,omitempty"`
+
+	// Schedule Run this report automatically on a cadence. A scheduled report cannot use
+	// query parameters, since nothing supplies their values when it runs on its
+	// own — use DuckDB's date/time functions (for example `CURRENT_DATE` or
+	// `NOW()`) for dynamic values instead.
+	Schedule *ScheduleSpec `json:"schedule,omitempty"`
+
+	// SqlQuery The SQL query defining the report.
+	SqlQuery string `json:"sqlQuery"`
+}
 
 // ReportExport Represents a report export job and its results.
 type ReportExport struct {
@@ -28447,6 +32869,18 @@ type ReportExportBase struct {
 // ReportExportCreate Model for creating a new Report Export.
 type ReportExportCreate = ReportExportBase
 
+// ReportExportList Represents a list of Report Exports.
+type ReportExportList struct {
+	Data       []ReportExport         `json:"data"`
+	Limit      int32                  `json:"limit"`
+	Object     ReportExportListObject `json:"object"`
+	Skip       int32                  `json:"skip"`
+	TotalCount int32                  `json:"totalCount"`
+}
+
+// ReportExportListObject defines model for ReportExportList.Object.
+type ReportExportListObject string
+
 // ReportList Represents a list of Reports.
 type ReportList struct {
 	Data       []Report         `json:"data"`
@@ -28467,12 +32901,18 @@ type ReportSample struct {
 	// Id Unique identifier for the sample query result.
 	Id string `json:"id"`
 
+	// Object Always `report_sample`.
+	Object ReportSampleObject `json:"object"`
+
 	// Records The actual data records returned by the sample query.
 	Records []ReportRecord `json:"records"`
 
 	// Report The ID of the report this sample was generated from, or null for ad-hoc samples.
 	Report *string `json:"report"`
 }
+
+// ReportSampleObject Always `report_sample`.
+type ReportSampleObject string
 
 // ReportSampleCreateBase Base properties for creating a report sample.
 type ReportSampleCreateBase struct {
@@ -28483,6 +32923,24 @@ type ReportSampleCreateBase struct {
 	Params *[]string `json:"params,omitempty"`
 }
 
+// ReportSchedule The schedule stored on a saved report.
+type ReportSchedule struct {
+	// Description The cadence in words, for example `Every 2 weeks on Monday at 9:00 AM (America/Toronto)`.
+	Description *string `json:"description,omitempty"`
+
+	// Frequency The cadence as a number + unit, for example `1h`, `2d`, or `1m`.
+	Frequency string `json:"frequency"`
+
+	// NextRun The next time this report will run.
+	NextRun time.Time `json:"nextRun"`
+
+	// NotificationEmails Addresses emailed when a run finishes.
+	NotificationEmails *[]string `json:"notificationEmails,omitempty"`
+
+	// Spec The schedule decomposed back into the fields used to create it.
+	Spec *ScheduleSpec `json:"spec,omitempty"`
+}
+
 // ReportUpdate Model for updating an existing Report.
 type ReportUpdate struct {
 	// Description An optional user-friendly description for the report. Set to null to remove.
@@ -28490,6 +32948,9 @@ type ReportUpdate struct {
 
 	// Metadata Optional key-value metadata associated with the report. Set to null to remove.
 	Metadata *map[string]string `json:"metadata,omitempty"`
+
+	// Schedule The report's schedule. Set to null to stop the report running on its own.
+	Schedule *ScheduleSpec `json:"schedule,omitempty"`
 
 	// SqlQuery The SQL query defining the report.
 	SqlQuery *string `json:"sqlQuery,omitempty"`
@@ -28608,16 +33069,7 @@ type ReturnEnvelopeCreate struct {
 
 	// To A contact ID or a contact object containing the address that will be
 	// printed onto the return envelope.
-	To ReturnEnvelopeCreate_To `json:"to"`
-}
-
-// ReturnEnvelopeCreateTo1 defines model for ReturnEnvelopeCreate.To.1.
-type ReturnEnvelopeCreateTo1 = string
-
-// ReturnEnvelopeCreate_To A contact ID or a contact object containing the address that will be
-// printed onto the return envelope.
-type ReturnEnvelopeCreate_To struct {
-	union json.RawMessage
+	To ContactCreateOrID `json:"to"`
 }
 
 // ReturnEnvelopeList defines model for ReturnEnvelopeList.
@@ -28702,6 +33154,102 @@ type ReturnEnvelopeOrderStatus string
 // SavedReportSampleCreate Model for creating a sample from a saved report.
 type SavedReportSampleCreate = ReportSampleCreateBase
 
+// ScheduleFrequencyUnit The cadence units a report schedule may use: hour, day, week, month, or year.
+type ScheduleFrequencyUnit string
+
+// SchedulePreview The cadence PostGrid derived from a schedule, returned without saving
+// anything. Useful for confirming when a schedule would actually run.
+type SchedulePreview struct {
+	// DayOfMonth The day of the month the schedule resolved to, clamped to a day that exists.
+	DayOfMonth int32 `json:"dayOfMonth"`
+
+	// DayOfMonthOptions The days of the month this cadence may be anchored to, with display labels.
+	DayOfMonthOptions []struct {
+		// Label The day as an ordinal, for example `15th`.
+		Label string `json:"label"`
+
+		// Value The day of the month.
+		Value int32 `json:"value"`
+	} `json:"dayOfMonthOptions"`
+
+	// Description The cadence in words, for example `Every 2 weeks on Monday at 9:00 AM (America/Toronto)`.
+	Description string `json:"description"`
+
+	// FirstRunLabel The first run as an absolute instant, for example `Monday, June 15, 2026 at 9:00 AM`.
+	FirstRunLabel string `json:"firstRunLabel"`
+
+	// Frequency The cadence as a number + unit, for example `1h` or `2d`.
+	Frequency string `json:"frequency"`
+
+	// NextRun When the report would run next.
+	NextRun time.Time `json:"nextRun"`
+
+	// QueryHasParameters True if the supplied `sqlQuery` uses parameters, which makes it
+	// unschedulable.
+	QueryHasParameters bool `json:"queryHasParameters"`
+}
+
+// SchedulePreviewCreate Model for previewing a schedule without saving it.
+type SchedulePreviewCreate struct {
+	// DayOfMonth Monthly and yearly schedules only. Monthly schedules are capped at `28`
+	// so a run never skips a short month.
+	DayOfMonth *int32 `json:"dayOfMonth,omitempty"`
+
+	// DayOfWeek Weekly schedules only. `0` is Sunday through `6` for Saturday.
+	DayOfWeek *int32 `json:"dayOfWeek,omitempty"`
+
+	// Interval How many `unit`s pass between runs — the `2` in "every 2 weeks".
+	Interval int32 `json:"interval"`
+
+	// Month Yearly schedules only. `0` is January through `11` for December.
+	Month *int32 `json:"month,omitempty"`
+
+	// NotificationEmails Up to 10 addresses to email when a run finishes. Each must belong to a
+	// user in the same organization as the report; others are skipped. Omit or
+	// pass an empty array to send no email.
+	NotificationEmails *[]string `json:"notificationEmails,omitempty"`
+
+	// SqlQuery The query the schedule would run against. Supplying it flags a
+	// parameterized query as unschedulable via `queryHasParameters`. It is only
+	// inspected — creating or updating a report always uses the report's own
+	// `sqlQuery`.
+	SqlQuery *string `json:"sqlQuery,omitempty"`
+
+	// Time The 24-hour `HH:mm` time of day the report runs, in `America/Toronto`.
+	Time string `json:"time"`
+
+	// Unit The cadence unit.
+	Unit ScheduleFrequencyUnit `json:"unit"`
+}
+
+// ScheduleSpec How often a saved report should run itself. Times are interpreted in the
+// `America/Toronto` timezone, and the smallest supported cadence is one hour.
+type ScheduleSpec struct {
+	// DayOfMonth Monthly and yearly schedules only. Monthly schedules are capped at `28`
+	// so a run never skips a short month.
+	DayOfMonth *int32 `json:"dayOfMonth,omitempty"`
+
+	// DayOfWeek Weekly schedules only. `0` is Sunday through `6` for Saturday.
+	DayOfWeek *int32 `json:"dayOfWeek,omitempty"`
+
+	// Interval How many `unit`s pass between runs — the `2` in "every 2 weeks".
+	Interval int32 `json:"interval"`
+
+	// Month Yearly schedules only. `0` is January through `11` for December.
+	Month *int32 `json:"month,omitempty"`
+
+	// NotificationEmails Up to 10 addresses to email when a run finishes. Each must belong to a
+	// user in the same organization as the report; others are skipped. Omit or
+	// pass an empty array to send no email.
+	NotificationEmails *[]string `json:"notificationEmails,omitempty"`
+
+	// Time The 24-hour `HH:mm` time of day the report runs, in `America/Toronto`.
+	Time string `json:"time"`
+
+	// Unit The cadence unit.
+	Unit ScheduleFrequencyUnit `json:"unit"`
+}
+
 // SelfMailer defines model for SelfMailer.
 type SelfMailer struct {
 	// Cancellation The cancellation details of this order. Populated if the order has been cancelled.
@@ -28743,6 +33291,16 @@ type SelfMailer struct {
 	// Object Always `self_mailer`.
 	Object SelfMailerObject `json:"object"`
 
+	// Paper Premium paper selection used for this self-mailer.
+	//
+	// Available values include:
+	// - `standard`
+	// - `premium_paper_self_mailer_standard_100lb`
+	//
+	// Not all premium paper options are enabled for all organizations.
+	// If omitted, the organization default self-mailer paper is used when configured; otherwise `standard`.
+	Paper *SelfMailerPremiumPaperID `json:"paper,omitempty"`
+
 	// SendDate This order will transition from `ready` to `printing` on the day after this date. For example, if this is a date on Tuesday, the order will transition to `printing` on Wednesday at midnight eastern time.
 	SendDate time.Time `json:"sendDate"`
 
@@ -28770,6 +33328,9 @@ type SelfMailer struct {
 // SelfMailerObject Always `self_mailer`.
 type SelfMailerObject string
 
+// SelfMailerBuiltInPremiumPaperID Built-in paper IDs for self-mailer products. Actual availability depends on your organization settings.
+type SelfMailerBuiltInPremiumPaperID string
+
 // SelfMailerCreate defines model for SelfMailerCreate.
 type SelfMailerCreate struct {
 	union json.RawMessage
@@ -28781,7 +33342,7 @@ type SelfMailerCreateFormMultiPart struct {
 	Description *string `json:"description,omitempty"`
 
 	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-	From SelfMailerCreateFormMultiPart_From `json:"from"`
+	From ContactCreateOrID `json:"from"`
 
 	// InsideHTML The HTML content for the inside of the self-mailer. You can supply _either_ this or `insideTemplate` but not both.
 	InsideHTML *string `json:"insideHTML,omitempty"`
@@ -28804,6 +33365,16 @@ type SelfMailerCreateFormMultiPart struct {
 	// OutsideTemplate The template ID for the outside of the self-mailer. You can supply _either_ this or `outsideHTML` but not both.
 	OutsideTemplate *string `json:"outsideTemplate,omitempty"`
 
+	// Paper Premium paper selection used for this self-mailer.
+	//
+	// Available values include:
+	// - `standard`
+	// - `premium_paper_self_mailer_standard_100lb`
+	//
+	// Not all premium paper options are enabled for all organizations.
+	// If omitted, the organization default self-mailer paper is used when configured; otherwise `standard`.
+	Paper *SelfMailerPremiumPaperID `json:"paper,omitempty"`
+
 	// Pdf A 2 page PDF file upload or URL (inside, then outside). Cannot be combined with the HTML or template fields.
 	Pdf *SelfMailerCreateFormMultiPart_Pdf `json:"pdf,omitempty"`
 
@@ -28814,15 +33385,7 @@ type SelfMailerCreateFormMultiPart struct {
 	Size SelfMailerSize `json:"size"`
 
 	// To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-	To SelfMailerCreateFormMultiPart_To `json:"to"`
-}
-
-// SelfMailerCreateFormMultiPartFrom1 defines model for SelfMailerCreateFormMultiPart.From.1.
-type SelfMailerCreateFormMultiPartFrom1 = string
-
-// SelfMailerCreateFormMultiPart_From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-type SelfMailerCreateFormMultiPart_From struct {
-	union json.RawMessage
+	To ContactCreateOrID `json:"to"`
 }
 
 // SelfMailerCreateFormMultiPartPdf0 defines model for SelfMailerCreateFormMultiPart.Pdf.0.
@@ -28833,21 +33396,13 @@ type SelfMailerCreateFormMultiPart_Pdf struct {
 	union json.RawMessage
 }
 
-// SelfMailerCreateFormMultiPartTo1 defines model for SelfMailerCreateFormMultiPart.To.1.
-type SelfMailerCreateFormMultiPartTo1 = string
-
-// SelfMailerCreateFormMultiPart_To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-type SelfMailerCreateFormMultiPart_To struct {
-	union json.RawMessage
-}
-
 // SelfMailerCreateWithHTML defines model for SelfMailerCreateWithHTML.
 type SelfMailerCreateWithHTML struct {
 	// Description An optional string describing this resource. Will be visible in the API and the dashboard.
 	Description *string `json:"description,omitempty"`
 
 	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-	From SelfMailerCreateWithHTML_From `json:"from"`
+	From ContactCreateOrID `json:"from"`
 
 	// InsideHTML The HTML content for the inside of the self-mailer. You can supply _either_ this or `insideTemplate` but not both.
 	InsideHTML string `json:"insideHTML"`
@@ -28864,6 +33419,16 @@ type SelfMailerCreateWithHTML struct {
 	// OutsideHTML The HTML content for the outside of the self-mailer. You can supply _either_ this or `outsideTemplate` but not both.
 	OutsideHTML string `json:"outsideHTML"`
 
+	// Paper Premium paper selection used for this self-mailer.
+	//
+	// Available values include:
+	// - `standard`
+	// - `premium_paper_self_mailer_standard_100lb`
+	//
+	// Not all premium paper options are enabled for all organizations.
+	// If omitted, the organization default self-mailer paper is used when configured; otherwise `standard`.
+	Paper *SelfMailerPremiumPaperID `json:"paper,omitempty"`
+
 	// SendDate This order will transition from `ready` to `printing` on the day after this date. You can use this parameter to schedule orders for a future date.
 	SendDate *time.Time `json:"sendDate,omitempty"`
 
@@ -28871,23 +33436,7 @@ type SelfMailerCreateWithHTML struct {
 	Size SelfMailerSize `json:"size"`
 
 	// To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-	To SelfMailerCreateWithHTML_To `json:"to"`
-}
-
-// SelfMailerCreateWithHTMLFrom1 defines model for SelfMailerCreateWithHTML.From.1.
-type SelfMailerCreateWithHTMLFrom1 = string
-
-// SelfMailerCreateWithHTML_From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-type SelfMailerCreateWithHTML_From struct {
-	union json.RawMessage
-}
-
-// SelfMailerCreateWithHTMLTo1 defines model for SelfMailerCreateWithHTML.To.1.
-type SelfMailerCreateWithHTMLTo1 = string
-
-// SelfMailerCreateWithHTML_To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-type SelfMailerCreateWithHTML_To struct {
-	union json.RawMessage
+	To ContactCreateOrID `json:"to"`
 }
 
 // SelfMailerCreateWithPDFFile defines model for SelfMailerCreateWithPDFFile.
@@ -28896,7 +33445,7 @@ type SelfMailerCreateWithPDFFile struct {
 	Description *string `json:"description,omitempty"`
 
 	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-	From SelfMailerCreateWithPDFFile_From `json:"from"`
+	From ContactCreateOrID `json:"from"`
 
 	// MailingClass The mailing class of this order. If not provided, automatically set to `first_class`.
 	MailingClass *OrderMailingClass `json:"mailingClass,omitempty"`
@@ -28906,6 +33455,16 @@ type SelfMailerCreateWithPDFFile struct {
 
 	// Metadata See the section on Metadata.
 	Metadata *map[string]interface{} `json:"metadata,omitempty"`
+
+	// Paper Premium paper selection used for this self-mailer.
+	//
+	// Available values include:
+	// - `standard`
+	// - `premium_paper_self_mailer_standard_100lb`
+	//
+	// Not all premium paper options are enabled for all organizations.
+	// If omitted, the organization default self-mailer paper is used when configured; otherwise `standard`.
+	Paper *SelfMailerPremiumPaperID `json:"paper,omitempty"`
 
 	// Pdf A 2 page PDF file. The first page is the inside of the self-mailer and the second page is the outside (where the address will be stamped on).
 	Pdf BinaryFile `json:"pdf"`
@@ -28917,23 +33476,7 @@ type SelfMailerCreateWithPDFFile struct {
 	Size SelfMailerSize `json:"size"`
 
 	// To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-	To SelfMailerCreateWithPDFFile_To `json:"to"`
-}
-
-// SelfMailerCreateWithPDFFileFrom1 defines model for SelfMailerCreateWithPDFFile.From.1.
-type SelfMailerCreateWithPDFFileFrom1 = string
-
-// SelfMailerCreateWithPDFFile_From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-type SelfMailerCreateWithPDFFile_From struct {
-	union json.RawMessage
-}
-
-// SelfMailerCreateWithPDFFileTo1 defines model for SelfMailerCreateWithPDFFile.To.1.
-type SelfMailerCreateWithPDFFileTo1 = string
-
-// SelfMailerCreateWithPDFFile_To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-type SelfMailerCreateWithPDFFile_To struct {
-	union json.RawMessage
+	To ContactCreateOrID `json:"to"`
 }
 
 // SelfMailerCreateWithPDFURL defines model for SelfMailerCreateWithPDFURL.
@@ -28942,7 +33485,7 @@ type SelfMailerCreateWithPDFURL struct {
 	Description *string `json:"description,omitempty"`
 
 	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-	From SelfMailerCreateWithPDFURL_From `json:"from"`
+	From ContactCreateOrID `json:"from"`
 
 	// MailingClass The mailing class of this order. If not provided, automatically set to `first_class`.
 	MailingClass *OrderMailingClass `json:"mailingClass,omitempty"`
@@ -28952,6 +33495,16 @@ type SelfMailerCreateWithPDFURL struct {
 
 	// Metadata See the section on Metadata.
 	Metadata *map[string]interface{} `json:"metadata,omitempty"`
+
+	// Paper Premium paper selection used for this self-mailer.
+	//
+	// Available values include:
+	// - `standard`
+	// - `premium_paper_self_mailer_standard_100lb`
+	//
+	// Not all premium paper options are enabled for all organizations.
+	// If omitted, the organization default self-mailer paper is used when configured; otherwise `standard`.
+	Paper *SelfMailerPremiumPaperID `json:"paper,omitempty"`
 
 	// Pdf A URL pointing to a 2 page PDF file. The first page is the inside of the self-mailer and the second page is the outside (where the address will be stamped on).
 	Pdf string `json:"pdf"`
@@ -28963,23 +33516,7 @@ type SelfMailerCreateWithPDFURL struct {
 	Size SelfMailerSize `json:"size"`
 
 	// To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-	To SelfMailerCreateWithPDFURL_To `json:"to"`
-}
-
-// SelfMailerCreateWithPDFURLFrom1 defines model for SelfMailerCreateWithPDFURL.From.1.
-type SelfMailerCreateWithPDFURLFrom1 = string
-
-// SelfMailerCreateWithPDFURL_From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-type SelfMailerCreateWithPDFURL_From struct {
-	union json.RawMessage
-}
-
-// SelfMailerCreateWithPDFURLTo1 defines model for SelfMailerCreateWithPDFURL.To.1.
-type SelfMailerCreateWithPDFURLTo1 = string
-
-// SelfMailerCreateWithPDFURL_To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-type SelfMailerCreateWithPDFURL_To struct {
-	union json.RawMessage
+	To ContactCreateOrID `json:"to"`
 }
 
 // SelfMailerCreateWithTemplate defines model for SelfMailerCreateWithTemplate.
@@ -28988,7 +33525,7 @@ type SelfMailerCreateWithTemplate struct {
 	Description *string `json:"description,omitempty"`
 
 	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-	From SelfMailerCreateWithTemplate_From `json:"from"`
+	From ContactCreateOrID `json:"from"`
 
 	// InsideTemplate The template ID for the inside of the self-mailer. You can supply _either_ this or `insideHTML` but not both.
 	InsideTemplate string `json:"insideTemplate"`
@@ -29005,6 +33542,16 @@ type SelfMailerCreateWithTemplate struct {
 	// OutsideTemplate The template ID for the outside of the self-mailer. You can supply _either_ this or `outsideHTML` but not both.
 	OutsideTemplate string `json:"outsideTemplate"`
 
+	// Paper Premium paper selection used for this self-mailer.
+	//
+	// Available values include:
+	// - `standard`
+	// - `premium_paper_self_mailer_standard_100lb`
+	//
+	// Not all premium paper options are enabled for all organizations.
+	// If omitted, the organization default self-mailer paper is used when configured; otherwise `standard`.
+	Paper *SelfMailerPremiumPaperID `json:"paper,omitempty"`
+
 	// SendDate This order will transition from `ready` to `printing` on the day after this date. You can use this parameter to schedule orders for a future date.
 	SendDate *time.Time `json:"sendDate,omitempty"`
 
@@ -29012,23 +33559,7 @@ type SelfMailerCreateWithTemplate struct {
 	Size SelfMailerSize `json:"size"`
 
 	// To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-	To SelfMailerCreateWithTemplate_To `json:"to"`
-}
-
-// SelfMailerCreateWithTemplateFrom1 defines model for SelfMailerCreateWithTemplate.From.1.
-type SelfMailerCreateWithTemplateFrom1 = string
-
-// SelfMailerCreateWithTemplate_From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-type SelfMailerCreateWithTemplate_From struct {
-	union json.RawMessage
-}
-
-// SelfMailerCreateWithTemplateTo1 defines model for SelfMailerCreateWithTemplate.To.1.
-type SelfMailerCreateWithTemplateTo1 = string
-
-// SelfMailerCreateWithTemplate_To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-type SelfMailerCreateWithTemplate_To struct {
-	union json.RawMessage
+	To ContactCreateOrID `json:"to"`
 }
 
 // SelfMailerList defines model for SelfMailerList.
@@ -29042,6 +33573,11 @@ type SelfMailerList struct {
 
 // SelfMailerListObject defines model for SelfMailerList.Object.
 type SelfMailerListObject string
+
+// SelfMailerPremiumPaperID defines model for SelfMailerPremiumPaperID.
+type SelfMailerPremiumPaperID struct {
+	union json.RawMessage
+}
 
 // SelfMailerSize Enum representing the supported self-mailer sizes.
 type SelfMailerSize string
@@ -29146,7 +33682,7 @@ type SnapPackCreateFormMultiPart struct {
 	Description *string `json:"description,omitempty"`
 
 	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to` contact.
-	From SnapPackCreateFormMultiPart_From `json:"from"`
+	From ContactCreateOrID `json:"from"`
 
 	// InsideHTML The HTML content for the inside of the snap pack. You can supply _either_ this or `insideTemplate` but not both.
 	InsideHTML *string `json:"insideHTML,omitempty"`
@@ -29179,15 +33715,7 @@ type SnapPackCreateFormMultiPart struct {
 	Size SnapPackSize `json:"size"`
 
 	// To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-	To SnapPackCreateFormMultiPart_To `json:"to"`
-}
-
-// SnapPackCreateFormMultiPartFrom1 defines model for SnapPackCreateFormMultiPart.From.1.
-type SnapPackCreateFormMultiPartFrom1 = string
-
-// SnapPackCreateFormMultiPart_From The contact information of the sender. You can pass contact information inline here just like you can for the `to` contact.
-type SnapPackCreateFormMultiPart_From struct {
-	union json.RawMessage
+	To ContactCreateOrID `json:"to"`
 }
 
 // SnapPackCreateFormMultiPartPdf0 defines model for SnapPackCreateFormMultiPart.Pdf.0.
@@ -29198,21 +33726,13 @@ type SnapPackCreateFormMultiPart_Pdf struct {
 	union json.RawMessage
 }
 
-// SnapPackCreateFormMultiPartTo1 defines model for SnapPackCreateFormMultiPart.To.1.
-type SnapPackCreateFormMultiPartTo1 = string
-
-// SnapPackCreateFormMultiPart_To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-type SnapPackCreateFormMultiPart_To struct {
-	union json.RawMessage
-}
-
 // SnapPackCreateWithHTML defines model for SnapPackCreateWithHTML.
 type SnapPackCreateWithHTML struct {
 	// Description An optional string describing this resource. Will be visible in the API and the dashboard.
 	Description *string `json:"description,omitempty"`
 
 	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to` contact.
-	From SnapPackCreateWithHTML_From `json:"from"`
+	From ContactCreateOrID `json:"from"`
 
 	// InsideHTML The HTML content for the inside of the snap pack. You can supply _either_ this or `insideTemplate` but not both.
 	InsideHTML string `json:"insideHTML"`
@@ -29236,23 +33756,7 @@ type SnapPackCreateWithHTML struct {
 	Size SnapPackSize `json:"size"`
 
 	// To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-	To SnapPackCreateWithHTML_To `json:"to"`
-}
-
-// SnapPackCreateWithHTMLFrom1 defines model for SnapPackCreateWithHTML.From.1.
-type SnapPackCreateWithHTMLFrom1 = string
-
-// SnapPackCreateWithHTML_From The contact information of the sender. You can pass contact information inline here just like you can for the `to` contact.
-type SnapPackCreateWithHTML_From struct {
-	union json.RawMessage
-}
-
-// SnapPackCreateWithHTMLTo1 defines model for SnapPackCreateWithHTML.To.1.
-type SnapPackCreateWithHTMLTo1 = string
-
-// SnapPackCreateWithHTML_To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-type SnapPackCreateWithHTML_To struct {
-	union json.RawMessage
+	To ContactCreateOrID `json:"to"`
 }
 
 // SnapPackCreateWithPDF defines model for SnapPackCreateWithPDF.
@@ -29261,7 +33765,7 @@ type SnapPackCreateWithPDF struct {
 	Description *string `json:"description,omitempty"`
 
 	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to` contact.
-	From SnapPackCreateWithPDF_From `json:"from"`
+	From ContactCreateOrID `json:"from"`
 
 	// MailingClass The mailing class of this order. If not provided, automatically set to `first_class`.
 	MailingClass *OrderMailingClass `json:"mailingClass,omitempty"`
@@ -29282,15 +33786,7 @@ type SnapPackCreateWithPDF struct {
 	Size SnapPackSize `json:"size"`
 
 	// To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-	To SnapPackCreateWithPDF_To `json:"to"`
-}
-
-// SnapPackCreateWithPDFFrom1 defines model for SnapPackCreateWithPDF.From.1.
-type SnapPackCreateWithPDFFrom1 = string
-
-// SnapPackCreateWithPDF_From The contact information of the sender. You can pass contact information inline here just like you can for the `to` contact.
-type SnapPackCreateWithPDF_From struct {
-	union json.RawMessage
+	To ContactCreateOrID `json:"to"`
 }
 
 // SnapPackCreateWithPDFPdf0 defines model for SnapPackCreateWithPDF.Pdf.0.
@@ -29301,21 +33797,13 @@ type SnapPackCreateWithPDF_Pdf struct {
 	union json.RawMessage
 }
 
-// SnapPackCreateWithPDFTo1 defines model for SnapPackCreateWithPDF.To.1.
-type SnapPackCreateWithPDFTo1 = string
-
-// SnapPackCreateWithPDF_To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-type SnapPackCreateWithPDF_To struct {
-	union json.RawMessage
-}
-
 // SnapPackCreateWithTemplate defines model for SnapPackCreateWithTemplate.
 type SnapPackCreateWithTemplate struct {
 	// Description An optional string describing this resource. Will be visible in the API and the dashboard.
 	Description *string `json:"description,omitempty"`
 
 	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to` contact.
-	From SnapPackCreateWithTemplate_From `json:"from"`
+	From ContactCreateOrID `json:"from"`
 
 	// InsideTemplate The template ID for the inside of the snap pack. You can supply _either_ this or `insideHTML` but not both.
 	InsideTemplate string `json:"insideTemplate"`
@@ -29339,23 +33827,7 @@ type SnapPackCreateWithTemplate struct {
 	Size SnapPackSize `json:"size"`
 
 	// To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-	To SnapPackCreateWithTemplate_To `json:"to"`
-}
-
-// SnapPackCreateWithTemplateFrom1 defines model for SnapPackCreateWithTemplate.From.1.
-type SnapPackCreateWithTemplateFrom1 = string
-
-// SnapPackCreateWithTemplate_From The contact information of the sender. You can pass contact information inline here just like you can for the `to` contact.
-type SnapPackCreateWithTemplate_From struct {
-	union json.RawMessage
-}
-
-// SnapPackCreateWithTemplateTo1 defines model for SnapPackCreateWithTemplate.To.1.
-type SnapPackCreateWithTemplateTo1 = string
-
-// SnapPackCreateWithTemplate_To The recipient of this order. You can either supply the contact information inline here or provide a contact ID. PostGrid will automatically deduplicate contacts regardless of whether you provide the information inline here or call the contact creation endpoint.
-type SnapPackCreateWithTemplate_To struct {
-	union json.RawMessage
+	To ContactCreateOrID `json:"to"`
 }
 
 // SnapPackList defines model for SnapPackList.
@@ -29378,11 +33850,61 @@ type StandardAddressInput struct {
 	union json.RawMessage
 }
 
+// StandardBatchAddressInput defines model for StandardBatchAddressInput.
+type StandardBatchAddressInput struct {
+	union json.RawMessage
+}
+
+// StandardBatchAddressInput0 defines model for StandardBatchAddressInput.0.
+type StandardBatchAddressInput0 = string
+
 // StandardBatchInput defines model for StandardBatchInput.
 type StandardBatchInput struct {
-	// Addresses Array of addresses to verify. Each item can be a freeform string or structured address object.
-	Addresses []StandardAddressInput `json:"addresses"`
+	// AccuracyStatement The ID of a draft accuracy statement to add these addresses to. Beta: requires the accuracy statements feature and a live API key.
+	AccuracyStatement *string `json:"accuracyStatement,omitempty"`
+
+	// Addresses Array of addresses to verify. Each item is a freeform string or the structured address fields themselves. When `accuracyStatement` is provided, every item must be a structured address with `inputID` and `accuracyStatementInclusion`.
+	Addresses []StandardBatchAddressInput `json:"addresses"`
 }
+
+// StandardBatchStructuredAddress The structured fields of one batch item.
+type StandardBatchStructuredAddress struct {
+	// AccuracyStatementInclusion Whether to include this address in the accuracy statement. Required when `accuracyStatement` is provided.
+	AccuracyStatementInclusion *StandardBatchStructuredAddressAccuracyStatementInclusion `json:"accuracyStatementInclusion,omitempty"`
+
+	// City The city of the address.
+	City *string `json:"city,omitempty"`
+
+	// Country The country of your address, one of `ca` or `us`.
+	Country *StandardBatchStructuredAddressCountry `json:"country,omitempty"`
+
+	// InputID An ID for the input address, echoed back on the verified address. Required when `accuracyStatement` is provided.
+	InputID *string `json:"inputID,omitempty"`
+
+	// Line1 The first line of the address.
+	Line1 *string `json:"line1,omitempty"`
+
+	// Line2 The second line of the address.
+	Line2 *string `json:"line2,omitempty"`
+
+	// PostalOrZip The postal or ZIP code of the address.
+	PostalOrZip *string `json:"postalOrZip,omitempty"`
+
+	// ProvinceOrState The province or state of the address.
+	ProvinceOrState *string `json:"provinceOrState,omitempty"`
+
+	// Recipient The optional firm/recipient name.
+	Recipient *string `json:"recipient,omitempty"`
+
+	// Urbanization The urbanization of the address (Puerto Rico only).
+	Urbanization *string `json:"urbanization,omitempty"`
+}
+
+// StandardBatchStructuredAddressAccuracyStatementInclusion Whether to include this address in the accuracy statement. Required when `accuracyStatement` is provided.
+type StandardBatchStructuredAddressAccuracyStatementInclusion string
+
+// StandardBatchStructuredAddressCountry The country of your address, one of `ca` or `us`.
+type StandardBatchStructuredAddressCountry string
 
 // StandardBatchVerificationResult defines model for StandardBatchVerificationResult.
 type StandardBatchVerificationResult struct {
@@ -29555,6 +34077,9 @@ type StandardStructuredAddressInput struct {
 		// Country The country of your address, one of `ca` or `us`.
 		Country StandardStructuredAddressInputAddressCountry `json:"country"`
 
+		// InputID An optional ID for the input address, echoed back on the verified address.
+		InputID *string `json:"inputID,omitempty"`
+
 		// Line1 The first line of the address.
 		Line1 string `json:"line1"`
 
@@ -29601,6 +34126,9 @@ type StandardVerifiedAddress struct {
 	// verification, suggestions, and POST /completions endpoint. Note that you must supply country when
 	// geocoding to get the result successfully.
 	GeocodeResult *GeocodeResult `json:"geocodeResult,omitempty"`
+
+	// InputID The `inputID` supplied with the input address, echoed back unchanged.
+	InputID *string `json:"inputID,omitempty"`
 
 	// Line1 The first line of the address.
 	Line1 string `json:"line1"`
@@ -29978,22 +34506,22 @@ type TemplateCreate struct {
 	Metadata *map[string]interface{} `json:"metadata,omitempty"`
 }
 
-// TemplateEditorSession defines model for TemplateEditorSession.
+// TemplateEditorSession A Template Editor Session that is returned from read/list/delete endpoints.
 type TemplateEditorSession struct {
 	// BackURL The URL supplied when this editor session was created.
 	BackURL *string `json:"backURL,omitempty"`
 
 	// CreatedAt The UTC time at which this session was created.
-	CreatedAt *time.Time `json:"createdAt,omitempty"`
+	CreatedAt time.Time `json:"createdAt"`
 
 	// Id A unique ID prefixed with `template_editor_session_`.
-	Id *string `json:"id,omitempty"`
+	Id string `json:"id"`
 
 	// Live `true` if this is a live mode session else `false`.
-	Live *bool `json:"live,omitempty"`
+	Live bool `json:"live"`
 
 	// Object Always `template_editor_session`.
-	Object *TemplateEditorSessionObject `json:"object,omitempty"`
+	Object TemplateEditorSessionObject `json:"object"`
 
 	// Styles Style overrides for the template editor.
 	Styles *TemplateEditorSessionStyles `json:"styles,omitempty"`
@@ -30008,7 +34536,7 @@ type TemplateEditorSession struct {
 	Trackers *VisibleTrackers `json:"trackers,omitempty"`
 
 	// Url A URL that can be iframed or redirected to for editing the template.
-	Url *string `json:"url,omitempty"`
+	Url string `json:"url"`
 }
 
 // TemplateEditorSessionObject Always `template_editor_session`.
@@ -30022,6 +34550,31 @@ type TemplateEditorSessionCanvasStyles struct {
 
 // TemplateEditorSessionCreate defines model for TemplateEditorSessionCreate.
 type TemplateEditorSessionCreate struct {
+	union json.RawMessage
+}
+
+// TemplateEditorSessionCreateWithBaseTemplate Create a Template Editor Session by copying an existing template first.
+type TemplateEditorSessionCreateWithBaseTemplate struct {
+	// BackURL The URL supplied when this editor session was created.
+	BackURL *string `json:"backURL,omitempty"`
+
+	// BaseTemplate ID of an existing template to use as a starting point. When provided, a new
+	// template is created as a copy of `baseTemplate` and the session is created
+	// against the new template instead.
+	BaseTemplate string `json:"baseTemplate"`
+
+	// Styles Style overrides for the template editor.
+	Styles *TemplateEditorSessionStyles `json:"styles,omitempty"`
+
+	// Title The title supplied when this editor session was created.
+	Title *string `json:"title,omitempty"`
+
+	// Trackers Controls which Trackers are displayed in the template editor.
+	Trackers *VisibleTrackers `json:"trackers,omitempty"`
+}
+
+// TemplateEditorSessionCreateWithTemplate Create a Template Editor Session using an existing template.
+type TemplateEditorSessionCreateWithTemplate struct {
 	// BackURL The URL supplied when this editor session was created.
 	BackURL *string `json:"backURL,omitempty"`
 
@@ -30100,6 +34653,44 @@ type TemplateUpdate struct {
 	// Metadata See the section on Metadata.
 	Metadata *map[string]interface{} `json:"metadata,omitempty"`
 }
+
+// Thumbnail A preview image of the first page of a resource.
+type Thumbnail struct {
+	// Id The ID of the resource this thumbnail is for. Only templates have
+	// thumbnails for now.
+	Id string `json:"id"`
+
+	// Medium A signed URL to an 800 pixel wide JPEG of the resource's first page,
+	// keeping the page's aspect ratio. The URL expires after 15 minutes, and
+	// each response returns a fresh one. Absent until the first render has
+	// been published.
+	Medium *string `json:"medium,omitempty"`
+
+	// Object Always `thumbnail`.
+	Object ThumbnailObject `json:"object"`
+
+	// Status The status of the latest render of this thumbnail.
+	Status ThumbnailStatus `json:"status"`
+}
+
+// ThumbnailObject Always `thumbnail`.
+type ThumbnailObject string
+
+// ThumbnailList defines model for ThumbnailList.
+type ThumbnailList struct {
+	// Data The thumbnails of the requested resources that have one, in no
+	// particular order.
+	Data []Thumbnail `json:"data"`
+
+	// Object Always `list`.
+	Object ThumbnailListObject `json:"object"`
+}
+
+// ThumbnailListObject Always `list`.
+type ThumbnailListObject string
+
+// ThumbnailStatus The status of a thumbnail.
+type ThumbnailStatus string
 
 // Tracker defines model for Tracker.
 type Tracker struct {
@@ -30237,7 +34828,20 @@ type USCompanyEmployeeCount = int32
 type USCompanyFoundedYear = int32
 
 // USCompanyListFilters Filters used to target US companies (B2B) when building a list.
+//
+// Target an area with either `postalCodes`, or `cityStates` and/or `states`.
+// `postalCodes` can't be combined with the other two. When both `cityStates`
+// and `states` are given, companies in any of those cities or states are
+// included. Without any of them, quote generation fails with a
+// `not_enough_info_to_quote` error.
 type USCompanyListFilters struct {
+	// CityStates A list of `"City, ST"` strings (e.g. `"Chicago, IL"`) to target every
+	// company headquartered in those cities. The city must be spelled the way
+	// it appears in mailing addresses, e.g. `"St. Louis, MO"` rather than
+	// `"Saint Louis, MO"`. Boroughs and neighborhoods with their own mailing
+	// city, such as `"Brooklyn, NY"`, are separate cities.
+	CityStates *[]string `json:"cityStates,omitempty"`
+
 	// CompanyTypes Filter by ownership structure of the company.
 	CompanyTypes *[]USCompanyType `json:"companyTypes,omitempty"`
 
@@ -30256,8 +34860,11 @@ type USCompanyListFilters struct {
 	// [NAICS](https://www.census.gov/naics/) industry codes.
 	NaicsCodes *[]string `json:"naicsCodes,omitempty"`
 
-	// PostalCodes Required list of five-digit US ZIP codes to target.
-	PostalCodes []string `json:"postalCodes"`
+	// PostalCodes A list of five-digit US ZIP codes to target.
+	PostalCodes *[]string `json:"postalCodes,omitempty"`
+
+	// States A list of US states to target every company headquartered in them.
+	States *[]USStateCode `json:"states,omitempty"`
 
 	// Tags Filter by free-form company tags (e.g., `"saas"`, `"b2b"`).
 	Tags *[]string `json:"tags,omitempty"`
@@ -30268,6 +34875,9 @@ type USCompanyType string
 
 // USConsumerAge An age, in years, of a US consumer. Between 18 and 80.
 type USConsumerAge = int32
+
+// USConsumerCreditRating A credit rating (FICO score) of a US consumer. Between 300 and 850.
+type USConsumerCreditRating = int32
 
 // USConsumerEducationLevel Highest level of education completed by a US consumer.
 type USConsumerEducationLevel string
@@ -30284,14 +34894,18 @@ type USConsumerIncomeUSD = int32
 
 // USConsumerListFilters Filters used to target US consumers (B2C) when building a list.
 //
-// The geographic filters (`zipCodesAround`, `cityStates`, `zipCodes`) are
-// mutually exclusive — you may supply at most one of them.
+// The geographic filters (`zipCodesAround`, `cityStates`, `zipCodes`,
+// `states`) are mutually exclusive — you may supply at most one of them.
 type USConsumerListFilters struct {
 	// AgeRange Inclusive `[min, max]` age range. Values must be between 18 and 80.
 	AgeRange *[]USConsumerAge `json:"ageRange,omitempty"`
 
 	// CityStates A list of `"City, ST"` strings (e.g. `"New York, NY"`) to target.
 	CityStates *[]string `json:"cityStates,omitempty"`
+
+	// CreditRatingRange Inclusive `[min, max]` credit rating range. Values must be between 300
+	// and 850.
+	CreditRatingRange *[]USConsumerCreditRating `json:"creditRatingRange,omitempty"`
 
 	// EducationLevels Filter by highest level of education completed.
 	EducationLevels *[]USConsumerEducationLevel `json:"educationLevels,omitempty"`
@@ -30314,6 +34928,9 @@ type USConsumerListFilters struct {
 	// Occupations Filter by occupation classification.
 	Occupations *[]USConsumerOccupation `json:"occupations,omitempty"`
 
+	// States A list of US states to target every consumer in them.
+	States *[]USStateCode `json:"states,omitempty"`
+
 	// ZipCodes A list of five-digit US ZIP codes to target.
 	ZipCodes *[]string `json:"zipCodes,omitempty"`
 
@@ -30326,6 +34943,12 @@ type USConsumerNumChildren = int32
 
 // USConsumerOccupation Occupation classification for a US consumer.
 type USConsumerOccupation string
+
+// USPSReturnReason defines model for USPSReturnReason.
+type USPSReturnReason string
+
+// USStateCode A two-letter code for a US state or the District of Columbia.
+type USStateCode string
 
 // USZipsAroundFilter A geographic filter that selects all ZIP codes within a given radius of a
 // center ZIP code.
@@ -30474,8 +35097,16 @@ type VerifiedAddress struct {
 
 // VirtualMailbox The virtual mailbox object.
 type VirtualMailbox struct {
+	// Attention An optional attention line printed above the name for returned mail,
+	// such as a department. Cannot be combined with `careOf`.
+	Attention *string `json:"attention,omitempty"`
+
 	// Capabilities The capabilities of the virtual mailbox.
 	Capabilities VirtualMailboxCapabilities `json:"capabilities"`
+
+	// CareOf An optional care-of line printed above the name for returned mail.
+	// Cannot be combined with `attention`.
+	CareOf *string `json:"careOf,omitempty"`
 
 	// CountryCode The country code of the virtual mailbox.
 	CountryCode VirtualMailboxSupportedCountry `json:"countryCode"`
@@ -30519,25 +35150,25 @@ type VirtualMailboxCapabilities struct {
 
 // VirtualMailboxCreate defines model for VirtualMailboxCreate.
 type VirtualMailboxCreate struct {
+	// Attention An optional attention line printed above the name for returned mail,
+	// such as a department. Cannot be combined with `careOf`.
+	Attention *string `json:"attention,omitempty"`
+
 	// Capabilities The capabilities the virtual mailbox should support.
 	Capabilities *struct {
 		// EnvelopeScans If the virtual mailbox should support envelope scans or not.
 		EnvelopeScans bool `json:"envelopeScans"`
 
 		// ForwardMailTo A contact ID or contact object.
-		ForwardMailTo *VirtualMailboxCreate_Capabilities_ForwardMailTo `json:"forwardMailTo,omitempty"`
+		ForwardMailTo *ContactCreateOrID `json:"forwardMailTo,omitempty"`
 	} `json:"capabilities,omitempty"`
+
+	// CareOf An optional care-of line printed above the name for returned mail.
+	// Cannot be combined with `attention`.
+	CareOf *string `json:"careOf,omitempty"`
 
 	// CountryCode The country of the virtual mailbox.
 	CountryCode VirtualMailboxSupportedCountry `json:"countryCode"`
-}
-
-// VirtualMailboxCreateCapabilitiesForwardMailTo1 defines model for VirtualMailboxCreate.Capabilities.ForwardMailTo.1.
-type VirtualMailboxCreateCapabilitiesForwardMailTo1 = string
-
-// VirtualMailboxCreate_Capabilities_ForwardMailTo A contact ID or contact object.
-type VirtualMailboxCreate_Capabilities_ForwardMailTo struct {
-	union json.RawMessage
 }
 
 // VirtualMailboxItem The virtual mailbox item object.
@@ -30566,6 +35197,11 @@ type VirtualMailboxItem struct {
 	// Object Always "virtual_mailbox_item".
 	Object VirtualMailboxItemObject `json:"object"`
 
+	// ReturnReason The reason for why this mail piece was returned. This is only present
+	// on items that are for return mail and that have a reason for return on
+	// the mailer itself, such as a USPS Nixie mail codes.
+	ReturnReason *USPSReturnReason `json:"returnReason,omitempty"`
+
 	// UpdatedAt The UTC time at which this resource was last updated.
 	UpdatedAt *time.Time `json:"updatedAt,omitempty"`
 
@@ -30586,6 +35222,9 @@ type VirtualMailboxItemTestCreate struct {
 
 	// Metadata The metadata of the item.
 	Metadata *map[string]interface{} `json:"metadata,omitempty"`
+
+	// ReturnReason The reason the mail was returned.
+	ReturnReason *USPSReturnReason `json:"returnReason,omitempty"`
 }
 
 // VirtualMailboxStatus The possible statuses of virtual mailboxes.
@@ -32866,6 +37505,1265 @@ type ContactsGet500JSONResponseBodyErrorType string
 
 // ContactsGet500JSONResponseBodyObject defines parameters for ContactsGet.
 type ContactsGet500JSONResponseBodyObject string
+
+// CustomEnvelopesListParams defines parameters for CustomEnvelopesList.
+type CustomEnvelopesListParams struct {
+	Skip  *ListParamsSkip  `form:"skip,omitempty" json:"skip,omitempty"`
+	Limit *ListParamsLimit `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Search You can supply any string to help narrow down the list of resources. For example, if you pass `"New York"` (quoted), it will return resources that have that string present somewhere in their response. Alternatively, you can supply a structured search query. See the documentation on `StructuredSearchQuery` for more details.
+	Search *ListParamsSearch `form:"search,omitempty" json:"search,omitempty"`
+}
+
+// CustomEnvelopesList400JSONResponseBodyErrorType defines parameters for CustomEnvelopesList.
+type CustomEnvelopesList400JSONResponseBodyErrorType string
+
+// CustomEnvelopesList400JSONResponseBodyObject defines parameters for CustomEnvelopesList.
+type CustomEnvelopesList400JSONResponseBodyObject string
+
+// CustomEnvelopesList401JSONResponseBody0 defines parameters for CustomEnvelopesList.
+type CustomEnvelopesList401JSONResponseBody0 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesList401JSONResponseBody0ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesList401JSONResponseBody0Object `json:"object"`
+}
+
+// CustomEnvelopesList401JSONResponseBody0ErrorType defines parameters for CustomEnvelopesList.
+type CustomEnvelopesList401JSONResponseBody0ErrorType string
+
+// CustomEnvelopesList401JSONResponseBody0Object defines parameters for CustomEnvelopesList.
+type CustomEnvelopesList401JSONResponseBody0Object string
+
+// CustomEnvelopesList401JSONResponseBody1 defines parameters for CustomEnvelopesList.
+type CustomEnvelopesList401JSONResponseBody1 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesList401JSONResponseBody1ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesList401JSONResponseBody1Object `json:"object"`
+}
+
+// CustomEnvelopesList401JSONResponseBody1ErrorType defines parameters for CustomEnvelopesList.
+type CustomEnvelopesList401JSONResponseBody1ErrorType string
+
+// CustomEnvelopesList401JSONResponseBody1Object defines parameters for CustomEnvelopesList.
+type CustomEnvelopesList401JSONResponseBody1Object string
+
+// CustomEnvelopesList401JSONResponseBody defines parameters for CustomEnvelopesList.
+type CustomEnvelopesList401JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// CustomEnvelopesList429JSONResponseBodyErrorType defines parameters for CustomEnvelopesList.
+type CustomEnvelopesList429JSONResponseBodyErrorType string
+
+// CustomEnvelopesList429JSONResponseBodyObject defines parameters for CustomEnvelopesList.
+type CustomEnvelopesList429JSONResponseBodyObject string
+
+// CustomEnvelopesList500JSONResponseBodyErrorType defines parameters for CustomEnvelopesList.
+type CustomEnvelopesList500JSONResponseBodyErrorType string
+
+// CustomEnvelopesList500JSONResponseBodyObject defines parameters for CustomEnvelopesList.
+type CustomEnvelopesList500JSONResponseBodyObject string
+
+// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartParams defines parameters for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart.
+type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartParams struct {
+	IdempotencyKey *string `json:"idempotency-key,omitempty"`
+}
+
+// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart400JSONResponseBodyErrorType defines parameters for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart.
+type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart400JSONResponseBodyErrorType string
+
+// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart400JSONResponseBodyObject defines parameters for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart.
+type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart400JSONResponseBodyObject string
+
+// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0 defines parameters for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart.
+type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0Object `json:"object"`
+}
+
+// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0ErrorType defines parameters for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart.
+type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0ErrorType string
+
+// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0Object defines parameters for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart.
+type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0Object string
+
+// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1 defines parameters for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart.
+type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1Object `json:"object"`
+}
+
+// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1ErrorType defines parameters for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart.
+type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1ErrorType string
+
+// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1Object defines parameters for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart.
+type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1Object string
+
+// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody defines parameters for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart.
+type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart404JSONResponseBodyErrorType defines parameters for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart.
+type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart404JSONResponseBodyErrorType string
+
+// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart404JSONResponseBodyObject defines parameters for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart.
+type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart404JSONResponseBodyObject string
+
+// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart422JSONResponseBodyObject defines parameters for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart.
+type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart422JSONResponseBodyObject string
+
+// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart429JSONResponseBodyErrorType defines parameters for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart.
+type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart429JSONResponseBodyErrorType string
+
+// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart429JSONResponseBodyObject defines parameters for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart.
+type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart429JSONResponseBodyObject string
+
+// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart500JSONResponseBodyErrorType defines parameters for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart.
+type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart500JSONResponseBodyErrorType string
+
+// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart500JSONResponseBodyObject defines parameters for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart.
+type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart500JSONResponseBodyObject string
+
+// CustomEnvelopesGet401JSONResponseBody0 defines parameters for CustomEnvelopesGet.
+type CustomEnvelopesGet401JSONResponseBody0 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesGet401JSONResponseBody0ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesGet401JSONResponseBody0Object `json:"object"`
+}
+
+// CustomEnvelopesGet401JSONResponseBody0ErrorType defines parameters for CustomEnvelopesGet.
+type CustomEnvelopesGet401JSONResponseBody0ErrorType string
+
+// CustomEnvelopesGet401JSONResponseBody0Object defines parameters for CustomEnvelopesGet.
+type CustomEnvelopesGet401JSONResponseBody0Object string
+
+// CustomEnvelopesGet401JSONResponseBody1 defines parameters for CustomEnvelopesGet.
+type CustomEnvelopesGet401JSONResponseBody1 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesGet401JSONResponseBody1ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesGet401JSONResponseBody1Object `json:"object"`
+}
+
+// CustomEnvelopesGet401JSONResponseBody1ErrorType defines parameters for CustomEnvelopesGet.
+type CustomEnvelopesGet401JSONResponseBody1ErrorType string
+
+// CustomEnvelopesGet401JSONResponseBody1Object defines parameters for CustomEnvelopesGet.
+type CustomEnvelopesGet401JSONResponseBody1Object string
+
+// CustomEnvelopesGet401JSONResponseBody defines parameters for CustomEnvelopesGet.
+type CustomEnvelopesGet401JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// CustomEnvelopesGet404JSONResponseBodyErrorType defines parameters for CustomEnvelopesGet.
+type CustomEnvelopesGet404JSONResponseBodyErrorType string
+
+// CustomEnvelopesGet404JSONResponseBodyObject defines parameters for CustomEnvelopesGet.
+type CustomEnvelopesGet404JSONResponseBodyObject string
+
+// CustomEnvelopesGet422JSONResponseBodyObject defines parameters for CustomEnvelopesGet.
+type CustomEnvelopesGet422JSONResponseBodyObject string
+
+// CustomEnvelopesGet429JSONResponseBodyErrorType defines parameters for CustomEnvelopesGet.
+type CustomEnvelopesGet429JSONResponseBodyErrorType string
+
+// CustomEnvelopesGet429JSONResponseBodyObject defines parameters for CustomEnvelopesGet.
+type CustomEnvelopesGet429JSONResponseBodyObject string
+
+// CustomEnvelopesGet500JSONResponseBodyErrorType defines parameters for CustomEnvelopesGet.
+type CustomEnvelopesGet500JSONResponseBodyErrorType string
+
+// CustomEnvelopesGet500JSONResponseBodyObject defines parameters for CustomEnvelopesGet.
+type CustomEnvelopesGet500JSONResponseBodyObject string
+
+// CustomEnvelopesListOrdersParams defines parameters for CustomEnvelopesListOrders.
+type CustomEnvelopesListOrdersParams struct {
+	Skip  *ListParamsSkip  `form:"skip,omitempty" json:"skip,omitempty"`
+	Limit *ListParamsLimit `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Search You can supply any string to help narrow down the list of resources. For example, if you pass `"New York"` (quoted), it will return resources that have that string present somewhere in their response. Alternatively, you can supply a structured search query. See the documentation on `StructuredSearchQuery` for more details.
+	Search *ListParamsSearch `form:"search,omitempty" json:"search,omitempty"`
+}
+
+// CustomEnvelopesListOrders400JSONResponseBodyErrorType defines parameters for CustomEnvelopesListOrders.
+type CustomEnvelopesListOrders400JSONResponseBodyErrorType string
+
+// CustomEnvelopesListOrders400JSONResponseBodyObject defines parameters for CustomEnvelopesListOrders.
+type CustomEnvelopesListOrders400JSONResponseBodyObject string
+
+// CustomEnvelopesListOrders401JSONResponseBody0 defines parameters for CustomEnvelopesListOrders.
+type CustomEnvelopesListOrders401JSONResponseBody0 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesListOrders401JSONResponseBody0ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesListOrders401JSONResponseBody0Object `json:"object"`
+}
+
+// CustomEnvelopesListOrders401JSONResponseBody0ErrorType defines parameters for CustomEnvelopesListOrders.
+type CustomEnvelopesListOrders401JSONResponseBody0ErrorType string
+
+// CustomEnvelopesListOrders401JSONResponseBody0Object defines parameters for CustomEnvelopesListOrders.
+type CustomEnvelopesListOrders401JSONResponseBody0Object string
+
+// CustomEnvelopesListOrders401JSONResponseBody1 defines parameters for CustomEnvelopesListOrders.
+type CustomEnvelopesListOrders401JSONResponseBody1 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesListOrders401JSONResponseBody1ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesListOrders401JSONResponseBody1Object `json:"object"`
+}
+
+// CustomEnvelopesListOrders401JSONResponseBody1ErrorType defines parameters for CustomEnvelopesListOrders.
+type CustomEnvelopesListOrders401JSONResponseBody1ErrorType string
+
+// CustomEnvelopesListOrders401JSONResponseBody1Object defines parameters for CustomEnvelopesListOrders.
+type CustomEnvelopesListOrders401JSONResponseBody1Object string
+
+// CustomEnvelopesListOrders401JSONResponseBody defines parameters for CustomEnvelopesListOrders.
+type CustomEnvelopesListOrders401JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// CustomEnvelopesListOrders429JSONResponseBodyErrorType defines parameters for CustomEnvelopesListOrders.
+type CustomEnvelopesListOrders429JSONResponseBodyErrorType string
+
+// CustomEnvelopesListOrders429JSONResponseBodyObject defines parameters for CustomEnvelopesListOrders.
+type CustomEnvelopesListOrders429JSONResponseBodyObject string
+
+// CustomEnvelopesListOrders500JSONResponseBodyErrorType defines parameters for CustomEnvelopesListOrders.
+type CustomEnvelopesListOrders500JSONResponseBodyErrorType string
+
+// CustomEnvelopesListOrders500JSONResponseBodyObject defines parameters for CustomEnvelopesListOrders.
+type CustomEnvelopesListOrders500JSONResponseBodyObject string
+
+// CustomEnvelopesCreateOrderJSONBody defines parameters for CustomEnvelopesCreateOrder.
+type CustomEnvelopesCreateOrderJSONBody struct {
+	// Description An optional string describing this resource. Will be visible in the API and the dashboard.
+	Description *string `json:"description,omitempty"`
+
+	// Metadata See the section on Metadata.
+	Metadata *map[string]interface{} `json:"metadata,omitempty"`
+
+	// QuantityOrdered The quantity of custom envelopes ordered. Minimum 5000.
+	QuantityOrdered int32 `json:"quantityOrdered"`
+}
+
+// CustomEnvelopesCreateOrderParams defines parameters for CustomEnvelopesCreateOrder.
+type CustomEnvelopesCreateOrderParams struct {
+	IdempotencyKey *string `json:"idempotency-key,omitempty"`
+}
+
+// CustomEnvelopesCreateOrder400JSONResponseBodyErrorType defines parameters for CustomEnvelopesCreateOrder.
+type CustomEnvelopesCreateOrder400JSONResponseBodyErrorType string
+
+// CustomEnvelopesCreateOrder400JSONResponseBodyObject defines parameters for CustomEnvelopesCreateOrder.
+type CustomEnvelopesCreateOrder400JSONResponseBodyObject string
+
+// CustomEnvelopesCreateOrder401JSONResponseBody0 defines parameters for CustomEnvelopesCreateOrder.
+type CustomEnvelopesCreateOrder401JSONResponseBody0 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesCreateOrder401JSONResponseBody0ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesCreateOrder401JSONResponseBody0Object `json:"object"`
+}
+
+// CustomEnvelopesCreateOrder401JSONResponseBody0ErrorType defines parameters for CustomEnvelopesCreateOrder.
+type CustomEnvelopesCreateOrder401JSONResponseBody0ErrorType string
+
+// CustomEnvelopesCreateOrder401JSONResponseBody0Object defines parameters for CustomEnvelopesCreateOrder.
+type CustomEnvelopesCreateOrder401JSONResponseBody0Object string
+
+// CustomEnvelopesCreateOrder401JSONResponseBody1 defines parameters for CustomEnvelopesCreateOrder.
+type CustomEnvelopesCreateOrder401JSONResponseBody1 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesCreateOrder401JSONResponseBody1ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesCreateOrder401JSONResponseBody1Object `json:"object"`
+}
+
+// CustomEnvelopesCreateOrder401JSONResponseBody1ErrorType defines parameters for CustomEnvelopesCreateOrder.
+type CustomEnvelopesCreateOrder401JSONResponseBody1ErrorType string
+
+// CustomEnvelopesCreateOrder401JSONResponseBody1Object defines parameters for CustomEnvelopesCreateOrder.
+type CustomEnvelopesCreateOrder401JSONResponseBody1Object string
+
+// CustomEnvelopesCreateOrder401JSONResponseBody defines parameters for CustomEnvelopesCreateOrder.
+type CustomEnvelopesCreateOrder401JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// CustomEnvelopesCreateOrder404JSONResponseBodyErrorType defines parameters for CustomEnvelopesCreateOrder.
+type CustomEnvelopesCreateOrder404JSONResponseBodyErrorType string
+
+// CustomEnvelopesCreateOrder404JSONResponseBodyObject defines parameters for CustomEnvelopesCreateOrder.
+type CustomEnvelopesCreateOrder404JSONResponseBodyObject string
+
+// CustomEnvelopesCreateOrder422JSONResponseBodyObject defines parameters for CustomEnvelopesCreateOrder.
+type CustomEnvelopesCreateOrder422JSONResponseBodyObject string
+
+// CustomEnvelopesCreateOrder429JSONResponseBodyErrorType defines parameters for CustomEnvelopesCreateOrder.
+type CustomEnvelopesCreateOrder429JSONResponseBodyErrorType string
+
+// CustomEnvelopesCreateOrder429JSONResponseBodyObject defines parameters for CustomEnvelopesCreateOrder.
+type CustomEnvelopesCreateOrder429JSONResponseBodyObject string
+
+// CustomEnvelopesCreateOrder500JSONResponseBodyErrorType defines parameters for CustomEnvelopesCreateOrder.
+type CustomEnvelopesCreateOrder500JSONResponseBodyErrorType string
+
+// CustomEnvelopesCreateOrder500JSONResponseBodyObject defines parameters for CustomEnvelopesCreateOrder.
+type CustomEnvelopesCreateOrder500JSONResponseBodyObject string
+
+// CustomEnvelopesCancelOrderParams defines parameters for CustomEnvelopesCancelOrder.
+type CustomEnvelopesCancelOrderParams struct {
+	// Expand Pass `expand[]=customEnvelope` to expand the order's
+	// `customEnvelope` field into the full custom envelope object.
+	Expand *[]CustomEnvelopesCancelOrderParamsExpand `form:"expand[],omitempty" json:"expand[],omitempty"`
+}
+
+// CustomEnvelopesCancelOrderParamsExpand defines parameters for CustomEnvelopesCancelOrder.
+type CustomEnvelopesCancelOrderParamsExpand string
+
+// CustomEnvelopesCancelOrder401JSONResponseBody0 defines parameters for CustomEnvelopesCancelOrder.
+type CustomEnvelopesCancelOrder401JSONResponseBody0 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesCancelOrder401JSONResponseBody0ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesCancelOrder401JSONResponseBody0Object `json:"object"`
+}
+
+// CustomEnvelopesCancelOrder401JSONResponseBody0ErrorType defines parameters for CustomEnvelopesCancelOrder.
+type CustomEnvelopesCancelOrder401JSONResponseBody0ErrorType string
+
+// CustomEnvelopesCancelOrder401JSONResponseBody0Object defines parameters for CustomEnvelopesCancelOrder.
+type CustomEnvelopesCancelOrder401JSONResponseBody0Object string
+
+// CustomEnvelopesCancelOrder401JSONResponseBody1 defines parameters for CustomEnvelopesCancelOrder.
+type CustomEnvelopesCancelOrder401JSONResponseBody1 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesCancelOrder401JSONResponseBody1ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesCancelOrder401JSONResponseBody1Object `json:"object"`
+}
+
+// CustomEnvelopesCancelOrder401JSONResponseBody1ErrorType defines parameters for CustomEnvelopesCancelOrder.
+type CustomEnvelopesCancelOrder401JSONResponseBody1ErrorType string
+
+// CustomEnvelopesCancelOrder401JSONResponseBody1Object defines parameters for CustomEnvelopesCancelOrder.
+type CustomEnvelopesCancelOrder401JSONResponseBody1Object string
+
+// CustomEnvelopesCancelOrder401JSONResponseBody defines parameters for CustomEnvelopesCancelOrder.
+type CustomEnvelopesCancelOrder401JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// CustomEnvelopesCancelOrder404JSONResponseBodyErrorType defines parameters for CustomEnvelopesCancelOrder.
+type CustomEnvelopesCancelOrder404JSONResponseBodyErrorType string
+
+// CustomEnvelopesCancelOrder404JSONResponseBodyObject defines parameters for CustomEnvelopesCancelOrder.
+type CustomEnvelopesCancelOrder404JSONResponseBodyObject string
+
+// CustomEnvelopesCancelOrder422JSONResponseBody0 defines parameters for CustomEnvelopesCancelOrder.
+type CustomEnvelopesCancelOrder422JSONResponseBody0 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type string `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesCancelOrder422JSONResponseBody0Object `json:"object"`
+}
+
+// CustomEnvelopesCancelOrder422JSONResponseBody0Object defines parameters for CustomEnvelopesCancelOrder.
+type CustomEnvelopesCancelOrder422JSONResponseBody0Object string
+
+// CustomEnvelopesCancelOrder422JSONResponseBody1 defines parameters for CustomEnvelopesCancelOrder.
+type CustomEnvelopesCancelOrder422JSONResponseBody1 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesCancelOrder422JSONResponseBody1ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesCancelOrder422JSONResponseBody1Object `json:"object"`
+}
+
+// CustomEnvelopesCancelOrder422JSONResponseBody1ErrorType defines parameters for CustomEnvelopesCancelOrder.
+type CustomEnvelopesCancelOrder422JSONResponseBody1ErrorType string
+
+// CustomEnvelopesCancelOrder422JSONResponseBody1Object defines parameters for CustomEnvelopesCancelOrder.
+type CustomEnvelopesCancelOrder422JSONResponseBody1Object string
+
+// CustomEnvelopesCancelOrder422JSONResponseBody defines parameters for CustomEnvelopesCancelOrder.
+type CustomEnvelopesCancelOrder422JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// CustomEnvelopesCancelOrder429JSONResponseBodyErrorType defines parameters for CustomEnvelopesCancelOrder.
+type CustomEnvelopesCancelOrder429JSONResponseBodyErrorType string
+
+// CustomEnvelopesCancelOrder429JSONResponseBodyObject defines parameters for CustomEnvelopesCancelOrder.
+type CustomEnvelopesCancelOrder429JSONResponseBodyObject string
+
+// CustomEnvelopesCancelOrder500JSONResponseBodyErrorType defines parameters for CustomEnvelopesCancelOrder.
+type CustomEnvelopesCancelOrder500JSONResponseBodyErrorType string
+
+// CustomEnvelopesCancelOrder500JSONResponseBodyObject defines parameters for CustomEnvelopesCancelOrder.
+type CustomEnvelopesCancelOrder500JSONResponseBodyObject string
+
+// CustomEnvelopesGetOrderParams defines parameters for CustomEnvelopesGetOrder.
+type CustomEnvelopesGetOrderParams struct {
+	// Expand Pass `expand[]=customEnvelope` to expand the order's
+	// `customEnvelope` field into the full custom envelope object.
+	Expand *[]CustomEnvelopesGetOrderParamsExpand `form:"expand[],omitempty" json:"expand[],omitempty"`
+}
+
+// CustomEnvelopesGetOrderParamsExpand defines parameters for CustomEnvelopesGetOrder.
+type CustomEnvelopesGetOrderParamsExpand string
+
+// CustomEnvelopesGetOrder401JSONResponseBody0 defines parameters for CustomEnvelopesGetOrder.
+type CustomEnvelopesGetOrder401JSONResponseBody0 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesGetOrder401JSONResponseBody0ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesGetOrder401JSONResponseBody0Object `json:"object"`
+}
+
+// CustomEnvelopesGetOrder401JSONResponseBody0ErrorType defines parameters for CustomEnvelopesGetOrder.
+type CustomEnvelopesGetOrder401JSONResponseBody0ErrorType string
+
+// CustomEnvelopesGetOrder401JSONResponseBody0Object defines parameters for CustomEnvelopesGetOrder.
+type CustomEnvelopesGetOrder401JSONResponseBody0Object string
+
+// CustomEnvelopesGetOrder401JSONResponseBody1 defines parameters for CustomEnvelopesGetOrder.
+type CustomEnvelopesGetOrder401JSONResponseBody1 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesGetOrder401JSONResponseBody1ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesGetOrder401JSONResponseBody1Object `json:"object"`
+}
+
+// CustomEnvelopesGetOrder401JSONResponseBody1ErrorType defines parameters for CustomEnvelopesGetOrder.
+type CustomEnvelopesGetOrder401JSONResponseBody1ErrorType string
+
+// CustomEnvelopesGetOrder401JSONResponseBody1Object defines parameters for CustomEnvelopesGetOrder.
+type CustomEnvelopesGetOrder401JSONResponseBody1Object string
+
+// CustomEnvelopesGetOrder401JSONResponseBody defines parameters for CustomEnvelopesGetOrder.
+type CustomEnvelopesGetOrder401JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// CustomEnvelopesGetOrder404JSONResponseBodyErrorType defines parameters for CustomEnvelopesGetOrder.
+type CustomEnvelopesGetOrder404JSONResponseBodyErrorType string
+
+// CustomEnvelopesGetOrder404JSONResponseBodyObject defines parameters for CustomEnvelopesGetOrder.
+type CustomEnvelopesGetOrder404JSONResponseBodyObject string
+
+// CustomEnvelopesGetOrder422JSONResponseBodyObject defines parameters for CustomEnvelopesGetOrder.
+type CustomEnvelopesGetOrder422JSONResponseBodyObject string
+
+// CustomEnvelopesGetOrder429JSONResponseBodyErrorType defines parameters for CustomEnvelopesGetOrder.
+type CustomEnvelopesGetOrder429JSONResponseBodyErrorType string
+
+// CustomEnvelopesGetOrder429JSONResponseBodyObject defines parameters for CustomEnvelopesGetOrder.
+type CustomEnvelopesGetOrder429JSONResponseBodyObject string
+
+// CustomEnvelopesGetOrder500JSONResponseBodyErrorType defines parameters for CustomEnvelopesGetOrder.
+type CustomEnvelopesGetOrder500JSONResponseBodyErrorType string
+
+// CustomEnvelopesGetOrder500JSONResponseBodyObject defines parameters for CustomEnvelopesGetOrder.
+type CustomEnvelopesGetOrder500JSONResponseBodyObject string
+
+// CustomEnvelopesFillTestOrderParams defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrderParams struct {
+	// Expand Pass `expand[]=customEnvelope` to expand the order's
+	// `customEnvelope` field into the full custom envelope object.
+	Expand *[]CustomEnvelopesFillTestOrderParamsExpand `form:"expand[],omitempty" json:"expand[],omitempty"`
+}
+
+// CustomEnvelopesFillTestOrderParamsExpand defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrderParamsExpand string
+
+// CustomEnvelopesFillTestOrder400JSONResponseBodyErrorType defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder400JSONResponseBodyErrorType string
+
+// CustomEnvelopesFillTestOrder400JSONResponseBodyObject defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder400JSONResponseBodyObject string
+
+// CustomEnvelopesFillTestOrder401JSONResponseBody0 defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder401JSONResponseBody0 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesFillTestOrder401JSONResponseBody0ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesFillTestOrder401JSONResponseBody0Object `json:"object"`
+}
+
+// CustomEnvelopesFillTestOrder401JSONResponseBody0ErrorType defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder401JSONResponseBody0ErrorType string
+
+// CustomEnvelopesFillTestOrder401JSONResponseBody0Object defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder401JSONResponseBody0Object string
+
+// CustomEnvelopesFillTestOrder401JSONResponseBody1 defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder401JSONResponseBody1 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesFillTestOrder401JSONResponseBody1ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesFillTestOrder401JSONResponseBody1Object `json:"object"`
+}
+
+// CustomEnvelopesFillTestOrder401JSONResponseBody1ErrorType defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder401JSONResponseBody1ErrorType string
+
+// CustomEnvelopesFillTestOrder401JSONResponseBody1Object defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder401JSONResponseBody1Object string
+
+// CustomEnvelopesFillTestOrder401JSONResponseBody defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder401JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// CustomEnvelopesFillTestOrder404JSONResponseBodyErrorType defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder404JSONResponseBodyErrorType string
+
+// CustomEnvelopesFillTestOrder404JSONResponseBodyObject defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder404JSONResponseBodyObject string
+
+// CustomEnvelopesFillTestOrder422JSONResponseBody0 defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder422JSONResponseBody0 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type string `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesFillTestOrder422JSONResponseBody0Object `json:"object"`
+}
+
+// CustomEnvelopesFillTestOrder422JSONResponseBody0Object defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder422JSONResponseBody0Object string
+
+// CustomEnvelopesFillTestOrder422JSONResponseBody1 defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder422JSONResponseBody1 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesFillTestOrder422JSONResponseBody1ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesFillTestOrder422JSONResponseBody1Object `json:"object"`
+}
+
+// CustomEnvelopesFillTestOrder422JSONResponseBody1ErrorType defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder422JSONResponseBody1ErrorType string
+
+// CustomEnvelopesFillTestOrder422JSONResponseBody1Object defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder422JSONResponseBody1Object string
+
+// CustomEnvelopesFillTestOrder422JSONResponseBody2 defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder422JSONResponseBody2 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesFillTestOrder422JSONResponseBody2ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesFillTestOrder422JSONResponseBody2Object `json:"object"`
+}
+
+// CustomEnvelopesFillTestOrder422JSONResponseBody2ErrorType defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder422JSONResponseBody2ErrorType string
+
+// CustomEnvelopesFillTestOrder422JSONResponseBody2Object defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder422JSONResponseBody2Object string
+
+// CustomEnvelopesFillTestOrder422JSONResponseBody3 defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder422JSONResponseBody3 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesFillTestOrder422JSONResponseBody3ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesFillTestOrder422JSONResponseBody3Object `json:"object"`
+}
+
+// CustomEnvelopesFillTestOrder422JSONResponseBody3ErrorType defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder422JSONResponseBody3ErrorType string
+
+// CustomEnvelopesFillTestOrder422JSONResponseBody3Object defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder422JSONResponseBody3Object string
+
+// CustomEnvelopesFillTestOrder422JSONResponseBody defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder422JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// CustomEnvelopesFillTestOrder429JSONResponseBodyErrorType defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder429JSONResponseBodyErrorType string
+
+// CustomEnvelopesFillTestOrder429JSONResponseBodyObject defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder429JSONResponseBodyObject string
+
+// CustomEnvelopesFillTestOrder500JSONResponseBodyErrorType defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder500JSONResponseBodyErrorType string
+
+// CustomEnvelopesFillTestOrder500JSONResponseBodyObject defines parameters for CustomEnvelopesFillTestOrder.
+type CustomEnvelopesFillTestOrder500JSONResponseBodyObject string
+
+// CustomEnvelopesProgressTestOrder400JSONResponseBodyErrorType defines parameters for CustomEnvelopesProgressTestOrder.
+type CustomEnvelopesProgressTestOrder400JSONResponseBodyErrorType string
+
+// CustomEnvelopesProgressTestOrder400JSONResponseBodyObject defines parameters for CustomEnvelopesProgressTestOrder.
+type CustomEnvelopesProgressTestOrder400JSONResponseBodyObject string
+
+// CustomEnvelopesProgressTestOrder401JSONResponseBody0 defines parameters for CustomEnvelopesProgressTestOrder.
+type CustomEnvelopesProgressTestOrder401JSONResponseBody0 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesProgressTestOrder401JSONResponseBody0ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesProgressTestOrder401JSONResponseBody0Object `json:"object"`
+}
+
+// CustomEnvelopesProgressTestOrder401JSONResponseBody0ErrorType defines parameters for CustomEnvelopesProgressTestOrder.
+type CustomEnvelopesProgressTestOrder401JSONResponseBody0ErrorType string
+
+// CustomEnvelopesProgressTestOrder401JSONResponseBody0Object defines parameters for CustomEnvelopesProgressTestOrder.
+type CustomEnvelopesProgressTestOrder401JSONResponseBody0Object string
+
+// CustomEnvelopesProgressTestOrder401JSONResponseBody1 defines parameters for CustomEnvelopesProgressTestOrder.
+type CustomEnvelopesProgressTestOrder401JSONResponseBody1 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesProgressTestOrder401JSONResponseBody1ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesProgressTestOrder401JSONResponseBody1Object `json:"object"`
+}
+
+// CustomEnvelopesProgressTestOrder401JSONResponseBody1ErrorType defines parameters for CustomEnvelopesProgressTestOrder.
+type CustomEnvelopesProgressTestOrder401JSONResponseBody1ErrorType string
+
+// CustomEnvelopesProgressTestOrder401JSONResponseBody1Object defines parameters for CustomEnvelopesProgressTestOrder.
+type CustomEnvelopesProgressTestOrder401JSONResponseBody1Object string
+
+// CustomEnvelopesProgressTestOrder401JSONResponseBody defines parameters for CustomEnvelopesProgressTestOrder.
+type CustomEnvelopesProgressTestOrder401JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// CustomEnvelopesProgressTestOrder404JSONResponseBodyErrorType defines parameters for CustomEnvelopesProgressTestOrder.
+type CustomEnvelopesProgressTestOrder404JSONResponseBodyErrorType string
+
+// CustomEnvelopesProgressTestOrder404JSONResponseBodyObject defines parameters for CustomEnvelopesProgressTestOrder.
+type CustomEnvelopesProgressTestOrder404JSONResponseBodyObject string
+
+// CustomEnvelopesProgressTestOrder422JSONResponseBody0 defines parameters for CustomEnvelopesProgressTestOrder.
+type CustomEnvelopesProgressTestOrder422JSONResponseBody0 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type string `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesProgressTestOrder422JSONResponseBody0Object `json:"object"`
+}
+
+// CustomEnvelopesProgressTestOrder422JSONResponseBody0Object defines parameters for CustomEnvelopesProgressTestOrder.
+type CustomEnvelopesProgressTestOrder422JSONResponseBody0Object string
+
+// CustomEnvelopesProgressTestOrder422JSONResponseBody1 defines parameters for CustomEnvelopesProgressTestOrder.
+type CustomEnvelopesProgressTestOrder422JSONResponseBody1 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesProgressTestOrder422JSONResponseBody1ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesProgressTestOrder422JSONResponseBody1Object `json:"object"`
+}
+
+// CustomEnvelopesProgressTestOrder422JSONResponseBody1ErrorType defines parameters for CustomEnvelopesProgressTestOrder.
+type CustomEnvelopesProgressTestOrder422JSONResponseBody1ErrorType string
+
+// CustomEnvelopesProgressTestOrder422JSONResponseBody1Object defines parameters for CustomEnvelopesProgressTestOrder.
+type CustomEnvelopesProgressTestOrder422JSONResponseBody1Object string
+
+// CustomEnvelopesProgressTestOrder422JSONResponseBody2 defines parameters for CustomEnvelopesProgressTestOrder.
+type CustomEnvelopesProgressTestOrder422JSONResponseBody2 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesProgressTestOrder422JSONResponseBody2ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesProgressTestOrder422JSONResponseBody2Object `json:"object"`
+}
+
+// CustomEnvelopesProgressTestOrder422JSONResponseBody2ErrorType defines parameters for CustomEnvelopesProgressTestOrder.
+type CustomEnvelopesProgressTestOrder422JSONResponseBody2ErrorType string
+
+// CustomEnvelopesProgressTestOrder422JSONResponseBody2Object defines parameters for CustomEnvelopesProgressTestOrder.
+type CustomEnvelopesProgressTestOrder422JSONResponseBody2Object string
+
+// CustomEnvelopesProgressTestOrder422JSONResponseBody defines parameters for CustomEnvelopesProgressTestOrder.
+type CustomEnvelopesProgressTestOrder422JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// CustomEnvelopesProgressTestOrder429JSONResponseBodyErrorType defines parameters for CustomEnvelopesProgressTestOrder.
+type CustomEnvelopesProgressTestOrder429JSONResponseBodyErrorType string
+
+// CustomEnvelopesProgressTestOrder429JSONResponseBodyObject defines parameters for CustomEnvelopesProgressTestOrder.
+type CustomEnvelopesProgressTestOrder429JSONResponseBodyObject string
+
+// CustomEnvelopesProgressTestOrder500JSONResponseBodyErrorType defines parameters for CustomEnvelopesProgressTestOrder.
+type CustomEnvelopesProgressTestOrder500JSONResponseBodyErrorType string
+
+// CustomEnvelopesProgressTestOrder500JSONResponseBodyObject defines parameters for CustomEnvelopesProgressTestOrder.
+type CustomEnvelopesProgressTestOrder500JSONResponseBodyObject string
+
+// CustomEnvelopesClearThresholdParams defines parameters for CustomEnvelopesClearThreshold.
+type CustomEnvelopesClearThresholdParams struct {
+	IdempotencyKey *string `json:"idempotency-key,omitempty"`
+}
+
+// CustomEnvelopesClearThreshold401JSONResponseBody0 defines parameters for CustomEnvelopesClearThreshold.
+type CustomEnvelopesClearThreshold401JSONResponseBody0 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesClearThreshold401JSONResponseBody0ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesClearThreshold401JSONResponseBody0Object `json:"object"`
+}
+
+// CustomEnvelopesClearThreshold401JSONResponseBody0ErrorType defines parameters for CustomEnvelopesClearThreshold.
+type CustomEnvelopesClearThreshold401JSONResponseBody0ErrorType string
+
+// CustomEnvelopesClearThreshold401JSONResponseBody0Object defines parameters for CustomEnvelopesClearThreshold.
+type CustomEnvelopesClearThreshold401JSONResponseBody0Object string
+
+// CustomEnvelopesClearThreshold401JSONResponseBody1 defines parameters for CustomEnvelopesClearThreshold.
+type CustomEnvelopesClearThreshold401JSONResponseBody1 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesClearThreshold401JSONResponseBody1ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesClearThreshold401JSONResponseBody1Object `json:"object"`
+}
+
+// CustomEnvelopesClearThreshold401JSONResponseBody1ErrorType defines parameters for CustomEnvelopesClearThreshold.
+type CustomEnvelopesClearThreshold401JSONResponseBody1ErrorType string
+
+// CustomEnvelopesClearThreshold401JSONResponseBody1Object defines parameters for CustomEnvelopesClearThreshold.
+type CustomEnvelopesClearThreshold401JSONResponseBody1Object string
+
+// CustomEnvelopesClearThreshold401JSONResponseBody defines parameters for CustomEnvelopesClearThreshold.
+type CustomEnvelopesClearThreshold401JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// CustomEnvelopesClearThreshold404JSONResponseBodyErrorType defines parameters for CustomEnvelopesClearThreshold.
+type CustomEnvelopesClearThreshold404JSONResponseBodyErrorType string
+
+// CustomEnvelopesClearThreshold404JSONResponseBodyObject defines parameters for CustomEnvelopesClearThreshold.
+type CustomEnvelopesClearThreshold404JSONResponseBodyObject string
+
+// CustomEnvelopesClearThreshold422JSONResponseBodyObject defines parameters for CustomEnvelopesClearThreshold.
+type CustomEnvelopesClearThreshold422JSONResponseBodyObject string
+
+// CustomEnvelopesClearThreshold429JSONResponseBodyErrorType defines parameters for CustomEnvelopesClearThreshold.
+type CustomEnvelopesClearThreshold429JSONResponseBodyErrorType string
+
+// CustomEnvelopesClearThreshold429JSONResponseBodyObject defines parameters for CustomEnvelopesClearThreshold.
+type CustomEnvelopesClearThreshold429JSONResponseBodyObject string
+
+// CustomEnvelopesClearThreshold500JSONResponseBodyErrorType defines parameters for CustomEnvelopesClearThreshold.
+type CustomEnvelopesClearThreshold500JSONResponseBodyErrorType string
+
+// CustomEnvelopesClearThreshold500JSONResponseBodyObject defines parameters for CustomEnvelopesClearThreshold.
+type CustomEnvelopesClearThreshold500JSONResponseBodyObject string
+
+// CustomEnvelopesSetThresholdParams defines parameters for CustomEnvelopesSetThreshold.
+type CustomEnvelopesSetThresholdParams struct {
+	IdempotencyKey *string `json:"idempotency-key,omitempty"`
+}
+
+// CustomEnvelopesSetThreshold400JSONResponseBodyErrorType defines parameters for CustomEnvelopesSetThreshold.
+type CustomEnvelopesSetThreshold400JSONResponseBodyErrorType string
+
+// CustomEnvelopesSetThreshold400JSONResponseBodyObject defines parameters for CustomEnvelopesSetThreshold.
+type CustomEnvelopesSetThreshold400JSONResponseBodyObject string
+
+// CustomEnvelopesSetThreshold401JSONResponseBody0 defines parameters for CustomEnvelopesSetThreshold.
+type CustomEnvelopesSetThreshold401JSONResponseBody0 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesSetThreshold401JSONResponseBody0ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesSetThreshold401JSONResponseBody0Object `json:"object"`
+}
+
+// CustomEnvelopesSetThreshold401JSONResponseBody0ErrorType defines parameters for CustomEnvelopesSetThreshold.
+type CustomEnvelopesSetThreshold401JSONResponseBody0ErrorType string
+
+// CustomEnvelopesSetThreshold401JSONResponseBody0Object defines parameters for CustomEnvelopesSetThreshold.
+type CustomEnvelopesSetThreshold401JSONResponseBody0Object string
+
+// CustomEnvelopesSetThreshold401JSONResponseBody1 defines parameters for CustomEnvelopesSetThreshold.
+type CustomEnvelopesSetThreshold401JSONResponseBody1 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesSetThreshold401JSONResponseBody1ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesSetThreshold401JSONResponseBody1Object `json:"object"`
+}
+
+// CustomEnvelopesSetThreshold401JSONResponseBody1ErrorType defines parameters for CustomEnvelopesSetThreshold.
+type CustomEnvelopesSetThreshold401JSONResponseBody1ErrorType string
+
+// CustomEnvelopesSetThreshold401JSONResponseBody1Object defines parameters for CustomEnvelopesSetThreshold.
+type CustomEnvelopesSetThreshold401JSONResponseBody1Object string
+
+// CustomEnvelopesSetThreshold401JSONResponseBody defines parameters for CustomEnvelopesSetThreshold.
+type CustomEnvelopesSetThreshold401JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// CustomEnvelopesSetThreshold404JSONResponseBodyErrorType defines parameters for CustomEnvelopesSetThreshold.
+type CustomEnvelopesSetThreshold404JSONResponseBodyErrorType string
+
+// CustomEnvelopesSetThreshold404JSONResponseBodyObject defines parameters for CustomEnvelopesSetThreshold.
+type CustomEnvelopesSetThreshold404JSONResponseBodyObject string
+
+// CustomEnvelopesSetThreshold422JSONResponseBodyObject defines parameters for CustomEnvelopesSetThreshold.
+type CustomEnvelopesSetThreshold422JSONResponseBodyObject string
+
+// CustomEnvelopesSetThreshold429JSONResponseBodyErrorType defines parameters for CustomEnvelopesSetThreshold.
+type CustomEnvelopesSetThreshold429JSONResponseBodyErrorType string
+
+// CustomEnvelopesSetThreshold429JSONResponseBodyObject defines parameters for CustomEnvelopesSetThreshold.
+type CustomEnvelopesSetThreshold429JSONResponseBodyObject string
+
+// CustomEnvelopesSetThreshold500JSONResponseBodyErrorType defines parameters for CustomEnvelopesSetThreshold.
+type CustomEnvelopesSetThreshold500JSONResponseBodyErrorType string
+
+// CustomEnvelopesSetThreshold500JSONResponseBodyObject defines parameters for CustomEnvelopesSetThreshold.
+type CustomEnvelopesSetThreshold500JSONResponseBodyObject string
+
+// DocumentsListParams defines parameters for DocumentsList.
+type DocumentsListParams struct {
+	Skip  *ListParamsSkip  `form:"skip,omitempty" json:"skip,omitempty"`
+	Limit *ListParamsLimit `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Search You can supply any string to help narrow down the list of resources. For example, if you pass `"New York"` (quoted), it will return resources that have that string present somewhere in their response. Alternatively, you can supply a structured search query. See the documentation on `StructuredSearchQuery` for more details.
+	Search *ListParamsSearch `form:"search,omitempty" json:"search,omitempty"`
+}
+
+// DocumentsList400JSONResponseBodyErrorType defines parameters for DocumentsList.
+type DocumentsList400JSONResponseBodyErrorType string
+
+// DocumentsList400JSONResponseBodyObject defines parameters for DocumentsList.
+type DocumentsList400JSONResponseBodyObject string
+
+// DocumentsList401JSONResponseBody0 defines parameters for DocumentsList.
+type DocumentsList401JSONResponseBody0 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type DocumentsList401JSONResponseBody0ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object DocumentsList401JSONResponseBody0Object `json:"object"`
+}
+
+// DocumentsList401JSONResponseBody0ErrorType defines parameters for DocumentsList.
+type DocumentsList401JSONResponseBody0ErrorType string
+
+// DocumentsList401JSONResponseBody0Object defines parameters for DocumentsList.
+type DocumentsList401JSONResponseBody0Object string
+
+// DocumentsList401JSONResponseBody1 defines parameters for DocumentsList.
+type DocumentsList401JSONResponseBody1 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type DocumentsList401JSONResponseBody1ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object DocumentsList401JSONResponseBody1Object `json:"object"`
+}
+
+// DocumentsList401JSONResponseBody1ErrorType defines parameters for DocumentsList.
+type DocumentsList401JSONResponseBody1ErrorType string
+
+// DocumentsList401JSONResponseBody1Object defines parameters for DocumentsList.
+type DocumentsList401JSONResponseBody1Object string
+
+// DocumentsList401JSONResponseBody defines parameters for DocumentsList.
+type DocumentsList401JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// DocumentsList429JSONResponseBodyErrorType defines parameters for DocumentsList.
+type DocumentsList429JSONResponseBodyErrorType string
+
+// DocumentsList429JSONResponseBodyObject defines parameters for DocumentsList.
+type DocumentsList429JSONResponseBodyObject string
+
+// DocumentsList500JSONResponseBodyErrorType defines parameters for DocumentsList.
+type DocumentsList500JSONResponseBodyErrorType string
+
+// DocumentsList500JSONResponseBodyObject defines parameters for DocumentsList.
+type DocumentsList500JSONResponseBodyObject string
+
+// DocumentsCreateParams defines parameters for DocumentsCreate.
+type DocumentsCreateParams struct {
+	IdempotencyKey *string `json:"idempotency-key,omitempty"`
+}
+
+// DocumentsCreate400JSONResponseBodyErrorType defines parameters for DocumentsCreate.
+type DocumentsCreate400JSONResponseBodyErrorType string
+
+// DocumentsCreate400JSONResponseBodyObject defines parameters for DocumentsCreate.
+type DocumentsCreate400JSONResponseBodyObject string
+
+// DocumentsCreate401JSONResponseBody0 defines parameters for DocumentsCreate.
+type DocumentsCreate401JSONResponseBody0 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type DocumentsCreate401JSONResponseBody0ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object DocumentsCreate401JSONResponseBody0Object `json:"object"`
+}
+
+// DocumentsCreate401JSONResponseBody0ErrorType defines parameters for DocumentsCreate.
+type DocumentsCreate401JSONResponseBody0ErrorType string
+
+// DocumentsCreate401JSONResponseBody0Object defines parameters for DocumentsCreate.
+type DocumentsCreate401JSONResponseBody0Object string
+
+// DocumentsCreate401JSONResponseBody1 defines parameters for DocumentsCreate.
+type DocumentsCreate401JSONResponseBody1 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type DocumentsCreate401JSONResponseBody1ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object DocumentsCreate401JSONResponseBody1Object `json:"object"`
+}
+
+// DocumentsCreate401JSONResponseBody1ErrorType defines parameters for DocumentsCreate.
+type DocumentsCreate401JSONResponseBody1ErrorType string
+
+// DocumentsCreate401JSONResponseBody1Object defines parameters for DocumentsCreate.
+type DocumentsCreate401JSONResponseBody1Object string
+
+// DocumentsCreate401JSONResponseBody defines parameters for DocumentsCreate.
+type DocumentsCreate401JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// DocumentsCreate404JSONResponseBodyErrorType defines parameters for DocumentsCreate.
+type DocumentsCreate404JSONResponseBodyErrorType string
+
+// DocumentsCreate404JSONResponseBodyObject defines parameters for DocumentsCreate.
+type DocumentsCreate404JSONResponseBodyObject string
+
+// DocumentsCreate422JSONResponseBodyObject defines parameters for DocumentsCreate.
+type DocumentsCreate422JSONResponseBodyObject string
+
+// DocumentsCreate429JSONResponseBodyErrorType defines parameters for DocumentsCreate.
+type DocumentsCreate429JSONResponseBodyErrorType string
+
+// DocumentsCreate429JSONResponseBodyObject defines parameters for DocumentsCreate.
+type DocumentsCreate429JSONResponseBodyObject string
+
+// DocumentsCreate500JSONResponseBodyErrorType defines parameters for DocumentsCreate.
+type DocumentsCreate500JSONResponseBodyErrorType string
+
+// DocumentsCreate500JSONResponseBodyObject defines parameters for DocumentsCreate.
+type DocumentsCreate500JSONResponseBodyObject string
+
+// DocumentsGet401JSONResponseBody0 defines parameters for DocumentsGet.
+type DocumentsGet401JSONResponseBody0 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type DocumentsGet401JSONResponseBody0ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object DocumentsGet401JSONResponseBody0Object `json:"object"`
+}
+
+// DocumentsGet401JSONResponseBody0ErrorType defines parameters for DocumentsGet.
+type DocumentsGet401JSONResponseBody0ErrorType string
+
+// DocumentsGet401JSONResponseBody0Object defines parameters for DocumentsGet.
+type DocumentsGet401JSONResponseBody0Object string
+
+// DocumentsGet401JSONResponseBody1 defines parameters for DocumentsGet.
+type DocumentsGet401JSONResponseBody1 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type DocumentsGet401JSONResponseBody1ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object DocumentsGet401JSONResponseBody1Object `json:"object"`
+}
+
+// DocumentsGet401JSONResponseBody1ErrorType defines parameters for DocumentsGet.
+type DocumentsGet401JSONResponseBody1ErrorType string
+
+// DocumentsGet401JSONResponseBody1Object defines parameters for DocumentsGet.
+type DocumentsGet401JSONResponseBody1Object string
+
+// DocumentsGet401JSONResponseBody defines parameters for DocumentsGet.
+type DocumentsGet401JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// DocumentsGet404JSONResponseBodyErrorType defines parameters for DocumentsGet.
+type DocumentsGet404JSONResponseBodyErrorType string
+
+// DocumentsGet404JSONResponseBodyObject defines parameters for DocumentsGet.
+type DocumentsGet404JSONResponseBodyObject string
+
+// DocumentsGet422JSONResponseBodyObject defines parameters for DocumentsGet.
+type DocumentsGet422JSONResponseBodyObject string
+
+// DocumentsGet429JSONResponseBodyErrorType defines parameters for DocumentsGet.
+type DocumentsGet429JSONResponseBodyErrorType string
+
+// DocumentsGet429JSONResponseBodyObject defines parameters for DocumentsGet.
+type DocumentsGet429JSONResponseBodyObject string
+
+// DocumentsGet500JSONResponseBodyErrorType defines parameters for DocumentsGet.
+type DocumentsGet500JSONResponseBodyErrorType string
+
+// DocumentsGet500JSONResponseBodyObject defines parameters for DocumentsGet.
+type DocumentsGet500JSONResponseBodyObject string
 
 // EventsListParams defines parameters for EventsList.
 type EventsListParams struct {
@@ -35358,6 +41256,80 @@ type ReportsRunAdHocSample500JSONResponseBodyErrorType string
 // ReportsRunAdHocSample500JSONResponseBodyObject defines parameters for ReportsRunAdHocSample.
 type ReportsRunAdHocSample500JSONResponseBodyObject string
 
+// ReportsPreviewSchedule400JSONResponseBodyErrorType defines parameters for ReportsPreviewSchedule.
+type ReportsPreviewSchedule400JSONResponseBodyErrorType string
+
+// ReportsPreviewSchedule400JSONResponseBodyObject defines parameters for ReportsPreviewSchedule.
+type ReportsPreviewSchedule400JSONResponseBodyObject string
+
+// ReportsPreviewSchedule401JSONResponseBody0 defines parameters for ReportsPreviewSchedule.
+type ReportsPreviewSchedule401JSONResponseBody0 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type ReportsPreviewSchedule401JSONResponseBody0ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object ReportsPreviewSchedule401JSONResponseBody0Object `json:"object"`
+}
+
+// ReportsPreviewSchedule401JSONResponseBody0ErrorType defines parameters for ReportsPreviewSchedule.
+type ReportsPreviewSchedule401JSONResponseBody0ErrorType string
+
+// ReportsPreviewSchedule401JSONResponseBody0Object defines parameters for ReportsPreviewSchedule.
+type ReportsPreviewSchedule401JSONResponseBody0Object string
+
+// ReportsPreviewSchedule401JSONResponseBody1 defines parameters for ReportsPreviewSchedule.
+type ReportsPreviewSchedule401JSONResponseBody1 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type ReportsPreviewSchedule401JSONResponseBody1ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object ReportsPreviewSchedule401JSONResponseBody1Object `json:"object"`
+}
+
+// ReportsPreviewSchedule401JSONResponseBody1ErrorType defines parameters for ReportsPreviewSchedule.
+type ReportsPreviewSchedule401JSONResponseBody1ErrorType string
+
+// ReportsPreviewSchedule401JSONResponseBody1Object defines parameters for ReportsPreviewSchedule.
+type ReportsPreviewSchedule401JSONResponseBody1Object string
+
+// ReportsPreviewSchedule401JSONResponseBody defines parameters for ReportsPreviewSchedule.
+type ReportsPreviewSchedule401JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// ReportsPreviewSchedule404JSONResponseBodyErrorType defines parameters for ReportsPreviewSchedule.
+type ReportsPreviewSchedule404JSONResponseBodyErrorType string
+
+// ReportsPreviewSchedule404JSONResponseBodyObject defines parameters for ReportsPreviewSchedule.
+type ReportsPreviewSchedule404JSONResponseBodyObject string
+
+// ReportsPreviewSchedule422JSONResponseBodyObject defines parameters for ReportsPreviewSchedule.
+type ReportsPreviewSchedule422JSONResponseBodyObject string
+
+// ReportsPreviewSchedule429JSONResponseBodyErrorType defines parameters for ReportsPreviewSchedule.
+type ReportsPreviewSchedule429JSONResponseBodyErrorType string
+
+// ReportsPreviewSchedule429JSONResponseBodyObject defines parameters for ReportsPreviewSchedule.
+type ReportsPreviewSchedule429JSONResponseBodyObject string
+
+// ReportsPreviewSchedule500JSONResponseBodyErrorType defines parameters for ReportsPreviewSchedule.
+type ReportsPreviewSchedule500JSONResponseBodyErrorType string
+
+// ReportsPreviewSchedule500JSONResponseBodyObject defines parameters for ReportsPreviewSchedule.
+type ReportsPreviewSchedule500JSONResponseBodyObject string
+
 // ReportsDeleteReport401JSONResponseBody0 defines parameters for ReportsDeleteReport.
 type ReportsDeleteReport401JSONResponseBody0 struct {
 	// Error The error object which has information on the error encountered.
@@ -35641,6 +41613,80 @@ type ReportsRunSavedReportSample500JSONResponseBodyErrorType string
 
 // ReportsRunSavedReportSample500JSONResponseBodyObject defines parameters for ReportsRunSavedReportSample.
 type ReportsRunSavedReportSample500JSONResponseBodyObject string
+
+// ReportsListReportExportsParams defines parameters for ReportsListReportExports.
+type ReportsListReportExportsParams struct {
+	Skip  *ListParamsSkip  `form:"skip,omitempty" json:"skip,omitempty"`
+	Limit *ListParamsLimit `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Search You can supply any string to help narrow down the list of resources. For example, if you pass `"New York"` (quoted), it will return resources that have that string present somewhere in their response. Alternatively, you can supply a structured search query. See the documentation on `StructuredSearchQuery` for more details.
+	Search *ListParamsSearch `form:"search,omitempty" json:"search,omitempty"`
+}
+
+// ReportsListReportExports400JSONResponseBodyErrorType defines parameters for ReportsListReportExports.
+type ReportsListReportExports400JSONResponseBodyErrorType string
+
+// ReportsListReportExports400JSONResponseBodyObject defines parameters for ReportsListReportExports.
+type ReportsListReportExports400JSONResponseBodyObject string
+
+// ReportsListReportExports401JSONResponseBody0 defines parameters for ReportsListReportExports.
+type ReportsListReportExports401JSONResponseBody0 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type ReportsListReportExports401JSONResponseBody0ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object ReportsListReportExports401JSONResponseBody0Object `json:"object"`
+}
+
+// ReportsListReportExports401JSONResponseBody0ErrorType defines parameters for ReportsListReportExports.
+type ReportsListReportExports401JSONResponseBody0ErrorType string
+
+// ReportsListReportExports401JSONResponseBody0Object defines parameters for ReportsListReportExports.
+type ReportsListReportExports401JSONResponseBody0Object string
+
+// ReportsListReportExports401JSONResponseBody1 defines parameters for ReportsListReportExports.
+type ReportsListReportExports401JSONResponseBody1 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type ReportsListReportExports401JSONResponseBody1ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object ReportsListReportExports401JSONResponseBody1Object `json:"object"`
+}
+
+// ReportsListReportExports401JSONResponseBody1ErrorType defines parameters for ReportsListReportExports.
+type ReportsListReportExports401JSONResponseBody1ErrorType string
+
+// ReportsListReportExports401JSONResponseBody1Object defines parameters for ReportsListReportExports.
+type ReportsListReportExports401JSONResponseBody1Object string
+
+// ReportsListReportExports401JSONResponseBody defines parameters for ReportsListReportExports.
+type ReportsListReportExports401JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// ReportsListReportExports429JSONResponseBodyErrorType defines parameters for ReportsListReportExports.
+type ReportsListReportExports429JSONResponseBodyErrorType string
+
+// ReportsListReportExports429JSONResponseBodyObject defines parameters for ReportsListReportExports.
+type ReportsListReportExports429JSONResponseBodyObject string
+
+// ReportsListReportExports500JSONResponseBodyErrorType defines parameters for ReportsListReportExports.
+type ReportsListReportExports500JSONResponseBodyErrorType string
+
+// ReportsListReportExports500JSONResponseBodyObject defines parameters for ReportsListReportExports.
+type ReportsListReportExports500JSONResponseBodyObject string
 
 // ReportsCreateReportExport400JSONResponseBodyErrorType defines parameters for ReportsCreateReportExport.
 type ReportsCreateReportExport400JSONResponseBodyErrorType string
@@ -38611,15 +44657,36 @@ type TargetedListBuildsConfirm422JSONResponseBody2 struct {
 		Message string `json:"message"`
 
 		// Type A stable machine-friendly identifier for the error.
-		Type string `json:"type"`
+		Type TargetedListBuildsConfirm422JSONResponseBody2ErrorType `json:"type"`
 	} `json:"error"`
 
 	// Object Always "error".
 	Object TargetedListBuildsConfirm422JSONResponseBody2Object `json:"object"`
 }
 
+// TargetedListBuildsConfirm422JSONResponseBody2ErrorType defines parameters for TargetedListBuildsConfirm.
+type TargetedListBuildsConfirm422JSONResponseBody2ErrorType string
+
 // TargetedListBuildsConfirm422JSONResponseBody2Object defines parameters for TargetedListBuildsConfirm.
 type TargetedListBuildsConfirm422JSONResponseBody2Object string
+
+// TargetedListBuildsConfirm422JSONResponseBody3 defines parameters for TargetedListBuildsConfirm.
+type TargetedListBuildsConfirm422JSONResponseBody3 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type string `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object TargetedListBuildsConfirm422JSONResponseBody3Object `json:"object"`
+}
+
+// TargetedListBuildsConfirm422JSONResponseBody3Object defines parameters for TargetedListBuildsConfirm.
+type TargetedListBuildsConfirm422JSONResponseBody3Object string
 
 // TargetedListBuildsConfirm422JSONResponseBody defines parameters for TargetedListBuildsConfirm.
 type TargetedListBuildsConfirm422JSONResponseBody struct {
@@ -38711,6 +44778,11 @@ type TemplateEditorSessionsList500JSONResponseBodyErrorType string
 
 // TemplateEditorSessionsList500JSONResponseBodyObject defines parameters for TemplateEditorSessionsList.
 type TemplateEditorSessionsList500JSONResponseBodyObject string
+
+// TemplateEditorSessionsCreateParams defines parameters for TemplateEditorSessionsCreate.
+type TemplateEditorSessionsCreateParams struct {
+	IdempotencyKey *string `json:"idempotency-key,omitempty"`
+}
 
 // TemplateEditorSessionsCreate400JSONResponseBodyErrorType defines parameters for TemplateEditorSessionsCreate.
 type TemplateEditorSessionsCreate400JSONResponseBodyErrorType string
@@ -39223,6 +45295,174 @@ type TemplatesUpdate500JSONResponseBodyErrorType string
 
 // TemplatesUpdate500JSONResponseBodyObject defines parameters for TemplatesUpdate.
 type TemplatesUpdate500JSONResponseBodyObject string
+
+// TemplatesCopyJSONBody defines parameters for TemplatesCopy.
+type TemplatesCopyJSONBody struct {
+	// Destination Where the copy is created.
+	Destination *struct {
+		// Live Create the copy in live mode. Defaults to the mode of your
+		// API key. `true` needs a live API key.
+		Live *bool `json:"live,omitempty"`
+
+		// Organization The organization to copy the template into: yours (the
+		// default) or one of its sub-organizations. An ID: `org_…` or
+		// `sub_org_…`.
+		Organization *string `json:"organization,omitempty"`
+	} `json:"destination,omitempty"`
+}
+
+// TemplatesCopy400JSONResponseBodyErrorType defines parameters for TemplatesCopy.
+type TemplatesCopy400JSONResponseBodyErrorType string
+
+// TemplatesCopy400JSONResponseBodyObject defines parameters for TemplatesCopy.
+type TemplatesCopy400JSONResponseBodyObject string
+
+// TemplatesCopy401JSONResponseBody0 defines parameters for TemplatesCopy.
+type TemplatesCopy401JSONResponseBody0 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type TemplatesCopy401JSONResponseBody0ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object TemplatesCopy401JSONResponseBody0Object `json:"object"`
+}
+
+// TemplatesCopy401JSONResponseBody0ErrorType defines parameters for TemplatesCopy.
+type TemplatesCopy401JSONResponseBody0ErrorType string
+
+// TemplatesCopy401JSONResponseBody0Object defines parameters for TemplatesCopy.
+type TemplatesCopy401JSONResponseBody0Object string
+
+// TemplatesCopy401JSONResponseBody1 defines parameters for TemplatesCopy.
+type TemplatesCopy401JSONResponseBody1 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type TemplatesCopy401JSONResponseBody1ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object TemplatesCopy401JSONResponseBody1Object `json:"object"`
+}
+
+// TemplatesCopy401JSONResponseBody1ErrorType defines parameters for TemplatesCopy.
+type TemplatesCopy401JSONResponseBody1ErrorType string
+
+// TemplatesCopy401JSONResponseBody1Object defines parameters for TemplatesCopy.
+type TemplatesCopy401JSONResponseBody1Object string
+
+// TemplatesCopy401JSONResponseBody defines parameters for TemplatesCopy.
+type TemplatesCopy401JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// TemplatesCopy404JSONResponseBodyErrorType defines parameters for TemplatesCopy.
+type TemplatesCopy404JSONResponseBodyErrorType string
+
+// TemplatesCopy404JSONResponseBodyObject defines parameters for TemplatesCopy.
+type TemplatesCopy404JSONResponseBodyObject string
+
+// TemplatesCopy422JSONResponseBodyObject defines parameters for TemplatesCopy.
+type TemplatesCopy422JSONResponseBodyObject string
+
+// TemplatesCopy429JSONResponseBodyErrorType defines parameters for TemplatesCopy.
+type TemplatesCopy429JSONResponseBodyErrorType string
+
+// TemplatesCopy429JSONResponseBodyObject defines parameters for TemplatesCopy.
+type TemplatesCopy429JSONResponseBodyObject string
+
+// TemplatesCopy500JSONResponseBodyErrorType defines parameters for TemplatesCopy.
+type TemplatesCopy500JSONResponseBodyErrorType string
+
+// TemplatesCopy500JSONResponseBodyObject defines parameters for TemplatesCopy.
+type TemplatesCopy500JSONResponseBodyObject string
+
+// ThumbnailsGetParams defines parameters for ThumbnailsGet.
+type ThumbnailsGetParams struct {
+	// Resources The IDs of the resources to get thumbnails for,
+	// comma separated (e.g. `resources=template_abc,template_def`). At least 1
+	// and at most 100. Only template IDs are accepted for now.
+	Resources []string `form:"resources" json:"resources"`
+}
+
+// ThumbnailsGet400JSONResponseBodyErrorType defines parameters for ThumbnailsGet.
+type ThumbnailsGet400JSONResponseBodyErrorType string
+
+// ThumbnailsGet400JSONResponseBodyObject defines parameters for ThumbnailsGet.
+type ThumbnailsGet400JSONResponseBodyObject string
+
+// ThumbnailsGet401JSONResponseBodyErrorType defines parameters for ThumbnailsGet.
+type ThumbnailsGet401JSONResponseBodyErrorType string
+
+// ThumbnailsGet401JSONResponseBodyObject defines parameters for ThumbnailsGet.
+type ThumbnailsGet401JSONResponseBodyObject string
+
+// ThumbnailsGet403JSONResponseBody0 defines parameters for ThumbnailsGet.
+type ThumbnailsGet403JSONResponseBody0 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type ThumbnailsGet403JSONResponseBody0ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object ThumbnailsGet403JSONResponseBody0Object `json:"object"`
+}
+
+// ThumbnailsGet403JSONResponseBody0ErrorType defines parameters for ThumbnailsGet.
+type ThumbnailsGet403JSONResponseBody0ErrorType string
+
+// ThumbnailsGet403JSONResponseBody0Object defines parameters for ThumbnailsGet.
+type ThumbnailsGet403JSONResponseBody0Object string
+
+// ThumbnailsGet403JSONResponseBody1 defines parameters for ThumbnailsGet.
+type ThumbnailsGet403JSONResponseBody1 struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type ThumbnailsGet403JSONResponseBody1ErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object ThumbnailsGet403JSONResponseBody1Object `json:"object"`
+}
+
+// ThumbnailsGet403JSONResponseBody1ErrorType defines parameters for ThumbnailsGet.
+type ThumbnailsGet403JSONResponseBody1ErrorType string
+
+// ThumbnailsGet403JSONResponseBody1Object defines parameters for ThumbnailsGet.
+type ThumbnailsGet403JSONResponseBody1Object string
+
+// ThumbnailsGet403JSONResponseBody defines parameters for ThumbnailsGet.
+type ThumbnailsGet403JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// ThumbnailsGet429JSONResponseBodyErrorType defines parameters for ThumbnailsGet.
+type ThumbnailsGet429JSONResponseBodyErrorType string
+
+// ThumbnailsGet429JSONResponseBodyObject defines parameters for ThumbnailsGet.
+type ThumbnailsGet429JSONResponseBodyObject string
+
+// ThumbnailsGet500JSONResponseBodyErrorType defines parameters for ThumbnailsGet.
+type ThumbnailsGet500JSONResponseBodyErrorType string
+
+// ThumbnailsGet500JSONResponseBodyObject defines parameters for ThumbnailsGet.
+type ThumbnailsGet500JSONResponseBodyObject string
 
 // TrackersListParams defines parameters for TrackersList.
 type TrackersListParams struct {
@@ -40721,6 +46961,24 @@ type WebhooksListInvocations500JSONResponseBodyErrorType string
 // WebhooksListInvocations500JSONResponseBodyObject defines parameters for WebhooksListInvocations.
 type WebhooksListInvocations500JSONResponseBodyObject string
 
+// AccuracyStatementsListParams defines parameters for AccuracyStatementsList.
+type AccuracyStatementsListParams struct {
+	Skip  *int `form:"skip,omitempty" json:"skip,omitempty"`
+	Limit *int `form:"limit,omitempty" json:"limit,omitempty"`
+}
+
+// AccuracyStatementsList200JSONResponseBodyStatus defines parameters for AccuracyStatementsList.
+type AccuracyStatementsList200JSONResponseBodyStatus string
+
+// AccuracyStatementsCreate201JSONResponseBodyStatus defines parameters for AccuracyStatementsCreate.
+type AccuracyStatementsCreate201JSONResponseBodyStatus string
+
+// AccuracyStatementsGet200JSONResponseBodyStatus defines parameters for AccuracyStatementsGet.
+type AccuracyStatementsGet200JSONResponseBodyStatus string
+
+// AccuracyStatementsGenerate200JSONResponseBodyStatus defines parameters for AccuracyStatementsGenerate.
+type AccuracyStatementsGenerate200JSONResponseBodyStatus string
+
 // StandardAPIGetLookupInfo200JSONResponseBodyStatus defines parameters for StandardAPIGetLookupInfo.
 type StandardAPIGetLookupInfo200JSONResponseBodyStatus string
 
@@ -40929,6 +47187,21 @@ type ChequesCancelWithNoteJSONRequestBody ChequesCancelWithNoteJSONBody
 // ContactsCreateJSONRequestBody defines body for ContactsCreate for application/json ContentType.
 type ContactsCreateJSONRequestBody = ContactCreate
 
+// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartJSONRequestBody defines body for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart for application/json ContentType.
+type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartJSONRequestBody = CustomEnvelopeCreate
+
+// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartMultipartRequestBody defines body for CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart for multipart/form-data ContentType.
+type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartMultipartRequestBody = CustomEnvelopeCreateMultiPart
+
+// CustomEnvelopesCreateOrderJSONRequestBody defines body for CustomEnvelopesCreateOrder for application/json ContentType.
+type CustomEnvelopesCreateOrderJSONRequestBody CustomEnvelopesCreateOrderJSONBody
+
+// CustomEnvelopesSetThresholdJSONRequestBody defines body for CustomEnvelopesSetThreshold for application/json ContentType.
+type CustomEnvelopesSetThresholdJSONRequestBody = CustomEnvelopeLowInventoryThreshold
+
+// DocumentsCreateJSONRequestBody defines body for DocumentsCreate for application/json ContentType.
+type DocumentsCreateJSONRequestBody = DocumentCreate
+
 // LettersCreateJSONLettersCreateMultipartJSONRequestBody defines body for LettersCreateJSONLettersCreateMultipart for application/json ContentType.
 type LettersCreateJSONLettersCreateMultipartJSONRequestBody = LetterCreate
 
@@ -40967,6 +47240,9 @@ type ReportsCreateReportJSONRequestBody = ReportCreate
 
 // ReportsRunAdHocSampleJSONRequestBody defines body for ReportsRunAdHocSample for application/json ContentType.
 type ReportsRunAdHocSampleJSONRequestBody = AdHocReportSampleCreate
+
+// ReportsPreviewScheduleJSONRequestBody defines body for ReportsPreviewSchedule for application/json ContentType.
+type ReportsPreviewScheduleJSONRequestBody = SchedulePreviewCreate
 
 // ReportsUpdateReportJSONRequestBody defines body for ReportsUpdateReport for application/json ContentType.
 type ReportsUpdateReportJSONRequestBody = ReportUpdate
@@ -41016,6 +47292,9 @@ type TemplatesCreateJSONRequestBody = TemplateCreate
 // TemplatesUpdateJSONRequestBody defines body for TemplatesUpdate for application/json ContentType.
 type TemplatesUpdateJSONRequestBody = TemplateUpdate
 
+// TemplatesCopyJSONRequestBody defines body for TemplatesCopy for application/json ContentType.
+type TemplatesCopyJSONRequestBody TemplatesCopyJSONBody
+
 // TrackersCreateJSONRequestBody defines body for TrackersCreate for application/json ContentType.
 type TrackersCreateJSONRequestBody = TrackerCreate
 
@@ -41033,6 +47312,9 @@ type WebhooksCreateJSONRequestBody = WebhookCreate
 
 // WebhooksUpdateJSONRequestBody defines body for WebhooksUpdate for application/json ContentType.
 type WebhooksUpdateJSONRequestBody = WebhookUpdate
+
+// AccuracyStatementsCreateJSONRequestBody defines body for AccuracyStatementsCreate for application/json ContentType.
+type AccuracyStatementsCreateJSONRequestBody = AccuracyStatementCreate
 
 // StandardAPILookupCityCountyJSONRequestBody defines body for StandardAPILookupCityCounty for application/json ContentType.
 type StandardAPILookupCityCountyJSONRequestBody StandardAPILookupCityCountyJSONBody
@@ -41275,254 +47557,6 @@ func (t BankAccountCreate) MarshalJSON() ([]byte, error) {
 }
 
 func (t *BankAccountCreate) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the BoxChequeCreate_From as a ContactCreate
-func (t BoxChequeCreate_From) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the BoxChequeCreate_From as the provided ContactCreate
-func (t *BoxChequeCreate_From) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the BoxChequeCreate_From, using the provided ContactCreate
-func (t *BoxChequeCreate_From) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBoxChequeCreateFrom1 returns the union data inside the BoxChequeCreate_From as a BoxChequeCreateFrom1
-func (t BoxChequeCreate_From) AsBoxChequeCreateFrom1() (BoxChequeCreateFrom1, error) {
-	var body BoxChequeCreateFrom1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBoxChequeCreateFrom1 overwrites any union data inside the BoxChequeCreate_From as the provided BoxChequeCreateFrom1
-func (t *BoxChequeCreate_From) FromBoxChequeCreateFrom1(v BoxChequeCreateFrom1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBoxChequeCreateFrom1 performs a merge with any union data inside the BoxChequeCreate_From, using the provided BoxChequeCreateFrom1
-func (t *BoxChequeCreate_From) MergeBoxChequeCreateFrom1(v BoxChequeCreateFrom1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t BoxChequeCreate_From) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *BoxChequeCreate_From) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the BoxChequeCreate_To as a ContactCreate
-func (t BoxChequeCreate_To) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the BoxChequeCreate_To as the provided ContactCreate
-func (t *BoxChequeCreate_To) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the BoxChequeCreate_To, using the provided ContactCreate
-func (t *BoxChequeCreate_To) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBoxChequeCreateTo1 returns the union data inside the BoxChequeCreate_To as a BoxChequeCreateTo1
-func (t BoxChequeCreate_To) AsBoxChequeCreateTo1() (BoxChequeCreateTo1, error) {
-	var body BoxChequeCreateTo1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBoxChequeCreateTo1 overwrites any union data inside the BoxChequeCreate_To as the provided BoxChequeCreateTo1
-func (t *BoxChequeCreate_To) FromBoxChequeCreateTo1(v BoxChequeCreateTo1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBoxChequeCreateTo1 performs a merge with any union data inside the BoxChequeCreate_To, using the provided BoxChequeCreateTo1
-func (t *BoxChequeCreate_To) MergeBoxChequeCreateTo1(v BoxChequeCreateTo1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t BoxChequeCreate_To) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *BoxChequeCreate_To) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the BoxCreate_From as a ContactCreate
-func (t BoxCreate_From) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the BoxCreate_From as the provided ContactCreate
-func (t *BoxCreate_From) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the BoxCreate_From, using the provided ContactCreate
-func (t *BoxCreate_From) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBoxCreateFrom1 returns the union data inside the BoxCreate_From as a BoxCreateFrom1
-func (t BoxCreate_From) AsBoxCreateFrom1() (BoxCreateFrom1, error) {
-	var body BoxCreateFrom1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBoxCreateFrom1 overwrites any union data inside the BoxCreate_From as the provided BoxCreateFrom1
-func (t *BoxCreate_From) FromBoxCreateFrom1(v BoxCreateFrom1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBoxCreateFrom1 performs a merge with any union data inside the BoxCreate_From, using the provided BoxCreateFrom1
-func (t *BoxCreate_From) MergeBoxCreateFrom1(v BoxCreateFrom1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t BoxCreate_From) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *BoxCreate_From) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the BoxCreate_To as a ContactCreate
-func (t BoxCreate_To) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the BoxCreate_To as the provided ContactCreate
-func (t *BoxCreate_To) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the BoxCreate_To, using the provided ContactCreate
-func (t *BoxCreate_To) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsBoxCreateTo1 returns the union data inside the BoxCreate_To as a BoxCreateTo1
-func (t BoxCreate_To) AsBoxCreateTo1() (BoxCreateTo1, error) {
-	var body BoxCreateTo1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromBoxCreateTo1 overwrites any union data inside the BoxCreate_To as the provided BoxCreateTo1
-func (t *BoxCreate_To) FromBoxCreateTo1(v BoxCreateTo1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeBoxCreateTo1 performs a merge with any union data inside the BoxCreate_To, using the provided BoxCreateTo1
-func (t *BoxCreate_To) MergeBoxCreateTo1(v BoxCreateTo1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t BoxCreate_To) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *BoxCreate_To) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -42147,68 +48181,6 @@ func (t *ChequeCreate_Envelope) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsContactCreate returns the union data inside the ChequeCreate_From as a ContactCreate
-func (t ChequeCreate_From) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the ChequeCreate_From as the provided ContactCreate
-func (t *ChequeCreate_From) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the ChequeCreate_From, using the provided ContactCreate
-func (t *ChequeCreate_From) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsChequeCreateFrom1 returns the union data inside the ChequeCreate_From as a ChequeCreateFrom1
-func (t ChequeCreate_From) AsChequeCreateFrom1() (ChequeCreateFrom1, error) {
-	var body ChequeCreateFrom1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromChequeCreateFrom1 overwrites any union data inside the ChequeCreate_From as the provided ChequeCreateFrom1
-func (t *ChequeCreate_From) FromChequeCreateFrom1(v ChequeCreateFrom1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeChequeCreateFrom1 performs a merge with any union data inside the ChequeCreate_From, using the provided ChequeCreateFrom1
-func (t *ChequeCreate_From) MergeChequeCreateFrom1(v ChequeCreateFrom1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t ChequeCreate_From) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *ChequeCreate_From) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
 // AsChequeCreateLetterPDF0 returns the union data inside the ChequeCreate_LetterPDF as a ChequeCreateLetterPDF0
 func (t ChequeCreate_LetterPDF) AsChequeCreateLetterPDF0() (ChequeCreateLetterPDF0, error) {
 	var body ChequeCreateLetterPDF0
@@ -42267,130 +48239,6 @@ func (t ChequeCreate_LetterPDF) MarshalJSON() ([]byte, error) {
 }
 
 func (t *ChequeCreate_LetterPDF) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the ChequeCreate_RedirectTo as a ContactCreate
-func (t ChequeCreate_RedirectTo) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the ChequeCreate_RedirectTo as the provided ContactCreate
-func (t *ChequeCreate_RedirectTo) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the ChequeCreate_RedirectTo, using the provided ContactCreate
-func (t *ChequeCreate_RedirectTo) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsChequeCreateRedirectTo1 returns the union data inside the ChequeCreate_RedirectTo as a ChequeCreateRedirectTo1
-func (t ChequeCreate_RedirectTo) AsChequeCreateRedirectTo1() (ChequeCreateRedirectTo1, error) {
-	var body ChequeCreateRedirectTo1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromChequeCreateRedirectTo1 overwrites any union data inside the ChequeCreate_RedirectTo as the provided ChequeCreateRedirectTo1
-func (t *ChequeCreate_RedirectTo) FromChequeCreateRedirectTo1(v ChequeCreateRedirectTo1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeChequeCreateRedirectTo1 performs a merge with any union data inside the ChequeCreate_RedirectTo, using the provided ChequeCreateRedirectTo1
-func (t *ChequeCreate_RedirectTo) MergeChequeCreateRedirectTo1(v ChequeCreateRedirectTo1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t ChequeCreate_RedirectTo) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *ChequeCreate_RedirectTo) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the ChequeCreate_To as a ContactCreate
-func (t ChequeCreate_To) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the ChequeCreate_To as the provided ContactCreate
-func (t *ChequeCreate_To) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the ChequeCreate_To, using the provided ContactCreate
-func (t *ChequeCreate_To) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsChequeCreateTo1 returns the union data inside the ChequeCreate_To as a ChequeCreateTo1
-func (t ChequeCreate_To) AsChequeCreateTo1() (ChequeCreateTo1, error) {
-	var body ChequeCreateTo1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromChequeCreateTo1 overwrites any union data inside the ChequeCreate_To as the provided ChequeCreateTo1
-func (t *ChequeCreate_To) FromChequeCreateTo1(v ChequeCreateTo1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeChequeCreateTo1 performs a merge with any union data inside the ChequeCreate_To, using the provided ChequeCreateTo1
-func (t *ChequeCreate_To) MergeChequeCreateTo1(v ChequeCreateTo1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t ChequeCreate_To) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *ChequeCreate_To) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -42519,68 +48367,6 @@ func (t *ChequeCreateMultiPart_Envelope) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsContactCreate returns the union data inside the ChequeCreateMultiPart_From as a ContactCreate
-func (t ChequeCreateMultiPart_From) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the ChequeCreateMultiPart_From as the provided ContactCreate
-func (t *ChequeCreateMultiPart_From) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the ChequeCreateMultiPart_From, using the provided ContactCreate
-func (t *ChequeCreateMultiPart_From) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsChequeCreateMultiPartFrom1 returns the union data inside the ChequeCreateMultiPart_From as a ChequeCreateMultiPartFrom1
-func (t ChequeCreateMultiPart_From) AsChequeCreateMultiPartFrom1() (ChequeCreateMultiPartFrom1, error) {
-	var body ChequeCreateMultiPartFrom1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromChequeCreateMultiPartFrom1 overwrites any union data inside the ChequeCreateMultiPart_From as the provided ChequeCreateMultiPartFrom1
-func (t *ChequeCreateMultiPart_From) FromChequeCreateMultiPartFrom1(v ChequeCreateMultiPartFrom1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeChequeCreateMultiPartFrom1 performs a merge with any union data inside the ChequeCreateMultiPart_From, using the provided ChequeCreateMultiPartFrom1
-func (t *ChequeCreateMultiPart_From) MergeChequeCreateMultiPartFrom1(v ChequeCreateMultiPartFrom1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t ChequeCreateMultiPart_From) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *ChequeCreateMultiPart_From) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
 // AsChequeCreateMultiPartLetterPDF0 returns the union data inside the ChequeCreateMultiPart_LetterPDF as a ChequeCreateMultiPartLetterPDF0
 func (t ChequeCreateMultiPart_LetterPDF) AsChequeCreateMultiPartLetterPDF0() (ChequeCreateMultiPartLetterPDF0, error) {
 	var body ChequeCreateMultiPartLetterPDF0
@@ -42643,130 +48429,6 @@ func (t *ChequeCreateMultiPart_LetterPDF) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsContactCreate returns the union data inside the ChequeCreateMultiPart_RedirectTo as a ContactCreate
-func (t ChequeCreateMultiPart_RedirectTo) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the ChequeCreateMultiPart_RedirectTo as the provided ContactCreate
-func (t *ChequeCreateMultiPart_RedirectTo) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the ChequeCreateMultiPart_RedirectTo, using the provided ContactCreate
-func (t *ChequeCreateMultiPart_RedirectTo) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsChequeCreateMultiPartRedirectTo1 returns the union data inside the ChequeCreateMultiPart_RedirectTo as a ChequeCreateMultiPartRedirectTo1
-func (t ChequeCreateMultiPart_RedirectTo) AsChequeCreateMultiPartRedirectTo1() (ChequeCreateMultiPartRedirectTo1, error) {
-	var body ChequeCreateMultiPartRedirectTo1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromChequeCreateMultiPartRedirectTo1 overwrites any union data inside the ChequeCreateMultiPart_RedirectTo as the provided ChequeCreateMultiPartRedirectTo1
-func (t *ChequeCreateMultiPart_RedirectTo) FromChequeCreateMultiPartRedirectTo1(v ChequeCreateMultiPartRedirectTo1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeChequeCreateMultiPartRedirectTo1 performs a merge with any union data inside the ChequeCreateMultiPart_RedirectTo, using the provided ChequeCreateMultiPartRedirectTo1
-func (t *ChequeCreateMultiPart_RedirectTo) MergeChequeCreateMultiPartRedirectTo1(v ChequeCreateMultiPartRedirectTo1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t ChequeCreateMultiPart_RedirectTo) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *ChequeCreateMultiPart_RedirectTo) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the ChequeCreateMultiPart_To as a ContactCreate
-func (t ChequeCreateMultiPart_To) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the ChequeCreateMultiPart_To as the provided ContactCreate
-func (t *ChequeCreateMultiPart_To) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the ChequeCreateMultiPart_To, using the provided ContactCreate
-func (t *ChequeCreateMultiPart_To) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsChequeCreateMultiPartTo1 returns the union data inside the ChequeCreateMultiPart_To as a ChequeCreateMultiPartTo1
-func (t ChequeCreateMultiPart_To) AsChequeCreateMultiPartTo1() (ChequeCreateMultiPartTo1, error) {
-	var body ChequeCreateMultiPartTo1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromChequeCreateMultiPartTo1 overwrites any union data inside the ChequeCreateMultiPart_To as the provided ChequeCreateMultiPartTo1
-func (t *ChequeCreateMultiPart_To) FromChequeCreateMultiPartTo1(v ChequeCreateMultiPartTo1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeChequeCreateMultiPartTo1 performs a merge with any union data inside the ChequeCreateMultiPart_To, using the provided ChequeCreateMultiPartTo1
-func (t *ChequeCreateMultiPart_To) MergeChequeCreateMultiPartTo1(v ChequeCreateMultiPartTo1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t ChequeCreateMultiPart_To) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *ChequeCreateMultiPart_To) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
 // AsContactCreateWithFirstName returns the union data inside the ContactCreate as a ContactCreateWithFirstName
 func (t ContactCreate) AsContactCreateWithFirstName() (ContactCreateWithFirstName, error) {
 	var body ContactCreateWithFirstName
@@ -42825,6 +48487,316 @@ func (t ContactCreate) MarshalJSON() ([]byte, error) {
 }
 
 func (t *ContactCreate) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsContactCreate returns the union data inside the ContactCreateOrID as a ContactCreate
+func (t ContactCreateOrID) AsContactCreate() (ContactCreate, error) {
+	var body ContactCreate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromContactCreate overwrites any union data inside the ContactCreateOrID as the provided ContactCreate
+func (t *ContactCreateOrID) FromContactCreate(v ContactCreate) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeContactCreate performs a merge with any union data inside the ContactCreateOrID, using the provided ContactCreate
+func (t *ContactCreateOrID) MergeContactCreate(v ContactCreate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsContactCreateOrID1 returns the union data inside the ContactCreateOrID as a ContactCreateOrID1
+func (t ContactCreateOrID) AsContactCreateOrID1() (ContactCreateOrID1, error) {
+	var body ContactCreateOrID1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromContactCreateOrID1 overwrites any union data inside the ContactCreateOrID as the provided ContactCreateOrID1
+func (t *ContactCreateOrID) FromContactCreateOrID1(v ContactCreateOrID1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeContactCreateOrID1 performs a merge with any union data inside the ContactCreateOrID, using the provided ContactCreateOrID1
+func (t *ContactCreateOrID) MergeContactCreateOrID1(v ContactCreateOrID1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t ContactCreateOrID) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *ContactCreateOrID) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsCustomEnvelopeCreatePdf0 returns the union data inside the CustomEnvelopeCreate_Pdf as a CustomEnvelopeCreatePdf0
+func (t CustomEnvelopeCreate_Pdf) AsCustomEnvelopeCreatePdf0() (CustomEnvelopeCreatePdf0, error) {
+	var body CustomEnvelopeCreatePdf0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopeCreatePdf0 overwrites any union data inside the CustomEnvelopeCreate_Pdf as the provided CustomEnvelopeCreatePdf0
+func (t *CustomEnvelopeCreate_Pdf) FromCustomEnvelopeCreatePdf0(v CustomEnvelopeCreatePdf0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopeCreatePdf0 performs a merge with any union data inside the CustomEnvelopeCreate_Pdf, using the provided CustomEnvelopeCreatePdf0
+func (t *CustomEnvelopeCreate_Pdf) MergeCustomEnvelopeCreatePdf0(v CustomEnvelopeCreatePdf0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBinaryFile returns the union data inside the CustomEnvelopeCreate_Pdf as a BinaryFile
+func (t CustomEnvelopeCreate_Pdf) AsBinaryFile() (BinaryFile, error) {
+	var body BinaryFile
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBinaryFile overwrites any union data inside the CustomEnvelopeCreate_Pdf as the provided BinaryFile
+func (t *CustomEnvelopeCreate_Pdf) FromBinaryFile(v BinaryFile) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBinaryFile performs a merge with any union data inside the CustomEnvelopeCreate_Pdf, using the provided BinaryFile
+func (t *CustomEnvelopeCreate_Pdf) MergeBinaryFile(v BinaryFile) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t CustomEnvelopeCreate_Pdf) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *CustomEnvelopeCreate_Pdf) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsCustomEnvelopeCreateMultiPartPdf0 returns the union data inside the CustomEnvelopeCreateMultiPart_Pdf as a CustomEnvelopeCreateMultiPartPdf0
+func (t CustomEnvelopeCreateMultiPart_Pdf) AsCustomEnvelopeCreateMultiPartPdf0() (CustomEnvelopeCreateMultiPartPdf0, error) {
+	var body CustomEnvelopeCreateMultiPartPdf0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopeCreateMultiPartPdf0 overwrites any union data inside the CustomEnvelopeCreateMultiPart_Pdf as the provided CustomEnvelopeCreateMultiPartPdf0
+func (t *CustomEnvelopeCreateMultiPart_Pdf) FromCustomEnvelopeCreateMultiPartPdf0(v CustomEnvelopeCreateMultiPartPdf0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopeCreateMultiPartPdf0 performs a merge with any union data inside the CustomEnvelopeCreateMultiPart_Pdf, using the provided CustomEnvelopeCreateMultiPartPdf0
+func (t *CustomEnvelopeCreateMultiPart_Pdf) MergeCustomEnvelopeCreateMultiPartPdf0(v CustomEnvelopeCreateMultiPartPdf0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsBinaryFile returns the union data inside the CustomEnvelopeCreateMultiPart_Pdf as a BinaryFile
+func (t CustomEnvelopeCreateMultiPart_Pdf) AsBinaryFile() (BinaryFile, error) {
+	var body BinaryFile
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromBinaryFile overwrites any union data inside the CustomEnvelopeCreateMultiPart_Pdf as the provided BinaryFile
+func (t *CustomEnvelopeCreateMultiPart_Pdf) FromBinaryFile(v BinaryFile) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeBinaryFile performs a merge with any union data inside the CustomEnvelopeCreateMultiPart_Pdf, using the provided BinaryFile
+func (t *CustomEnvelopeCreateMultiPart_Pdf) MergeBinaryFile(v BinaryFile) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t CustomEnvelopeCreateMultiPart_Pdf) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *CustomEnvelopeCreateMultiPart_Pdf) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsCustomEnvelopeOrderCustomEnvelope0 returns the union data inside the CustomEnvelopeOrder_CustomEnvelope as a CustomEnvelopeOrderCustomEnvelope0
+func (t CustomEnvelopeOrder_CustomEnvelope) AsCustomEnvelopeOrderCustomEnvelope0() (CustomEnvelopeOrderCustomEnvelope0, error) {
+	var body CustomEnvelopeOrderCustomEnvelope0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopeOrderCustomEnvelope0 overwrites any union data inside the CustomEnvelopeOrder_CustomEnvelope as the provided CustomEnvelopeOrderCustomEnvelope0
+func (t *CustomEnvelopeOrder_CustomEnvelope) FromCustomEnvelopeOrderCustomEnvelope0(v CustomEnvelopeOrderCustomEnvelope0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopeOrderCustomEnvelope0 performs a merge with any union data inside the CustomEnvelopeOrder_CustomEnvelope, using the provided CustomEnvelopeOrderCustomEnvelope0
+func (t *CustomEnvelopeOrder_CustomEnvelope) MergeCustomEnvelopeOrderCustomEnvelope0(v CustomEnvelopeOrderCustomEnvelope0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCustomEnvelope returns the union data inside the CustomEnvelopeOrder_CustomEnvelope as a CustomEnvelope
+func (t CustomEnvelopeOrder_CustomEnvelope) AsCustomEnvelope() (CustomEnvelope, error) {
+	var body CustomEnvelope
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelope overwrites any union data inside the CustomEnvelopeOrder_CustomEnvelope as the provided CustomEnvelope
+func (t *CustomEnvelopeOrder_CustomEnvelope) FromCustomEnvelope(v CustomEnvelope) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelope performs a merge with any union data inside the CustomEnvelopeOrder_CustomEnvelope, using the provided CustomEnvelope
+func (t *CustomEnvelopeOrder_CustomEnvelope) MergeCustomEnvelope(v CustomEnvelope) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t CustomEnvelopeOrder_CustomEnvelope) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *CustomEnvelopeOrder_CustomEnvelope) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsIntlBatchAddressInput0 returns the union data inside the IntlBatchAddressInput as a IntlBatchAddressInput0
+func (t IntlBatchAddressInput) AsIntlBatchAddressInput0() (IntlBatchAddressInput0, error) {
+	var body IntlBatchAddressInput0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromIntlBatchAddressInput0 overwrites any union data inside the IntlBatchAddressInput as the provided IntlBatchAddressInput0
+func (t *IntlBatchAddressInput) FromIntlBatchAddressInput0(v IntlBatchAddressInput0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeIntlBatchAddressInput0 performs a merge with any union data inside the IntlBatchAddressInput, using the provided IntlBatchAddressInput0
+func (t *IntlBatchAddressInput) MergeIntlBatchAddressInput0(v IntlBatchAddressInput0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsIntlBatchStructuredAddress returns the union data inside the IntlBatchAddressInput as a IntlBatchStructuredAddress
+func (t IntlBatchAddressInput) AsIntlBatchStructuredAddress() (IntlBatchStructuredAddress, error) {
+	var body IntlBatchStructuredAddress
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromIntlBatchStructuredAddress overwrites any union data inside the IntlBatchAddressInput as the provided IntlBatchStructuredAddress
+func (t *IntlBatchAddressInput) FromIntlBatchStructuredAddress(v IntlBatchStructuredAddress) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeIntlBatchStructuredAddress performs a merge with any union data inside the IntlBatchAddressInput, using the provided IntlBatchStructuredAddress
+func (t *IntlBatchAddressInput) MergeIntlBatchStructuredAddress(v IntlBatchStructuredAddress) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t IntlBatchAddressInput) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *IntlBatchAddressInput) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -42917,68 +48889,6 @@ func (t *LetterCreate) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsContactCreate returns the union data inside the LetterCreateFormMultiPart_From as a ContactCreate
-func (t LetterCreateFormMultiPart_From) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the LetterCreateFormMultiPart_From as the provided ContactCreate
-func (t *LetterCreateFormMultiPart_From) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the LetterCreateFormMultiPart_From, using the provided ContactCreate
-func (t *LetterCreateFormMultiPart_From) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsLetterCreateFormMultiPartFrom1 returns the union data inside the LetterCreateFormMultiPart_From as a LetterCreateFormMultiPartFrom1
-func (t LetterCreateFormMultiPart_From) AsLetterCreateFormMultiPartFrom1() (LetterCreateFormMultiPartFrom1, error) {
-	var body LetterCreateFormMultiPartFrom1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromLetterCreateFormMultiPartFrom1 overwrites any union data inside the LetterCreateFormMultiPart_From as the provided LetterCreateFormMultiPartFrom1
-func (t *LetterCreateFormMultiPart_From) FromLetterCreateFormMultiPartFrom1(v LetterCreateFormMultiPartFrom1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeLetterCreateFormMultiPartFrom1 performs a merge with any union data inside the LetterCreateFormMultiPart_From, using the provided LetterCreateFormMultiPartFrom1
-func (t *LetterCreateFormMultiPart_From) MergeLetterCreateFormMultiPartFrom1(v LetterCreateFormMultiPartFrom1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t LetterCreateFormMultiPart_From) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *LetterCreateFormMultiPart_From) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
 // AsLetterCreateFormMultiPartPdf0 returns the union data inside the LetterCreateFormMultiPart_Pdf as a LetterCreateFormMultiPartPdf0
 func (t LetterCreateFormMultiPart_Pdf) AsLetterCreateFormMultiPartPdf0() (LetterCreateFormMultiPartPdf0, error) {
 	var body LetterCreateFormMultiPartPdf0
@@ -43041,254 +48951,6 @@ func (t *LetterCreateFormMultiPart_Pdf) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsContactCreate returns the union data inside the LetterCreateFormMultiPart_To as a ContactCreate
-func (t LetterCreateFormMultiPart_To) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the LetterCreateFormMultiPart_To as the provided ContactCreate
-func (t *LetterCreateFormMultiPart_To) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the LetterCreateFormMultiPart_To, using the provided ContactCreate
-func (t *LetterCreateFormMultiPart_To) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsLetterCreateFormMultiPartTo1 returns the union data inside the LetterCreateFormMultiPart_To as a LetterCreateFormMultiPartTo1
-func (t LetterCreateFormMultiPart_To) AsLetterCreateFormMultiPartTo1() (LetterCreateFormMultiPartTo1, error) {
-	var body LetterCreateFormMultiPartTo1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromLetterCreateFormMultiPartTo1 overwrites any union data inside the LetterCreateFormMultiPart_To as the provided LetterCreateFormMultiPartTo1
-func (t *LetterCreateFormMultiPart_To) FromLetterCreateFormMultiPartTo1(v LetterCreateFormMultiPartTo1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeLetterCreateFormMultiPartTo1 performs a merge with any union data inside the LetterCreateFormMultiPart_To, using the provided LetterCreateFormMultiPartTo1
-func (t *LetterCreateFormMultiPart_To) MergeLetterCreateFormMultiPartTo1(v LetterCreateFormMultiPartTo1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t LetterCreateFormMultiPart_To) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *LetterCreateFormMultiPart_To) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the LetterCreateWithHTML_From as a ContactCreate
-func (t LetterCreateWithHTML_From) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the LetterCreateWithHTML_From as the provided ContactCreate
-func (t *LetterCreateWithHTML_From) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the LetterCreateWithHTML_From, using the provided ContactCreate
-func (t *LetterCreateWithHTML_From) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsLetterCreateWithHTMLFrom1 returns the union data inside the LetterCreateWithHTML_From as a LetterCreateWithHTMLFrom1
-func (t LetterCreateWithHTML_From) AsLetterCreateWithHTMLFrom1() (LetterCreateWithHTMLFrom1, error) {
-	var body LetterCreateWithHTMLFrom1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromLetterCreateWithHTMLFrom1 overwrites any union data inside the LetterCreateWithHTML_From as the provided LetterCreateWithHTMLFrom1
-func (t *LetterCreateWithHTML_From) FromLetterCreateWithHTMLFrom1(v LetterCreateWithHTMLFrom1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeLetterCreateWithHTMLFrom1 performs a merge with any union data inside the LetterCreateWithHTML_From, using the provided LetterCreateWithHTMLFrom1
-func (t *LetterCreateWithHTML_From) MergeLetterCreateWithHTMLFrom1(v LetterCreateWithHTMLFrom1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t LetterCreateWithHTML_From) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *LetterCreateWithHTML_From) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the LetterCreateWithHTML_To as a ContactCreate
-func (t LetterCreateWithHTML_To) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the LetterCreateWithHTML_To as the provided ContactCreate
-func (t *LetterCreateWithHTML_To) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the LetterCreateWithHTML_To, using the provided ContactCreate
-func (t *LetterCreateWithHTML_To) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsLetterCreateWithHTMLTo1 returns the union data inside the LetterCreateWithHTML_To as a LetterCreateWithHTMLTo1
-func (t LetterCreateWithHTML_To) AsLetterCreateWithHTMLTo1() (LetterCreateWithHTMLTo1, error) {
-	var body LetterCreateWithHTMLTo1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromLetterCreateWithHTMLTo1 overwrites any union data inside the LetterCreateWithHTML_To as the provided LetterCreateWithHTMLTo1
-func (t *LetterCreateWithHTML_To) FromLetterCreateWithHTMLTo1(v LetterCreateWithHTMLTo1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeLetterCreateWithHTMLTo1 performs a merge with any union data inside the LetterCreateWithHTML_To, using the provided LetterCreateWithHTMLTo1
-func (t *LetterCreateWithHTML_To) MergeLetterCreateWithHTMLTo1(v LetterCreateWithHTMLTo1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t LetterCreateWithHTML_To) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *LetterCreateWithHTML_To) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the LetterCreateWithPDF_From as a ContactCreate
-func (t LetterCreateWithPDF_From) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the LetterCreateWithPDF_From as the provided ContactCreate
-func (t *LetterCreateWithPDF_From) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the LetterCreateWithPDF_From, using the provided ContactCreate
-func (t *LetterCreateWithPDF_From) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsLetterCreateWithPDFFrom1 returns the union data inside the LetterCreateWithPDF_From as a LetterCreateWithPDFFrom1
-func (t LetterCreateWithPDF_From) AsLetterCreateWithPDFFrom1() (LetterCreateWithPDFFrom1, error) {
-	var body LetterCreateWithPDFFrom1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromLetterCreateWithPDFFrom1 overwrites any union data inside the LetterCreateWithPDF_From as the provided LetterCreateWithPDFFrom1
-func (t *LetterCreateWithPDF_From) FromLetterCreateWithPDFFrom1(v LetterCreateWithPDFFrom1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeLetterCreateWithPDFFrom1 performs a merge with any union data inside the LetterCreateWithPDF_From, using the provided LetterCreateWithPDFFrom1
-func (t *LetterCreateWithPDF_From) MergeLetterCreateWithPDFFrom1(v LetterCreateWithPDFFrom1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t LetterCreateWithPDF_From) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *LetterCreateWithPDF_From) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
 // AsLetterCreateWithPDFPdf0 returns the union data inside the LetterCreateWithPDF_Pdf as a LetterCreateWithPDFPdf0
 func (t LetterCreateWithPDF_Pdf) AsLetterCreateWithPDFPdf0() (LetterCreateWithPDFPdf0, error) {
 	var body LetterCreateWithPDFPdf0
@@ -43347,192 +49009,6 @@ func (t LetterCreateWithPDF_Pdf) MarshalJSON() ([]byte, error) {
 }
 
 func (t *LetterCreateWithPDF_Pdf) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the LetterCreateWithPDF_To as a ContactCreate
-func (t LetterCreateWithPDF_To) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the LetterCreateWithPDF_To as the provided ContactCreate
-func (t *LetterCreateWithPDF_To) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the LetterCreateWithPDF_To, using the provided ContactCreate
-func (t *LetterCreateWithPDF_To) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsLetterCreateWithPDFTo1 returns the union data inside the LetterCreateWithPDF_To as a LetterCreateWithPDFTo1
-func (t LetterCreateWithPDF_To) AsLetterCreateWithPDFTo1() (LetterCreateWithPDFTo1, error) {
-	var body LetterCreateWithPDFTo1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromLetterCreateWithPDFTo1 overwrites any union data inside the LetterCreateWithPDF_To as the provided LetterCreateWithPDFTo1
-func (t *LetterCreateWithPDF_To) FromLetterCreateWithPDFTo1(v LetterCreateWithPDFTo1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeLetterCreateWithPDFTo1 performs a merge with any union data inside the LetterCreateWithPDF_To, using the provided LetterCreateWithPDFTo1
-func (t *LetterCreateWithPDF_To) MergeLetterCreateWithPDFTo1(v LetterCreateWithPDFTo1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t LetterCreateWithPDF_To) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *LetterCreateWithPDF_To) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the LetterCreateWithTemplate_From as a ContactCreate
-func (t LetterCreateWithTemplate_From) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the LetterCreateWithTemplate_From as the provided ContactCreate
-func (t *LetterCreateWithTemplate_From) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the LetterCreateWithTemplate_From, using the provided ContactCreate
-func (t *LetterCreateWithTemplate_From) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsLetterCreateWithTemplateFrom1 returns the union data inside the LetterCreateWithTemplate_From as a LetterCreateWithTemplateFrom1
-func (t LetterCreateWithTemplate_From) AsLetterCreateWithTemplateFrom1() (LetterCreateWithTemplateFrom1, error) {
-	var body LetterCreateWithTemplateFrom1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromLetterCreateWithTemplateFrom1 overwrites any union data inside the LetterCreateWithTemplate_From as the provided LetterCreateWithTemplateFrom1
-func (t *LetterCreateWithTemplate_From) FromLetterCreateWithTemplateFrom1(v LetterCreateWithTemplateFrom1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeLetterCreateWithTemplateFrom1 performs a merge with any union data inside the LetterCreateWithTemplate_From, using the provided LetterCreateWithTemplateFrom1
-func (t *LetterCreateWithTemplate_From) MergeLetterCreateWithTemplateFrom1(v LetterCreateWithTemplateFrom1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t LetterCreateWithTemplate_From) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *LetterCreateWithTemplate_From) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the LetterCreateWithTemplate_To as a ContactCreate
-func (t LetterCreateWithTemplate_To) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the LetterCreateWithTemplate_To as the provided ContactCreate
-func (t *LetterCreateWithTemplate_To) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the LetterCreateWithTemplate_To, using the provided ContactCreate
-func (t *LetterCreateWithTemplate_To) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsLetterCreateWithTemplateTo1 returns the union data inside the LetterCreateWithTemplate_To as a LetterCreateWithTemplateTo1
-func (t LetterCreateWithTemplate_To) AsLetterCreateWithTemplateTo1() (LetterCreateWithTemplateTo1, error) {
-	var body LetterCreateWithTemplateTo1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromLetterCreateWithTemplateTo1 overwrites any union data inside the LetterCreateWithTemplate_To as the provided LetterCreateWithTemplateTo1
-func (t *LetterCreateWithTemplate_To) FromLetterCreateWithTemplateTo1(v LetterCreateWithTemplateTo1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeLetterCreateWithTemplateTo1 performs a merge with any union data inside the LetterCreateWithTemplate_To, using the provided LetterCreateWithTemplateTo1
-func (t *LetterCreateWithTemplate_To) MergeLetterCreateWithTemplateTo1(v LetterCreateWithTemplateTo1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t LetterCreateWithTemplate_To) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *LetterCreateWithTemplate_To) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -43899,68 +49375,6 @@ func (t *PostcardCreate) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsContactCreate returns the union data inside the PostcardCreateFormMultiPart_From as a ContactCreate
-func (t PostcardCreateFormMultiPart_From) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the PostcardCreateFormMultiPart_From as the provided ContactCreate
-func (t *PostcardCreateFormMultiPart_From) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the PostcardCreateFormMultiPart_From, using the provided ContactCreate
-func (t *PostcardCreateFormMultiPart_From) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsPostcardCreateFormMultiPartFrom1 returns the union data inside the PostcardCreateFormMultiPart_From as a PostcardCreateFormMultiPartFrom1
-func (t PostcardCreateFormMultiPart_From) AsPostcardCreateFormMultiPartFrom1() (PostcardCreateFormMultiPartFrom1, error) {
-	var body PostcardCreateFormMultiPartFrom1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromPostcardCreateFormMultiPartFrom1 overwrites any union data inside the PostcardCreateFormMultiPart_From as the provided PostcardCreateFormMultiPartFrom1
-func (t *PostcardCreateFormMultiPart_From) FromPostcardCreateFormMultiPartFrom1(v PostcardCreateFormMultiPartFrom1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergePostcardCreateFormMultiPartFrom1 performs a merge with any union data inside the PostcardCreateFormMultiPart_From, using the provided PostcardCreateFormMultiPartFrom1
-func (t *PostcardCreateFormMultiPart_From) MergePostcardCreateFormMultiPartFrom1(v PostcardCreateFormMultiPartFrom1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t PostcardCreateFormMultiPart_From) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *PostcardCreateFormMultiPart_From) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
 // AsPostcardCreateFormMultiPartPdf0 returns the union data inside the PostcardCreateFormMultiPart_Pdf as a PostcardCreateFormMultiPartPdf0
 func (t PostcardCreateFormMultiPart_Pdf) AsPostcardCreateFormMultiPartPdf0() (PostcardCreateFormMultiPartPdf0, error) {
 	var body PostcardCreateFormMultiPartPdf0
@@ -44023,564 +49437,6 @@ func (t *PostcardCreateFormMultiPart_Pdf) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsContactCreate returns the union data inside the PostcardCreateFormMultiPart_To as a ContactCreate
-func (t PostcardCreateFormMultiPart_To) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the PostcardCreateFormMultiPart_To as the provided ContactCreate
-func (t *PostcardCreateFormMultiPart_To) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the PostcardCreateFormMultiPart_To, using the provided ContactCreate
-func (t *PostcardCreateFormMultiPart_To) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsPostcardCreateFormMultiPartTo1 returns the union data inside the PostcardCreateFormMultiPart_To as a PostcardCreateFormMultiPartTo1
-func (t PostcardCreateFormMultiPart_To) AsPostcardCreateFormMultiPartTo1() (PostcardCreateFormMultiPartTo1, error) {
-	var body PostcardCreateFormMultiPartTo1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromPostcardCreateFormMultiPartTo1 overwrites any union data inside the PostcardCreateFormMultiPart_To as the provided PostcardCreateFormMultiPartTo1
-func (t *PostcardCreateFormMultiPart_To) FromPostcardCreateFormMultiPartTo1(v PostcardCreateFormMultiPartTo1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergePostcardCreateFormMultiPartTo1 performs a merge with any union data inside the PostcardCreateFormMultiPart_To, using the provided PostcardCreateFormMultiPartTo1
-func (t *PostcardCreateFormMultiPart_To) MergePostcardCreateFormMultiPartTo1(v PostcardCreateFormMultiPartTo1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t PostcardCreateFormMultiPart_To) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *PostcardCreateFormMultiPart_To) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the PostcardCreateWithHTML_From as a ContactCreate
-func (t PostcardCreateWithHTML_From) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the PostcardCreateWithHTML_From as the provided ContactCreate
-func (t *PostcardCreateWithHTML_From) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the PostcardCreateWithHTML_From, using the provided ContactCreate
-func (t *PostcardCreateWithHTML_From) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsPostcardCreateWithHTMLFrom1 returns the union data inside the PostcardCreateWithHTML_From as a PostcardCreateWithHTMLFrom1
-func (t PostcardCreateWithHTML_From) AsPostcardCreateWithHTMLFrom1() (PostcardCreateWithHTMLFrom1, error) {
-	var body PostcardCreateWithHTMLFrom1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromPostcardCreateWithHTMLFrom1 overwrites any union data inside the PostcardCreateWithHTML_From as the provided PostcardCreateWithHTMLFrom1
-func (t *PostcardCreateWithHTML_From) FromPostcardCreateWithHTMLFrom1(v PostcardCreateWithHTMLFrom1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergePostcardCreateWithHTMLFrom1 performs a merge with any union data inside the PostcardCreateWithHTML_From, using the provided PostcardCreateWithHTMLFrom1
-func (t *PostcardCreateWithHTML_From) MergePostcardCreateWithHTMLFrom1(v PostcardCreateWithHTMLFrom1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t PostcardCreateWithHTML_From) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *PostcardCreateWithHTML_From) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the PostcardCreateWithHTML_To as a ContactCreate
-func (t PostcardCreateWithHTML_To) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the PostcardCreateWithHTML_To as the provided ContactCreate
-func (t *PostcardCreateWithHTML_To) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the PostcardCreateWithHTML_To, using the provided ContactCreate
-func (t *PostcardCreateWithHTML_To) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsPostcardCreateWithHTMLTo1 returns the union data inside the PostcardCreateWithHTML_To as a PostcardCreateWithHTMLTo1
-func (t PostcardCreateWithHTML_To) AsPostcardCreateWithHTMLTo1() (PostcardCreateWithHTMLTo1, error) {
-	var body PostcardCreateWithHTMLTo1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromPostcardCreateWithHTMLTo1 overwrites any union data inside the PostcardCreateWithHTML_To as the provided PostcardCreateWithHTMLTo1
-func (t *PostcardCreateWithHTML_To) FromPostcardCreateWithHTMLTo1(v PostcardCreateWithHTMLTo1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergePostcardCreateWithHTMLTo1 performs a merge with any union data inside the PostcardCreateWithHTML_To, using the provided PostcardCreateWithHTMLTo1
-func (t *PostcardCreateWithHTML_To) MergePostcardCreateWithHTMLTo1(v PostcardCreateWithHTMLTo1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t PostcardCreateWithHTML_To) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *PostcardCreateWithHTML_To) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the PostcardCreateWithPDFFile_From as a ContactCreate
-func (t PostcardCreateWithPDFFile_From) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the PostcardCreateWithPDFFile_From as the provided ContactCreate
-func (t *PostcardCreateWithPDFFile_From) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the PostcardCreateWithPDFFile_From, using the provided ContactCreate
-func (t *PostcardCreateWithPDFFile_From) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsPostcardCreateWithPDFFileFrom1 returns the union data inside the PostcardCreateWithPDFFile_From as a PostcardCreateWithPDFFileFrom1
-func (t PostcardCreateWithPDFFile_From) AsPostcardCreateWithPDFFileFrom1() (PostcardCreateWithPDFFileFrom1, error) {
-	var body PostcardCreateWithPDFFileFrom1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromPostcardCreateWithPDFFileFrom1 overwrites any union data inside the PostcardCreateWithPDFFile_From as the provided PostcardCreateWithPDFFileFrom1
-func (t *PostcardCreateWithPDFFile_From) FromPostcardCreateWithPDFFileFrom1(v PostcardCreateWithPDFFileFrom1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergePostcardCreateWithPDFFileFrom1 performs a merge with any union data inside the PostcardCreateWithPDFFile_From, using the provided PostcardCreateWithPDFFileFrom1
-func (t *PostcardCreateWithPDFFile_From) MergePostcardCreateWithPDFFileFrom1(v PostcardCreateWithPDFFileFrom1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t PostcardCreateWithPDFFile_From) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *PostcardCreateWithPDFFile_From) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the PostcardCreateWithPDFFile_To as a ContactCreate
-func (t PostcardCreateWithPDFFile_To) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the PostcardCreateWithPDFFile_To as the provided ContactCreate
-func (t *PostcardCreateWithPDFFile_To) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the PostcardCreateWithPDFFile_To, using the provided ContactCreate
-func (t *PostcardCreateWithPDFFile_To) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsPostcardCreateWithPDFFileTo1 returns the union data inside the PostcardCreateWithPDFFile_To as a PostcardCreateWithPDFFileTo1
-func (t PostcardCreateWithPDFFile_To) AsPostcardCreateWithPDFFileTo1() (PostcardCreateWithPDFFileTo1, error) {
-	var body PostcardCreateWithPDFFileTo1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromPostcardCreateWithPDFFileTo1 overwrites any union data inside the PostcardCreateWithPDFFile_To as the provided PostcardCreateWithPDFFileTo1
-func (t *PostcardCreateWithPDFFile_To) FromPostcardCreateWithPDFFileTo1(v PostcardCreateWithPDFFileTo1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergePostcardCreateWithPDFFileTo1 performs a merge with any union data inside the PostcardCreateWithPDFFile_To, using the provided PostcardCreateWithPDFFileTo1
-func (t *PostcardCreateWithPDFFile_To) MergePostcardCreateWithPDFFileTo1(v PostcardCreateWithPDFFileTo1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t PostcardCreateWithPDFFile_To) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *PostcardCreateWithPDFFile_To) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the PostcardCreateWithPDFURL_From as a ContactCreate
-func (t PostcardCreateWithPDFURL_From) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the PostcardCreateWithPDFURL_From as the provided ContactCreate
-func (t *PostcardCreateWithPDFURL_From) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the PostcardCreateWithPDFURL_From, using the provided ContactCreate
-func (t *PostcardCreateWithPDFURL_From) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsPostcardCreateWithPDFURLFrom1 returns the union data inside the PostcardCreateWithPDFURL_From as a PostcardCreateWithPDFURLFrom1
-func (t PostcardCreateWithPDFURL_From) AsPostcardCreateWithPDFURLFrom1() (PostcardCreateWithPDFURLFrom1, error) {
-	var body PostcardCreateWithPDFURLFrom1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromPostcardCreateWithPDFURLFrom1 overwrites any union data inside the PostcardCreateWithPDFURL_From as the provided PostcardCreateWithPDFURLFrom1
-func (t *PostcardCreateWithPDFURL_From) FromPostcardCreateWithPDFURLFrom1(v PostcardCreateWithPDFURLFrom1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergePostcardCreateWithPDFURLFrom1 performs a merge with any union data inside the PostcardCreateWithPDFURL_From, using the provided PostcardCreateWithPDFURLFrom1
-func (t *PostcardCreateWithPDFURL_From) MergePostcardCreateWithPDFURLFrom1(v PostcardCreateWithPDFURLFrom1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t PostcardCreateWithPDFURL_From) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *PostcardCreateWithPDFURL_From) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the PostcardCreateWithPDFURL_To as a ContactCreate
-func (t PostcardCreateWithPDFURL_To) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the PostcardCreateWithPDFURL_To as the provided ContactCreate
-func (t *PostcardCreateWithPDFURL_To) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the PostcardCreateWithPDFURL_To, using the provided ContactCreate
-func (t *PostcardCreateWithPDFURL_To) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsPostcardCreateWithPDFURLTo1 returns the union data inside the PostcardCreateWithPDFURL_To as a PostcardCreateWithPDFURLTo1
-func (t PostcardCreateWithPDFURL_To) AsPostcardCreateWithPDFURLTo1() (PostcardCreateWithPDFURLTo1, error) {
-	var body PostcardCreateWithPDFURLTo1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromPostcardCreateWithPDFURLTo1 overwrites any union data inside the PostcardCreateWithPDFURL_To as the provided PostcardCreateWithPDFURLTo1
-func (t *PostcardCreateWithPDFURL_To) FromPostcardCreateWithPDFURLTo1(v PostcardCreateWithPDFURLTo1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergePostcardCreateWithPDFURLTo1 performs a merge with any union data inside the PostcardCreateWithPDFURL_To, using the provided PostcardCreateWithPDFURLTo1
-func (t *PostcardCreateWithPDFURL_To) MergePostcardCreateWithPDFURLTo1(v PostcardCreateWithPDFURLTo1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t PostcardCreateWithPDFURL_To) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *PostcardCreateWithPDFURL_To) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the PostcardCreateWithTemplate_From as a ContactCreate
-func (t PostcardCreateWithTemplate_From) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the PostcardCreateWithTemplate_From as the provided ContactCreate
-func (t *PostcardCreateWithTemplate_From) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the PostcardCreateWithTemplate_From, using the provided ContactCreate
-func (t *PostcardCreateWithTemplate_From) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsPostcardCreateWithTemplateFrom1 returns the union data inside the PostcardCreateWithTemplate_From as a PostcardCreateWithTemplateFrom1
-func (t PostcardCreateWithTemplate_From) AsPostcardCreateWithTemplateFrom1() (PostcardCreateWithTemplateFrom1, error) {
-	var body PostcardCreateWithTemplateFrom1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromPostcardCreateWithTemplateFrom1 overwrites any union data inside the PostcardCreateWithTemplate_From as the provided PostcardCreateWithTemplateFrom1
-func (t *PostcardCreateWithTemplate_From) FromPostcardCreateWithTemplateFrom1(v PostcardCreateWithTemplateFrom1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergePostcardCreateWithTemplateFrom1 performs a merge with any union data inside the PostcardCreateWithTemplate_From, using the provided PostcardCreateWithTemplateFrom1
-func (t *PostcardCreateWithTemplate_From) MergePostcardCreateWithTemplateFrom1(v PostcardCreateWithTemplateFrom1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t PostcardCreateWithTemplate_From) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *PostcardCreateWithTemplate_From) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the PostcardCreateWithTemplate_To as a ContactCreate
-func (t PostcardCreateWithTemplate_To) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the PostcardCreateWithTemplate_To as the provided ContactCreate
-func (t *PostcardCreateWithTemplate_To) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the PostcardCreateWithTemplate_To, using the provided ContactCreate
-func (t *PostcardCreateWithTemplate_To) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsPostcardCreateWithTemplateTo1 returns the union data inside the PostcardCreateWithTemplate_To as a PostcardCreateWithTemplateTo1
-func (t PostcardCreateWithTemplate_To) AsPostcardCreateWithTemplateTo1() (PostcardCreateWithTemplateTo1, error) {
-	var body PostcardCreateWithTemplateTo1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromPostcardCreateWithTemplateTo1 overwrites any union data inside the PostcardCreateWithTemplate_To as the provided PostcardCreateWithTemplateTo1
-func (t *PostcardCreateWithTemplate_To) FromPostcardCreateWithTemplateTo1(v PostcardCreateWithTemplateTo1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergePostcardCreateWithTemplateTo1 performs a merge with any union data inside the PostcardCreateWithTemplate_To, using the provided PostcardCreateWithTemplateTo1
-func (t *PostcardCreateWithTemplate_To) MergePostcardCreateWithTemplateTo1(v PostcardCreateWithTemplateTo1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t PostcardCreateWithTemplate_To) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *PostcardCreateWithTemplate_To) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
 // AsPostcardBuiltInPremiumPaperID returns the union data inside the PostcardPremiumPaperID as a PostcardBuiltInPremiumPaperID
 func (t PostcardPremiumPaperID) AsPostcardBuiltInPremiumPaperID() (PostcardBuiltInPremiumPaperID, error) {
 	var body PostcardBuiltInPremiumPaperID
@@ -44639,68 +49495,6 @@ func (t PostcardPremiumPaperID) MarshalJSON() ([]byte, error) {
 }
 
 func (t *PostcardPremiumPaperID) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the ReturnEnvelopeCreate_To as a ContactCreate
-func (t ReturnEnvelopeCreate_To) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the ReturnEnvelopeCreate_To as the provided ContactCreate
-func (t *ReturnEnvelopeCreate_To) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the ReturnEnvelopeCreate_To, using the provided ContactCreate
-func (t *ReturnEnvelopeCreate_To) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsReturnEnvelopeCreateTo1 returns the union data inside the ReturnEnvelopeCreate_To as a ReturnEnvelopeCreateTo1
-func (t ReturnEnvelopeCreate_To) AsReturnEnvelopeCreateTo1() (ReturnEnvelopeCreateTo1, error) {
-	var body ReturnEnvelopeCreateTo1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromReturnEnvelopeCreateTo1 overwrites any union data inside the ReturnEnvelopeCreate_To as the provided ReturnEnvelopeCreateTo1
-func (t *ReturnEnvelopeCreate_To) FromReturnEnvelopeCreateTo1(v ReturnEnvelopeCreateTo1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeReturnEnvelopeCreateTo1 performs a merge with any union data inside the ReturnEnvelopeCreate_To, using the provided ReturnEnvelopeCreateTo1
-func (t *ReturnEnvelopeCreate_To) MergeReturnEnvelopeCreateTo1(v ReturnEnvelopeCreateTo1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t ReturnEnvelopeCreate_To) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *ReturnEnvelopeCreate_To) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -44881,68 +49675,6 @@ func (t *SelfMailerCreate) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsContactCreate returns the union data inside the SelfMailerCreateFormMultiPart_From as a ContactCreate
-func (t SelfMailerCreateFormMultiPart_From) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the SelfMailerCreateFormMultiPart_From as the provided ContactCreate
-func (t *SelfMailerCreateFormMultiPart_From) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the SelfMailerCreateFormMultiPart_From, using the provided ContactCreate
-func (t *SelfMailerCreateFormMultiPart_From) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsSelfMailerCreateFormMultiPartFrom1 returns the union data inside the SelfMailerCreateFormMultiPart_From as a SelfMailerCreateFormMultiPartFrom1
-func (t SelfMailerCreateFormMultiPart_From) AsSelfMailerCreateFormMultiPartFrom1() (SelfMailerCreateFormMultiPartFrom1, error) {
-	var body SelfMailerCreateFormMultiPartFrom1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromSelfMailerCreateFormMultiPartFrom1 overwrites any union data inside the SelfMailerCreateFormMultiPart_From as the provided SelfMailerCreateFormMultiPartFrom1
-func (t *SelfMailerCreateFormMultiPart_From) FromSelfMailerCreateFormMultiPartFrom1(v SelfMailerCreateFormMultiPartFrom1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeSelfMailerCreateFormMultiPartFrom1 performs a merge with any union data inside the SelfMailerCreateFormMultiPart_From, using the provided SelfMailerCreateFormMultiPartFrom1
-func (t *SelfMailerCreateFormMultiPart_From) MergeSelfMailerCreateFormMultiPartFrom1(v SelfMailerCreateFormMultiPartFrom1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t SelfMailerCreateFormMultiPart_From) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *SelfMailerCreateFormMultiPart_From) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
 // AsSelfMailerCreateFormMultiPartPdf0 returns the union data inside the SelfMailerCreateFormMultiPart_Pdf as a SelfMailerCreateFormMultiPartPdf0
 func (t SelfMailerCreateFormMultiPart_Pdf) AsSelfMailerCreateFormMultiPartPdf0() (SelfMailerCreateFormMultiPartPdf0, error) {
 	var body SelfMailerCreateFormMultiPartPdf0
@@ -45005,22 +49737,22 @@ func (t *SelfMailerCreateFormMultiPart_Pdf) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsContactCreate returns the union data inside the SelfMailerCreateFormMultiPart_To as a ContactCreate
-func (t SelfMailerCreateFormMultiPart_To) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
+// AsSelfMailerBuiltInPremiumPaperID returns the union data inside the SelfMailerPremiumPaperID as a SelfMailerBuiltInPremiumPaperID
+func (t SelfMailerPremiumPaperID) AsSelfMailerBuiltInPremiumPaperID() (SelfMailerBuiltInPremiumPaperID, error) {
+	var body SelfMailerBuiltInPremiumPaperID
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromContactCreate overwrites any union data inside the SelfMailerCreateFormMultiPart_To as the provided ContactCreate
-func (t *SelfMailerCreateFormMultiPart_To) FromContactCreate(v ContactCreate) error {
+// FromSelfMailerBuiltInPremiumPaperID overwrites any union data inside the SelfMailerPremiumPaperID as the provided SelfMailerBuiltInPremiumPaperID
+func (t *SelfMailerPremiumPaperID) FromSelfMailerBuiltInPremiumPaperID(v SelfMailerBuiltInPremiumPaperID) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeContactCreate performs a merge with any union data inside the SelfMailerCreateFormMultiPart_To, using the provided ContactCreate
-func (t *SelfMailerCreateFormMultiPart_To) MergeContactCreate(v ContactCreate) error {
+// MergeSelfMailerBuiltInPremiumPaperID performs a merge with any union data inside the SelfMailerPremiumPaperID, using the provided SelfMailerBuiltInPremiumPaperID
+func (t *SelfMailerPremiumPaperID) MergeSelfMailerBuiltInPremiumPaperID(v SelfMailerBuiltInPremiumPaperID) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -45031,22 +49763,22 @@ func (t *SelfMailerCreateFormMultiPart_To) MergeContactCreate(v ContactCreate) e
 	return err
 }
 
-// AsSelfMailerCreateFormMultiPartTo1 returns the union data inside the SelfMailerCreateFormMultiPart_To as a SelfMailerCreateFormMultiPartTo1
-func (t SelfMailerCreateFormMultiPart_To) AsSelfMailerCreateFormMultiPartTo1() (SelfMailerCreateFormMultiPartTo1, error) {
-	var body SelfMailerCreateFormMultiPartTo1
+// AsPremiumPaperID returns the union data inside the SelfMailerPremiumPaperID as a PremiumPaperID
+func (t SelfMailerPremiumPaperID) AsPremiumPaperID() (PremiumPaperID, error) {
+	var body PremiumPaperID
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromSelfMailerCreateFormMultiPartTo1 overwrites any union data inside the SelfMailerCreateFormMultiPart_To as the provided SelfMailerCreateFormMultiPartTo1
-func (t *SelfMailerCreateFormMultiPart_To) FromSelfMailerCreateFormMultiPartTo1(v SelfMailerCreateFormMultiPartTo1) error {
+// FromPremiumPaperID overwrites any union data inside the SelfMailerPremiumPaperID as the provided PremiumPaperID
+func (t *SelfMailerPremiumPaperID) FromPremiumPaperID(v PremiumPaperID) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeSelfMailerCreateFormMultiPartTo1 performs a merge with any union data inside the SelfMailerCreateFormMultiPart_To, using the provided SelfMailerCreateFormMultiPartTo1
-func (t *SelfMailerCreateFormMultiPart_To) MergeSelfMailerCreateFormMultiPartTo1(v SelfMailerCreateFormMultiPartTo1) error {
+// MergePremiumPaperID performs a merge with any union data inside the SelfMailerPremiumPaperID, using the provided PremiumPaperID
+func (t *SelfMailerPremiumPaperID) MergePremiumPaperID(v PremiumPaperID) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -45057,508 +49789,12 @@ func (t *SelfMailerCreateFormMultiPart_To) MergeSelfMailerCreateFormMultiPartTo1
 	return err
 }
 
-func (t SelfMailerCreateFormMultiPart_To) MarshalJSON() ([]byte, error) {
+func (t SelfMailerPremiumPaperID) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *SelfMailerCreateFormMultiPart_To) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the SelfMailerCreateWithHTML_From as a ContactCreate
-func (t SelfMailerCreateWithHTML_From) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the SelfMailerCreateWithHTML_From as the provided ContactCreate
-func (t *SelfMailerCreateWithHTML_From) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the SelfMailerCreateWithHTML_From, using the provided ContactCreate
-func (t *SelfMailerCreateWithHTML_From) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsSelfMailerCreateWithHTMLFrom1 returns the union data inside the SelfMailerCreateWithHTML_From as a SelfMailerCreateWithHTMLFrom1
-func (t SelfMailerCreateWithHTML_From) AsSelfMailerCreateWithHTMLFrom1() (SelfMailerCreateWithHTMLFrom1, error) {
-	var body SelfMailerCreateWithHTMLFrom1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromSelfMailerCreateWithHTMLFrom1 overwrites any union data inside the SelfMailerCreateWithHTML_From as the provided SelfMailerCreateWithHTMLFrom1
-func (t *SelfMailerCreateWithHTML_From) FromSelfMailerCreateWithHTMLFrom1(v SelfMailerCreateWithHTMLFrom1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeSelfMailerCreateWithHTMLFrom1 performs a merge with any union data inside the SelfMailerCreateWithHTML_From, using the provided SelfMailerCreateWithHTMLFrom1
-func (t *SelfMailerCreateWithHTML_From) MergeSelfMailerCreateWithHTMLFrom1(v SelfMailerCreateWithHTMLFrom1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t SelfMailerCreateWithHTML_From) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *SelfMailerCreateWithHTML_From) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the SelfMailerCreateWithHTML_To as a ContactCreate
-func (t SelfMailerCreateWithHTML_To) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the SelfMailerCreateWithHTML_To as the provided ContactCreate
-func (t *SelfMailerCreateWithHTML_To) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the SelfMailerCreateWithHTML_To, using the provided ContactCreate
-func (t *SelfMailerCreateWithHTML_To) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsSelfMailerCreateWithHTMLTo1 returns the union data inside the SelfMailerCreateWithHTML_To as a SelfMailerCreateWithHTMLTo1
-func (t SelfMailerCreateWithHTML_To) AsSelfMailerCreateWithHTMLTo1() (SelfMailerCreateWithHTMLTo1, error) {
-	var body SelfMailerCreateWithHTMLTo1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromSelfMailerCreateWithHTMLTo1 overwrites any union data inside the SelfMailerCreateWithHTML_To as the provided SelfMailerCreateWithHTMLTo1
-func (t *SelfMailerCreateWithHTML_To) FromSelfMailerCreateWithHTMLTo1(v SelfMailerCreateWithHTMLTo1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeSelfMailerCreateWithHTMLTo1 performs a merge with any union data inside the SelfMailerCreateWithHTML_To, using the provided SelfMailerCreateWithHTMLTo1
-func (t *SelfMailerCreateWithHTML_To) MergeSelfMailerCreateWithHTMLTo1(v SelfMailerCreateWithHTMLTo1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t SelfMailerCreateWithHTML_To) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *SelfMailerCreateWithHTML_To) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the SelfMailerCreateWithPDFFile_From as a ContactCreate
-func (t SelfMailerCreateWithPDFFile_From) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the SelfMailerCreateWithPDFFile_From as the provided ContactCreate
-func (t *SelfMailerCreateWithPDFFile_From) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the SelfMailerCreateWithPDFFile_From, using the provided ContactCreate
-func (t *SelfMailerCreateWithPDFFile_From) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsSelfMailerCreateWithPDFFileFrom1 returns the union data inside the SelfMailerCreateWithPDFFile_From as a SelfMailerCreateWithPDFFileFrom1
-func (t SelfMailerCreateWithPDFFile_From) AsSelfMailerCreateWithPDFFileFrom1() (SelfMailerCreateWithPDFFileFrom1, error) {
-	var body SelfMailerCreateWithPDFFileFrom1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromSelfMailerCreateWithPDFFileFrom1 overwrites any union data inside the SelfMailerCreateWithPDFFile_From as the provided SelfMailerCreateWithPDFFileFrom1
-func (t *SelfMailerCreateWithPDFFile_From) FromSelfMailerCreateWithPDFFileFrom1(v SelfMailerCreateWithPDFFileFrom1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeSelfMailerCreateWithPDFFileFrom1 performs a merge with any union data inside the SelfMailerCreateWithPDFFile_From, using the provided SelfMailerCreateWithPDFFileFrom1
-func (t *SelfMailerCreateWithPDFFile_From) MergeSelfMailerCreateWithPDFFileFrom1(v SelfMailerCreateWithPDFFileFrom1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t SelfMailerCreateWithPDFFile_From) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *SelfMailerCreateWithPDFFile_From) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the SelfMailerCreateWithPDFFile_To as a ContactCreate
-func (t SelfMailerCreateWithPDFFile_To) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the SelfMailerCreateWithPDFFile_To as the provided ContactCreate
-func (t *SelfMailerCreateWithPDFFile_To) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the SelfMailerCreateWithPDFFile_To, using the provided ContactCreate
-func (t *SelfMailerCreateWithPDFFile_To) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsSelfMailerCreateWithPDFFileTo1 returns the union data inside the SelfMailerCreateWithPDFFile_To as a SelfMailerCreateWithPDFFileTo1
-func (t SelfMailerCreateWithPDFFile_To) AsSelfMailerCreateWithPDFFileTo1() (SelfMailerCreateWithPDFFileTo1, error) {
-	var body SelfMailerCreateWithPDFFileTo1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromSelfMailerCreateWithPDFFileTo1 overwrites any union data inside the SelfMailerCreateWithPDFFile_To as the provided SelfMailerCreateWithPDFFileTo1
-func (t *SelfMailerCreateWithPDFFile_To) FromSelfMailerCreateWithPDFFileTo1(v SelfMailerCreateWithPDFFileTo1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeSelfMailerCreateWithPDFFileTo1 performs a merge with any union data inside the SelfMailerCreateWithPDFFile_To, using the provided SelfMailerCreateWithPDFFileTo1
-func (t *SelfMailerCreateWithPDFFile_To) MergeSelfMailerCreateWithPDFFileTo1(v SelfMailerCreateWithPDFFileTo1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t SelfMailerCreateWithPDFFile_To) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *SelfMailerCreateWithPDFFile_To) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the SelfMailerCreateWithPDFURL_From as a ContactCreate
-func (t SelfMailerCreateWithPDFURL_From) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the SelfMailerCreateWithPDFURL_From as the provided ContactCreate
-func (t *SelfMailerCreateWithPDFURL_From) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the SelfMailerCreateWithPDFURL_From, using the provided ContactCreate
-func (t *SelfMailerCreateWithPDFURL_From) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsSelfMailerCreateWithPDFURLFrom1 returns the union data inside the SelfMailerCreateWithPDFURL_From as a SelfMailerCreateWithPDFURLFrom1
-func (t SelfMailerCreateWithPDFURL_From) AsSelfMailerCreateWithPDFURLFrom1() (SelfMailerCreateWithPDFURLFrom1, error) {
-	var body SelfMailerCreateWithPDFURLFrom1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromSelfMailerCreateWithPDFURLFrom1 overwrites any union data inside the SelfMailerCreateWithPDFURL_From as the provided SelfMailerCreateWithPDFURLFrom1
-func (t *SelfMailerCreateWithPDFURL_From) FromSelfMailerCreateWithPDFURLFrom1(v SelfMailerCreateWithPDFURLFrom1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeSelfMailerCreateWithPDFURLFrom1 performs a merge with any union data inside the SelfMailerCreateWithPDFURL_From, using the provided SelfMailerCreateWithPDFURLFrom1
-func (t *SelfMailerCreateWithPDFURL_From) MergeSelfMailerCreateWithPDFURLFrom1(v SelfMailerCreateWithPDFURLFrom1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t SelfMailerCreateWithPDFURL_From) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *SelfMailerCreateWithPDFURL_From) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the SelfMailerCreateWithPDFURL_To as a ContactCreate
-func (t SelfMailerCreateWithPDFURL_To) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the SelfMailerCreateWithPDFURL_To as the provided ContactCreate
-func (t *SelfMailerCreateWithPDFURL_To) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the SelfMailerCreateWithPDFURL_To, using the provided ContactCreate
-func (t *SelfMailerCreateWithPDFURL_To) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsSelfMailerCreateWithPDFURLTo1 returns the union data inside the SelfMailerCreateWithPDFURL_To as a SelfMailerCreateWithPDFURLTo1
-func (t SelfMailerCreateWithPDFURL_To) AsSelfMailerCreateWithPDFURLTo1() (SelfMailerCreateWithPDFURLTo1, error) {
-	var body SelfMailerCreateWithPDFURLTo1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromSelfMailerCreateWithPDFURLTo1 overwrites any union data inside the SelfMailerCreateWithPDFURL_To as the provided SelfMailerCreateWithPDFURLTo1
-func (t *SelfMailerCreateWithPDFURL_To) FromSelfMailerCreateWithPDFURLTo1(v SelfMailerCreateWithPDFURLTo1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeSelfMailerCreateWithPDFURLTo1 performs a merge with any union data inside the SelfMailerCreateWithPDFURL_To, using the provided SelfMailerCreateWithPDFURLTo1
-func (t *SelfMailerCreateWithPDFURL_To) MergeSelfMailerCreateWithPDFURLTo1(v SelfMailerCreateWithPDFURLTo1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t SelfMailerCreateWithPDFURL_To) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *SelfMailerCreateWithPDFURL_To) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the SelfMailerCreateWithTemplate_From as a ContactCreate
-func (t SelfMailerCreateWithTemplate_From) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the SelfMailerCreateWithTemplate_From as the provided ContactCreate
-func (t *SelfMailerCreateWithTemplate_From) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the SelfMailerCreateWithTemplate_From, using the provided ContactCreate
-func (t *SelfMailerCreateWithTemplate_From) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsSelfMailerCreateWithTemplateFrom1 returns the union data inside the SelfMailerCreateWithTemplate_From as a SelfMailerCreateWithTemplateFrom1
-func (t SelfMailerCreateWithTemplate_From) AsSelfMailerCreateWithTemplateFrom1() (SelfMailerCreateWithTemplateFrom1, error) {
-	var body SelfMailerCreateWithTemplateFrom1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromSelfMailerCreateWithTemplateFrom1 overwrites any union data inside the SelfMailerCreateWithTemplate_From as the provided SelfMailerCreateWithTemplateFrom1
-func (t *SelfMailerCreateWithTemplate_From) FromSelfMailerCreateWithTemplateFrom1(v SelfMailerCreateWithTemplateFrom1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeSelfMailerCreateWithTemplateFrom1 performs a merge with any union data inside the SelfMailerCreateWithTemplate_From, using the provided SelfMailerCreateWithTemplateFrom1
-func (t *SelfMailerCreateWithTemplate_From) MergeSelfMailerCreateWithTemplateFrom1(v SelfMailerCreateWithTemplateFrom1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t SelfMailerCreateWithTemplate_From) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *SelfMailerCreateWithTemplate_From) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the SelfMailerCreateWithTemplate_To as a ContactCreate
-func (t SelfMailerCreateWithTemplate_To) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the SelfMailerCreateWithTemplate_To as the provided ContactCreate
-func (t *SelfMailerCreateWithTemplate_To) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the SelfMailerCreateWithTemplate_To, using the provided ContactCreate
-func (t *SelfMailerCreateWithTemplate_To) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsSelfMailerCreateWithTemplateTo1 returns the union data inside the SelfMailerCreateWithTemplate_To as a SelfMailerCreateWithTemplateTo1
-func (t SelfMailerCreateWithTemplate_To) AsSelfMailerCreateWithTemplateTo1() (SelfMailerCreateWithTemplateTo1, error) {
-	var body SelfMailerCreateWithTemplateTo1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromSelfMailerCreateWithTemplateTo1 overwrites any union data inside the SelfMailerCreateWithTemplate_To as the provided SelfMailerCreateWithTemplateTo1
-func (t *SelfMailerCreateWithTemplate_To) FromSelfMailerCreateWithTemplateTo1(v SelfMailerCreateWithTemplateTo1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeSelfMailerCreateWithTemplateTo1 performs a merge with any union data inside the SelfMailerCreateWithTemplate_To, using the provided SelfMailerCreateWithTemplateTo1
-func (t *SelfMailerCreateWithTemplate_To) MergeSelfMailerCreateWithTemplateTo1(v SelfMailerCreateWithTemplateTo1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t SelfMailerCreateWithTemplate_To) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *SelfMailerCreateWithTemplate_To) UnmarshalJSON(b []byte) error {
+func (t *SelfMailerPremiumPaperID) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -45651,68 +49887,6 @@ func (t *SnapPackCreate) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsContactCreate returns the union data inside the SnapPackCreateFormMultiPart_From as a ContactCreate
-func (t SnapPackCreateFormMultiPart_From) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the SnapPackCreateFormMultiPart_From as the provided ContactCreate
-func (t *SnapPackCreateFormMultiPart_From) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the SnapPackCreateFormMultiPart_From, using the provided ContactCreate
-func (t *SnapPackCreateFormMultiPart_From) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsSnapPackCreateFormMultiPartFrom1 returns the union data inside the SnapPackCreateFormMultiPart_From as a SnapPackCreateFormMultiPartFrom1
-func (t SnapPackCreateFormMultiPart_From) AsSnapPackCreateFormMultiPartFrom1() (SnapPackCreateFormMultiPartFrom1, error) {
-	var body SnapPackCreateFormMultiPartFrom1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromSnapPackCreateFormMultiPartFrom1 overwrites any union data inside the SnapPackCreateFormMultiPart_From as the provided SnapPackCreateFormMultiPartFrom1
-func (t *SnapPackCreateFormMultiPart_From) FromSnapPackCreateFormMultiPartFrom1(v SnapPackCreateFormMultiPartFrom1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeSnapPackCreateFormMultiPartFrom1 performs a merge with any union data inside the SnapPackCreateFormMultiPart_From, using the provided SnapPackCreateFormMultiPartFrom1
-func (t *SnapPackCreateFormMultiPart_From) MergeSnapPackCreateFormMultiPartFrom1(v SnapPackCreateFormMultiPartFrom1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t SnapPackCreateFormMultiPart_From) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *SnapPackCreateFormMultiPart_From) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
 // AsSnapPackCreateFormMultiPartPdf0 returns the union data inside the SnapPackCreateFormMultiPart_Pdf as a SnapPackCreateFormMultiPartPdf0
 func (t SnapPackCreateFormMultiPart_Pdf) AsSnapPackCreateFormMultiPartPdf0() (SnapPackCreateFormMultiPartPdf0, error) {
 	var body SnapPackCreateFormMultiPartPdf0
@@ -45771,254 +49945,6 @@ func (t SnapPackCreateFormMultiPart_Pdf) MarshalJSON() ([]byte, error) {
 }
 
 func (t *SnapPackCreateFormMultiPart_Pdf) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the SnapPackCreateFormMultiPart_To as a ContactCreate
-func (t SnapPackCreateFormMultiPart_To) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the SnapPackCreateFormMultiPart_To as the provided ContactCreate
-func (t *SnapPackCreateFormMultiPart_To) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the SnapPackCreateFormMultiPart_To, using the provided ContactCreate
-func (t *SnapPackCreateFormMultiPart_To) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsSnapPackCreateFormMultiPartTo1 returns the union data inside the SnapPackCreateFormMultiPart_To as a SnapPackCreateFormMultiPartTo1
-func (t SnapPackCreateFormMultiPart_To) AsSnapPackCreateFormMultiPartTo1() (SnapPackCreateFormMultiPartTo1, error) {
-	var body SnapPackCreateFormMultiPartTo1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromSnapPackCreateFormMultiPartTo1 overwrites any union data inside the SnapPackCreateFormMultiPart_To as the provided SnapPackCreateFormMultiPartTo1
-func (t *SnapPackCreateFormMultiPart_To) FromSnapPackCreateFormMultiPartTo1(v SnapPackCreateFormMultiPartTo1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeSnapPackCreateFormMultiPartTo1 performs a merge with any union data inside the SnapPackCreateFormMultiPart_To, using the provided SnapPackCreateFormMultiPartTo1
-func (t *SnapPackCreateFormMultiPart_To) MergeSnapPackCreateFormMultiPartTo1(v SnapPackCreateFormMultiPartTo1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t SnapPackCreateFormMultiPart_To) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *SnapPackCreateFormMultiPart_To) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the SnapPackCreateWithHTML_From as a ContactCreate
-func (t SnapPackCreateWithHTML_From) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the SnapPackCreateWithHTML_From as the provided ContactCreate
-func (t *SnapPackCreateWithHTML_From) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the SnapPackCreateWithHTML_From, using the provided ContactCreate
-func (t *SnapPackCreateWithHTML_From) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsSnapPackCreateWithHTMLFrom1 returns the union data inside the SnapPackCreateWithHTML_From as a SnapPackCreateWithHTMLFrom1
-func (t SnapPackCreateWithHTML_From) AsSnapPackCreateWithHTMLFrom1() (SnapPackCreateWithHTMLFrom1, error) {
-	var body SnapPackCreateWithHTMLFrom1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromSnapPackCreateWithHTMLFrom1 overwrites any union data inside the SnapPackCreateWithHTML_From as the provided SnapPackCreateWithHTMLFrom1
-func (t *SnapPackCreateWithHTML_From) FromSnapPackCreateWithHTMLFrom1(v SnapPackCreateWithHTMLFrom1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeSnapPackCreateWithHTMLFrom1 performs a merge with any union data inside the SnapPackCreateWithHTML_From, using the provided SnapPackCreateWithHTMLFrom1
-func (t *SnapPackCreateWithHTML_From) MergeSnapPackCreateWithHTMLFrom1(v SnapPackCreateWithHTMLFrom1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t SnapPackCreateWithHTML_From) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *SnapPackCreateWithHTML_From) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the SnapPackCreateWithHTML_To as a ContactCreate
-func (t SnapPackCreateWithHTML_To) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the SnapPackCreateWithHTML_To as the provided ContactCreate
-func (t *SnapPackCreateWithHTML_To) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the SnapPackCreateWithHTML_To, using the provided ContactCreate
-func (t *SnapPackCreateWithHTML_To) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsSnapPackCreateWithHTMLTo1 returns the union data inside the SnapPackCreateWithHTML_To as a SnapPackCreateWithHTMLTo1
-func (t SnapPackCreateWithHTML_To) AsSnapPackCreateWithHTMLTo1() (SnapPackCreateWithHTMLTo1, error) {
-	var body SnapPackCreateWithHTMLTo1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromSnapPackCreateWithHTMLTo1 overwrites any union data inside the SnapPackCreateWithHTML_To as the provided SnapPackCreateWithHTMLTo1
-func (t *SnapPackCreateWithHTML_To) FromSnapPackCreateWithHTMLTo1(v SnapPackCreateWithHTMLTo1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeSnapPackCreateWithHTMLTo1 performs a merge with any union data inside the SnapPackCreateWithHTML_To, using the provided SnapPackCreateWithHTMLTo1
-func (t *SnapPackCreateWithHTML_To) MergeSnapPackCreateWithHTMLTo1(v SnapPackCreateWithHTMLTo1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t SnapPackCreateWithHTML_To) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *SnapPackCreateWithHTML_To) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the SnapPackCreateWithPDF_From as a ContactCreate
-func (t SnapPackCreateWithPDF_From) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the SnapPackCreateWithPDF_From as the provided ContactCreate
-func (t *SnapPackCreateWithPDF_From) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the SnapPackCreateWithPDF_From, using the provided ContactCreate
-func (t *SnapPackCreateWithPDF_From) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsSnapPackCreateWithPDFFrom1 returns the union data inside the SnapPackCreateWithPDF_From as a SnapPackCreateWithPDFFrom1
-func (t SnapPackCreateWithPDF_From) AsSnapPackCreateWithPDFFrom1() (SnapPackCreateWithPDFFrom1, error) {
-	var body SnapPackCreateWithPDFFrom1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromSnapPackCreateWithPDFFrom1 overwrites any union data inside the SnapPackCreateWithPDF_From as the provided SnapPackCreateWithPDFFrom1
-func (t *SnapPackCreateWithPDF_From) FromSnapPackCreateWithPDFFrom1(v SnapPackCreateWithPDFFrom1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeSnapPackCreateWithPDFFrom1 performs a merge with any union data inside the SnapPackCreateWithPDF_From, using the provided SnapPackCreateWithPDFFrom1
-func (t *SnapPackCreateWithPDF_From) MergeSnapPackCreateWithPDFFrom1(v SnapPackCreateWithPDFFrom1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t SnapPackCreateWithPDF_From) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *SnapPackCreateWithPDF_From) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -46085,192 +50011,6 @@ func (t *SnapPackCreateWithPDF_Pdf) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsContactCreate returns the union data inside the SnapPackCreateWithPDF_To as a ContactCreate
-func (t SnapPackCreateWithPDF_To) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the SnapPackCreateWithPDF_To as the provided ContactCreate
-func (t *SnapPackCreateWithPDF_To) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the SnapPackCreateWithPDF_To, using the provided ContactCreate
-func (t *SnapPackCreateWithPDF_To) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsSnapPackCreateWithPDFTo1 returns the union data inside the SnapPackCreateWithPDF_To as a SnapPackCreateWithPDFTo1
-func (t SnapPackCreateWithPDF_To) AsSnapPackCreateWithPDFTo1() (SnapPackCreateWithPDFTo1, error) {
-	var body SnapPackCreateWithPDFTo1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromSnapPackCreateWithPDFTo1 overwrites any union data inside the SnapPackCreateWithPDF_To as the provided SnapPackCreateWithPDFTo1
-func (t *SnapPackCreateWithPDF_To) FromSnapPackCreateWithPDFTo1(v SnapPackCreateWithPDFTo1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeSnapPackCreateWithPDFTo1 performs a merge with any union data inside the SnapPackCreateWithPDF_To, using the provided SnapPackCreateWithPDFTo1
-func (t *SnapPackCreateWithPDF_To) MergeSnapPackCreateWithPDFTo1(v SnapPackCreateWithPDFTo1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t SnapPackCreateWithPDF_To) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *SnapPackCreateWithPDF_To) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the SnapPackCreateWithTemplate_From as a ContactCreate
-func (t SnapPackCreateWithTemplate_From) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the SnapPackCreateWithTemplate_From as the provided ContactCreate
-func (t *SnapPackCreateWithTemplate_From) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the SnapPackCreateWithTemplate_From, using the provided ContactCreate
-func (t *SnapPackCreateWithTemplate_From) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsSnapPackCreateWithTemplateFrom1 returns the union data inside the SnapPackCreateWithTemplate_From as a SnapPackCreateWithTemplateFrom1
-func (t SnapPackCreateWithTemplate_From) AsSnapPackCreateWithTemplateFrom1() (SnapPackCreateWithTemplateFrom1, error) {
-	var body SnapPackCreateWithTemplateFrom1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromSnapPackCreateWithTemplateFrom1 overwrites any union data inside the SnapPackCreateWithTemplate_From as the provided SnapPackCreateWithTemplateFrom1
-func (t *SnapPackCreateWithTemplate_From) FromSnapPackCreateWithTemplateFrom1(v SnapPackCreateWithTemplateFrom1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeSnapPackCreateWithTemplateFrom1 performs a merge with any union data inside the SnapPackCreateWithTemplate_From, using the provided SnapPackCreateWithTemplateFrom1
-func (t *SnapPackCreateWithTemplate_From) MergeSnapPackCreateWithTemplateFrom1(v SnapPackCreateWithTemplateFrom1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t SnapPackCreateWithTemplate_From) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *SnapPackCreateWithTemplate_From) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
-// AsContactCreate returns the union data inside the SnapPackCreateWithTemplate_To as a ContactCreate
-func (t SnapPackCreateWithTemplate_To) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromContactCreate overwrites any union data inside the SnapPackCreateWithTemplate_To as the provided ContactCreate
-func (t *SnapPackCreateWithTemplate_To) FromContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeContactCreate performs a merge with any union data inside the SnapPackCreateWithTemplate_To, using the provided ContactCreate
-func (t *SnapPackCreateWithTemplate_To) MergeContactCreate(v ContactCreate) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-// AsSnapPackCreateWithTemplateTo1 returns the union data inside the SnapPackCreateWithTemplate_To as a SnapPackCreateWithTemplateTo1
-func (t SnapPackCreateWithTemplate_To) AsSnapPackCreateWithTemplateTo1() (SnapPackCreateWithTemplateTo1, error) {
-	var body SnapPackCreateWithTemplateTo1
-	err := json.Unmarshal(t.union, &body)
-	return body, err
-}
-
-// FromSnapPackCreateWithTemplateTo1 overwrites any union data inside the SnapPackCreateWithTemplate_To as the provided SnapPackCreateWithTemplateTo1
-func (t *SnapPackCreateWithTemplate_To) FromSnapPackCreateWithTemplateTo1(v SnapPackCreateWithTemplateTo1) error {
-	b, err := json.Marshal(v)
-	t.union = b
-	return err
-}
-
-// MergeSnapPackCreateWithTemplateTo1 performs a merge with any union data inside the SnapPackCreateWithTemplate_To, using the provided SnapPackCreateWithTemplateTo1
-func (t *SnapPackCreateWithTemplate_To) MergeSnapPackCreateWithTemplateTo1(v SnapPackCreateWithTemplateTo1) error {
-	b, err := json.Marshal(v)
-	if err != nil {
-		return err
-	}
-
-	merged, err := runtime.JSONMerge(t.union, b)
-	t.union = merged
-	return err
-}
-
-func (t SnapPackCreateWithTemplate_To) MarshalJSON() ([]byte, error) {
-	b, err := t.union.MarshalJSON()
-	return b, err
-}
-
-func (t *SnapPackCreateWithTemplate_To) UnmarshalJSON(b []byte) error {
-	err := t.union.UnmarshalJSON(b)
-	return err
-}
-
 // AsStandardFreeformAddressInput returns the union data inside the StandardAddressInput as a StandardFreeformAddressInput
 func (t StandardAddressInput) AsStandardFreeformAddressInput() (StandardFreeformAddressInput, error) {
 	var body StandardFreeformAddressInput
@@ -46333,22 +50073,22 @@ func (t *StandardAddressInput) UnmarshalJSON(b []byte) error {
 	return err
 }
 
-// AsContactCreate returns the union data inside the VirtualMailboxCreate_Capabilities_ForwardMailTo as a ContactCreate
-func (t VirtualMailboxCreate_Capabilities_ForwardMailTo) AsContactCreate() (ContactCreate, error) {
-	var body ContactCreate
+// AsStandardBatchAddressInput0 returns the union data inside the StandardBatchAddressInput as a StandardBatchAddressInput0
+func (t StandardBatchAddressInput) AsStandardBatchAddressInput0() (StandardBatchAddressInput0, error) {
+	var body StandardBatchAddressInput0
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromContactCreate overwrites any union data inside the VirtualMailboxCreate_Capabilities_ForwardMailTo as the provided ContactCreate
-func (t *VirtualMailboxCreate_Capabilities_ForwardMailTo) FromContactCreate(v ContactCreate) error {
+// FromStandardBatchAddressInput0 overwrites any union data inside the StandardBatchAddressInput as the provided StandardBatchAddressInput0
+func (t *StandardBatchAddressInput) FromStandardBatchAddressInput0(v StandardBatchAddressInput0) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeContactCreate performs a merge with any union data inside the VirtualMailboxCreate_Capabilities_ForwardMailTo, using the provided ContactCreate
-func (t *VirtualMailboxCreate_Capabilities_ForwardMailTo) MergeContactCreate(v ContactCreate) error {
+// MergeStandardBatchAddressInput0 performs a merge with any union data inside the StandardBatchAddressInput, using the provided StandardBatchAddressInput0
+func (t *StandardBatchAddressInput) MergeStandardBatchAddressInput0(v StandardBatchAddressInput0) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -46359,22 +50099,22 @@ func (t *VirtualMailboxCreate_Capabilities_ForwardMailTo) MergeContactCreate(v C
 	return err
 }
 
-// AsVirtualMailboxCreateCapabilitiesForwardMailTo1 returns the union data inside the VirtualMailboxCreate_Capabilities_ForwardMailTo as a VirtualMailboxCreateCapabilitiesForwardMailTo1
-func (t VirtualMailboxCreate_Capabilities_ForwardMailTo) AsVirtualMailboxCreateCapabilitiesForwardMailTo1() (VirtualMailboxCreateCapabilitiesForwardMailTo1, error) {
-	var body VirtualMailboxCreateCapabilitiesForwardMailTo1
+// AsStandardBatchStructuredAddress returns the union data inside the StandardBatchAddressInput as a StandardBatchStructuredAddress
+func (t StandardBatchAddressInput) AsStandardBatchStructuredAddress() (StandardBatchStructuredAddress, error) {
+	var body StandardBatchStructuredAddress
 	err := json.Unmarshal(t.union, &body)
 	return body, err
 }
 
-// FromVirtualMailboxCreateCapabilitiesForwardMailTo1 overwrites any union data inside the VirtualMailboxCreate_Capabilities_ForwardMailTo as the provided VirtualMailboxCreateCapabilitiesForwardMailTo1
-func (t *VirtualMailboxCreate_Capabilities_ForwardMailTo) FromVirtualMailboxCreateCapabilitiesForwardMailTo1(v VirtualMailboxCreateCapabilitiesForwardMailTo1) error {
+// FromStandardBatchStructuredAddress overwrites any union data inside the StandardBatchAddressInput as the provided StandardBatchStructuredAddress
+func (t *StandardBatchAddressInput) FromStandardBatchStructuredAddress(v StandardBatchStructuredAddress) error {
 	b, err := json.Marshal(v)
 	t.union = b
 	return err
 }
 
-// MergeVirtualMailboxCreateCapabilitiesForwardMailTo1 performs a merge with any union data inside the VirtualMailboxCreate_Capabilities_ForwardMailTo, using the provided VirtualMailboxCreateCapabilitiesForwardMailTo1
-func (t *VirtualMailboxCreate_Capabilities_ForwardMailTo) MergeVirtualMailboxCreateCapabilitiesForwardMailTo1(v VirtualMailboxCreateCapabilitiesForwardMailTo1) error {
+// MergeStandardBatchStructuredAddress performs a merge with any union data inside the StandardBatchAddressInput, using the provided StandardBatchStructuredAddress
+func (t *StandardBatchAddressInput) MergeStandardBatchStructuredAddress(v StandardBatchStructuredAddress) error {
 	b, err := json.Marshal(v)
 	if err != nil {
 		return err
@@ -46385,12 +50125,74 @@ func (t *VirtualMailboxCreate_Capabilities_ForwardMailTo) MergeVirtualMailboxCre
 	return err
 }
 
-func (t VirtualMailboxCreate_Capabilities_ForwardMailTo) MarshalJSON() ([]byte, error) {
+func (t StandardBatchAddressInput) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
-func (t *VirtualMailboxCreate_Capabilities_ForwardMailTo) UnmarshalJSON(b []byte) error {
+func (t *StandardBatchAddressInput) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsTemplateEditorSessionCreateWithTemplate returns the union data inside the TemplateEditorSessionCreate as a TemplateEditorSessionCreateWithTemplate
+func (t TemplateEditorSessionCreate) AsTemplateEditorSessionCreateWithTemplate() (TemplateEditorSessionCreateWithTemplate, error) {
+	var body TemplateEditorSessionCreateWithTemplate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromTemplateEditorSessionCreateWithTemplate overwrites any union data inside the TemplateEditorSessionCreate as the provided TemplateEditorSessionCreateWithTemplate
+func (t *TemplateEditorSessionCreate) FromTemplateEditorSessionCreateWithTemplate(v TemplateEditorSessionCreateWithTemplate) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeTemplateEditorSessionCreateWithTemplate performs a merge with any union data inside the TemplateEditorSessionCreate, using the provided TemplateEditorSessionCreateWithTemplate
+func (t *TemplateEditorSessionCreate) MergeTemplateEditorSessionCreateWithTemplate(v TemplateEditorSessionCreateWithTemplate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsTemplateEditorSessionCreateWithBaseTemplate returns the union data inside the TemplateEditorSessionCreate as a TemplateEditorSessionCreateWithBaseTemplate
+func (t TemplateEditorSessionCreate) AsTemplateEditorSessionCreateWithBaseTemplate() (TemplateEditorSessionCreateWithBaseTemplate, error) {
+	var body TemplateEditorSessionCreateWithBaseTemplate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromTemplateEditorSessionCreateWithBaseTemplate overwrites any union data inside the TemplateEditorSessionCreate as the provided TemplateEditorSessionCreateWithBaseTemplate
+func (t *TemplateEditorSessionCreate) FromTemplateEditorSessionCreateWithBaseTemplate(v TemplateEditorSessionCreateWithBaseTemplate) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeTemplateEditorSessionCreateWithBaseTemplate performs a merge with any union data inside the TemplateEditorSessionCreate, using the provided TemplateEditorSessionCreateWithBaseTemplate
+func (t *TemplateEditorSessionCreate) MergeTemplateEditorSessionCreateWithBaseTemplate(v TemplateEditorSessionCreateWithBaseTemplate) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t TemplateEditorSessionCreate) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *TemplateEditorSessionCreate) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -48375,6 +52177,1138 @@ func (t ContactsGet401JSONResponseBody) MarshalJSON() ([]byte, error) {
 }
 
 func (t *ContactsGet401JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsCustomEnvelopesList401JSONResponseBody0 returns the union data inside the CustomEnvelopesList401JSONResponseBody as a CustomEnvelopesList401JSONResponseBody0
+func (t CustomEnvelopesList401JSONResponseBody) AsCustomEnvelopesList401JSONResponseBody0() (CustomEnvelopesList401JSONResponseBody0, error) {
+	var body CustomEnvelopesList401JSONResponseBody0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesList401JSONResponseBody0 overwrites any union data inside the CustomEnvelopesList401JSONResponseBody as the provided CustomEnvelopesList401JSONResponseBody0
+func (t *CustomEnvelopesList401JSONResponseBody) FromCustomEnvelopesList401JSONResponseBody0(v CustomEnvelopesList401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesList401JSONResponseBody0 performs a merge with any union data inside the CustomEnvelopesList401JSONResponseBody, using the provided CustomEnvelopesList401JSONResponseBody0
+func (t *CustomEnvelopesList401JSONResponseBody) MergeCustomEnvelopesList401JSONResponseBody0(v CustomEnvelopesList401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCustomEnvelopesList401JSONResponseBody1 returns the union data inside the CustomEnvelopesList401JSONResponseBody as a CustomEnvelopesList401JSONResponseBody1
+func (t CustomEnvelopesList401JSONResponseBody) AsCustomEnvelopesList401JSONResponseBody1() (CustomEnvelopesList401JSONResponseBody1, error) {
+	var body CustomEnvelopesList401JSONResponseBody1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesList401JSONResponseBody1 overwrites any union data inside the CustomEnvelopesList401JSONResponseBody as the provided CustomEnvelopesList401JSONResponseBody1
+func (t *CustomEnvelopesList401JSONResponseBody) FromCustomEnvelopesList401JSONResponseBody1(v CustomEnvelopesList401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesList401JSONResponseBody1 performs a merge with any union data inside the CustomEnvelopesList401JSONResponseBody, using the provided CustomEnvelopesList401JSONResponseBody1
+func (t *CustomEnvelopesList401JSONResponseBody) MergeCustomEnvelopesList401JSONResponseBody1(v CustomEnvelopesList401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t CustomEnvelopesList401JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *CustomEnvelopesList401JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsCustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0 returns the union data inside the CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody as a CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0
+func (t CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody) AsCustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0() (CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0, error) {
+	var body CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0 overwrites any union data inside the CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody as the provided CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0
+func (t *CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody) FromCustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0(v CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0 performs a merge with any union data inside the CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody, using the provided CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0
+func (t *CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody) MergeCustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0(v CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1 returns the union data inside the CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody as a CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1
+func (t CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody) AsCustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1() (CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1, error) {
+	var body CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1 overwrites any union data inside the CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody as the provided CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1
+func (t *CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody) FromCustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1(v CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1 performs a merge with any union data inside the CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody, using the provided CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1
+func (t *CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody) MergeCustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1(v CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsCustomEnvelopesGet401JSONResponseBody0 returns the union data inside the CustomEnvelopesGet401JSONResponseBody as a CustomEnvelopesGet401JSONResponseBody0
+func (t CustomEnvelopesGet401JSONResponseBody) AsCustomEnvelopesGet401JSONResponseBody0() (CustomEnvelopesGet401JSONResponseBody0, error) {
+	var body CustomEnvelopesGet401JSONResponseBody0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesGet401JSONResponseBody0 overwrites any union data inside the CustomEnvelopesGet401JSONResponseBody as the provided CustomEnvelopesGet401JSONResponseBody0
+func (t *CustomEnvelopesGet401JSONResponseBody) FromCustomEnvelopesGet401JSONResponseBody0(v CustomEnvelopesGet401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesGet401JSONResponseBody0 performs a merge with any union data inside the CustomEnvelopesGet401JSONResponseBody, using the provided CustomEnvelopesGet401JSONResponseBody0
+func (t *CustomEnvelopesGet401JSONResponseBody) MergeCustomEnvelopesGet401JSONResponseBody0(v CustomEnvelopesGet401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCustomEnvelopesGet401JSONResponseBody1 returns the union data inside the CustomEnvelopesGet401JSONResponseBody as a CustomEnvelopesGet401JSONResponseBody1
+func (t CustomEnvelopesGet401JSONResponseBody) AsCustomEnvelopesGet401JSONResponseBody1() (CustomEnvelopesGet401JSONResponseBody1, error) {
+	var body CustomEnvelopesGet401JSONResponseBody1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesGet401JSONResponseBody1 overwrites any union data inside the CustomEnvelopesGet401JSONResponseBody as the provided CustomEnvelopesGet401JSONResponseBody1
+func (t *CustomEnvelopesGet401JSONResponseBody) FromCustomEnvelopesGet401JSONResponseBody1(v CustomEnvelopesGet401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesGet401JSONResponseBody1 performs a merge with any union data inside the CustomEnvelopesGet401JSONResponseBody, using the provided CustomEnvelopesGet401JSONResponseBody1
+func (t *CustomEnvelopesGet401JSONResponseBody) MergeCustomEnvelopesGet401JSONResponseBody1(v CustomEnvelopesGet401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t CustomEnvelopesGet401JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *CustomEnvelopesGet401JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsCustomEnvelopesListOrders401JSONResponseBody0 returns the union data inside the CustomEnvelopesListOrders401JSONResponseBody as a CustomEnvelopesListOrders401JSONResponseBody0
+func (t CustomEnvelopesListOrders401JSONResponseBody) AsCustomEnvelopesListOrders401JSONResponseBody0() (CustomEnvelopesListOrders401JSONResponseBody0, error) {
+	var body CustomEnvelopesListOrders401JSONResponseBody0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesListOrders401JSONResponseBody0 overwrites any union data inside the CustomEnvelopesListOrders401JSONResponseBody as the provided CustomEnvelopesListOrders401JSONResponseBody0
+func (t *CustomEnvelopesListOrders401JSONResponseBody) FromCustomEnvelopesListOrders401JSONResponseBody0(v CustomEnvelopesListOrders401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesListOrders401JSONResponseBody0 performs a merge with any union data inside the CustomEnvelopesListOrders401JSONResponseBody, using the provided CustomEnvelopesListOrders401JSONResponseBody0
+func (t *CustomEnvelopesListOrders401JSONResponseBody) MergeCustomEnvelopesListOrders401JSONResponseBody0(v CustomEnvelopesListOrders401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCustomEnvelopesListOrders401JSONResponseBody1 returns the union data inside the CustomEnvelopesListOrders401JSONResponseBody as a CustomEnvelopesListOrders401JSONResponseBody1
+func (t CustomEnvelopesListOrders401JSONResponseBody) AsCustomEnvelopesListOrders401JSONResponseBody1() (CustomEnvelopesListOrders401JSONResponseBody1, error) {
+	var body CustomEnvelopesListOrders401JSONResponseBody1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesListOrders401JSONResponseBody1 overwrites any union data inside the CustomEnvelopesListOrders401JSONResponseBody as the provided CustomEnvelopesListOrders401JSONResponseBody1
+func (t *CustomEnvelopesListOrders401JSONResponseBody) FromCustomEnvelopesListOrders401JSONResponseBody1(v CustomEnvelopesListOrders401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesListOrders401JSONResponseBody1 performs a merge with any union data inside the CustomEnvelopesListOrders401JSONResponseBody, using the provided CustomEnvelopesListOrders401JSONResponseBody1
+func (t *CustomEnvelopesListOrders401JSONResponseBody) MergeCustomEnvelopesListOrders401JSONResponseBody1(v CustomEnvelopesListOrders401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t CustomEnvelopesListOrders401JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *CustomEnvelopesListOrders401JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsCustomEnvelopesCreateOrder401JSONResponseBody0 returns the union data inside the CustomEnvelopesCreateOrder401JSONResponseBody as a CustomEnvelopesCreateOrder401JSONResponseBody0
+func (t CustomEnvelopesCreateOrder401JSONResponseBody) AsCustomEnvelopesCreateOrder401JSONResponseBody0() (CustomEnvelopesCreateOrder401JSONResponseBody0, error) {
+	var body CustomEnvelopesCreateOrder401JSONResponseBody0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesCreateOrder401JSONResponseBody0 overwrites any union data inside the CustomEnvelopesCreateOrder401JSONResponseBody as the provided CustomEnvelopesCreateOrder401JSONResponseBody0
+func (t *CustomEnvelopesCreateOrder401JSONResponseBody) FromCustomEnvelopesCreateOrder401JSONResponseBody0(v CustomEnvelopesCreateOrder401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesCreateOrder401JSONResponseBody0 performs a merge with any union data inside the CustomEnvelopesCreateOrder401JSONResponseBody, using the provided CustomEnvelopesCreateOrder401JSONResponseBody0
+func (t *CustomEnvelopesCreateOrder401JSONResponseBody) MergeCustomEnvelopesCreateOrder401JSONResponseBody0(v CustomEnvelopesCreateOrder401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCustomEnvelopesCreateOrder401JSONResponseBody1 returns the union data inside the CustomEnvelopesCreateOrder401JSONResponseBody as a CustomEnvelopesCreateOrder401JSONResponseBody1
+func (t CustomEnvelopesCreateOrder401JSONResponseBody) AsCustomEnvelopesCreateOrder401JSONResponseBody1() (CustomEnvelopesCreateOrder401JSONResponseBody1, error) {
+	var body CustomEnvelopesCreateOrder401JSONResponseBody1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesCreateOrder401JSONResponseBody1 overwrites any union data inside the CustomEnvelopesCreateOrder401JSONResponseBody as the provided CustomEnvelopesCreateOrder401JSONResponseBody1
+func (t *CustomEnvelopesCreateOrder401JSONResponseBody) FromCustomEnvelopesCreateOrder401JSONResponseBody1(v CustomEnvelopesCreateOrder401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesCreateOrder401JSONResponseBody1 performs a merge with any union data inside the CustomEnvelopesCreateOrder401JSONResponseBody, using the provided CustomEnvelopesCreateOrder401JSONResponseBody1
+func (t *CustomEnvelopesCreateOrder401JSONResponseBody) MergeCustomEnvelopesCreateOrder401JSONResponseBody1(v CustomEnvelopesCreateOrder401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t CustomEnvelopesCreateOrder401JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *CustomEnvelopesCreateOrder401JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsCustomEnvelopesCancelOrder401JSONResponseBody0 returns the union data inside the CustomEnvelopesCancelOrder401JSONResponseBody as a CustomEnvelopesCancelOrder401JSONResponseBody0
+func (t CustomEnvelopesCancelOrder401JSONResponseBody) AsCustomEnvelopesCancelOrder401JSONResponseBody0() (CustomEnvelopesCancelOrder401JSONResponseBody0, error) {
+	var body CustomEnvelopesCancelOrder401JSONResponseBody0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesCancelOrder401JSONResponseBody0 overwrites any union data inside the CustomEnvelopesCancelOrder401JSONResponseBody as the provided CustomEnvelopesCancelOrder401JSONResponseBody0
+func (t *CustomEnvelopesCancelOrder401JSONResponseBody) FromCustomEnvelopesCancelOrder401JSONResponseBody0(v CustomEnvelopesCancelOrder401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesCancelOrder401JSONResponseBody0 performs a merge with any union data inside the CustomEnvelopesCancelOrder401JSONResponseBody, using the provided CustomEnvelopesCancelOrder401JSONResponseBody0
+func (t *CustomEnvelopesCancelOrder401JSONResponseBody) MergeCustomEnvelopesCancelOrder401JSONResponseBody0(v CustomEnvelopesCancelOrder401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCustomEnvelopesCancelOrder401JSONResponseBody1 returns the union data inside the CustomEnvelopesCancelOrder401JSONResponseBody as a CustomEnvelopesCancelOrder401JSONResponseBody1
+func (t CustomEnvelopesCancelOrder401JSONResponseBody) AsCustomEnvelopesCancelOrder401JSONResponseBody1() (CustomEnvelopesCancelOrder401JSONResponseBody1, error) {
+	var body CustomEnvelopesCancelOrder401JSONResponseBody1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesCancelOrder401JSONResponseBody1 overwrites any union data inside the CustomEnvelopesCancelOrder401JSONResponseBody as the provided CustomEnvelopesCancelOrder401JSONResponseBody1
+func (t *CustomEnvelopesCancelOrder401JSONResponseBody) FromCustomEnvelopesCancelOrder401JSONResponseBody1(v CustomEnvelopesCancelOrder401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesCancelOrder401JSONResponseBody1 performs a merge with any union data inside the CustomEnvelopesCancelOrder401JSONResponseBody, using the provided CustomEnvelopesCancelOrder401JSONResponseBody1
+func (t *CustomEnvelopesCancelOrder401JSONResponseBody) MergeCustomEnvelopesCancelOrder401JSONResponseBody1(v CustomEnvelopesCancelOrder401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t CustomEnvelopesCancelOrder401JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *CustomEnvelopesCancelOrder401JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsCustomEnvelopesCancelOrder422JSONResponseBody0 returns the union data inside the CustomEnvelopesCancelOrder422JSONResponseBody as a CustomEnvelopesCancelOrder422JSONResponseBody0
+func (t CustomEnvelopesCancelOrder422JSONResponseBody) AsCustomEnvelopesCancelOrder422JSONResponseBody0() (CustomEnvelopesCancelOrder422JSONResponseBody0, error) {
+	var body CustomEnvelopesCancelOrder422JSONResponseBody0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesCancelOrder422JSONResponseBody0 overwrites any union data inside the CustomEnvelopesCancelOrder422JSONResponseBody as the provided CustomEnvelopesCancelOrder422JSONResponseBody0
+func (t *CustomEnvelopesCancelOrder422JSONResponseBody) FromCustomEnvelopesCancelOrder422JSONResponseBody0(v CustomEnvelopesCancelOrder422JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesCancelOrder422JSONResponseBody0 performs a merge with any union data inside the CustomEnvelopesCancelOrder422JSONResponseBody, using the provided CustomEnvelopesCancelOrder422JSONResponseBody0
+func (t *CustomEnvelopesCancelOrder422JSONResponseBody) MergeCustomEnvelopesCancelOrder422JSONResponseBody0(v CustomEnvelopesCancelOrder422JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCustomEnvelopesCancelOrder422JSONResponseBody1 returns the union data inside the CustomEnvelopesCancelOrder422JSONResponseBody as a CustomEnvelopesCancelOrder422JSONResponseBody1
+func (t CustomEnvelopesCancelOrder422JSONResponseBody) AsCustomEnvelopesCancelOrder422JSONResponseBody1() (CustomEnvelopesCancelOrder422JSONResponseBody1, error) {
+	var body CustomEnvelopesCancelOrder422JSONResponseBody1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesCancelOrder422JSONResponseBody1 overwrites any union data inside the CustomEnvelopesCancelOrder422JSONResponseBody as the provided CustomEnvelopesCancelOrder422JSONResponseBody1
+func (t *CustomEnvelopesCancelOrder422JSONResponseBody) FromCustomEnvelopesCancelOrder422JSONResponseBody1(v CustomEnvelopesCancelOrder422JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesCancelOrder422JSONResponseBody1 performs a merge with any union data inside the CustomEnvelopesCancelOrder422JSONResponseBody, using the provided CustomEnvelopesCancelOrder422JSONResponseBody1
+func (t *CustomEnvelopesCancelOrder422JSONResponseBody) MergeCustomEnvelopesCancelOrder422JSONResponseBody1(v CustomEnvelopesCancelOrder422JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t CustomEnvelopesCancelOrder422JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *CustomEnvelopesCancelOrder422JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsCustomEnvelopesGetOrder401JSONResponseBody0 returns the union data inside the CustomEnvelopesGetOrder401JSONResponseBody as a CustomEnvelopesGetOrder401JSONResponseBody0
+func (t CustomEnvelopesGetOrder401JSONResponseBody) AsCustomEnvelopesGetOrder401JSONResponseBody0() (CustomEnvelopesGetOrder401JSONResponseBody0, error) {
+	var body CustomEnvelopesGetOrder401JSONResponseBody0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesGetOrder401JSONResponseBody0 overwrites any union data inside the CustomEnvelopesGetOrder401JSONResponseBody as the provided CustomEnvelopesGetOrder401JSONResponseBody0
+func (t *CustomEnvelopesGetOrder401JSONResponseBody) FromCustomEnvelopesGetOrder401JSONResponseBody0(v CustomEnvelopesGetOrder401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesGetOrder401JSONResponseBody0 performs a merge with any union data inside the CustomEnvelopesGetOrder401JSONResponseBody, using the provided CustomEnvelopesGetOrder401JSONResponseBody0
+func (t *CustomEnvelopesGetOrder401JSONResponseBody) MergeCustomEnvelopesGetOrder401JSONResponseBody0(v CustomEnvelopesGetOrder401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCustomEnvelopesGetOrder401JSONResponseBody1 returns the union data inside the CustomEnvelopesGetOrder401JSONResponseBody as a CustomEnvelopesGetOrder401JSONResponseBody1
+func (t CustomEnvelopesGetOrder401JSONResponseBody) AsCustomEnvelopesGetOrder401JSONResponseBody1() (CustomEnvelopesGetOrder401JSONResponseBody1, error) {
+	var body CustomEnvelopesGetOrder401JSONResponseBody1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesGetOrder401JSONResponseBody1 overwrites any union data inside the CustomEnvelopesGetOrder401JSONResponseBody as the provided CustomEnvelopesGetOrder401JSONResponseBody1
+func (t *CustomEnvelopesGetOrder401JSONResponseBody) FromCustomEnvelopesGetOrder401JSONResponseBody1(v CustomEnvelopesGetOrder401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesGetOrder401JSONResponseBody1 performs a merge with any union data inside the CustomEnvelopesGetOrder401JSONResponseBody, using the provided CustomEnvelopesGetOrder401JSONResponseBody1
+func (t *CustomEnvelopesGetOrder401JSONResponseBody) MergeCustomEnvelopesGetOrder401JSONResponseBody1(v CustomEnvelopesGetOrder401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t CustomEnvelopesGetOrder401JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *CustomEnvelopesGetOrder401JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsCustomEnvelopesFillTestOrder401JSONResponseBody0 returns the union data inside the CustomEnvelopesFillTestOrder401JSONResponseBody as a CustomEnvelopesFillTestOrder401JSONResponseBody0
+func (t CustomEnvelopesFillTestOrder401JSONResponseBody) AsCustomEnvelopesFillTestOrder401JSONResponseBody0() (CustomEnvelopesFillTestOrder401JSONResponseBody0, error) {
+	var body CustomEnvelopesFillTestOrder401JSONResponseBody0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesFillTestOrder401JSONResponseBody0 overwrites any union data inside the CustomEnvelopesFillTestOrder401JSONResponseBody as the provided CustomEnvelopesFillTestOrder401JSONResponseBody0
+func (t *CustomEnvelopesFillTestOrder401JSONResponseBody) FromCustomEnvelopesFillTestOrder401JSONResponseBody0(v CustomEnvelopesFillTestOrder401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesFillTestOrder401JSONResponseBody0 performs a merge with any union data inside the CustomEnvelopesFillTestOrder401JSONResponseBody, using the provided CustomEnvelopesFillTestOrder401JSONResponseBody0
+func (t *CustomEnvelopesFillTestOrder401JSONResponseBody) MergeCustomEnvelopesFillTestOrder401JSONResponseBody0(v CustomEnvelopesFillTestOrder401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCustomEnvelopesFillTestOrder401JSONResponseBody1 returns the union data inside the CustomEnvelopesFillTestOrder401JSONResponseBody as a CustomEnvelopesFillTestOrder401JSONResponseBody1
+func (t CustomEnvelopesFillTestOrder401JSONResponseBody) AsCustomEnvelopesFillTestOrder401JSONResponseBody1() (CustomEnvelopesFillTestOrder401JSONResponseBody1, error) {
+	var body CustomEnvelopesFillTestOrder401JSONResponseBody1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesFillTestOrder401JSONResponseBody1 overwrites any union data inside the CustomEnvelopesFillTestOrder401JSONResponseBody as the provided CustomEnvelopesFillTestOrder401JSONResponseBody1
+func (t *CustomEnvelopesFillTestOrder401JSONResponseBody) FromCustomEnvelopesFillTestOrder401JSONResponseBody1(v CustomEnvelopesFillTestOrder401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesFillTestOrder401JSONResponseBody1 performs a merge with any union data inside the CustomEnvelopesFillTestOrder401JSONResponseBody, using the provided CustomEnvelopesFillTestOrder401JSONResponseBody1
+func (t *CustomEnvelopesFillTestOrder401JSONResponseBody) MergeCustomEnvelopesFillTestOrder401JSONResponseBody1(v CustomEnvelopesFillTestOrder401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t CustomEnvelopesFillTestOrder401JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *CustomEnvelopesFillTestOrder401JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsCustomEnvelopesFillTestOrder422JSONResponseBody0 returns the union data inside the CustomEnvelopesFillTestOrder422JSONResponseBody as a CustomEnvelopesFillTestOrder422JSONResponseBody0
+func (t CustomEnvelopesFillTestOrder422JSONResponseBody) AsCustomEnvelopesFillTestOrder422JSONResponseBody0() (CustomEnvelopesFillTestOrder422JSONResponseBody0, error) {
+	var body CustomEnvelopesFillTestOrder422JSONResponseBody0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesFillTestOrder422JSONResponseBody0 overwrites any union data inside the CustomEnvelopesFillTestOrder422JSONResponseBody as the provided CustomEnvelopesFillTestOrder422JSONResponseBody0
+func (t *CustomEnvelopesFillTestOrder422JSONResponseBody) FromCustomEnvelopesFillTestOrder422JSONResponseBody0(v CustomEnvelopesFillTestOrder422JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesFillTestOrder422JSONResponseBody0 performs a merge with any union data inside the CustomEnvelopesFillTestOrder422JSONResponseBody, using the provided CustomEnvelopesFillTestOrder422JSONResponseBody0
+func (t *CustomEnvelopesFillTestOrder422JSONResponseBody) MergeCustomEnvelopesFillTestOrder422JSONResponseBody0(v CustomEnvelopesFillTestOrder422JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCustomEnvelopesFillTestOrder422JSONResponseBody1 returns the union data inside the CustomEnvelopesFillTestOrder422JSONResponseBody as a CustomEnvelopesFillTestOrder422JSONResponseBody1
+func (t CustomEnvelopesFillTestOrder422JSONResponseBody) AsCustomEnvelopesFillTestOrder422JSONResponseBody1() (CustomEnvelopesFillTestOrder422JSONResponseBody1, error) {
+	var body CustomEnvelopesFillTestOrder422JSONResponseBody1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesFillTestOrder422JSONResponseBody1 overwrites any union data inside the CustomEnvelopesFillTestOrder422JSONResponseBody as the provided CustomEnvelopesFillTestOrder422JSONResponseBody1
+func (t *CustomEnvelopesFillTestOrder422JSONResponseBody) FromCustomEnvelopesFillTestOrder422JSONResponseBody1(v CustomEnvelopesFillTestOrder422JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesFillTestOrder422JSONResponseBody1 performs a merge with any union data inside the CustomEnvelopesFillTestOrder422JSONResponseBody, using the provided CustomEnvelopesFillTestOrder422JSONResponseBody1
+func (t *CustomEnvelopesFillTestOrder422JSONResponseBody) MergeCustomEnvelopesFillTestOrder422JSONResponseBody1(v CustomEnvelopesFillTestOrder422JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCustomEnvelopesFillTestOrder422JSONResponseBody2 returns the union data inside the CustomEnvelopesFillTestOrder422JSONResponseBody as a CustomEnvelopesFillTestOrder422JSONResponseBody2
+func (t CustomEnvelopesFillTestOrder422JSONResponseBody) AsCustomEnvelopesFillTestOrder422JSONResponseBody2() (CustomEnvelopesFillTestOrder422JSONResponseBody2, error) {
+	var body CustomEnvelopesFillTestOrder422JSONResponseBody2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesFillTestOrder422JSONResponseBody2 overwrites any union data inside the CustomEnvelopesFillTestOrder422JSONResponseBody as the provided CustomEnvelopesFillTestOrder422JSONResponseBody2
+func (t *CustomEnvelopesFillTestOrder422JSONResponseBody) FromCustomEnvelopesFillTestOrder422JSONResponseBody2(v CustomEnvelopesFillTestOrder422JSONResponseBody2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesFillTestOrder422JSONResponseBody2 performs a merge with any union data inside the CustomEnvelopesFillTestOrder422JSONResponseBody, using the provided CustomEnvelopesFillTestOrder422JSONResponseBody2
+func (t *CustomEnvelopesFillTestOrder422JSONResponseBody) MergeCustomEnvelopesFillTestOrder422JSONResponseBody2(v CustomEnvelopesFillTestOrder422JSONResponseBody2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCustomEnvelopesFillTestOrder422JSONResponseBody3 returns the union data inside the CustomEnvelopesFillTestOrder422JSONResponseBody as a CustomEnvelopesFillTestOrder422JSONResponseBody3
+func (t CustomEnvelopesFillTestOrder422JSONResponseBody) AsCustomEnvelopesFillTestOrder422JSONResponseBody3() (CustomEnvelopesFillTestOrder422JSONResponseBody3, error) {
+	var body CustomEnvelopesFillTestOrder422JSONResponseBody3
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesFillTestOrder422JSONResponseBody3 overwrites any union data inside the CustomEnvelopesFillTestOrder422JSONResponseBody as the provided CustomEnvelopesFillTestOrder422JSONResponseBody3
+func (t *CustomEnvelopesFillTestOrder422JSONResponseBody) FromCustomEnvelopesFillTestOrder422JSONResponseBody3(v CustomEnvelopesFillTestOrder422JSONResponseBody3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesFillTestOrder422JSONResponseBody3 performs a merge with any union data inside the CustomEnvelopesFillTestOrder422JSONResponseBody, using the provided CustomEnvelopesFillTestOrder422JSONResponseBody3
+func (t *CustomEnvelopesFillTestOrder422JSONResponseBody) MergeCustomEnvelopesFillTestOrder422JSONResponseBody3(v CustomEnvelopesFillTestOrder422JSONResponseBody3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t CustomEnvelopesFillTestOrder422JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *CustomEnvelopesFillTestOrder422JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsCustomEnvelopesProgressTestOrder401JSONResponseBody0 returns the union data inside the CustomEnvelopesProgressTestOrder401JSONResponseBody as a CustomEnvelopesProgressTestOrder401JSONResponseBody0
+func (t CustomEnvelopesProgressTestOrder401JSONResponseBody) AsCustomEnvelopesProgressTestOrder401JSONResponseBody0() (CustomEnvelopesProgressTestOrder401JSONResponseBody0, error) {
+	var body CustomEnvelopesProgressTestOrder401JSONResponseBody0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesProgressTestOrder401JSONResponseBody0 overwrites any union data inside the CustomEnvelopesProgressTestOrder401JSONResponseBody as the provided CustomEnvelopesProgressTestOrder401JSONResponseBody0
+func (t *CustomEnvelopesProgressTestOrder401JSONResponseBody) FromCustomEnvelopesProgressTestOrder401JSONResponseBody0(v CustomEnvelopesProgressTestOrder401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesProgressTestOrder401JSONResponseBody0 performs a merge with any union data inside the CustomEnvelopesProgressTestOrder401JSONResponseBody, using the provided CustomEnvelopesProgressTestOrder401JSONResponseBody0
+func (t *CustomEnvelopesProgressTestOrder401JSONResponseBody) MergeCustomEnvelopesProgressTestOrder401JSONResponseBody0(v CustomEnvelopesProgressTestOrder401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCustomEnvelopesProgressTestOrder401JSONResponseBody1 returns the union data inside the CustomEnvelopesProgressTestOrder401JSONResponseBody as a CustomEnvelopesProgressTestOrder401JSONResponseBody1
+func (t CustomEnvelopesProgressTestOrder401JSONResponseBody) AsCustomEnvelopesProgressTestOrder401JSONResponseBody1() (CustomEnvelopesProgressTestOrder401JSONResponseBody1, error) {
+	var body CustomEnvelopesProgressTestOrder401JSONResponseBody1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesProgressTestOrder401JSONResponseBody1 overwrites any union data inside the CustomEnvelopesProgressTestOrder401JSONResponseBody as the provided CustomEnvelopesProgressTestOrder401JSONResponseBody1
+func (t *CustomEnvelopesProgressTestOrder401JSONResponseBody) FromCustomEnvelopesProgressTestOrder401JSONResponseBody1(v CustomEnvelopesProgressTestOrder401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesProgressTestOrder401JSONResponseBody1 performs a merge with any union data inside the CustomEnvelopesProgressTestOrder401JSONResponseBody, using the provided CustomEnvelopesProgressTestOrder401JSONResponseBody1
+func (t *CustomEnvelopesProgressTestOrder401JSONResponseBody) MergeCustomEnvelopesProgressTestOrder401JSONResponseBody1(v CustomEnvelopesProgressTestOrder401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t CustomEnvelopesProgressTestOrder401JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *CustomEnvelopesProgressTestOrder401JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsCustomEnvelopesProgressTestOrder422JSONResponseBody0 returns the union data inside the CustomEnvelopesProgressTestOrder422JSONResponseBody as a CustomEnvelopesProgressTestOrder422JSONResponseBody0
+func (t CustomEnvelopesProgressTestOrder422JSONResponseBody) AsCustomEnvelopesProgressTestOrder422JSONResponseBody0() (CustomEnvelopesProgressTestOrder422JSONResponseBody0, error) {
+	var body CustomEnvelopesProgressTestOrder422JSONResponseBody0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesProgressTestOrder422JSONResponseBody0 overwrites any union data inside the CustomEnvelopesProgressTestOrder422JSONResponseBody as the provided CustomEnvelopesProgressTestOrder422JSONResponseBody0
+func (t *CustomEnvelopesProgressTestOrder422JSONResponseBody) FromCustomEnvelopesProgressTestOrder422JSONResponseBody0(v CustomEnvelopesProgressTestOrder422JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesProgressTestOrder422JSONResponseBody0 performs a merge with any union data inside the CustomEnvelopesProgressTestOrder422JSONResponseBody, using the provided CustomEnvelopesProgressTestOrder422JSONResponseBody0
+func (t *CustomEnvelopesProgressTestOrder422JSONResponseBody) MergeCustomEnvelopesProgressTestOrder422JSONResponseBody0(v CustomEnvelopesProgressTestOrder422JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCustomEnvelopesProgressTestOrder422JSONResponseBody1 returns the union data inside the CustomEnvelopesProgressTestOrder422JSONResponseBody as a CustomEnvelopesProgressTestOrder422JSONResponseBody1
+func (t CustomEnvelopesProgressTestOrder422JSONResponseBody) AsCustomEnvelopesProgressTestOrder422JSONResponseBody1() (CustomEnvelopesProgressTestOrder422JSONResponseBody1, error) {
+	var body CustomEnvelopesProgressTestOrder422JSONResponseBody1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesProgressTestOrder422JSONResponseBody1 overwrites any union data inside the CustomEnvelopesProgressTestOrder422JSONResponseBody as the provided CustomEnvelopesProgressTestOrder422JSONResponseBody1
+func (t *CustomEnvelopesProgressTestOrder422JSONResponseBody) FromCustomEnvelopesProgressTestOrder422JSONResponseBody1(v CustomEnvelopesProgressTestOrder422JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesProgressTestOrder422JSONResponseBody1 performs a merge with any union data inside the CustomEnvelopesProgressTestOrder422JSONResponseBody, using the provided CustomEnvelopesProgressTestOrder422JSONResponseBody1
+func (t *CustomEnvelopesProgressTestOrder422JSONResponseBody) MergeCustomEnvelopesProgressTestOrder422JSONResponseBody1(v CustomEnvelopesProgressTestOrder422JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCustomEnvelopesProgressTestOrder422JSONResponseBody2 returns the union data inside the CustomEnvelopesProgressTestOrder422JSONResponseBody as a CustomEnvelopesProgressTestOrder422JSONResponseBody2
+func (t CustomEnvelopesProgressTestOrder422JSONResponseBody) AsCustomEnvelopesProgressTestOrder422JSONResponseBody2() (CustomEnvelopesProgressTestOrder422JSONResponseBody2, error) {
+	var body CustomEnvelopesProgressTestOrder422JSONResponseBody2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesProgressTestOrder422JSONResponseBody2 overwrites any union data inside the CustomEnvelopesProgressTestOrder422JSONResponseBody as the provided CustomEnvelopesProgressTestOrder422JSONResponseBody2
+func (t *CustomEnvelopesProgressTestOrder422JSONResponseBody) FromCustomEnvelopesProgressTestOrder422JSONResponseBody2(v CustomEnvelopesProgressTestOrder422JSONResponseBody2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesProgressTestOrder422JSONResponseBody2 performs a merge with any union data inside the CustomEnvelopesProgressTestOrder422JSONResponseBody, using the provided CustomEnvelopesProgressTestOrder422JSONResponseBody2
+func (t *CustomEnvelopesProgressTestOrder422JSONResponseBody) MergeCustomEnvelopesProgressTestOrder422JSONResponseBody2(v CustomEnvelopesProgressTestOrder422JSONResponseBody2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t CustomEnvelopesProgressTestOrder422JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *CustomEnvelopesProgressTestOrder422JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsCustomEnvelopesClearThreshold401JSONResponseBody0 returns the union data inside the CustomEnvelopesClearThreshold401JSONResponseBody as a CustomEnvelopesClearThreshold401JSONResponseBody0
+func (t CustomEnvelopesClearThreshold401JSONResponseBody) AsCustomEnvelopesClearThreshold401JSONResponseBody0() (CustomEnvelopesClearThreshold401JSONResponseBody0, error) {
+	var body CustomEnvelopesClearThreshold401JSONResponseBody0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesClearThreshold401JSONResponseBody0 overwrites any union data inside the CustomEnvelopesClearThreshold401JSONResponseBody as the provided CustomEnvelopesClearThreshold401JSONResponseBody0
+func (t *CustomEnvelopesClearThreshold401JSONResponseBody) FromCustomEnvelopesClearThreshold401JSONResponseBody0(v CustomEnvelopesClearThreshold401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesClearThreshold401JSONResponseBody0 performs a merge with any union data inside the CustomEnvelopesClearThreshold401JSONResponseBody, using the provided CustomEnvelopesClearThreshold401JSONResponseBody0
+func (t *CustomEnvelopesClearThreshold401JSONResponseBody) MergeCustomEnvelopesClearThreshold401JSONResponseBody0(v CustomEnvelopesClearThreshold401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCustomEnvelopesClearThreshold401JSONResponseBody1 returns the union data inside the CustomEnvelopesClearThreshold401JSONResponseBody as a CustomEnvelopesClearThreshold401JSONResponseBody1
+func (t CustomEnvelopesClearThreshold401JSONResponseBody) AsCustomEnvelopesClearThreshold401JSONResponseBody1() (CustomEnvelopesClearThreshold401JSONResponseBody1, error) {
+	var body CustomEnvelopesClearThreshold401JSONResponseBody1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesClearThreshold401JSONResponseBody1 overwrites any union data inside the CustomEnvelopesClearThreshold401JSONResponseBody as the provided CustomEnvelopesClearThreshold401JSONResponseBody1
+func (t *CustomEnvelopesClearThreshold401JSONResponseBody) FromCustomEnvelopesClearThreshold401JSONResponseBody1(v CustomEnvelopesClearThreshold401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesClearThreshold401JSONResponseBody1 performs a merge with any union data inside the CustomEnvelopesClearThreshold401JSONResponseBody, using the provided CustomEnvelopesClearThreshold401JSONResponseBody1
+func (t *CustomEnvelopesClearThreshold401JSONResponseBody) MergeCustomEnvelopesClearThreshold401JSONResponseBody1(v CustomEnvelopesClearThreshold401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t CustomEnvelopesClearThreshold401JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *CustomEnvelopesClearThreshold401JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsCustomEnvelopesSetThreshold401JSONResponseBody0 returns the union data inside the CustomEnvelopesSetThreshold401JSONResponseBody as a CustomEnvelopesSetThreshold401JSONResponseBody0
+func (t CustomEnvelopesSetThreshold401JSONResponseBody) AsCustomEnvelopesSetThreshold401JSONResponseBody0() (CustomEnvelopesSetThreshold401JSONResponseBody0, error) {
+	var body CustomEnvelopesSetThreshold401JSONResponseBody0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesSetThreshold401JSONResponseBody0 overwrites any union data inside the CustomEnvelopesSetThreshold401JSONResponseBody as the provided CustomEnvelopesSetThreshold401JSONResponseBody0
+func (t *CustomEnvelopesSetThreshold401JSONResponseBody) FromCustomEnvelopesSetThreshold401JSONResponseBody0(v CustomEnvelopesSetThreshold401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesSetThreshold401JSONResponseBody0 performs a merge with any union data inside the CustomEnvelopesSetThreshold401JSONResponseBody, using the provided CustomEnvelopesSetThreshold401JSONResponseBody0
+func (t *CustomEnvelopesSetThreshold401JSONResponseBody) MergeCustomEnvelopesSetThreshold401JSONResponseBody0(v CustomEnvelopesSetThreshold401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCustomEnvelopesSetThreshold401JSONResponseBody1 returns the union data inside the CustomEnvelopesSetThreshold401JSONResponseBody as a CustomEnvelopesSetThreshold401JSONResponseBody1
+func (t CustomEnvelopesSetThreshold401JSONResponseBody) AsCustomEnvelopesSetThreshold401JSONResponseBody1() (CustomEnvelopesSetThreshold401JSONResponseBody1, error) {
+	var body CustomEnvelopesSetThreshold401JSONResponseBody1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomEnvelopesSetThreshold401JSONResponseBody1 overwrites any union data inside the CustomEnvelopesSetThreshold401JSONResponseBody as the provided CustomEnvelopesSetThreshold401JSONResponseBody1
+func (t *CustomEnvelopesSetThreshold401JSONResponseBody) FromCustomEnvelopesSetThreshold401JSONResponseBody1(v CustomEnvelopesSetThreshold401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomEnvelopesSetThreshold401JSONResponseBody1 performs a merge with any union data inside the CustomEnvelopesSetThreshold401JSONResponseBody, using the provided CustomEnvelopesSetThreshold401JSONResponseBody1
+func (t *CustomEnvelopesSetThreshold401JSONResponseBody) MergeCustomEnvelopesSetThreshold401JSONResponseBody1(v CustomEnvelopesSetThreshold401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t CustomEnvelopesSetThreshold401JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *CustomEnvelopesSetThreshold401JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsDocumentsList401JSONResponseBody0 returns the union data inside the DocumentsList401JSONResponseBody as a DocumentsList401JSONResponseBody0
+func (t DocumentsList401JSONResponseBody) AsDocumentsList401JSONResponseBody0() (DocumentsList401JSONResponseBody0, error) {
+	var body DocumentsList401JSONResponseBody0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromDocumentsList401JSONResponseBody0 overwrites any union data inside the DocumentsList401JSONResponseBody as the provided DocumentsList401JSONResponseBody0
+func (t *DocumentsList401JSONResponseBody) FromDocumentsList401JSONResponseBody0(v DocumentsList401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeDocumentsList401JSONResponseBody0 performs a merge with any union data inside the DocumentsList401JSONResponseBody, using the provided DocumentsList401JSONResponseBody0
+func (t *DocumentsList401JSONResponseBody) MergeDocumentsList401JSONResponseBody0(v DocumentsList401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsDocumentsList401JSONResponseBody1 returns the union data inside the DocumentsList401JSONResponseBody as a DocumentsList401JSONResponseBody1
+func (t DocumentsList401JSONResponseBody) AsDocumentsList401JSONResponseBody1() (DocumentsList401JSONResponseBody1, error) {
+	var body DocumentsList401JSONResponseBody1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromDocumentsList401JSONResponseBody1 overwrites any union data inside the DocumentsList401JSONResponseBody as the provided DocumentsList401JSONResponseBody1
+func (t *DocumentsList401JSONResponseBody) FromDocumentsList401JSONResponseBody1(v DocumentsList401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeDocumentsList401JSONResponseBody1 performs a merge with any union data inside the DocumentsList401JSONResponseBody, using the provided DocumentsList401JSONResponseBody1
+func (t *DocumentsList401JSONResponseBody) MergeDocumentsList401JSONResponseBody1(v DocumentsList401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t DocumentsList401JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *DocumentsList401JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsDocumentsCreate401JSONResponseBody0 returns the union data inside the DocumentsCreate401JSONResponseBody as a DocumentsCreate401JSONResponseBody0
+func (t DocumentsCreate401JSONResponseBody) AsDocumentsCreate401JSONResponseBody0() (DocumentsCreate401JSONResponseBody0, error) {
+	var body DocumentsCreate401JSONResponseBody0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromDocumentsCreate401JSONResponseBody0 overwrites any union data inside the DocumentsCreate401JSONResponseBody as the provided DocumentsCreate401JSONResponseBody0
+func (t *DocumentsCreate401JSONResponseBody) FromDocumentsCreate401JSONResponseBody0(v DocumentsCreate401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeDocumentsCreate401JSONResponseBody0 performs a merge with any union data inside the DocumentsCreate401JSONResponseBody, using the provided DocumentsCreate401JSONResponseBody0
+func (t *DocumentsCreate401JSONResponseBody) MergeDocumentsCreate401JSONResponseBody0(v DocumentsCreate401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsDocumentsCreate401JSONResponseBody1 returns the union data inside the DocumentsCreate401JSONResponseBody as a DocumentsCreate401JSONResponseBody1
+func (t DocumentsCreate401JSONResponseBody) AsDocumentsCreate401JSONResponseBody1() (DocumentsCreate401JSONResponseBody1, error) {
+	var body DocumentsCreate401JSONResponseBody1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromDocumentsCreate401JSONResponseBody1 overwrites any union data inside the DocumentsCreate401JSONResponseBody as the provided DocumentsCreate401JSONResponseBody1
+func (t *DocumentsCreate401JSONResponseBody) FromDocumentsCreate401JSONResponseBody1(v DocumentsCreate401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeDocumentsCreate401JSONResponseBody1 performs a merge with any union data inside the DocumentsCreate401JSONResponseBody, using the provided DocumentsCreate401JSONResponseBody1
+func (t *DocumentsCreate401JSONResponseBody) MergeDocumentsCreate401JSONResponseBody1(v DocumentsCreate401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t DocumentsCreate401JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *DocumentsCreate401JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsDocumentsGet401JSONResponseBody0 returns the union data inside the DocumentsGet401JSONResponseBody as a DocumentsGet401JSONResponseBody0
+func (t DocumentsGet401JSONResponseBody) AsDocumentsGet401JSONResponseBody0() (DocumentsGet401JSONResponseBody0, error) {
+	var body DocumentsGet401JSONResponseBody0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromDocumentsGet401JSONResponseBody0 overwrites any union data inside the DocumentsGet401JSONResponseBody as the provided DocumentsGet401JSONResponseBody0
+func (t *DocumentsGet401JSONResponseBody) FromDocumentsGet401JSONResponseBody0(v DocumentsGet401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeDocumentsGet401JSONResponseBody0 performs a merge with any union data inside the DocumentsGet401JSONResponseBody, using the provided DocumentsGet401JSONResponseBody0
+func (t *DocumentsGet401JSONResponseBody) MergeDocumentsGet401JSONResponseBody0(v DocumentsGet401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsDocumentsGet401JSONResponseBody1 returns the union data inside the DocumentsGet401JSONResponseBody as a DocumentsGet401JSONResponseBody1
+func (t DocumentsGet401JSONResponseBody) AsDocumentsGet401JSONResponseBody1() (DocumentsGet401JSONResponseBody1, error) {
+	var body DocumentsGet401JSONResponseBody1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromDocumentsGet401JSONResponseBody1 overwrites any union data inside the DocumentsGet401JSONResponseBody as the provided DocumentsGet401JSONResponseBody1
+func (t *DocumentsGet401JSONResponseBody) FromDocumentsGet401JSONResponseBody1(v DocumentsGet401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeDocumentsGet401JSONResponseBody1 performs a merge with any union data inside the DocumentsGet401JSONResponseBody, using the provided DocumentsGet401JSONResponseBody1
+func (t *DocumentsGet401JSONResponseBody) MergeDocumentsGet401JSONResponseBody1(v DocumentsGet401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t DocumentsGet401JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *DocumentsGet401JSONResponseBody) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -50725,6 +55659,68 @@ func (t *ReportsRunAdHocSample401JSONResponseBody) UnmarshalJSON(b []byte) error
 	return err
 }
 
+// AsReportsPreviewSchedule401JSONResponseBody0 returns the union data inside the ReportsPreviewSchedule401JSONResponseBody as a ReportsPreviewSchedule401JSONResponseBody0
+func (t ReportsPreviewSchedule401JSONResponseBody) AsReportsPreviewSchedule401JSONResponseBody0() (ReportsPreviewSchedule401JSONResponseBody0, error) {
+	var body ReportsPreviewSchedule401JSONResponseBody0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromReportsPreviewSchedule401JSONResponseBody0 overwrites any union data inside the ReportsPreviewSchedule401JSONResponseBody as the provided ReportsPreviewSchedule401JSONResponseBody0
+func (t *ReportsPreviewSchedule401JSONResponseBody) FromReportsPreviewSchedule401JSONResponseBody0(v ReportsPreviewSchedule401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeReportsPreviewSchedule401JSONResponseBody0 performs a merge with any union data inside the ReportsPreviewSchedule401JSONResponseBody, using the provided ReportsPreviewSchedule401JSONResponseBody0
+func (t *ReportsPreviewSchedule401JSONResponseBody) MergeReportsPreviewSchedule401JSONResponseBody0(v ReportsPreviewSchedule401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsReportsPreviewSchedule401JSONResponseBody1 returns the union data inside the ReportsPreviewSchedule401JSONResponseBody as a ReportsPreviewSchedule401JSONResponseBody1
+func (t ReportsPreviewSchedule401JSONResponseBody) AsReportsPreviewSchedule401JSONResponseBody1() (ReportsPreviewSchedule401JSONResponseBody1, error) {
+	var body ReportsPreviewSchedule401JSONResponseBody1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromReportsPreviewSchedule401JSONResponseBody1 overwrites any union data inside the ReportsPreviewSchedule401JSONResponseBody as the provided ReportsPreviewSchedule401JSONResponseBody1
+func (t *ReportsPreviewSchedule401JSONResponseBody) FromReportsPreviewSchedule401JSONResponseBody1(v ReportsPreviewSchedule401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeReportsPreviewSchedule401JSONResponseBody1 performs a merge with any union data inside the ReportsPreviewSchedule401JSONResponseBody, using the provided ReportsPreviewSchedule401JSONResponseBody1
+func (t *ReportsPreviewSchedule401JSONResponseBody) MergeReportsPreviewSchedule401JSONResponseBody1(v ReportsPreviewSchedule401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t ReportsPreviewSchedule401JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *ReportsPreviewSchedule401JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
 // AsReportsDeleteReport401JSONResponseBody0 returns the union data inside the ReportsDeleteReport401JSONResponseBody as a ReportsDeleteReport401JSONResponseBody0
 func (t ReportsDeleteReport401JSONResponseBody) AsReportsDeleteReport401JSONResponseBody0() (ReportsDeleteReport401JSONResponseBody0, error) {
 	var body ReportsDeleteReport401JSONResponseBody0
@@ -50969,6 +55965,68 @@ func (t ReportsRunSavedReportSample401JSONResponseBody) MarshalJSON() ([]byte, e
 }
 
 func (t *ReportsRunSavedReportSample401JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsReportsListReportExports401JSONResponseBody0 returns the union data inside the ReportsListReportExports401JSONResponseBody as a ReportsListReportExports401JSONResponseBody0
+func (t ReportsListReportExports401JSONResponseBody) AsReportsListReportExports401JSONResponseBody0() (ReportsListReportExports401JSONResponseBody0, error) {
+	var body ReportsListReportExports401JSONResponseBody0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromReportsListReportExports401JSONResponseBody0 overwrites any union data inside the ReportsListReportExports401JSONResponseBody as the provided ReportsListReportExports401JSONResponseBody0
+func (t *ReportsListReportExports401JSONResponseBody) FromReportsListReportExports401JSONResponseBody0(v ReportsListReportExports401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeReportsListReportExports401JSONResponseBody0 performs a merge with any union data inside the ReportsListReportExports401JSONResponseBody, using the provided ReportsListReportExports401JSONResponseBody0
+func (t *ReportsListReportExports401JSONResponseBody) MergeReportsListReportExports401JSONResponseBody0(v ReportsListReportExports401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsReportsListReportExports401JSONResponseBody1 returns the union data inside the ReportsListReportExports401JSONResponseBody as a ReportsListReportExports401JSONResponseBody1
+func (t ReportsListReportExports401JSONResponseBody) AsReportsListReportExports401JSONResponseBody1() (ReportsListReportExports401JSONResponseBody1, error) {
+	var body ReportsListReportExports401JSONResponseBody1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromReportsListReportExports401JSONResponseBody1 overwrites any union data inside the ReportsListReportExports401JSONResponseBody as the provided ReportsListReportExports401JSONResponseBody1
+func (t *ReportsListReportExports401JSONResponseBody) FromReportsListReportExports401JSONResponseBody1(v ReportsListReportExports401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeReportsListReportExports401JSONResponseBody1 performs a merge with any union data inside the ReportsListReportExports401JSONResponseBody, using the provided ReportsListReportExports401JSONResponseBody1
+func (t *ReportsListReportExports401JSONResponseBody) MergeReportsListReportExports401JSONResponseBody1(v ReportsListReportExports401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t ReportsListReportExports401JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *ReportsListReportExports401JSONResponseBody) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -53805,6 +58863,32 @@ func (t *TargetedListBuildsConfirm422JSONResponseBody) MergeTargetedListBuildsCo
 	return err
 }
 
+// AsTargetedListBuildsConfirm422JSONResponseBody3 returns the union data inside the TargetedListBuildsConfirm422JSONResponseBody as a TargetedListBuildsConfirm422JSONResponseBody3
+func (t TargetedListBuildsConfirm422JSONResponseBody) AsTargetedListBuildsConfirm422JSONResponseBody3() (TargetedListBuildsConfirm422JSONResponseBody3, error) {
+	var body TargetedListBuildsConfirm422JSONResponseBody3
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromTargetedListBuildsConfirm422JSONResponseBody3 overwrites any union data inside the TargetedListBuildsConfirm422JSONResponseBody as the provided TargetedListBuildsConfirm422JSONResponseBody3
+func (t *TargetedListBuildsConfirm422JSONResponseBody) FromTargetedListBuildsConfirm422JSONResponseBody3(v TargetedListBuildsConfirm422JSONResponseBody3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeTargetedListBuildsConfirm422JSONResponseBody3 performs a merge with any union data inside the TargetedListBuildsConfirm422JSONResponseBody, using the provided TargetedListBuildsConfirm422JSONResponseBody3
+func (t *TargetedListBuildsConfirm422JSONResponseBody) MergeTargetedListBuildsConfirm422JSONResponseBody3(v TargetedListBuildsConfirm422JSONResponseBody3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
 func (t TargetedListBuildsConfirm422JSONResponseBody) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
@@ -54307,6 +59391,130 @@ func (t TemplatesUpdate401JSONResponseBody) MarshalJSON() ([]byte, error) {
 }
 
 func (t *TemplatesUpdate401JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsTemplatesCopy401JSONResponseBody0 returns the union data inside the TemplatesCopy401JSONResponseBody as a TemplatesCopy401JSONResponseBody0
+func (t TemplatesCopy401JSONResponseBody) AsTemplatesCopy401JSONResponseBody0() (TemplatesCopy401JSONResponseBody0, error) {
+	var body TemplatesCopy401JSONResponseBody0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromTemplatesCopy401JSONResponseBody0 overwrites any union data inside the TemplatesCopy401JSONResponseBody as the provided TemplatesCopy401JSONResponseBody0
+func (t *TemplatesCopy401JSONResponseBody) FromTemplatesCopy401JSONResponseBody0(v TemplatesCopy401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeTemplatesCopy401JSONResponseBody0 performs a merge with any union data inside the TemplatesCopy401JSONResponseBody, using the provided TemplatesCopy401JSONResponseBody0
+func (t *TemplatesCopy401JSONResponseBody) MergeTemplatesCopy401JSONResponseBody0(v TemplatesCopy401JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsTemplatesCopy401JSONResponseBody1 returns the union data inside the TemplatesCopy401JSONResponseBody as a TemplatesCopy401JSONResponseBody1
+func (t TemplatesCopy401JSONResponseBody) AsTemplatesCopy401JSONResponseBody1() (TemplatesCopy401JSONResponseBody1, error) {
+	var body TemplatesCopy401JSONResponseBody1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromTemplatesCopy401JSONResponseBody1 overwrites any union data inside the TemplatesCopy401JSONResponseBody as the provided TemplatesCopy401JSONResponseBody1
+func (t *TemplatesCopy401JSONResponseBody) FromTemplatesCopy401JSONResponseBody1(v TemplatesCopy401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeTemplatesCopy401JSONResponseBody1 performs a merge with any union data inside the TemplatesCopy401JSONResponseBody, using the provided TemplatesCopy401JSONResponseBody1
+func (t *TemplatesCopy401JSONResponseBody) MergeTemplatesCopy401JSONResponseBody1(v TemplatesCopy401JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t TemplatesCopy401JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *TemplatesCopy401JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsThumbnailsGet403JSONResponseBody0 returns the union data inside the ThumbnailsGet403JSONResponseBody as a ThumbnailsGet403JSONResponseBody0
+func (t ThumbnailsGet403JSONResponseBody) AsThumbnailsGet403JSONResponseBody0() (ThumbnailsGet403JSONResponseBody0, error) {
+	var body ThumbnailsGet403JSONResponseBody0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromThumbnailsGet403JSONResponseBody0 overwrites any union data inside the ThumbnailsGet403JSONResponseBody as the provided ThumbnailsGet403JSONResponseBody0
+func (t *ThumbnailsGet403JSONResponseBody) FromThumbnailsGet403JSONResponseBody0(v ThumbnailsGet403JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeThumbnailsGet403JSONResponseBody0 performs a merge with any union data inside the ThumbnailsGet403JSONResponseBody, using the provided ThumbnailsGet403JSONResponseBody0
+func (t *ThumbnailsGet403JSONResponseBody) MergeThumbnailsGet403JSONResponseBody0(v ThumbnailsGet403JSONResponseBody0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsThumbnailsGet403JSONResponseBody1 returns the union data inside the ThumbnailsGet403JSONResponseBody as a ThumbnailsGet403JSONResponseBody1
+func (t ThumbnailsGet403JSONResponseBody) AsThumbnailsGet403JSONResponseBody1() (ThumbnailsGet403JSONResponseBody1, error) {
+	var body ThumbnailsGet403JSONResponseBody1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromThumbnailsGet403JSONResponseBody1 overwrites any union data inside the ThumbnailsGet403JSONResponseBody as the provided ThumbnailsGet403JSONResponseBody1
+func (t *ThumbnailsGet403JSONResponseBody) FromThumbnailsGet403JSONResponseBody1(v ThumbnailsGet403JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeThumbnailsGet403JSONResponseBody1 performs a merge with any union data inside the ThumbnailsGet403JSONResponseBody, using the provided ThumbnailsGet403JSONResponseBody1
+func (t *ThumbnailsGet403JSONResponseBody) MergeThumbnailsGet403JSONResponseBody1(v ThumbnailsGet403JSONResponseBody1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t ThumbnailsGet403JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *ThumbnailsGet403JSONResponseBody) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -56282,6 +61490,183 @@ type ClientInterface interface {
 	// Corresponds with GET /print-mail/v1/contacts/{id} (the `ContactsGet` operationId).
 	ContactsGet(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// CustomEnvelopesList List Custom Envelopes
+	//
+	// Gets a list of custom envelopes for the user.
+	//
+	// Corresponds with GET /print-mail/v1/custom_envelopes (the `CustomEnvelopesList` operationId).
+	CustomEnvelopesList(ctx context.Context, params *CustomEnvelopesListParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartWithBody Create Custom Envelope
+	//
+	// Creates a new custom envelope. The artwork is reviewed after it is
+	// uploaded: the custom envelope is returned with a `status` of `pending`
+	// and moves to `approved` or `rejected` once the review finishes. Create a custom envelope via a multipart/form-data request. Accepts the
+	// same fields as the JSON create body; use this content type to upload the
+	// PDF file directly.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with POST /print-mail/v1/custom_envelopes (the `CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart` operationId).
+	CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartWithBody(ctx context.Context, params *CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart Create Custom Envelope
+	//
+	// Creates a new custom envelope. The artwork is reviewed after it is
+	// uploaded: the custom envelope is returned with a `status` of `pending`
+	// and moves to `approved` or `rejected` once the review finishes. Create a custom envelope via a multipart/form-data request. Accepts the
+	// same fields as the JSON create body; use this content type to upload the
+	// PDF file directly.
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with POST /print-mail/v1/custom_envelopes (the `CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart` operationId).
+	CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart(ctx context.Context, params *CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartParams, body CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomEnvelopesGet Get Custom Envelope
+	//
+	// Gets the information for a custom envelope by `id`. This should be a
+	// unique identifying string starting with `custom_envelope_`.
+	//
+	// Corresponds with GET /print-mail/v1/custom_envelopes/{id} (the `CustomEnvelopesGet` operationId).
+	CustomEnvelopesGet(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomEnvelopesListOrders List Custom Envelope Orders
+	//
+	// Gets a list of orders for the custom envelope by `id`.
+	//
+	// Corresponds with GET /print-mail/v1/custom_envelopes/{id}/orders (the `CustomEnvelopesListOrders` operationId).
+	CustomEnvelopesListOrders(ctx context.Context, id string, params *CustomEnvelopesListOrdersParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomEnvelopesCreateOrderWithBody Create Custom Envelope Order
+	//
+	// Creates a batch order of custom envelopes. The minimum order quantity is
+	// 5000.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with POST /print-mail/v1/custom_envelopes/{id}/orders (the `CustomEnvelopesCreateOrder` operationId).
+	CustomEnvelopesCreateOrderWithBody(ctx context.Context, id string, params *CustomEnvelopesCreateOrderParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomEnvelopesCreateOrder Create Custom Envelope Order
+	//
+	// Creates a batch order of custom envelopes. The minimum order quantity is
+	// 5000.
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with POST /print-mail/v1/custom_envelopes/{id}/orders (the `CustomEnvelopesCreateOrder` operationId).
+	CustomEnvelopesCreateOrder(ctx context.Context, id string, params *CustomEnvelopesCreateOrderParams, body CustomEnvelopesCreateOrderJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomEnvelopesCancelOrder Cancel Custom Envelope Order
+	//
+	// Cancels the custom envelope order by `orderID` for the custom envelope
+	// by `id`. Only orders whose status is `placed` can be cancelled. Note that
+	// this operation cannot be undone.
+	//
+	// Corresponds with DELETE /print-mail/v1/custom_envelopes/{id}/orders/{orderID} (the `CustomEnvelopesCancelOrder` operationId).
+	CustomEnvelopesCancelOrder(ctx context.Context, id string, orderID string, params *CustomEnvelopesCancelOrderParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomEnvelopesGetOrder Get Custom Envelope Order
+	//
+	// Gets a specific custom envelope order by custom envelope ID as `id` and
+	// custom envelope order ID as `orderID`.
+	//
+	// Corresponds with GET /print-mail/v1/custom_envelopes/{id}/orders/{orderID} (the `CustomEnvelopesGetOrder` operationId).
+	CustomEnvelopesGetOrder(ctx context.Context, id string, orderID string, params *CustomEnvelopesGetOrderParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomEnvelopesFillTestOrder Fill Test Custom Envelope Order
+	//
+	// Fills the custom envelope order by `orderID` for the custom envelope by
+	// `id`. This is only available in test mode and can be used to simulate
+	// how a live order would be filled.
+	//
+	// Note: this will fail with a `custom_envelope_order_fill_failed_error` if
+	// the order's status is not `in_progress`, and with a
+	// `custom_envelope_order_fill_not_approved_error` if the custom envelope
+	// has not been approved.
+	//
+	// Corresponds with POST /print-mail/v1/custom_envelopes/{id}/orders/{orderID}/fills (the `CustomEnvelopesFillTestOrder` operationId).
+	CustomEnvelopesFillTestOrder(ctx context.Context, id string, orderID string, params *CustomEnvelopesFillTestOrderParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomEnvelopesProgressTestOrder Progress Test Custom Envelope Order
+	//
+	// Moves the custom envelope order by `orderID` for the custom envelope by
+	// `id` from `placed` to `in_progress`. This is only available in test mode
+	// and can be used to simulate how a live order would be produced.
+	//
+	// Note: this will fail with a
+	// `custom_envelope_order_progress_failed_error` if the order's status is
+	// not `placed`.
+	//
+	// Corresponds with POST /print-mail/v1/custom_envelopes/{id}/orders/{orderID}/progress (the `CustomEnvelopesProgressTestOrder` operationId).
+	CustomEnvelopesProgressTestOrder(ctx context.Context, id string, orderID string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomEnvelopesClearThreshold Clear Custom Envelope Low-Inventory Threshold
+	//
+	// Clears the low-inventory threshold for the custom envelope by `id`. We
+	// stop sending low-inventory alerts for the custom envelope.
+	//
+	// Corresponds with DELETE /print-mail/v1/custom_envelopes/{id}/threshold (the `CustomEnvelopesClearThreshold` operationId).
+	CustomEnvelopesClearThreshold(ctx context.Context, id string, params *CustomEnvelopesClearThresholdParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomEnvelopesSetThresholdWithBody Set Custom Envelope Low-Inventory Threshold
+	//
+	// Sets the low-inventory threshold for the custom envelope by `id`,
+	// replacing any threshold that was set before. When the available quantity
+	// drops to or below the threshold, we send a low-inventory alert email to
+	// the Admins of your organization.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with POST /print-mail/v1/custom_envelopes/{id}/threshold (the `CustomEnvelopesSetThreshold` operationId).
+	CustomEnvelopesSetThresholdWithBody(ctx context.Context, id string, params *CustomEnvelopesSetThresholdParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomEnvelopesSetThreshold Set Custom Envelope Low-Inventory Threshold
+	//
+	// Sets the low-inventory threshold for the custom envelope by `id`,
+	// replacing any threshold that was set before. When the available quantity
+	// drops to or below the threshold, we send a low-inventory alert email to
+	// the Admins of your organization.
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with POST /print-mail/v1/custom_envelopes/{id}/threshold (the `CustomEnvelopesSetThreshold` operationId).
+	CustomEnvelopesSetThreshold(ctx context.Context, id string, params *CustomEnvelopesSetThresholdParams, body CustomEnvelopesSetThresholdJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// DocumentsList List Documents
+	//
+	// Gets a list of documents for the user.
+	//
+	// Corresponds with GET /print-mail/v1/documents (the `DocumentsList` operationId).
+	DocumentsList(ctx context.Context, params *DocumentsListParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// DocumentsCreateWithBody Create Document
+	//
+	// Creates a new document by rendering a template with merge data.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with POST /print-mail/v1/documents (the `DocumentsCreate` operationId).
+	DocumentsCreateWithBody(ctx context.Context, params *DocumentsCreateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// DocumentsCreate Create Document
+	//
+	// Creates a new document by rendering a template with merge data.
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with POST /print-mail/v1/documents (the `DocumentsCreate` operationId).
+	DocumentsCreate(ctx context.Context, params *DocumentsCreateParams, body DocumentsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// DocumentsGet Get Document
+	//
+	// Gets the information for a document by `id`. This should be a unique
+	// identifying string starting with `document_`.
+	//
+	// Corresponds with GET /print-mail/v1/documents/{id} (the `DocumentsGet` operationId).
+	DocumentsGet(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// EventsList List Events
 	//
 	// Retrieve a paginated list of Events.
@@ -56296,7 +61681,7 @@ type ClientInterface interface {
 	// Corresponds with GET /print-mail/v1/letters (the `LettersList` operationId).
 	LettersList(ctx context.Context, params *LettersListParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// LettersCreateJSONLettersCreateMultipartWithBody Create Letter Create Letter
+	// LettersCreateJSONLettersCreateMultipartWithBody Create Letter
 	//
 	// Create a letter. Note that you can supply one of the following:
 	// - HTML content for the letter
@@ -56311,7 +61696,7 @@ type ClientInterface interface {
 	// Corresponds with POST /print-mail/v1/letters (the `LettersCreateJSONLettersCreateMultipart` operationId).
 	LettersCreateJSONLettersCreateMultipartWithBody(ctx context.Context, params *LettersCreateJSONLettersCreateMultipartParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// LettersCreateJSONLettersCreateMultipart Create Letter Create Letter
+	// LettersCreateJSONLettersCreateMultipart Create Letter
 	//
 	// Create a letter. Note that you can supply one of the following:
 	// - HTML content for the letter
@@ -56562,7 +61947,7 @@ type ClientInterface interface {
 	// Corresponds with GET /print-mail/v1/postcards (the `PostcardsList` operationId).
 	PostcardsList(ctx context.Context, params *PostcardsListParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// PostcardsCreateJSONPostcardsCreateMultipartWithBody Create Postcard Create Postcard
+	// PostcardsCreateJSONPostcardsCreateMultipartWithBody Create Postcard
 	//
 	// Create a postcard. Note that you can supply one of the following:
 	// - HTML content for the front and back of the postcard
@@ -56577,7 +61962,7 @@ type ClientInterface interface {
 	// Corresponds with POST /print-mail/v1/postcards (the `PostcardsCreateJSONPostcardsCreateMultipart` operationId).
 	PostcardsCreateJSONPostcardsCreateMultipartWithBody(ctx context.Context, params *PostcardsCreateJSONPostcardsCreateMultipartParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// PostcardsCreateJSONPostcardsCreateMultipart Create Postcard Create Postcard
+	// PostcardsCreateJSONPostcardsCreateMultipart Create Postcard
 	//
 	// Create a postcard. Note that you can supply one of the following:
 	// - HTML content for the front and back of the postcard
@@ -56704,6 +62089,28 @@ type ClientInterface interface {
 	// Corresponds with POST /print-mail/v1/reports/samples (the `ReportsRunAdHocSample` operationId).
 	ReportsRunAdHocSample(ctx context.Context, body ReportsRunAdHocSampleJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// ReportsPreviewScheduleWithBody Preview a Report Schedule
+	//
+	// Work out when a schedule would actually run, without saving anything. Takes the same
+	// fields as the `schedule` on a report, plus an optional `sqlQuery` so you can check
+	// whether that query is schedulable at all (a parameterized query is not).
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with POST /print-mail/v1/reports/schedule_previews (the `ReportsPreviewSchedule` operationId).
+	ReportsPreviewScheduleWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ReportsPreviewSchedule Preview a Report Schedule
+	//
+	// Work out when a schedule would actually run, without saving anything. Takes the same
+	// fields as the `schedule` on a report, plus an optional `sqlQuery` so you can check
+	// whether that query is schedulable at all (a parameterized query is not).
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with POST /print-mail/v1/reports/schedule_previews (the `ReportsPreviewSchedule` operationId).
+	ReportsPreviewSchedule(ctx context.Context, body ReportsPreviewScheduleJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// ReportsDeleteReport Delete Saved Report
 	//
 	// Delete a saved report definition. This action cannot be undone.
@@ -56758,6 +62165,13 @@ type ClientInterface interface {
 	//
 	// Corresponds with POST /print-mail/v1/reports/{id}/samples (the `ReportsRunSavedReportSample` operationId).
 	ReportsRunSavedReportSample(ctx context.Context, id string, body ReportsRunSavedReportSampleJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ReportsListReportExports List Report Exports
+	//
+	// Retrieve a list of the export jobs taken from a report, newest first.
+	//
+	// Corresponds with GET /print-mail/v1/reports/{reportID}/exports (the `ReportsListReportExports` operationId).
+	ReportsListReportExports(ctx context.Context, reportID string, params *ReportsListReportExportsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// ReportsCreateReportExportWithBody Create a Report Export
 	//
@@ -56896,7 +62310,7 @@ type ClientInterface interface {
 	// Corresponds with GET /print-mail/v1/self_mailers (the `SelfMailersList` operationId).
 	SelfMailersList(ctx context.Context, params *SelfMailersListParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// SelfMailersCreateJSONSelfMailersCreateMultipartWithBody Create Self Mailer Create Self Mailer
+	// SelfMailersCreateJSONSelfMailersCreateMultipartWithBody Create Self Mailer
 	//
 	// Create a self-mailer. Note that you can supply one of the following:
 	// - HTML content for the inside and outside of the self-mailer
@@ -56911,7 +62325,7 @@ type ClientInterface interface {
 	// Corresponds with POST /print-mail/v1/self_mailers (the `SelfMailersCreateJSONSelfMailersCreateMultipart` operationId).
 	SelfMailersCreateJSONSelfMailersCreateMultipartWithBody(ctx context.Context, params *SelfMailersCreateJSONSelfMailersCreateMultipartParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// SelfMailersCreateJSONSelfMailersCreateMultipart Create Self Mailer Create Self Mailer
+	// SelfMailersCreateJSONSelfMailersCreateMultipart Create Self Mailer
 	//
 	// Create a self-mailer. Note that you can supply one of the following:
 	// - HTML content for the inside and outside of the self-mailer
@@ -56970,7 +62384,7 @@ type ClientInterface interface {
 	// Corresponds with GET /print-mail/v1/snap_packs (the `SnapPacksList` operationId).
 	SnapPacksList(ctx context.Context, params *SnapPacksListParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// SnapPacksCreateJSONSnapPacksCreateMultipartWithBody Create Snap Pack Create Snap Pack
+	// SnapPacksCreateJSONSnapPacksCreateMultipartWithBody Create Snap Pack
 	//
 	// Create a snap pack. You can supply one of the following:
 	// - HTML content for the inside and outside of the snap pack
@@ -56985,7 +62399,7 @@ type ClientInterface interface {
 	// Corresponds with POST /print-mail/v1/snap_packs (the `SnapPacksCreateJSONSnapPacksCreateMultipart` operationId).
 	SnapPacksCreateJSONSnapPacksCreateMultipartWithBody(ctx context.Context, params *SnapPacksCreateJSONSnapPacksCreateMultipartParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// SnapPacksCreateJSONSnapPacksCreateMultipart Create Snap Pack Create Snap Pack
+	// SnapPacksCreateJSONSnapPacksCreateMultipart Create Snap Pack
 	//
 	// Create a snap pack. You can supply one of the following:
 	// - HTML content for the inside and outside of the snap pack
@@ -57189,7 +62603,7 @@ type ClientInterface interface {
 	// Takes any type of body and a specified content type.
 	//
 	// Corresponds with POST /print-mail/v1/template_editor_sessions (the `TemplateEditorSessionsCreate` operationId).
-	TemplateEditorSessionsCreateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+	TemplateEditorSessionsCreateWithBody(ctx context.Context, params *TemplateEditorSessionsCreateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// TemplateEditorSessionsCreate Create Session
 	//
@@ -57201,7 +62615,7 @@ type ClientInterface interface {
 	// Takes a body of the `application/json` content type.
 	//
 	// Corresponds with POST /print-mail/v1/template_editor_sessions (the `TemplateEditorSessionsCreate` operationId).
-	TemplateEditorSessionsCreate(ctx context.Context, body TemplateEditorSessionsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+	TemplateEditorSessionsCreate(ctx context.Context, params *TemplateEditorSessionsCreateParams, body TemplateEditorSessionsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// TemplateEditorSessionsDelete Delete Session
 	//
@@ -57266,6 +62680,62 @@ type ClientInterface interface {
 	//
 	// Corresponds with POST /print-mail/v1/templates/{id} (the `TemplatesUpdate` operationId).
 	TemplatesUpdate(ctx context.Context, id string, body TemplatesUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// TemplatesCopyWithBody Copy Template
+	//
+	// Copy a template, including its template editor design and format
+	// settings. The template is found by ID in your organization, in whichever
+	// mode it's in. By default the copy is created in your organization, in the
+	// mode of your API key, so an empty body duplicates the template. The copy
+	// keeps the template's description and metadata.
+	//
+	// A test API key only finds test templates and can only copy into test
+	// mode. A live API key can copy between test and live mode in either
+	// direction.
+	//
+	// A template that uses trackers or a custom envelope can only be copied
+	// within your organization and the same mode, where the copy uses the same
+	// trackers and envelope. Images keep their URLs.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with POST /print-mail/v1/templates/{id}/copy (the `TemplatesCopy` operationId).
+	TemplatesCopyWithBody(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// TemplatesCopy Copy Template
+	//
+	// Copy a template, including its template editor design and format
+	// settings. The template is found by ID in your organization, in whichever
+	// mode it's in. By default the copy is created in your organization, in the
+	// mode of your API key, so an empty body duplicates the template. The copy
+	// keeps the template's description and metadata.
+	//
+	// A test API key only finds test templates and can only copy into test
+	// mode. A live API key can copy between test and live mode in either
+	// direction.
+	//
+	// A template that uses trackers or a custom envelope can only be copied
+	// within your organization and the same mode, where the copy uses the same
+	// trackers and envelope. Images keep their URLs.
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with POST /print-mail/v1/templates/{id}/copy (the `TemplatesCopy` operationId).
+	TemplatesCopy(ctx context.Context, id string, body TemplatesCopyJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ThumbnailsGet Get Thumbnails
+	//
+	// Gets the thumbnails of up to 100 resources.
+	//
+	// IDs that have no thumbnail yet, and IDs of resources that are deleted,
+	// don't exist, or belong to another organization or mode, are left out of
+	// `data` without an error. Poll until an ID appears with `status` of
+	// `generated`.
+	//
+	// This endpoint is limited to 10 requests per minute.
+	//
+	// Corresponds with GET /print-mail/v1/thumbnails (the `ThumbnailsGet` operationId).
+	ThumbnailsGet(ctx context.Context, params *ThumbnailsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// TrackersList List Trackers
 	//
@@ -57477,6 +62947,57 @@ type ClientInterface interface {
 	// Corresponds with GET /print-mail/v1/webhooks/{id}/invocations (the `WebhooksListInvocations` operationId).
 	WebhooksListInvocations(ctx context.Context, id string, params *WebhooksListInvocationsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// AccuracyStatementsList List Accuracy Statements
+	//
+	// List the accuracy statements belonging to your organization.
+	//
+	// Corresponds with GET /v1/accuracy_statements (the `AccuracyStatementsList` operationId).
+	AccuracyStatementsList(ctx context.Context, params *AccuracyStatementsListParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// AccuracyStatementsCreateWithBody Create Accuracy Statement
+	//
+	// Create a new accuracy statement.
+	//
+	// The statement is created in `draft` status. Add addresses to it with
+	// `POST /verifications/batch` (passing the ID as `accuracyStatement`),
+	// then generate it with `POST /accuracy_statements/{id}/generate`.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with POST /v1/accuracy_statements (the `AccuracyStatementsCreate` operationId).
+	AccuracyStatementsCreateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// AccuracyStatementsCreate Create Accuracy Statement
+	//
+	// Create a new accuracy statement.
+	//
+	// The statement is created in `draft` status. Add addresses to it with
+	// `POST /verifications/batch` (passing the ID as `accuracyStatement`),
+	// then generate it with `POST /accuracy_statements/{id}/generate`.
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with POST /v1/accuracy_statements (the `AccuracyStatementsCreate` operationId).
+	AccuracyStatementsCreate(ctx context.Context, body AccuracyStatementsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// AccuracyStatementsGet Get Accuracy Statement
+	//
+	// Retrieve a specific accuracy statement by its ID.
+	//
+	// Corresponds with GET /v1/accuracy_statements/{id} (the `AccuracyStatementsGet` operationId).
+	AccuracyStatementsGet(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// AccuracyStatementsGenerate Generate Accuracy Statement
+	//
+	// Start generating a draft accuracy statement.
+	//
+	// The statement must be in `draft` status. Poll the statement with
+	// `GET /accuracy_statements/{id}` until its status is `generated` or
+	// `failed`.
+	//
+	// Corresponds with POST /v1/accuracy_statements/{id}/generate (the `AccuracyStatementsGenerate` operationId).
+	AccuracyStatementsGenerate(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// StandardAPIGetLookupInfo performs a GET /v1/addver/ (the `StandardAPIGetLookupInfo` operationId) request.
 	//
 	// Returns your organization's current lookup usage and plan information.
@@ -57634,8 +63155,8 @@ type ClientInterface interface {
 	// with any type of body and a specified content type.
 	//
 	// Verify a batch of US or Canadian addresses in a single request.
-	// Each address can be freeform or structured, matching the same input formats
-	// accepted by the single verification endpoint.
+	// Each item is either a freeform string or the structured address fields
+	// themselves.
 	//
 	// - Accepts up to 2,000 addresses per request.
 	// - Uses 1 lookup per address (plus 1 more per address if geocoding).
@@ -57646,14 +63167,19 @@ type ClientInterface interface {
 	// - If you are not subscribed and the batch would exceed your remaining free
 	// lookups, the entire batch fails (nothing is verified). Size your batch to
 	// the number of lookups you have left.
+	// - To add the addresses to a draft accuracy statement (beta), pass its ID
+	// as `accuracyStatement` and send every address as a structured object
+	// with `inputID` and `accuracyStatementInclusion` (`include` or
+	// `exclude`). Accuracy statements require a live API key and the feature
+	// to be enabled for your organization.
 	StandardAPIVerifyBatchWithBody(ctx context.Context, params *StandardAPIVerifyBatchParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// StandardAPIVerifyBatch performs a POST /v1/addver/verifications/batch (the `StandardAPIVerifyBatch` operationId) request.
 	// Takes a body of the `application/json` content type.
 	//
 	// Verify a batch of US or Canadian addresses in a single request.
-	// Each address can be freeform or structured, matching the same input formats
-	// accepted by the single verification endpoint.
+	// Each item is either a freeform string or the structured address fields
+	// themselves.
 	//
 	// - Accepts up to 2,000 addresses per request.
 	// - Uses 1 lookup per address (plus 1 more per address if geocoding).
@@ -57664,6 +63190,11 @@ type ClientInterface interface {
 	// - If you are not subscribed and the batch would exceed your remaining free
 	// lookups, the entire batch fails (nothing is verified). Size your batch to
 	// the number of lookups you have left.
+	// - To add the addresses to a draft accuracy statement (beta), pass its ID
+	// as `accuracyStatement` and send every address as a structured object
+	// with `inputID` and `accuracyStatementInclusion` (`include` or
+	// `exclude`). Accuracy statements require a live API key and the feature
+	// to be enabled for your organization.
 	StandardAPIVerifyBatch(ctx context.Context, params *StandardAPIVerifyBatchParams, body StandardAPIVerifyBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// StandardAPILookupZipCodesWithBody performs a POST /v1/addver/zip_codes (the `StandardAPILookupZipCodes` operationId) request,
@@ -57753,9 +63284,11 @@ type ClientInterface interface {
 	// InternationalAPIVerifyAddressWithBody performs a POST /v1/intl_addver/verifications (the `InternationalAPIVerifyAddress` operationId) request,
 	// with any type of body and a specified content type.
 	//
-	// Verify and standardize an international address.
+	// Verify and standardize an international address. Accepts two input formats:
 	//
-	// - Supports both structured and freeform address inputs.
+	// 1. **Structured Address** — Verify and standardize a structured address (e.g., with `line1`, `city`, etc.).
+	// 2. **Freeform Address** — Verify and standardize a freeform address written on a single line.
+	//
 	// - Specify `includeDetails=true` to get additional details as per the `IntlDetails` schema.
 	// - Uses 1 lookup.
 	InternationalAPIVerifyAddressWithBody(ctx context.Context, params *InternationalAPIVerifyAddressParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -57763,9 +63296,11 @@ type ClientInterface interface {
 	// InternationalAPIVerifyAddress performs a POST /v1/intl_addver/verifications (the `InternationalAPIVerifyAddress` operationId) request.
 	// Takes a body of the `application/json` content type.
 	//
-	// Verify and standardize an international address.
+	// Verify and standardize an international address. Accepts two input formats:
 	//
-	// - Supports both structured and freeform address inputs.
+	// 1. **Structured Address** — Verify and standardize a structured address (e.g., with `line1`, `city`, etc.).
+	// 2. **Freeform Address** — Verify and standardize a freeform address written on a single line.
+	//
 	// - Specify `includeDetails=true` to get additional details as per the `IntlDetails` schema.
 	// - Uses 1 lookup.
 	InternationalAPIVerifyAddress(ctx context.Context, params *InternationalAPIVerifyAddressParams, body InternationalAPIVerifyAddressJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -57774,8 +63309,8 @@ type ClientInterface interface {
 	// with any type of body and a specified content type.
 	//
 	// Verify a batch of international addresses in a single request.
-	// Each address can be freeform or structured, matching the same input formats
-	// accepted by the single verification endpoint.
+	// Each address is either a freeform string or the structured address fields
+	// themselves.
 	//
 	// - Accepts up to 2,000 addresses per request.
 	// - Uses 1 lookup per address.
@@ -57792,8 +63327,8 @@ type ClientInterface interface {
 	// Takes a body of the `application/json` content type.
 	//
 	// Verify a batch of international addresses in a single request.
-	// Each address can be freeform or structured, matching the same input formats
-	// accepted by the single verification endpoint.
+	// Each address is either a freeform string or the structured address fields
+	// themselves.
 	//
 	// - Accepts up to 2,000 addresses per request.
 	// - Uses 1 lookup per address.
@@ -58578,6 +64113,363 @@ func (c *Client) ContactsGet(ctx context.Context, id string, reqEditors ...Reque
 	return c.Client.Do(req)
 }
 
+// CustomEnvelopesList List Custom Envelopes
+//
+// Gets a list of custom envelopes for the user.
+//
+// Corresponds with GET /print-mail/v1/custom_envelopes (the `CustomEnvelopesList` operationId).
+func (c *Client) CustomEnvelopesList(ctx context.Context, params *CustomEnvelopesListParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomEnvelopesListRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartWithBody Create Custom Envelope
+//
+// Creates a new custom envelope. The artwork is reviewed after it is
+// uploaded: the custom envelope is returned with a `status` of `pending`
+// and moves to `approved` or `rejected` once the review finishes. Create a custom envelope via a multipart/form-data request. Accepts the
+// same fields as the JSON create body; use this content type to upload the
+// PDF file directly.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /print-mail/v1/custom_envelopes (the `CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart` operationId).
+func (c *Client) CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartWithBody(ctx context.Context, params *CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartRequestWithBody(c.Server, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart Create Custom Envelope
+//
+// Creates a new custom envelope. The artwork is reviewed after it is
+// uploaded: the custom envelope is returned with a `status` of `pending`
+// and moves to `approved` or `rejected` once the review finishes. Create a custom envelope via a multipart/form-data request. Accepts the
+// same fields as the JSON create body; use this content type to upload the
+// PDF file directly.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /print-mail/v1/custom_envelopes (the `CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart` operationId).
+func (c *Client) CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart(ctx context.Context, params *CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartParams, body CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartRequest(c.Server, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// CustomEnvelopesGet Get Custom Envelope
+//
+// Gets the information for a custom envelope by `id`. This should be a
+// unique identifying string starting with `custom_envelope_`.
+//
+// Corresponds with GET /print-mail/v1/custom_envelopes/{id} (the `CustomEnvelopesGet` operationId).
+func (c *Client) CustomEnvelopesGet(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomEnvelopesGetRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// CustomEnvelopesListOrders List Custom Envelope Orders
+//
+// Gets a list of orders for the custom envelope by `id`.
+//
+// Corresponds with GET /print-mail/v1/custom_envelopes/{id}/orders (the `CustomEnvelopesListOrders` operationId).
+func (c *Client) CustomEnvelopesListOrders(ctx context.Context, id string, params *CustomEnvelopesListOrdersParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomEnvelopesListOrdersRequest(c.Server, id, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// CustomEnvelopesCreateOrderWithBody Create Custom Envelope Order
+//
+// Creates a batch order of custom envelopes. The minimum order quantity is
+// 5000.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /print-mail/v1/custom_envelopes/{id}/orders (the `CustomEnvelopesCreateOrder` operationId).
+func (c *Client) CustomEnvelopesCreateOrderWithBody(ctx context.Context, id string, params *CustomEnvelopesCreateOrderParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomEnvelopesCreateOrderRequestWithBody(c.Server, id, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// CustomEnvelopesCreateOrder Create Custom Envelope Order
+//
+// Creates a batch order of custom envelopes. The minimum order quantity is
+// 5000.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /print-mail/v1/custom_envelopes/{id}/orders (the `CustomEnvelopesCreateOrder` operationId).
+func (c *Client) CustomEnvelopesCreateOrder(ctx context.Context, id string, params *CustomEnvelopesCreateOrderParams, body CustomEnvelopesCreateOrderJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomEnvelopesCreateOrderRequest(c.Server, id, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// CustomEnvelopesCancelOrder Cancel Custom Envelope Order
+//
+// Cancels the custom envelope order by `orderID` for the custom envelope
+// by `id`. Only orders whose status is `placed` can be cancelled. Note that
+// this operation cannot be undone.
+//
+// Corresponds with DELETE /print-mail/v1/custom_envelopes/{id}/orders/{orderID} (the `CustomEnvelopesCancelOrder` operationId).
+func (c *Client) CustomEnvelopesCancelOrder(ctx context.Context, id string, orderID string, params *CustomEnvelopesCancelOrderParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomEnvelopesCancelOrderRequest(c.Server, id, orderID, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// CustomEnvelopesGetOrder Get Custom Envelope Order
+//
+// Gets a specific custom envelope order by custom envelope ID as `id` and
+// custom envelope order ID as `orderID`.
+//
+// Corresponds with GET /print-mail/v1/custom_envelopes/{id}/orders/{orderID} (the `CustomEnvelopesGetOrder` operationId).
+func (c *Client) CustomEnvelopesGetOrder(ctx context.Context, id string, orderID string, params *CustomEnvelopesGetOrderParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomEnvelopesGetOrderRequest(c.Server, id, orderID, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// CustomEnvelopesFillTestOrder Fill Test Custom Envelope Order
+//
+// Fills the custom envelope order by `orderID` for the custom envelope by
+// `id`. This is only available in test mode and can be used to simulate
+// how a live order would be filled.
+//
+// Note: this will fail with a `custom_envelope_order_fill_failed_error` if
+// the order's status is not `in_progress`, and with a
+// `custom_envelope_order_fill_not_approved_error` if the custom envelope
+// has not been approved.
+//
+// Corresponds with POST /print-mail/v1/custom_envelopes/{id}/orders/{orderID}/fills (the `CustomEnvelopesFillTestOrder` operationId).
+func (c *Client) CustomEnvelopesFillTestOrder(ctx context.Context, id string, orderID string, params *CustomEnvelopesFillTestOrderParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomEnvelopesFillTestOrderRequest(c.Server, id, orderID, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// CustomEnvelopesProgressTestOrder Progress Test Custom Envelope Order
+//
+// Moves the custom envelope order by `orderID` for the custom envelope by
+// `id` from `placed` to `in_progress`. This is only available in test mode
+// and can be used to simulate how a live order would be produced.
+//
+// Note: this will fail with a
+// `custom_envelope_order_progress_failed_error` if the order's status is
+// not `placed`.
+//
+// Corresponds with POST /print-mail/v1/custom_envelopes/{id}/orders/{orderID}/progress (the `CustomEnvelopesProgressTestOrder` operationId).
+func (c *Client) CustomEnvelopesProgressTestOrder(ctx context.Context, id string, orderID string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomEnvelopesProgressTestOrderRequest(c.Server, id, orderID)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// CustomEnvelopesClearThreshold Clear Custom Envelope Low-Inventory Threshold
+//
+// Clears the low-inventory threshold for the custom envelope by `id`. We
+// stop sending low-inventory alerts for the custom envelope.
+//
+// Corresponds with DELETE /print-mail/v1/custom_envelopes/{id}/threshold (the `CustomEnvelopesClearThreshold` operationId).
+func (c *Client) CustomEnvelopesClearThreshold(ctx context.Context, id string, params *CustomEnvelopesClearThresholdParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomEnvelopesClearThresholdRequest(c.Server, id, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// CustomEnvelopesSetThresholdWithBody Set Custom Envelope Low-Inventory Threshold
+//
+// Sets the low-inventory threshold for the custom envelope by `id`,
+// replacing any threshold that was set before. When the available quantity
+// drops to or below the threshold, we send a low-inventory alert email to
+// the Admins of your organization.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /print-mail/v1/custom_envelopes/{id}/threshold (the `CustomEnvelopesSetThreshold` operationId).
+func (c *Client) CustomEnvelopesSetThresholdWithBody(ctx context.Context, id string, params *CustomEnvelopesSetThresholdParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomEnvelopesSetThresholdRequestWithBody(c.Server, id, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// CustomEnvelopesSetThreshold Set Custom Envelope Low-Inventory Threshold
+//
+// Sets the low-inventory threshold for the custom envelope by `id`,
+// replacing any threshold that was set before. When the available quantity
+// drops to or below the threshold, we send a low-inventory alert email to
+// the Admins of your organization.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /print-mail/v1/custom_envelopes/{id}/threshold (the `CustomEnvelopesSetThreshold` operationId).
+func (c *Client) CustomEnvelopesSetThreshold(ctx context.Context, id string, params *CustomEnvelopesSetThresholdParams, body CustomEnvelopesSetThresholdJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomEnvelopesSetThresholdRequest(c.Server, id, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// DocumentsList List Documents
+//
+// Gets a list of documents for the user.
+//
+// Corresponds with GET /print-mail/v1/documents (the `DocumentsList` operationId).
+func (c *Client) DocumentsList(ctx context.Context, params *DocumentsListParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDocumentsListRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// DocumentsCreateWithBody Create Document
+//
+// Creates a new document by rendering a template with merge data.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /print-mail/v1/documents (the `DocumentsCreate` operationId).
+func (c *Client) DocumentsCreateWithBody(ctx context.Context, params *DocumentsCreateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDocumentsCreateRequestWithBody(c.Server, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// DocumentsCreate Create Document
+//
+// Creates a new document by rendering a template with merge data.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /print-mail/v1/documents (the `DocumentsCreate` operationId).
+func (c *Client) DocumentsCreate(ctx context.Context, params *DocumentsCreateParams, body DocumentsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDocumentsCreateRequest(c.Server, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// DocumentsGet Get Document
+//
+// Gets the information for a document by `id`. This should be a unique
+// identifying string starting with `document_`.
+//
+// Corresponds with GET /print-mail/v1/documents/{id} (the `DocumentsGet` operationId).
+func (c *Client) DocumentsGet(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDocumentsGetRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // EventsList List Events
 //
 // Retrieve a paginated list of Events.
@@ -58612,7 +64504,7 @@ func (c *Client) LettersList(ctx context.Context, params *LettersListParams, req
 	return c.Client.Do(req)
 }
 
-// LettersCreateJSONLettersCreateMultipartWithBody Create Letter Create Letter
+// LettersCreateJSONLettersCreateMultipartWithBody Create Letter
 //
 // Create a letter. Note that you can supply one of the following:
 // - HTML content for the letter
@@ -58637,7 +64529,7 @@ func (c *Client) LettersCreateJSONLettersCreateMultipartWithBody(ctx context.Con
 	return c.Client.Do(req)
 }
 
-// LettersCreateJSONLettersCreateMultipart Create Letter Create Letter
+// LettersCreateJSONLettersCreateMultipart Create Letter
 //
 // Create a letter. Note that you can supply one of the following:
 // - HTML content for the letter
@@ -59128,7 +65020,7 @@ func (c *Client) PostcardsList(ctx context.Context, params *PostcardsListParams,
 	return c.Client.Do(req)
 }
 
-// PostcardsCreateJSONPostcardsCreateMultipartWithBody Create Postcard Create Postcard
+// PostcardsCreateJSONPostcardsCreateMultipartWithBody Create Postcard
 //
 // Create a postcard. Note that you can supply one of the following:
 // - HTML content for the front and back of the postcard
@@ -59153,7 +65045,7 @@ func (c *Client) PostcardsCreateJSONPostcardsCreateMultipartWithBody(ctx context
 	return c.Client.Do(req)
 }
 
-// PostcardsCreateJSONPostcardsCreateMultipart Create Postcard Create Postcard
+// PostcardsCreateJSONPostcardsCreateMultipart Create Postcard
 //
 // Create a postcard. Note that you can supply one of the following:
 // - HTML content for the front and back of the postcard
@@ -59400,6 +65292,48 @@ func (c *Client) ReportsRunAdHocSample(ctx context.Context, body ReportsRunAdHoc
 	return c.Client.Do(req)
 }
 
+// ReportsPreviewScheduleWithBody Preview a Report Schedule
+//
+// Work out when a schedule would actually run, without saving anything. Takes the same
+// fields as the `schedule` on a report, plus an optional `sqlQuery` so you can check
+// whether that query is schedulable at all (a parameterized query is not).
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /print-mail/v1/reports/schedule_previews (the `ReportsPreviewSchedule` operationId).
+func (c *Client) ReportsPreviewScheduleWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewReportsPreviewScheduleRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// ReportsPreviewSchedule Preview a Report Schedule
+//
+// Work out when a schedule would actually run, without saving anything. Takes the same
+// fields as the `schedule` on a report, plus an optional `sqlQuery` so you can check
+// whether that query is schedulable at all (a parameterized query is not).
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /print-mail/v1/reports/schedule_previews (the `ReportsPreviewSchedule` operationId).
+func (c *Client) ReportsPreviewSchedule(ctx context.Context, body ReportsPreviewScheduleJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewReportsPreviewScheduleRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // ReportsDeleteReport Delete Saved Report
 //
 // Delete a saved report definition. This action cannot be undone.
@@ -59505,6 +65439,23 @@ func (c *Client) ReportsRunSavedReportSampleWithBody(ctx context.Context, id str
 // Corresponds with POST /print-mail/v1/reports/{id}/samples (the `ReportsRunSavedReportSample` operationId).
 func (c *Client) ReportsRunSavedReportSample(ctx context.Context, id string, body ReportsRunSavedReportSampleJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewReportsRunSavedReportSampleRequest(c.Server, id, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// ReportsListReportExports List Report Exports
+//
+// Retrieve a list of the export jobs taken from a report, newest first.
+//
+// Corresponds with GET /print-mail/v1/reports/{reportID}/exports (the `ReportsListReportExports` operationId).
+func (c *Client) ReportsListReportExports(ctx context.Context, reportID string, params *ReportsListReportExportsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewReportsListReportExportsRequest(c.Server, reportID, params)
 	if err != nil {
 		return nil, err
 	}
@@ -59802,7 +65753,7 @@ func (c *Client) SelfMailersList(ctx context.Context, params *SelfMailersListPar
 	return c.Client.Do(req)
 }
 
-// SelfMailersCreateJSONSelfMailersCreateMultipartWithBody Create Self Mailer Create Self Mailer
+// SelfMailersCreateJSONSelfMailersCreateMultipartWithBody Create Self Mailer
 //
 // Create a self-mailer. Note that you can supply one of the following:
 // - HTML content for the inside and outside of the self-mailer
@@ -59827,7 +65778,7 @@ func (c *Client) SelfMailersCreateJSONSelfMailersCreateMultipartWithBody(ctx con
 	return c.Client.Do(req)
 }
 
-// SelfMailersCreateJSONSelfMailersCreateMultipart Create Self Mailer Create Self Mailer
+// SelfMailersCreateJSONSelfMailersCreateMultipart Create Self Mailer
 //
 // Create a self-mailer. Note that you can supply one of the following:
 // - HTML content for the inside and outside of the self-mailer
@@ -59946,7 +65897,7 @@ func (c *Client) SnapPacksList(ctx context.Context, params *SnapPacksListParams,
 	return c.Client.Do(req)
 }
 
-// SnapPacksCreateJSONSnapPacksCreateMultipartWithBody Create Snap Pack Create Snap Pack
+// SnapPacksCreateJSONSnapPacksCreateMultipartWithBody Create Snap Pack
 //
 // Create a snap pack. You can supply one of the following:
 // - HTML content for the inside and outside of the snap pack
@@ -59971,7 +65922,7 @@ func (c *Client) SnapPacksCreateJSONSnapPacksCreateMultipartWithBody(ctx context
 	return c.Client.Do(req)
 }
 
-// SnapPacksCreateJSONSnapPacksCreateMultipart Create Snap Pack Create Snap Pack
+// SnapPacksCreateJSONSnapPacksCreateMultipart Create Snap Pack
 //
 // Create a snap pack. You can supply one of the following:
 // - HTML content for the inside and outside of the snap pack
@@ -60385,8 +66336,8 @@ func (c *Client) TemplateEditorSessionsList(ctx context.Context, params *Templat
 // Takes any type of body and a specified content type.
 //
 // Corresponds with POST /print-mail/v1/template_editor_sessions (the `TemplateEditorSessionsCreate` operationId).
-func (c *Client) TemplateEditorSessionsCreateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewTemplateEditorSessionsCreateRequestWithBody(c.Server, contentType, body)
+func (c *Client) TemplateEditorSessionsCreateWithBody(ctx context.Context, params *TemplateEditorSessionsCreateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewTemplateEditorSessionsCreateRequestWithBody(c.Server, params, contentType, body)
 	if err != nil {
 		return nil, err
 	}
@@ -60407,8 +66358,8 @@ func (c *Client) TemplateEditorSessionsCreateWithBody(ctx context.Context, conte
 // Takes a body of the `application/json` content type.
 //
 // Corresponds with POST /print-mail/v1/template_editor_sessions (the `TemplateEditorSessionsCreate` operationId).
-func (c *Client) TemplateEditorSessionsCreate(ctx context.Context, body TemplateEditorSessionsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
-	req, err := NewTemplateEditorSessionsCreateRequest(c.Server, body)
+func (c *Client) TemplateEditorSessionsCreate(ctx context.Context, params *TemplateEditorSessionsCreateParams, body TemplateEditorSessionsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewTemplateEditorSessionsCreateRequest(c.Server, params, body)
 	if err != nil {
 		return nil, err
 	}
@@ -60553,6 +66504,92 @@ func (c *Client) TemplatesUpdateWithBody(ctx context.Context, id string, content
 // Corresponds with POST /print-mail/v1/templates/{id} (the `TemplatesUpdate` operationId).
 func (c *Client) TemplatesUpdate(ctx context.Context, id string, body TemplatesUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewTemplatesUpdateRequest(c.Server, id, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// TemplatesCopyWithBody Copy Template
+//
+// Copy a template, including its template editor design and format
+// settings. The template is found by ID in your organization, in whichever
+// mode it's in. By default the copy is created in your organization, in the
+// mode of your API key, so an empty body duplicates the template. The copy
+// keeps the template's description and metadata.
+//
+// A test API key only finds test templates and can only copy into test
+// mode. A live API key can copy between test and live mode in either
+// direction.
+//
+// A template that uses trackers or a custom envelope can only be copied
+// within your organization and the same mode, where the copy uses the same
+// trackers and envelope. Images keep their URLs.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /print-mail/v1/templates/{id}/copy (the `TemplatesCopy` operationId).
+func (c *Client) TemplatesCopyWithBody(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewTemplatesCopyRequestWithBody(c.Server, id, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// TemplatesCopy Copy Template
+//
+// Copy a template, including its template editor design and format
+// settings. The template is found by ID in your organization, in whichever
+// mode it's in. By default the copy is created in your organization, in the
+// mode of your API key, so an empty body duplicates the template. The copy
+// keeps the template's description and metadata.
+//
+// A test API key only finds test templates and can only copy into test
+// mode. A live API key can copy between test and live mode in either
+// direction.
+//
+// A template that uses trackers or a custom envelope can only be copied
+// within your organization and the same mode, where the copy uses the same
+// trackers and envelope. Images keep their URLs.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /print-mail/v1/templates/{id}/copy (the `TemplatesCopy` operationId).
+func (c *Client) TemplatesCopy(ctx context.Context, id string, body TemplatesCopyJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewTemplatesCopyRequest(c.Server, id, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// ThumbnailsGet Get Thumbnails
+//
+// Gets the thumbnails of up to 100 resources.
+//
+// IDs that have no thumbnail yet, and IDs of resources that are deleted,
+// don't exist, or belong to another organization or mode, are left out of
+// `data` without an error. Poll until an ID appears with `status` of
+// `generated`.
+//
+// This endpoint is limited to 10 requests per minute.
+//
+// Corresponds with GET /print-mail/v1/thumbnails (the `ThumbnailsGet` operationId).
+func (c *Client) ThumbnailsGet(ctx context.Context, params *ThumbnailsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewThumbnailsGetRequest(c.Server, params)
 	if err != nil {
 		return nil, err
 	}
@@ -61023,6 +67060,107 @@ func (c *Client) WebhooksListInvocations(ctx context.Context, id string, params 
 	return c.Client.Do(req)
 }
 
+// AccuracyStatementsList List Accuracy Statements
+//
+// List the accuracy statements belonging to your organization.
+//
+// Corresponds with GET /v1/accuracy_statements (the `AccuracyStatementsList` operationId).
+func (c *Client) AccuracyStatementsList(ctx context.Context, params *AccuracyStatementsListParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAccuracyStatementsListRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// AccuracyStatementsCreateWithBody Create Accuracy Statement
+//
+// Create a new accuracy statement.
+//
+// The statement is created in `draft` status. Add addresses to it with
+// `POST /verifications/batch` (passing the ID as `accuracyStatement`),
+// then generate it with `POST /accuracy_statements/{id}/generate`.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /v1/accuracy_statements (the `AccuracyStatementsCreate` operationId).
+func (c *Client) AccuracyStatementsCreateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAccuracyStatementsCreateRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// AccuracyStatementsCreate Create Accuracy Statement
+//
+// Create a new accuracy statement.
+//
+// The statement is created in `draft` status. Add addresses to it with
+// `POST /verifications/batch` (passing the ID as `accuracyStatement`),
+// then generate it with `POST /accuracy_statements/{id}/generate`.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /v1/accuracy_statements (the `AccuracyStatementsCreate` operationId).
+func (c *Client) AccuracyStatementsCreate(ctx context.Context, body AccuracyStatementsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAccuracyStatementsCreateRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// AccuracyStatementsGet Get Accuracy Statement
+//
+// Retrieve a specific accuracy statement by its ID.
+//
+// Corresponds with GET /v1/accuracy_statements/{id} (the `AccuracyStatementsGet` operationId).
+func (c *Client) AccuracyStatementsGet(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAccuracyStatementsGetRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// AccuracyStatementsGenerate Generate Accuracy Statement
+//
+// Start generating a draft accuracy statement.
+//
+// The statement must be in `draft` status. Poll the statement with
+// `GET /accuracy_statements/{id}` until its status is `generated` or
+// `failed`.
+//
+// Corresponds with POST /v1/accuracy_statements/{id}/generate (the `AccuracyStatementsGenerate` operationId).
+func (c *Client) AccuracyStatementsGenerate(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAccuracyStatementsGenerateRequest(c.Server, id)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // StandardAPIGetLookupInfo performs a GET /v1/addver/ (the `StandardAPIGetLookupInfo` operationId) request.
 //
 // Returns your organization's current lookup usage and plan information.
@@ -61300,8 +67438,8 @@ func (c *Client) StandardAPIVerifyAddress(ctx context.Context, params *StandardA
 // with any type of body and a specified content type.
 //
 // Verify a batch of US or Canadian addresses in a single request.
-// Each address can be freeform or structured, matching the same input formats
-// accepted by the single verification endpoint.
+// Each item is either a freeform string or the structured address fields
+// themselves.
 //
 // - Accepts up to 2,000 addresses per request.
 // - Uses 1 lookup per address (plus 1 more per address if geocoding).
@@ -61312,6 +67450,11 @@ func (c *Client) StandardAPIVerifyAddress(ctx context.Context, params *StandardA
 // - If you are not subscribed and the batch would exceed your remaining free
 // lookups, the entire batch fails (nothing is verified). Size your batch to
 // the number of lookups you have left.
+// - To add the addresses to a draft accuracy statement (beta), pass its ID
+// as `accuracyStatement` and send every address as a structured object
+// with `inputID` and `accuracyStatementInclusion` (`include` or
+// `exclude`). Accuracy statements require a live API key and the feature
+// to be enabled for your organization.
 func (c *Client) StandardAPIVerifyBatchWithBody(ctx context.Context, params *StandardAPIVerifyBatchParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewStandardAPIVerifyBatchRequestWithBody(c.Server, params, contentType, body)
 	if err != nil {
@@ -61328,8 +67471,8 @@ func (c *Client) StandardAPIVerifyBatchWithBody(ctx context.Context, params *Sta
 // Takes a body of the `application/json` content type.
 //
 // Verify a batch of US or Canadian addresses in a single request.
-// Each address can be freeform or structured, matching the same input formats
-// accepted by the single verification endpoint.
+// Each item is either a freeform string or the structured address fields
+// themselves.
 //
 // - Accepts up to 2,000 addresses per request.
 // - Uses 1 lookup per address (plus 1 more per address if geocoding).
@@ -61340,6 +67483,11 @@ func (c *Client) StandardAPIVerifyBatchWithBody(ctx context.Context, params *Sta
 // - If you are not subscribed and the batch would exceed your remaining free
 // lookups, the entire batch fails (nothing is verified). Size your batch to
 // the number of lookups you have left.
+// - To add the addresses to a draft accuracy statement (beta), pass its ID
+// as `accuracyStatement` and send every address as a structured object
+// with `inputID` and `accuracyStatementInclusion` (`include` or
+// `exclude`). Accuracy statements require a live API key and the feature
+// to be enabled for your organization.
 func (c *Client) StandardAPIVerifyBatch(ctx context.Context, params *StandardAPIVerifyBatchParams, body StandardAPIVerifyBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewStandardAPIVerifyBatchRequest(c.Server, params, body)
 	if err != nil {
@@ -61519,9 +67667,11 @@ func (c *Client) InternationalAPIComplete(ctx context.Context, params *Internati
 // InternationalAPIVerifyAddressWithBody performs a POST /v1/intl_addver/verifications (the `InternationalAPIVerifyAddress` operationId) request,
 // with any type of body and a specified content type.
 //
-// Verify and standardize an international address.
+// Verify and standardize an international address. Accepts two input formats:
 //
-// - Supports both structured and freeform address inputs.
+// 1. **Structured Address** — Verify and standardize a structured address (e.g., with `line1`, `city`, etc.).
+// 2. **Freeform Address** — Verify and standardize a freeform address written on a single line.
+//
 // - Specify `includeDetails=true` to get additional details as per the `IntlDetails` schema.
 // - Uses 1 lookup.
 func (c *Client) InternationalAPIVerifyAddressWithBody(ctx context.Context, params *InternationalAPIVerifyAddressParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -61539,9 +67689,11 @@ func (c *Client) InternationalAPIVerifyAddressWithBody(ctx context.Context, para
 // InternationalAPIVerifyAddress performs a POST /v1/intl_addver/verifications (the `InternationalAPIVerifyAddress` operationId) request.
 // Takes a body of the `application/json` content type.
 //
-// Verify and standardize an international address.
+// Verify and standardize an international address. Accepts two input formats:
 //
-// - Supports both structured and freeform address inputs.
+// 1. **Structured Address** — Verify and standardize a structured address (e.g., with `line1`, `city`, etc.).
+// 2. **Freeform Address** — Verify and standardize a freeform address written on a single line.
+//
 // - Specify `includeDetails=true` to get additional details as per the `IntlDetails` schema.
 // - Uses 1 lookup.
 func (c *Client) InternationalAPIVerifyAddress(ctx context.Context, params *InternationalAPIVerifyAddressParams, body InternationalAPIVerifyAddressJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -61560,8 +67712,8 @@ func (c *Client) InternationalAPIVerifyAddress(ctx context.Context, params *Inte
 // with any type of body and a specified content type.
 //
 // Verify a batch of international addresses in a single request.
-// Each address can be freeform or structured, matching the same input formats
-// accepted by the single verification endpoint.
+// Each address is either a freeform string or the structured address fields
+// themselves.
 //
 // - Accepts up to 2,000 addresses per request.
 // - Uses 1 lookup per address.
@@ -61588,8 +67740,8 @@ func (c *Client) InternationalAPIVerifyBatchWithBody(ctx context.Context, params
 // Takes a body of the `application/json` content type.
 //
 // Verify a batch of international addresses in a single request.
-// Each address can be freeform or structured, matching the same input formats
-// accepted by the single verification endpoint.
+// Each address is either a freeform string or the structured address fields
+// themselves.
 //
 // - Accepts up to 2,000 addresses per request.
 // - Uses 1 lookup per address.
@@ -62832,6 +68984,843 @@ func NewContactsGetRequest(server string, id string) (*http.Request, error) {
 	}
 
 	operationPath := fmt.Sprintf("/print-mail/v1/contacts/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewCustomEnvelopesListRequest constructs an http.Request for the CustomEnvelopesList method
+func NewCustomEnvelopesListRequest(server string, params *CustomEnvelopesListParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/print-mail/v1/custom_envelopes")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Skip != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", false, "skip", *params.Skip, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", false, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Search != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", false, "search", *params.Search, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewCustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartRequest calls the generic CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart builder with application/json body
+func NewCustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartRequest(server string, params *CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartParams, body CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartRequestWithBody(server, params, "application/json", bodyReader)
+}
+
+// NewCustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartRequestWithBody constructs an http.Request for the CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart method, with any body, and a specified content type
+func NewCustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartRequestWithBody(server string, params *CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/print-mail/v1/custom_envelopes")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	if params != nil {
+
+		if params.IdempotencyKey != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithOptions("simple", false, "idempotency-key", *params.IdempotencyKey, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("idempotency-key", headerParam0)
+		}
+
+	}
+
+	return req, nil
+}
+
+// NewCustomEnvelopesGetRequest constructs an http.Request for the CustomEnvelopesGet method
+func NewCustomEnvelopesGetRequest(server string, id string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/print-mail/v1/custom_envelopes/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewCustomEnvelopesListOrdersRequest constructs an http.Request for the CustomEnvelopesListOrders method
+func NewCustomEnvelopesListOrdersRequest(server string, id string, params *CustomEnvelopesListOrdersParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/print-mail/v1/custom_envelopes/%s/orders", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Skip != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", false, "skip", *params.Skip, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", false, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Search != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", false, "search", *params.Search, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewCustomEnvelopesCreateOrderRequest calls the generic CustomEnvelopesCreateOrder builder with application/json body
+func NewCustomEnvelopesCreateOrderRequest(server string, id string, params *CustomEnvelopesCreateOrderParams, body CustomEnvelopesCreateOrderJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCustomEnvelopesCreateOrderRequestWithBody(server, id, params, "application/json", bodyReader)
+}
+
+// NewCustomEnvelopesCreateOrderRequestWithBody constructs an http.Request for the CustomEnvelopesCreateOrder method, with any body, and a specified content type
+func NewCustomEnvelopesCreateOrderRequestWithBody(server string, id string, params *CustomEnvelopesCreateOrderParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/print-mail/v1/custom_envelopes/%s/orders", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	if params != nil {
+
+		if params.IdempotencyKey != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithOptions("simple", false, "idempotency-key", *params.IdempotencyKey, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("idempotency-key", headerParam0)
+		}
+
+	}
+
+	return req, nil
+}
+
+// NewCustomEnvelopesCancelOrderRequest constructs an http.Request for the CustomEnvelopesCancelOrder method
+func NewCustomEnvelopesCancelOrderRequest(server string, id string, orderID string, params *CustomEnvelopesCancelOrderParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "orderID", orderID, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/print-mail/v1/custom_envelopes/%s/orders/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Expand != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "expand[]", *params.Expand, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewCustomEnvelopesGetOrderRequest constructs an http.Request for the CustomEnvelopesGetOrder method
+func NewCustomEnvelopesGetOrderRequest(server string, id string, orderID string, params *CustomEnvelopesGetOrderParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "orderID", orderID, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/print-mail/v1/custom_envelopes/%s/orders/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Expand != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "expand[]", *params.Expand, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewCustomEnvelopesFillTestOrderRequest constructs an http.Request for the CustomEnvelopesFillTestOrder method
+func NewCustomEnvelopesFillTestOrderRequest(server string, id string, orderID string, params *CustomEnvelopesFillTestOrderParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "orderID", orderID, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/print-mail/v1/custom_envelopes/%s/orders/%s/fills", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Expand != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "expand[]", *params.Expand, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewCustomEnvelopesProgressTestOrderRequest constructs an http.Request for the CustomEnvelopesProgressTestOrder method
+func NewCustomEnvelopesProgressTestOrderRequest(server string, id string, orderID string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "orderID", orderID, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/print-mail/v1/custom_envelopes/%s/orders/%s/progress", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewCustomEnvelopesClearThresholdRequest constructs an http.Request for the CustomEnvelopesClearThreshold method
+func NewCustomEnvelopesClearThresholdRequest(server string, id string, params *CustomEnvelopesClearThresholdParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/print-mail/v1/custom_envelopes/%s/threshold", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+
+		if params.IdempotencyKey != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithOptions("simple", false, "idempotency-key", *params.IdempotencyKey, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("idempotency-key", headerParam0)
+		}
+
+	}
+
+	return req, nil
+}
+
+// NewCustomEnvelopesSetThresholdRequest calls the generic CustomEnvelopesSetThreshold builder with application/json body
+func NewCustomEnvelopesSetThresholdRequest(server string, id string, params *CustomEnvelopesSetThresholdParams, body CustomEnvelopesSetThresholdJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCustomEnvelopesSetThresholdRequestWithBody(server, id, params, "application/json", bodyReader)
+}
+
+// NewCustomEnvelopesSetThresholdRequestWithBody constructs an http.Request for the CustomEnvelopesSetThreshold method, with any body, and a specified content type
+func NewCustomEnvelopesSetThresholdRequestWithBody(server string, id string, params *CustomEnvelopesSetThresholdParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/print-mail/v1/custom_envelopes/%s/threshold", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	if params != nil {
+
+		if params.IdempotencyKey != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithOptions("simple", false, "idempotency-key", *params.IdempotencyKey, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("idempotency-key", headerParam0)
+		}
+
+	}
+
+	return req, nil
+}
+
+// NewDocumentsListRequest constructs an http.Request for the DocumentsList method
+func NewDocumentsListRequest(server string, params *DocumentsListParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/print-mail/v1/documents")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Skip != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", false, "skip", *params.Skip, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", false, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Search != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", false, "search", *params.Search, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewDocumentsCreateRequest calls the generic DocumentsCreate builder with application/json body
+func NewDocumentsCreateRequest(server string, params *DocumentsCreateParams, body DocumentsCreateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewDocumentsCreateRequestWithBody(server, params, "application/json", bodyReader)
+}
+
+// NewDocumentsCreateRequestWithBody constructs an http.Request for the DocumentsCreate method, with any body, and a specified content type
+func NewDocumentsCreateRequestWithBody(server string, params *DocumentsCreateParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/print-mail/v1/documents")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	if params != nil {
+
+		if params.IdempotencyKey != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithOptions("simple", false, "idempotency-key", *params.IdempotencyKey, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("idempotency-key", headerParam0)
+		}
+
+	}
+
+	return req, nil
+}
+
+// NewDocumentsGetRequest constructs an http.Request for the DocumentsGet method
+func NewDocumentsGetRequest(server string, id string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/print-mail/v1/documents/%s", pathParam0)
 	if operationPath[0] == '/' {
 		operationPath = "." + operationPath
 	}
@@ -64260,6 +71249,46 @@ func NewReportsRunAdHocSampleRequestWithBody(server string, contentType string, 
 	return req, nil
 }
 
+// NewReportsPreviewScheduleRequest calls the generic ReportsPreviewSchedule builder with application/json body
+func NewReportsPreviewScheduleRequest(server string, body ReportsPreviewScheduleJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewReportsPreviewScheduleRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewReportsPreviewScheduleRequestWithBody constructs an http.Request for the ReportsPreviewSchedule method, with any body, and a specified content type
+func NewReportsPreviewScheduleRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/print-mail/v1/reports/schedule_previews")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
 // NewReportsDeleteReportRequest constructs an http.Request for the ReportsDeleteReport method
 func NewReportsDeleteReportRequest(server string, id string) (*http.Request, error) {
 	var err error
@@ -64418,6 +71447,91 @@ func NewReportsRunSavedReportSampleRequestWithBody(server string, id string, con
 	}
 
 	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewReportsListReportExportsRequest constructs an http.Request for the ReportsListReportExports method
+func NewReportsListReportExportsRequest(server string, reportID string, params *ReportsListReportExportsParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "reportID", reportID, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/print-mail/v1/reports/%s/exports", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Skip != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", false, "skip", *params.Skip, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", false, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: "int32"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Search != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", false, "search", *params.Search, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
 
 	return req, nil
 }
@@ -66243,18 +73357,18 @@ func NewTemplateEditorSessionsListRequest(server string, params *TemplateEditorS
 }
 
 // NewTemplateEditorSessionsCreateRequest calls the generic TemplateEditorSessionsCreate builder with application/json body
-func NewTemplateEditorSessionsCreateRequest(server string, body TemplateEditorSessionsCreateJSONRequestBody) (*http.Request, error) {
+func NewTemplateEditorSessionsCreateRequest(server string, params *TemplateEditorSessionsCreateParams, body TemplateEditorSessionsCreateJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
 	buf, err := json.Marshal(body)
 	if err != nil {
 		return nil, err
 	}
 	bodyReader = bytes.NewReader(buf)
-	return NewTemplateEditorSessionsCreateRequestWithBody(server, "application/json", bodyReader)
+	return NewTemplateEditorSessionsCreateRequestWithBody(server, params, "application/json", bodyReader)
 }
 
 // NewTemplateEditorSessionsCreateRequestWithBody constructs an http.Request for the TemplateEditorSessionsCreate method, with any body, and a specified content type
-func NewTemplateEditorSessionsCreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+func NewTemplateEditorSessionsCreateRequestWithBody(server string, params *TemplateEditorSessionsCreateParams, contentType string, body io.Reader) (*http.Request, error) {
 	var err error
 
 	serverURL, err := url.Parse(server)
@@ -66278,6 +73392,21 @@ func NewTemplateEditorSessionsCreateRequestWithBody(server string, contentType s
 	}
 
 	req.Header.Add("Content-Type", contentType)
+
+	if params != nil {
+
+		if params.IdempotencyKey != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithOptions("simple", false, "idempotency-key", *params.IdempotencyKey, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("idempotency-key", headerParam0)
+		}
+
+	}
 
 	return req, nil
 }
@@ -66545,6 +73674,107 @@ func NewTemplatesUpdateRequestWithBody(server string, id string, contentType str
 	}
 
 	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewTemplatesCopyRequest calls the generic TemplatesCopy builder with application/json body
+func NewTemplatesCopyRequest(server string, id string, body TemplatesCopyJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewTemplatesCopyRequestWithBody(server, id, "application/json", bodyReader)
+}
+
+// NewTemplatesCopyRequestWithBody constructs an http.Request for the TemplatesCopy method, with any body, and a specified content type
+func NewTemplatesCopyRequestWithBody(server string, id string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/print-mail/v1/templates/%s/copy", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewThumbnailsGetRequest constructs an http.Request for the ThumbnailsGet method
+func NewThumbnailsGetRequest(server string, params *ThumbnailsGetParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/print-mail/v1/thumbnails")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Resources != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", false, "resources", params.Resources, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "array", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
 
 	return req, nil
 }
@@ -67537,6 +74767,180 @@ func NewWebhooksListInvocationsRequest(server string, id string, params *Webhook
 	}
 
 	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewAccuracyStatementsListRequest constructs an http.Request for the AccuracyStatementsList method
+func NewAccuracyStatementsListRequest(server string, params *AccuracyStatementsListParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/accuracy_statements")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Skip != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", false, "skip", *params.Skip, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", false, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewAccuracyStatementsCreateRequest calls the generic AccuracyStatementsCreate builder with application/json body
+func NewAccuracyStatementsCreateRequest(server string, body AccuracyStatementsCreateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewAccuracyStatementsCreateRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewAccuracyStatementsCreateRequestWithBody constructs an http.Request for the AccuracyStatementsCreate method, with any body, and a specified content type
+func NewAccuracyStatementsCreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/accuracy_statements")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewAccuracyStatementsGetRequest constructs an http.Request for the AccuracyStatementsGet method
+func NewAccuracyStatementsGetRequest(server string, id string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/accuracy_statements/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewAccuracyStatementsGenerateRequest constructs an http.Request for the AccuracyStatementsGenerate method
+func NewAccuracyStatementsGenerateRequest(server string, id string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "id", id, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/accuracy_statements/%s/generate", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), nil)
 	if err != nil {
 		return nil, err
 	}
@@ -69386,6 +76790,203 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /print-mail/v1/contacts/{id} (the `ContactsGet` operationId).
 	ContactsGetWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*ContactsGetResponse, error)
 
+	// CustomEnvelopesListWithResponse List Custom Envelopes
+	//
+	// Gets a list of custom envelopes for the user.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /print-mail/v1/custom_envelopes (the `CustomEnvelopesList` operationId).
+	CustomEnvelopesListWithResponse(ctx context.Context, params *CustomEnvelopesListParams, reqEditors ...RequestEditorFn) (*CustomEnvelopesListResponse, error)
+
+	// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartWithBodyWithResponse Create Custom Envelope
+	//
+	// Creates a new custom envelope. The artwork is reviewed after it is
+	// uploaded: the custom envelope is returned with a `status` of `pending`
+	// and moves to `approved` or `rejected` once the review finishes. Create a custom envelope via a multipart/form-data request. Accepts the
+	// same fields as the JSON create body; use this content type to upload the
+	// PDF file directly.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /print-mail/v1/custom_envelopes (the `CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart` operationId).
+	CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartWithBodyWithResponse(ctx context.Context, params *CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartResponse, error)
+
+	// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartWithResponse Create Custom Envelope
+	//
+	// Creates a new custom envelope. The artwork is reviewed after it is
+	// uploaded: the custom envelope is returned with a `status` of `pending`
+	// and moves to `approved` or `rejected` once the review finishes. Create a custom envelope via a multipart/form-data request. Accepts the
+	// same fields as the JSON create body; use this content type to upload the
+	// PDF file directly.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /print-mail/v1/custom_envelopes (the `CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart` operationId).
+	CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartWithResponse(ctx context.Context, params *CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartParams, body CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartResponse, error)
+
+	// CustomEnvelopesGetWithResponse Get Custom Envelope
+	//
+	// Gets the information for a custom envelope by `id`. This should be a
+	// unique identifying string starting with `custom_envelope_`.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /print-mail/v1/custom_envelopes/{id} (the `CustomEnvelopesGet` operationId).
+	CustomEnvelopesGetWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*CustomEnvelopesGetResponse, error)
+
+	// CustomEnvelopesListOrdersWithResponse List Custom Envelope Orders
+	//
+	// Gets a list of orders for the custom envelope by `id`.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /print-mail/v1/custom_envelopes/{id}/orders (the `CustomEnvelopesListOrders` operationId).
+	CustomEnvelopesListOrdersWithResponse(ctx context.Context, id string, params *CustomEnvelopesListOrdersParams, reqEditors ...RequestEditorFn) (*CustomEnvelopesListOrdersResponse, error)
+
+	// CustomEnvelopesCreateOrderWithBodyWithResponse Create Custom Envelope Order
+	//
+	// Creates a batch order of custom envelopes. The minimum order quantity is
+	// 5000.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /print-mail/v1/custom_envelopes/{id}/orders (the `CustomEnvelopesCreateOrder` operationId).
+	CustomEnvelopesCreateOrderWithBodyWithResponse(ctx context.Context, id string, params *CustomEnvelopesCreateOrderParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomEnvelopesCreateOrderResponse, error)
+
+	// CustomEnvelopesCreateOrderWithResponse Create Custom Envelope Order
+	//
+	// Creates a batch order of custom envelopes. The minimum order quantity is
+	// 5000.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /print-mail/v1/custom_envelopes/{id}/orders (the `CustomEnvelopesCreateOrder` operationId).
+	CustomEnvelopesCreateOrderWithResponse(ctx context.Context, id string, params *CustomEnvelopesCreateOrderParams, body CustomEnvelopesCreateOrderJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomEnvelopesCreateOrderResponse, error)
+
+	// CustomEnvelopesCancelOrderWithResponse Cancel Custom Envelope Order
+	//
+	// Cancels the custom envelope order by `orderID` for the custom envelope
+	// by `id`. Only orders whose status is `placed` can be cancelled. Note that
+	// this operation cannot be undone.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with DELETE /print-mail/v1/custom_envelopes/{id}/orders/{orderID} (the `CustomEnvelopesCancelOrder` operationId).
+	CustomEnvelopesCancelOrderWithResponse(ctx context.Context, id string, orderID string, params *CustomEnvelopesCancelOrderParams, reqEditors ...RequestEditorFn) (*CustomEnvelopesCancelOrderResponse, error)
+
+	// CustomEnvelopesGetOrderWithResponse Get Custom Envelope Order
+	//
+	// Gets a specific custom envelope order by custom envelope ID as `id` and
+	// custom envelope order ID as `orderID`.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /print-mail/v1/custom_envelopes/{id}/orders/{orderID} (the `CustomEnvelopesGetOrder` operationId).
+	CustomEnvelopesGetOrderWithResponse(ctx context.Context, id string, orderID string, params *CustomEnvelopesGetOrderParams, reqEditors ...RequestEditorFn) (*CustomEnvelopesGetOrderResponse, error)
+
+	// CustomEnvelopesFillTestOrderWithResponse Fill Test Custom Envelope Order
+	//
+	// Fills the custom envelope order by `orderID` for the custom envelope by
+	// `id`. This is only available in test mode and can be used to simulate
+	// how a live order would be filled.
+	//
+	// Note: this will fail with a `custom_envelope_order_fill_failed_error` if
+	// the order's status is not `in_progress`, and with a
+	// `custom_envelope_order_fill_not_approved_error` if the custom envelope
+	// has not been approved.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /print-mail/v1/custom_envelopes/{id}/orders/{orderID}/fills (the `CustomEnvelopesFillTestOrder` operationId).
+	CustomEnvelopesFillTestOrderWithResponse(ctx context.Context, id string, orderID string, params *CustomEnvelopesFillTestOrderParams, reqEditors ...RequestEditorFn) (*CustomEnvelopesFillTestOrderResponse, error)
+
+	// CustomEnvelopesProgressTestOrderWithResponse Progress Test Custom Envelope Order
+	//
+	// Moves the custom envelope order by `orderID` for the custom envelope by
+	// `id` from `placed` to `in_progress`. This is only available in test mode
+	// and can be used to simulate how a live order would be produced.
+	//
+	// Note: this will fail with a
+	// `custom_envelope_order_progress_failed_error` if the order's status is
+	// not `placed`.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /print-mail/v1/custom_envelopes/{id}/orders/{orderID}/progress (the `CustomEnvelopesProgressTestOrder` operationId).
+	CustomEnvelopesProgressTestOrderWithResponse(ctx context.Context, id string, orderID string, reqEditors ...RequestEditorFn) (*CustomEnvelopesProgressTestOrderResponse, error)
+
+	// CustomEnvelopesClearThresholdWithResponse Clear Custom Envelope Low-Inventory Threshold
+	//
+	// Clears the low-inventory threshold for the custom envelope by `id`. We
+	// stop sending low-inventory alerts for the custom envelope.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with DELETE /print-mail/v1/custom_envelopes/{id}/threshold (the `CustomEnvelopesClearThreshold` operationId).
+	CustomEnvelopesClearThresholdWithResponse(ctx context.Context, id string, params *CustomEnvelopesClearThresholdParams, reqEditors ...RequestEditorFn) (*CustomEnvelopesClearThresholdResponse, error)
+
+	// CustomEnvelopesSetThresholdWithBodyWithResponse Set Custom Envelope Low-Inventory Threshold
+	//
+	// Sets the low-inventory threshold for the custom envelope by `id`,
+	// replacing any threshold that was set before. When the available quantity
+	// drops to or below the threshold, we send a low-inventory alert email to
+	// the Admins of your organization.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /print-mail/v1/custom_envelopes/{id}/threshold (the `CustomEnvelopesSetThreshold` operationId).
+	CustomEnvelopesSetThresholdWithBodyWithResponse(ctx context.Context, id string, params *CustomEnvelopesSetThresholdParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomEnvelopesSetThresholdResponse, error)
+
+	// CustomEnvelopesSetThresholdWithResponse Set Custom Envelope Low-Inventory Threshold
+	//
+	// Sets the low-inventory threshold for the custom envelope by `id`,
+	// replacing any threshold that was set before. When the available quantity
+	// drops to or below the threshold, we send a low-inventory alert email to
+	// the Admins of your organization.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /print-mail/v1/custom_envelopes/{id}/threshold (the `CustomEnvelopesSetThreshold` operationId).
+	CustomEnvelopesSetThresholdWithResponse(ctx context.Context, id string, params *CustomEnvelopesSetThresholdParams, body CustomEnvelopesSetThresholdJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomEnvelopesSetThresholdResponse, error)
+
+	// DocumentsListWithResponse List Documents
+	//
+	// Gets a list of documents for the user.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /print-mail/v1/documents (the `DocumentsList` operationId).
+	DocumentsListWithResponse(ctx context.Context, params *DocumentsListParams, reqEditors ...RequestEditorFn) (*DocumentsListResponse, error)
+
+	// DocumentsCreateWithBodyWithResponse Create Document
+	//
+	// Creates a new document by rendering a template with merge data.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /print-mail/v1/documents (the `DocumentsCreate` operationId).
+	DocumentsCreateWithBodyWithResponse(ctx context.Context, params *DocumentsCreateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DocumentsCreateResponse, error)
+
+	// DocumentsCreateWithResponse Create Document
+	//
+	// Creates a new document by rendering a template with merge data.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /print-mail/v1/documents (the `DocumentsCreate` operationId).
+	DocumentsCreateWithResponse(ctx context.Context, params *DocumentsCreateParams, body DocumentsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*DocumentsCreateResponse, error)
+
+	// DocumentsGetWithResponse Get Document
+	//
+	// Gets the information for a document by `id`. This should be a unique
+	// identifying string starting with `document_`.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /print-mail/v1/documents/{id} (the `DocumentsGet` operationId).
+	DocumentsGetWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*DocumentsGetResponse, error)
+
 	// EventsListWithResponse List Events
 	//
 	// Retrieve a paginated list of Events.
@@ -69404,7 +77005,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /print-mail/v1/letters (the `LettersList` operationId).
 	LettersListWithResponse(ctx context.Context, params *LettersListParams, reqEditors ...RequestEditorFn) (*LettersListResponse, error)
 
-	// LettersCreateJSONLettersCreateMultipartWithBodyWithResponse Create Letter Create Letter
+	// LettersCreateJSONLettersCreateMultipartWithBodyWithResponse Create Letter
 	//
 	// Create a letter. Note that you can supply one of the following:
 	// - HTML content for the letter
@@ -69419,7 +77020,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /print-mail/v1/letters (the `LettersCreateJSONLettersCreateMultipart` operationId).
 	LettersCreateJSONLettersCreateMultipartWithBodyWithResponse(ctx context.Context, params *LettersCreateJSONLettersCreateMultipartParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*LettersCreateJSONLettersCreateMultipartResponse, error)
 
-	// LettersCreateJSONLettersCreateMultipartWithResponse Create Letter Create Letter
+	// LettersCreateJSONLettersCreateMultipartWithResponse Create Letter
 	//
 	// Create a letter. Note that you can supply one of the following:
 	// - HTML content for the letter
@@ -69692,7 +77293,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /print-mail/v1/postcards (the `PostcardsList` operationId).
 	PostcardsListWithResponse(ctx context.Context, params *PostcardsListParams, reqEditors ...RequestEditorFn) (*PostcardsListResponse, error)
 
-	// PostcardsCreateJSONPostcardsCreateMultipartWithBodyWithResponse Create Postcard Create Postcard
+	// PostcardsCreateJSONPostcardsCreateMultipartWithBodyWithResponse Create Postcard
 	//
 	// Create a postcard. Note that you can supply one of the following:
 	// - HTML content for the front and back of the postcard
@@ -69707,7 +77308,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /print-mail/v1/postcards (the `PostcardsCreateJSONPostcardsCreateMultipart` operationId).
 	PostcardsCreateJSONPostcardsCreateMultipartWithBodyWithResponse(ctx context.Context, params *PostcardsCreateJSONPostcardsCreateMultipartParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*PostcardsCreateJSONPostcardsCreateMultipartResponse, error)
 
-	// PostcardsCreateJSONPostcardsCreateMultipartWithResponse Create Postcard Create Postcard
+	// PostcardsCreateJSONPostcardsCreateMultipartWithResponse Create Postcard
 	//
 	// Create a postcard. Note that you can supply one of the following:
 	// - HTML content for the front and back of the postcard
@@ -69844,6 +77445,28 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /print-mail/v1/reports/samples (the `ReportsRunAdHocSample` operationId).
 	ReportsRunAdHocSampleWithResponse(ctx context.Context, body ReportsRunAdHocSampleJSONRequestBody, reqEditors ...RequestEditorFn) (*ReportsRunAdHocSampleResponse, error)
 
+	// ReportsPreviewScheduleWithBodyWithResponse Preview a Report Schedule
+	//
+	// Work out when a schedule would actually run, without saving anything. Takes the same
+	// fields as the `schedule` on a report, plus an optional `sqlQuery` so you can check
+	// whether that query is schedulable at all (a parameterized query is not).
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /print-mail/v1/reports/schedule_previews (the `ReportsPreviewSchedule` operationId).
+	ReportsPreviewScheduleWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ReportsPreviewScheduleResponse, error)
+
+	// ReportsPreviewScheduleWithResponse Preview a Report Schedule
+	//
+	// Work out when a schedule would actually run, without saving anything. Takes the same
+	// fields as the `schedule` on a report, plus an optional `sqlQuery` so you can check
+	// whether that query is schedulable at all (a parameterized query is not).
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /print-mail/v1/reports/schedule_previews (the `ReportsPreviewSchedule` operationId).
+	ReportsPreviewScheduleWithResponse(ctx context.Context, body ReportsPreviewScheduleJSONRequestBody, reqEditors ...RequestEditorFn) (*ReportsPreviewScheduleResponse, error)
+
 	// ReportsDeleteReportWithResponse Delete Saved Report
 	//
 	// Delete a saved report definition. This action cannot be undone.
@@ -69902,6 +77525,15 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /print-mail/v1/reports/{id}/samples (the `ReportsRunSavedReportSample` operationId).
 	ReportsRunSavedReportSampleWithResponse(ctx context.Context, id string, body ReportsRunSavedReportSampleJSONRequestBody, reqEditors ...RequestEditorFn) (*ReportsRunSavedReportSampleResponse, error)
+
+	// ReportsListReportExportsWithResponse List Report Exports
+	//
+	// Retrieve a list of the export jobs taken from a report, newest first.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /print-mail/v1/reports/{reportID}/exports (the `ReportsListReportExports` operationId).
+	ReportsListReportExportsWithResponse(ctx context.Context, reportID string, params *ReportsListReportExportsParams, reqEditors ...RequestEditorFn) (*ReportsListReportExportsResponse, error)
 
 	// ReportsCreateReportExportWithBodyWithResponse Create a Report Export
 	//
@@ -70058,7 +77690,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /print-mail/v1/self_mailers (the `SelfMailersList` operationId).
 	SelfMailersListWithResponse(ctx context.Context, params *SelfMailersListParams, reqEditors ...RequestEditorFn) (*SelfMailersListResponse, error)
 
-	// SelfMailersCreateJSONSelfMailersCreateMultipartWithBodyWithResponse Create Self Mailer Create Self Mailer
+	// SelfMailersCreateJSONSelfMailersCreateMultipartWithBodyWithResponse Create Self Mailer
 	//
 	// Create a self-mailer. Note that you can supply one of the following:
 	// - HTML content for the inside and outside of the self-mailer
@@ -70073,7 +77705,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /print-mail/v1/self_mailers (the `SelfMailersCreateJSONSelfMailersCreateMultipart` operationId).
 	SelfMailersCreateJSONSelfMailersCreateMultipartWithBodyWithResponse(ctx context.Context, params *SelfMailersCreateJSONSelfMailersCreateMultipartParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*SelfMailersCreateJSONSelfMailersCreateMultipartResponse, error)
 
-	// SelfMailersCreateJSONSelfMailersCreateMultipartWithResponse Create Self Mailer Create Self Mailer
+	// SelfMailersCreateJSONSelfMailersCreateMultipartWithResponse Create Self Mailer
 	//
 	// Create a self-mailer. Note that you can supply one of the following:
 	// - HTML content for the inside and outside of the self-mailer
@@ -70142,7 +77774,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /print-mail/v1/snap_packs (the `SnapPacksList` operationId).
 	SnapPacksListWithResponse(ctx context.Context, params *SnapPacksListParams, reqEditors ...RequestEditorFn) (*SnapPacksListResponse, error)
 
-	// SnapPacksCreateJSONSnapPacksCreateMultipartWithBodyWithResponse Create Snap Pack Create Snap Pack
+	// SnapPacksCreateJSONSnapPacksCreateMultipartWithBodyWithResponse Create Snap Pack
 	//
 	// Create a snap pack. You can supply one of the following:
 	// - HTML content for the inside and outside of the snap pack
@@ -70157,7 +77789,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /print-mail/v1/snap_packs (the `SnapPacksCreateJSONSnapPacksCreateMultipart` operationId).
 	SnapPacksCreateJSONSnapPacksCreateMultipartWithBodyWithResponse(ctx context.Context, params *SnapPacksCreateJSONSnapPacksCreateMultipartParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*SnapPacksCreateJSONSnapPacksCreateMultipartResponse, error)
 
-	// SnapPacksCreateJSONSnapPacksCreateMultipartWithResponse Create Snap Pack Create Snap Pack
+	// SnapPacksCreateJSONSnapPacksCreateMultipartWithResponse Create Snap Pack
 	//
 	// Create a snap pack. You can supply one of the following:
 	// - HTML content for the inside and outside of the snap pack
@@ -70385,7 +78017,7 @@ type ClientWithResponsesInterface interface {
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /print-mail/v1/template_editor_sessions (the `TemplateEditorSessionsCreate` operationId).
-	TemplateEditorSessionsCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*TemplateEditorSessionsCreateResponse, error)
+	TemplateEditorSessionsCreateWithBodyWithResponse(ctx context.Context, params *TemplateEditorSessionsCreateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*TemplateEditorSessionsCreateResponse, error)
 
 	// TemplateEditorSessionsCreateWithResponse Create Session
 	//
@@ -70397,7 +78029,7 @@ type ClientWithResponsesInterface interface {
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Corresponds with POST /print-mail/v1/template_editor_sessions (the `TemplateEditorSessionsCreate` operationId).
-	TemplateEditorSessionsCreateWithResponse(ctx context.Context, body TemplateEditorSessionsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*TemplateEditorSessionsCreateResponse, error)
+	TemplateEditorSessionsCreateWithResponse(ctx context.Context, params *TemplateEditorSessionsCreateParams, body TemplateEditorSessionsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*TemplateEditorSessionsCreateResponse, error)
 
 	// TemplateEditorSessionsDeleteWithResponse Delete Session
 	//
@@ -70470,6 +78102,64 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /print-mail/v1/templates/{id} (the `TemplatesUpdate` operationId).
 	TemplatesUpdateWithResponse(ctx context.Context, id string, body TemplatesUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*TemplatesUpdateResponse, error)
+
+	// TemplatesCopyWithBodyWithResponse Copy Template
+	//
+	// Copy a template, including its template editor design and format
+	// settings. The template is found by ID in your organization, in whichever
+	// mode it's in. By default the copy is created in your organization, in the
+	// mode of your API key, so an empty body duplicates the template. The copy
+	// keeps the template's description and metadata.
+	//
+	// A test API key only finds test templates and can only copy into test
+	// mode. A live API key can copy between test and live mode in either
+	// direction.
+	//
+	// A template that uses trackers or a custom envelope can only be copied
+	// within your organization and the same mode, where the copy uses the same
+	// trackers and envelope. Images keep their URLs.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /print-mail/v1/templates/{id}/copy (the `TemplatesCopy` operationId).
+	TemplatesCopyWithBodyWithResponse(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*TemplatesCopyResponse, error)
+
+	// TemplatesCopyWithResponse Copy Template
+	//
+	// Copy a template, including its template editor design and format
+	// settings. The template is found by ID in your organization, in whichever
+	// mode it's in. By default the copy is created in your organization, in the
+	// mode of your API key, so an empty body duplicates the template. The copy
+	// keeps the template's description and metadata.
+	//
+	// A test API key only finds test templates and can only copy into test
+	// mode. A live API key can copy between test and live mode in either
+	// direction.
+	//
+	// A template that uses trackers or a custom envelope can only be copied
+	// within your organization and the same mode, where the copy uses the same
+	// trackers and envelope. Images keep their URLs.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /print-mail/v1/templates/{id}/copy (the `TemplatesCopy` operationId).
+	TemplatesCopyWithResponse(ctx context.Context, id string, body TemplatesCopyJSONRequestBody, reqEditors ...RequestEditorFn) (*TemplatesCopyResponse, error)
+
+	// ThumbnailsGetWithResponse Get Thumbnails
+	//
+	// Gets the thumbnails of up to 100 resources.
+	//
+	// IDs that have no thumbnail yet, and IDs of resources that are deleted,
+	// don't exist, or belong to another organization or mode, are left out of
+	// `data` without an error. Poll until an ID appears with `status` of
+	// `generated`.
+	//
+	// This endpoint is limited to 10 requests per minute.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /print-mail/v1/thumbnails (the `ThumbnailsGet` operationId).
+	ThumbnailsGetWithResponse(ctx context.Context, params *ThumbnailsGetParams, reqEditors ...RequestEditorFn) (*ThumbnailsGetResponse, error)
 
 	// TrackersListWithResponse List Trackers
 	//
@@ -70707,6 +78397,63 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /print-mail/v1/webhooks/{id}/invocations (the `WebhooksListInvocations` operationId).
 	WebhooksListInvocationsWithResponse(ctx context.Context, id string, params *WebhooksListInvocationsParams, reqEditors ...RequestEditorFn) (*WebhooksListInvocationsResponse, error)
 
+	// AccuracyStatementsListWithResponse List Accuracy Statements
+	//
+	// List the accuracy statements belonging to your organization.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /v1/accuracy_statements (the `AccuracyStatementsList` operationId).
+	AccuracyStatementsListWithResponse(ctx context.Context, params *AccuracyStatementsListParams, reqEditors ...RequestEditorFn) (*AccuracyStatementsListResponse, error)
+
+	// AccuracyStatementsCreateWithBodyWithResponse Create Accuracy Statement
+	//
+	// Create a new accuracy statement.
+	//
+	// The statement is created in `draft` status. Add addresses to it with
+	// `POST /verifications/batch` (passing the ID as `accuracyStatement`),
+	// then generate it with `POST /accuracy_statements/{id}/generate`.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /v1/accuracy_statements (the `AccuracyStatementsCreate` operationId).
+	AccuracyStatementsCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AccuracyStatementsCreateResponse, error)
+
+	// AccuracyStatementsCreateWithResponse Create Accuracy Statement
+	//
+	// Create a new accuracy statement.
+	//
+	// The statement is created in `draft` status. Add addresses to it with
+	// `POST /verifications/batch` (passing the ID as `accuracyStatement`),
+	// then generate it with `POST /accuracy_statements/{id}/generate`.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /v1/accuracy_statements (the `AccuracyStatementsCreate` operationId).
+	AccuracyStatementsCreateWithResponse(ctx context.Context, body AccuracyStatementsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*AccuracyStatementsCreateResponse, error)
+
+	// AccuracyStatementsGetWithResponse Get Accuracy Statement
+	//
+	// Retrieve a specific accuracy statement by its ID.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /v1/accuracy_statements/{id} (the `AccuracyStatementsGet` operationId).
+	AccuracyStatementsGetWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*AccuracyStatementsGetResponse, error)
+
+	// AccuracyStatementsGenerateWithResponse Generate Accuracy Statement
+	//
+	// Start generating a draft accuracy statement.
+	//
+	// The statement must be in `draft` status. Poll the statement with
+	// `GET /accuracy_statements/{id}` until its status is `generated` or
+	// `failed`.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /v1/accuracy_statements/{id}/generate (the `AccuracyStatementsGenerate` operationId).
+	AccuracyStatementsGenerateWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*AccuracyStatementsGenerateResponse, error)
+
 	// StandardAPIGetLookupInfoWithResponse performs a GET /v1/addver/ (the `StandardAPIGetLookupInfo` operationId) request.
 	//
 	// Returns your organization's current lookup usage and plan information.
@@ -70878,8 +78625,8 @@ type ClientWithResponsesInterface interface {
 	// with any type of body and a specified content type.
 	//
 	// Verify a batch of US or Canadian addresses in a single request.
-	// Each address can be freeform or structured, matching the same input formats
-	// accepted by the single verification endpoint.
+	// Each item is either a freeform string or the structured address fields
+	// themselves.
 	//
 	// - Accepts up to 2,000 addresses per request.
 	// - Uses 1 lookup per address (plus 1 more per address if geocoding).
@@ -70890,6 +78637,11 @@ type ClientWithResponsesInterface interface {
 	// - If you are not subscribed and the batch would exceed your remaining free
 	// lookups, the entire batch fails (nothing is verified). Size your batch to
 	// the number of lookups you have left.
+	// - To add the addresses to a draft accuracy statement (beta), pass its ID
+	// as `accuracyStatement` and send every address as a structured object
+	// with `inputID` and `accuracyStatementInclusion` (`include` or
+	// `exclude`). Accuracy statements require a live API key and the feature
+	// to be enabled for your organization.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	StandardAPIVerifyBatchWithBodyWithResponse(ctx context.Context, params *StandardAPIVerifyBatchParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*StandardAPIVerifyBatchResponse, error)
@@ -70898,8 +78650,8 @@ type ClientWithResponsesInterface interface {
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Verify a batch of US or Canadian addresses in a single request.
-	// Each address can be freeform or structured, matching the same input formats
-	// accepted by the single verification endpoint.
+	// Each item is either a freeform string or the structured address fields
+	// themselves.
 	//
 	// - Accepts up to 2,000 addresses per request.
 	// - Uses 1 lookup per address (plus 1 more per address if geocoding).
@@ -70910,6 +78662,11 @@ type ClientWithResponsesInterface interface {
 	// - If you are not subscribed and the batch would exceed your remaining free
 	// lookups, the entire batch fails (nothing is verified). Size your batch to
 	// the number of lookups you have left.
+	// - To add the addresses to a draft accuracy statement (beta), pass its ID
+	// as `accuracyStatement` and send every address as a structured object
+	// with `inputID` and `accuracyStatementInclusion` (`include` or
+	// `exclude`). Accuracy statements require a live API key and the feature
+	// to be enabled for your organization.
 	StandardAPIVerifyBatchWithResponse(ctx context.Context, params *StandardAPIVerifyBatchParams, body StandardAPIVerifyBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*StandardAPIVerifyBatchResponse, error)
 
 	// StandardAPILookupZipCodesWithBodyWithResponse performs a POST /v1/addver/zip_codes (the `StandardAPILookupZipCodes` operationId) request,
@@ -71011,9 +78768,11 @@ type ClientWithResponsesInterface interface {
 	// InternationalAPIVerifyAddressWithBodyWithResponse performs a POST /v1/intl_addver/verifications (the `InternationalAPIVerifyAddress` operationId) request,
 	// with any type of body and a specified content type.
 	//
-	// Verify and standardize an international address.
+	// Verify and standardize an international address. Accepts two input formats:
 	//
-	// - Supports both structured and freeform address inputs.
+	// 1. **Structured Address** — Verify and standardize a structured address (e.g., with `line1`, `city`, etc.).
+	// 2. **Freeform Address** — Verify and standardize a freeform address written on a single line.
+	//
 	// - Specify `includeDetails=true` to get additional details as per the `IntlDetails` schema.
 	// - Uses 1 lookup.
 	//
@@ -71023,9 +78782,11 @@ type ClientWithResponsesInterface interface {
 	// InternationalAPIVerifyAddressWithResponse performs a POST /v1/intl_addver/verifications (the `InternationalAPIVerifyAddress` operationId) request.
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
-	// Verify and standardize an international address.
+	// Verify and standardize an international address. Accepts two input formats:
 	//
-	// - Supports both structured and freeform address inputs.
+	// 1. **Structured Address** — Verify and standardize a structured address (e.g., with `line1`, `city`, etc.).
+	// 2. **Freeform Address** — Verify and standardize a freeform address written on a single line.
+	//
 	// - Specify `includeDetails=true` to get additional details as per the `IntlDetails` schema.
 	// - Uses 1 lookup.
 	InternationalAPIVerifyAddressWithResponse(ctx context.Context, params *InternationalAPIVerifyAddressParams, body InternationalAPIVerifyAddressJSONRequestBody, reqEditors ...RequestEditorFn) (*InternationalAPIVerifyAddressResponse, error)
@@ -71034,8 +78795,8 @@ type ClientWithResponsesInterface interface {
 	// with any type of body and a specified content type.
 	//
 	// Verify a batch of international addresses in a single request.
-	// Each address can be freeform or structured, matching the same input formats
-	// accepted by the single verification endpoint.
+	// Each address is either a freeform string or the structured address fields
+	// themselves.
 	//
 	// - Accepts up to 2,000 addresses per request.
 	// - Uses 1 lookup per address.
@@ -71054,8 +78815,8 @@ type ClientWithResponsesInterface interface {
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
 	// Verify a batch of international addresses in a single request.
-	// Each address can be freeform or structured, matching the same input formats
-	// accepted by the single verification endpoint.
+	// Each address is either a freeform string or the structured address fields
+	// themselves.
 	//
 	// - Accepts up to 2,000 addresses per request.
 	// - Uses 1 lookup per address.
@@ -75877,6 +83638,2435 @@ func (r ContactsGetResponse) StatusCode() int {
 
 // ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
 func (r ContactsGetResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type CustomEnvelopesListResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CustomEnvelopeList
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesList400JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesList400JSONResponseBodyObject `json:"object"`
+	}
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *CustomEnvelopesList401JSONResponseBody
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesList429JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesList429JSONResponseBodyObject `json:"object"`
+	}
+	// JSON500 the response for an HTTP 500 `application/json` response
+	JSON500 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesList500JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesList500JSONResponseBodyObject `json:"object"`
+	}
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r CustomEnvelopesListResponse) GetJSON200() *CustomEnvelopeList {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r CustomEnvelopesListResponse) GetJSON400() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesList400JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesList400JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r CustomEnvelopesListResponse) GetJSON401() *CustomEnvelopesList401JSONResponseBody {
+	return r.JSON401
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r CustomEnvelopesListResponse) GetJSON429() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesList429JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesList429JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON429
+}
+
+// GetJSON500 returns the response for an HTTP 500 `application/json` response
+func (r CustomEnvelopesListResponse) GetJSON500() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesList500JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesList500JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON500
+}
+
+// GetBody returns the raw response body bytes
+func (r CustomEnvelopesListResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomEnvelopesListResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomEnvelopesListResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r CustomEnvelopesListResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON201 the response for an HTTP 201 `application/json` response
+	JSON201 *CustomEnvelope
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart400JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart400JSONResponseBodyObject `json:"object"`
+	}
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart404JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart404JSONResponseBodyObject `json:"object"`
+	}
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type string `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart422JSONResponseBodyObject `json:"object"`
+	}
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart429JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart429JSONResponseBodyObject `json:"object"`
+	}
+	// JSON500 the response for an HTTP 500 `application/json` response
+	JSON500 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart500JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart500JSONResponseBodyObject `json:"object"`
+	}
+}
+
+// GetJSON201 returns the response for an HTTP 201 `application/json` response
+func (r CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartResponse) GetJSON201() *CustomEnvelope {
+	return r.JSON201
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartResponse) GetJSON400() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart400JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart400JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartResponse) GetJSON401() *CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody {
+	return r.JSON401
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartResponse) GetJSON404() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart404JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart404JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON404
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartResponse) GetJSON422() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type string `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart422JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON422
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartResponse) GetJSON429() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart429JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart429JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON429
+}
+
+// GetJSON500 returns the response for an HTTP 500 `application/json` response
+func (r CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartResponse) GetJSON500() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart500JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart500JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON500
+}
+
+// GetBody returns the raw response body bytes
+func (r CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type CustomEnvelopesGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CustomEnvelope
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *CustomEnvelopesGet401JSONResponseBody
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesGet404JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesGet404JSONResponseBodyObject `json:"object"`
+	}
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type string `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesGet422JSONResponseBodyObject `json:"object"`
+	}
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesGet429JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesGet429JSONResponseBodyObject `json:"object"`
+	}
+	// JSON500 the response for an HTTP 500 `application/json` response
+	JSON500 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesGet500JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesGet500JSONResponseBodyObject `json:"object"`
+	}
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r CustomEnvelopesGetResponse) GetJSON200() *CustomEnvelope {
+	return r.JSON200
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r CustomEnvelopesGetResponse) GetJSON401() *CustomEnvelopesGet401JSONResponseBody {
+	return r.JSON401
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r CustomEnvelopesGetResponse) GetJSON404() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesGet404JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesGet404JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON404
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r CustomEnvelopesGetResponse) GetJSON422() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type string `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesGet422JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON422
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r CustomEnvelopesGetResponse) GetJSON429() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesGet429JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesGet429JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON429
+}
+
+// GetJSON500 returns the response for an HTTP 500 `application/json` response
+func (r CustomEnvelopesGetResponse) GetJSON500() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesGet500JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesGet500JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON500
+}
+
+// GetBody returns the raw response body bytes
+func (r CustomEnvelopesGetResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomEnvelopesGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomEnvelopesGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r CustomEnvelopesGetResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type CustomEnvelopesListOrdersResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CustomEnvelopeOrderList
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesListOrders400JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesListOrders400JSONResponseBodyObject `json:"object"`
+	}
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *CustomEnvelopesListOrders401JSONResponseBody
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesListOrders429JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesListOrders429JSONResponseBodyObject `json:"object"`
+	}
+	// JSON500 the response for an HTTP 500 `application/json` response
+	JSON500 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesListOrders500JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesListOrders500JSONResponseBodyObject `json:"object"`
+	}
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r CustomEnvelopesListOrdersResponse) GetJSON200() *CustomEnvelopeOrderList {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r CustomEnvelopesListOrdersResponse) GetJSON400() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesListOrders400JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesListOrders400JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r CustomEnvelopesListOrdersResponse) GetJSON401() *CustomEnvelopesListOrders401JSONResponseBody {
+	return r.JSON401
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r CustomEnvelopesListOrdersResponse) GetJSON429() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesListOrders429JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesListOrders429JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON429
+}
+
+// GetJSON500 returns the response for an HTTP 500 `application/json` response
+func (r CustomEnvelopesListOrdersResponse) GetJSON500() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesListOrders500JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesListOrders500JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON500
+}
+
+// GetBody returns the raw response body bytes
+func (r CustomEnvelopesListOrdersResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomEnvelopesListOrdersResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomEnvelopesListOrdersResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r CustomEnvelopesListOrdersResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type CustomEnvelopesCreateOrderResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON201 the response for an HTTP 201 `application/json` response
+	JSON201 *CustomEnvelopeOrder
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesCreateOrder400JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesCreateOrder400JSONResponseBodyObject `json:"object"`
+	}
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *CustomEnvelopesCreateOrder401JSONResponseBody
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesCreateOrder404JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesCreateOrder404JSONResponseBodyObject `json:"object"`
+	}
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type string `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesCreateOrder422JSONResponseBodyObject `json:"object"`
+	}
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesCreateOrder429JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesCreateOrder429JSONResponseBodyObject `json:"object"`
+	}
+	// JSON500 the response for an HTTP 500 `application/json` response
+	JSON500 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesCreateOrder500JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesCreateOrder500JSONResponseBodyObject `json:"object"`
+	}
+}
+
+// GetJSON201 returns the response for an HTTP 201 `application/json` response
+func (r CustomEnvelopesCreateOrderResponse) GetJSON201() *CustomEnvelopeOrder {
+	return r.JSON201
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r CustomEnvelopesCreateOrderResponse) GetJSON400() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesCreateOrder400JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesCreateOrder400JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r CustomEnvelopesCreateOrderResponse) GetJSON401() *CustomEnvelopesCreateOrder401JSONResponseBody {
+	return r.JSON401
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r CustomEnvelopesCreateOrderResponse) GetJSON404() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesCreateOrder404JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesCreateOrder404JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON404
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r CustomEnvelopesCreateOrderResponse) GetJSON422() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type string `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesCreateOrder422JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON422
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r CustomEnvelopesCreateOrderResponse) GetJSON429() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesCreateOrder429JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesCreateOrder429JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON429
+}
+
+// GetJSON500 returns the response for an HTTP 500 `application/json` response
+func (r CustomEnvelopesCreateOrderResponse) GetJSON500() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesCreateOrder500JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesCreateOrder500JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON500
+}
+
+// GetBody returns the raw response body bytes
+func (r CustomEnvelopesCreateOrderResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomEnvelopesCreateOrderResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomEnvelopesCreateOrderResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r CustomEnvelopesCreateOrderResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type CustomEnvelopesCancelOrderResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CustomEnvelopeOrder
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *CustomEnvelopesCancelOrder401JSONResponseBody
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesCancelOrder404JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesCancelOrder404JSONResponseBodyObject `json:"object"`
+	}
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *CustomEnvelopesCancelOrder422JSONResponseBody
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesCancelOrder429JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesCancelOrder429JSONResponseBodyObject `json:"object"`
+	}
+	// JSON500 the response for an HTTP 500 `application/json` response
+	JSON500 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesCancelOrder500JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesCancelOrder500JSONResponseBodyObject `json:"object"`
+	}
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r CustomEnvelopesCancelOrderResponse) GetJSON200() *CustomEnvelopeOrder {
+	return r.JSON200
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r CustomEnvelopesCancelOrderResponse) GetJSON401() *CustomEnvelopesCancelOrder401JSONResponseBody {
+	return r.JSON401
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r CustomEnvelopesCancelOrderResponse) GetJSON404() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesCancelOrder404JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesCancelOrder404JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON404
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r CustomEnvelopesCancelOrderResponse) GetJSON422() *CustomEnvelopesCancelOrder422JSONResponseBody {
+	return r.JSON422
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r CustomEnvelopesCancelOrderResponse) GetJSON429() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesCancelOrder429JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesCancelOrder429JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON429
+}
+
+// GetJSON500 returns the response for an HTTP 500 `application/json` response
+func (r CustomEnvelopesCancelOrderResponse) GetJSON500() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesCancelOrder500JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesCancelOrder500JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON500
+}
+
+// GetBody returns the raw response body bytes
+func (r CustomEnvelopesCancelOrderResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomEnvelopesCancelOrderResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomEnvelopesCancelOrderResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r CustomEnvelopesCancelOrderResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type CustomEnvelopesGetOrderResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CustomEnvelopeOrder
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *CustomEnvelopesGetOrder401JSONResponseBody
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesGetOrder404JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesGetOrder404JSONResponseBodyObject `json:"object"`
+	}
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type string `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesGetOrder422JSONResponseBodyObject `json:"object"`
+	}
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesGetOrder429JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesGetOrder429JSONResponseBodyObject `json:"object"`
+	}
+	// JSON500 the response for an HTTP 500 `application/json` response
+	JSON500 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesGetOrder500JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesGetOrder500JSONResponseBodyObject `json:"object"`
+	}
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r CustomEnvelopesGetOrderResponse) GetJSON200() *CustomEnvelopeOrder {
+	return r.JSON200
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r CustomEnvelopesGetOrderResponse) GetJSON401() *CustomEnvelopesGetOrder401JSONResponseBody {
+	return r.JSON401
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r CustomEnvelopesGetOrderResponse) GetJSON404() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesGetOrder404JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesGetOrder404JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON404
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r CustomEnvelopesGetOrderResponse) GetJSON422() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type string `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesGetOrder422JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON422
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r CustomEnvelopesGetOrderResponse) GetJSON429() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesGetOrder429JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesGetOrder429JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON429
+}
+
+// GetJSON500 returns the response for an HTTP 500 `application/json` response
+func (r CustomEnvelopesGetOrderResponse) GetJSON500() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesGetOrder500JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesGetOrder500JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON500
+}
+
+// GetBody returns the raw response body bytes
+func (r CustomEnvelopesGetOrderResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomEnvelopesGetOrderResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomEnvelopesGetOrderResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r CustomEnvelopesGetOrderResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type CustomEnvelopesFillTestOrderResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CustomEnvelopeOrder
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesFillTestOrder400JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesFillTestOrder400JSONResponseBodyObject `json:"object"`
+	}
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *CustomEnvelopesFillTestOrder401JSONResponseBody
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesFillTestOrder404JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesFillTestOrder404JSONResponseBodyObject `json:"object"`
+	}
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *CustomEnvelopesFillTestOrder422JSONResponseBody
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesFillTestOrder429JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesFillTestOrder429JSONResponseBodyObject `json:"object"`
+	}
+	// JSON500 the response for an HTTP 500 `application/json` response
+	JSON500 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesFillTestOrder500JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesFillTestOrder500JSONResponseBodyObject `json:"object"`
+	}
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r CustomEnvelopesFillTestOrderResponse) GetJSON200() *CustomEnvelopeOrder {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r CustomEnvelopesFillTestOrderResponse) GetJSON400() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesFillTestOrder400JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesFillTestOrder400JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r CustomEnvelopesFillTestOrderResponse) GetJSON401() *CustomEnvelopesFillTestOrder401JSONResponseBody {
+	return r.JSON401
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r CustomEnvelopesFillTestOrderResponse) GetJSON404() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesFillTestOrder404JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesFillTestOrder404JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON404
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r CustomEnvelopesFillTestOrderResponse) GetJSON422() *CustomEnvelopesFillTestOrder422JSONResponseBody {
+	return r.JSON422
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r CustomEnvelopesFillTestOrderResponse) GetJSON429() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesFillTestOrder429JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesFillTestOrder429JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON429
+}
+
+// GetJSON500 returns the response for an HTTP 500 `application/json` response
+func (r CustomEnvelopesFillTestOrderResponse) GetJSON500() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesFillTestOrder500JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesFillTestOrder500JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON500
+}
+
+// GetBody returns the raw response body bytes
+func (r CustomEnvelopesFillTestOrderResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomEnvelopesFillTestOrderResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomEnvelopesFillTestOrderResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r CustomEnvelopesFillTestOrderResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type CustomEnvelopesProgressTestOrderResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CustomEnvelopeOrder
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesProgressTestOrder400JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesProgressTestOrder400JSONResponseBodyObject `json:"object"`
+	}
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *CustomEnvelopesProgressTestOrder401JSONResponseBody
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesProgressTestOrder404JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesProgressTestOrder404JSONResponseBodyObject `json:"object"`
+	}
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *CustomEnvelopesProgressTestOrder422JSONResponseBody
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesProgressTestOrder429JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesProgressTestOrder429JSONResponseBodyObject `json:"object"`
+	}
+	// JSON500 the response for an HTTP 500 `application/json` response
+	JSON500 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesProgressTestOrder500JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesProgressTestOrder500JSONResponseBodyObject `json:"object"`
+	}
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r CustomEnvelopesProgressTestOrderResponse) GetJSON200() *CustomEnvelopeOrder {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r CustomEnvelopesProgressTestOrderResponse) GetJSON400() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesProgressTestOrder400JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesProgressTestOrder400JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r CustomEnvelopesProgressTestOrderResponse) GetJSON401() *CustomEnvelopesProgressTestOrder401JSONResponseBody {
+	return r.JSON401
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r CustomEnvelopesProgressTestOrderResponse) GetJSON404() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesProgressTestOrder404JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesProgressTestOrder404JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON404
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r CustomEnvelopesProgressTestOrderResponse) GetJSON422() *CustomEnvelopesProgressTestOrder422JSONResponseBody {
+	return r.JSON422
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r CustomEnvelopesProgressTestOrderResponse) GetJSON429() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesProgressTestOrder429JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesProgressTestOrder429JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON429
+}
+
+// GetJSON500 returns the response for an HTTP 500 `application/json` response
+func (r CustomEnvelopesProgressTestOrderResponse) GetJSON500() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesProgressTestOrder500JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesProgressTestOrder500JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON500
+}
+
+// GetBody returns the raw response body bytes
+func (r CustomEnvelopesProgressTestOrderResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomEnvelopesProgressTestOrderResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomEnvelopesProgressTestOrderResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r CustomEnvelopesProgressTestOrderResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type CustomEnvelopesClearThresholdResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CustomEnvelope
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *CustomEnvelopesClearThreshold401JSONResponseBody
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesClearThreshold404JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesClearThreshold404JSONResponseBodyObject `json:"object"`
+	}
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type string `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesClearThreshold422JSONResponseBodyObject `json:"object"`
+	}
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesClearThreshold429JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesClearThreshold429JSONResponseBodyObject `json:"object"`
+	}
+	// JSON500 the response for an HTTP 500 `application/json` response
+	JSON500 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesClearThreshold500JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesClearThreshold500JSONResponseBodyObject `json:"object"`
+	}
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r CustomEnvelopesClearThresholdResponse) GetJSON200() *CustomEnvelope {
+	return r.JSON200
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r CustomEnvelopesClearThresholdResponse) GetJSON401() *CustomEnvelopesClearThreshold401JSONResponseBody {
+	return r.JSON401
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r CustomEnvelopesClearThresholdResponse) GetJSON404() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesClearThreshold404JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesClearThreshold404JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON404
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r CustomEnvelopesClearThresholdResponse) GetJSON422() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type string `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesClearThreshold422JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON422
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r CustomEnvelopesClearThresholdResponse) GetJSON429() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesClearThreshold429JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesClearThreshold429JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON429
+}
+
+// GetJSON500 returns the response for an HTTP 500 `application/json` response
+func (r CustomEnvelopesClearThresholdResponse) GetJSON500() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesClearThreshold500JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesClearThreshold500JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON500
+}
+
+// GetBody returns the raw response body bytes
+func (r CustomEnvelopesClearThresholdResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomEnvelopesClearThresholdResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomEnvelopesClearThresholdResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r CustomEnvelopesClearThresholdResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type CustomEnvelopesSetThresholdResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *CustomEnvelope
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesSetThreshold400JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesSetThreshold400JSONResponseBodyObject `json:"object"`
+	}
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *CustomEnvelopesSetThreshold401JSONResponseBody
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesSetThreshold404JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesSetThreshold404JSONResponseBodyObject `json:"object"`
+	}
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type string `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesSetThreshold422JSONResponseBodyObject `json:"object"`
+	}
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesSetThreshold429JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesSetThreshold429JSONResponseBodyObject `json:"object"`
+	}
+	// JSON500 the response for an HTTP 500 `application/json` response
+	JSON500 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type CustomEnvelopesSetThreshold500JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object CustomEnvelopesSetThreshold500JSONResponseBodyObject `json:"object"`
+	}
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r CustomEnvelopesSetThresholdResponse) GetJSON200() *CustomEnvelope {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r CustomEnvelopesSetThresholdResponse) GetJSON400() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesSetThreshold400JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesSetThreshold400JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r CustomEnvelopesSetThresholdResponse) GetJSON401() *CustomEnvelopesSetThreshold401JSONResponseBody {
+	return r.JSON401
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r CustomEnvelopesSetThresholdResponse) GetJSON404() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesSetThreshold404JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesSetThreshold404JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON404
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r CustomEnvelopesSetThresholdResponse) GetJSON422() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type string `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesSetThreshold422JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON422
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r CustomEnvelopesSetThresholdResponse) GetJSON429() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesSetThreshold429JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesSetThreshold429JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON429
+}
+
+// GetJSON500 returns the response for an HTTP 500 `application/json` response
+func (r CustomEnvelopesSetThresholdResponse) GetJSON500() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type CustomEnvelopesSetThreshold500JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object CustomEnvelopesSetThreshold500JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON500
+}
+
+// GetBody returns the raw response body bytes
+func (r CustomEnvelopesSetThresholdResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomEnvelopesSetThresholdResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomEnvelopesSetThresholdResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r CustomEnvelopesSetThresholdResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type DocumentsListResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *DocumentList
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type DocumentsList400JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object DocumentsList400JSONResponseBodyObject `json:"object"`
+	}
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *DocumentsList401JSONResponseBody
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type DocumentsList429JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object DocumentsList429JSONResponseBodyObject `json:"object"`
+	}
+	// JSON500 the response for an HTTP 500 `application/json` response
+	JSON500 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type DocumentsList500JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object DocumentsList500JSONResponseBodyObject `json:"object"`
+	}
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r DocumentsListResponse) GetJSON200() *DocumentList {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r DocumentsListResponse) GetJSON400() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type DocumentsList400JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object DocumentsList400JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r DocumentsListResponse) GetJSON401() *DocumentsList401JSONResponseBody {
+	return r.JSON401
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r DocumentsListResponse) GetJSON429() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type DocumentsList429JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object DocumentsList429JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON429
+}
+
+// GetJSON500 returns the response for an HTTP 500 `application/json` response
+func (r DocumentsListResponse) GetJSON500() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type DocumentsList500JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object DocumentsList500JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON500
+}
+
+// GetBody returns the raw response body bytes
+func (r DocumentsListResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r DocumentsListResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r DocumentsListResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r DocumentsListResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type DocumentsCreateResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON201 the response for an HTTP 201 `application/json` response
+	JSON201 *Document
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type DocumentsCreate400JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object DocumentsCreate400JSONResponseBodyObject `json:"object"`
+	}
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *DocumentsCreate401JSONResponseBody
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type DocumentsCreate404JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object DocumentsCreate404JSONResponseBodyObject `json:"object"`
+	}
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type string `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object DocumentsCreate422JSONResponseBodyObject `json:"object"`
+	}
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type DocumentsCreate429JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object DocumentsCreate429JSONResponseBodyObject `json:"object"`
+	}
+	// JSON500 the response for an HTTP 500 `application/json` response
+	JSON500 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type DocumentsCreate500JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object DocumentsCreate500JSONResponseBodyObject `json:"object"`
+	}
+}
+
+// GetJSON201 returns the response for an HTTP 201 `application/json` response
+func (r DocumentsCreateResponse) GetJSON201() *Document {
+	return r.JSON201
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r DocumentsCreateResponse) GetJSON400() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type DocumentsCreate400JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object DocumentsCreate400JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r DocumentsCreateResponse) GetJSON401() *DocumentsCreate401JSONResponseBody {
+	return r.JSON401
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r DocumentsCreateResponse) GetJSON404() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type DocumentsCreate404JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object DocumentsCreate404JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON404
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r DocumentsCreateResponse) GetJSON422() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type string `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object DocumentsCreate422JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON422
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r DocumentsCreateResponse) GetJSON429() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type DocumentsCreate429JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object DocumentsCreate429JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON429
+}
+
+// GetJSON500 returns the response for an HTTP 500 `application/json` response
+func (r DocumentsCreateResponse) GetJSON500() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type DocumentsCreate500JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object DocumentsCreate500JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON500
+}
+
+// GetBody returns the raw response body bytes
+func (r DocumentsCreateResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r DocumentsCreateResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r DocumentsCreateResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r DocumentsCreateResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type DocumentsGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Document
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *DocumentsGet401JSONResponseBody
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type DocumentsGet404JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object DocumentsGet404JSONResponseBodyObject `json:"object"`
+	}
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type string `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object DocumentsGet422JSONResponseBodyObject `json:"object"`
+	}
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type DocumentsGet429JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object DocumentsGet429JSONResponseBodyObject `json:"object"`
+	}
+	// JSON500 the response for an HTTP 500 `application/json` response
+	JSON500 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type DocumentsGet500JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object DocumentsGet500JSONResponseBodyObject `json:"object"`
+	}
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r DocumentsGetResponse) GetJSON200() *Document {
+	return r.JSON200
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r DocumentsGetResponse) GetJSON401() *DocumentsGet401JSONResponseBody {
+	return r.JSON401
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r DocumentsGetResponse) GetJSON404() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type DocumentsGet404JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object DocumentsGet404JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON404
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r DocumentsGetResponse) GetJSON422() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type string `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object DocumentsGet422JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON422
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r DocumentsGetResponse) GetJSON429() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type DocumentsGet429JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object DocumentsGet429JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON429
+}
+
+// GetJSON500 returns the response for an HTTP 500 `application/json` response
+func (r DocumentsGetResponse) GetJSON500() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type DocumentsGet500JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object DocumentsGet500JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON500
+}
+
+// GetBody returns the raw response body bytes
+func (r DocumentsGetResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r DocumentsGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r DocumentsGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r DocumentsGetResponse) ContentType() string {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.Header.Get("Content-Type")
 	}
@@ -80944,6 +91134,209 @@ func (r ReportsRunAdHocSampleResponse) ContentType() string {
 	return ""
 }
 
+type ReportsPreviewScheduleResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *SchedulePreview
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type ReportsPreviewSchedule400JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object ReportsPreviewSchedule400JSONResponseBodyObject `json:"object"`
+	}
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *ReportsPreviewSchedule401JSONResponseBody
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type ReportsPreviewSchedule404JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object ReportsPreviewSchedule404JSONResponseBodyObject `json:"object"`
+	}
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type string `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object ReportsPreviewSchedule422JSONResponseBodyObject `json:"object"`
+	}
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type ReportsPreviewSchedule429JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object ReportsPreviewSchedule429JSONResponseBodyObject `json:"object"`
+	}
+	// JSON500 the response for an HTTP 500 `application/json` response
+	JSON500 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type ReportsPreviewSchedule500JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object ReportsPreviewSchedule500JSONResponseBodyObject `json:"object"`
+	}
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r ReportsPreviewScheduleResponse) GetJSON200() *SchedulePreview {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r ReportsPreviewScheduleResponse) GetJSON400() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type ReportsPreviewSchedule400JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object ReportsPreviewSchedule400JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r ReportsPreviewScheduleResponse) GetJSON401() *ReportsPreviewSchedule401JSONResponseBody {
+	return r.JSON401
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r ReportsPreviewScheduleResponse) GetJSON404() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type ReportsPreviewSchedule404JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object ReportsPreviewSchedule404JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON404
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r ReportsPreviewScheduleResponse) GetJSON422() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type string `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object ReportsPreviewSchedule422JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON422
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r ReportsPreviewScheduleResponse) GetJSON429() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type ReportsPreviewSchedule429JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object ReportsPreviewSchedule429JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON429
+}
+
+// GetJSON500 returns the response for an HTTP 500 `application/json` response
+func (r ReportsPreviewScheduleResponse) GetJSON500() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type ReportsPreviewSchedule500JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object ReportsPreviewSchedule500JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON500
+}
+
+// GetBody returns the raw response body bytes
+func (r ReportsPreviewScheduleResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r ReportsPreviewScheduleResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ReportsPreviewScheduleResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r ReportsPreviewScheduleResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
 type ReportsDeleteReportResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -81688,6 +92081,147 @@ func (r ReportsRunSavedReportSampleResponse) StatusCode() int {
 
 // ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
 func (r ReportsRunSavedReportSampleResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type ReportsListReportExportsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *ReportExportList
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type ReportsListReportExports400JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object ReportsListReportExports400JSONResponseBodyObject `json:"object"`
+	}
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *ReportsListReportExports401JSONResponseBody
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type ReportsListReportExports429JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object ReportsListReportExports429JSONResponseBodyObject `json:"object"`
+	}
+	// JSON500 the response for an HTTP 500 `application/json` response
+	JSON500 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type ReportsListReportExports500JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object ReportsListReportExports500JSONResponseBodyObject `json:"object"`
+	}
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r ReportsListReportExportsResponse) GetJSON200() *ReportExportList {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r ReportsListReportExportsResponse) GetJSON400() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type ReportsListReportExports400JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object ReportsListReportExports400JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r ReportsListReportExportsResponse) GetJSON401() *ReportsListReportExports401JSONResponseBody {
+	return r.JSON401
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r ReportsListReportExportsResponse) GetJSON429() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type ReportsListReportExports429JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object ReportsListReportExports429JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON429
+}
+
+// GetJSON500 returns the response for an HTTP 500 `application/json` response
+func (r ReportsListReportExportsResponse) GetJSON500() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type ReportsListReportExports500JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object ReportsListReportExports500JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON500
+}
+
+// GetBody returns the raw response body bytes
+func (r ReportsListReportExportsResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r ReportsListReportExportsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ReportsListReportExportsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r ReportsListReportExportsResponse) ContentType() string {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.Header.Get("Content-Type")
 	}
@@ -88939,6 +99473,381 @@ func (r TemplatesUpdateResponse) ContentType() string {
 	return ""
 }
 
+type TemplatesCopyResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON201 the response for an HTTP 201 `application/json` response
+	JSON201 *Template
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type TemplatesCopy400JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object TemplatesCopy400JSONResponseBodyObject `json:"object"`
+	}
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *TemplatesCopy401JSONResponseBody
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type TemplatesCopy404JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object TemplatesCopy404JSONResponseBodyObject `json:"object"`
+	}
+	// JSON422 the response for an HTTP 422 `application/json` response
+	JSON422 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type string `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object TemplatesCopy422JSONResponseBodyObject `json:"object"`
+	}
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type TemplatesCopy429JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object TemplatesCopy429JSONResponseBodyObject `json:"object"`
+	}
+	// JSON500 the response for an HTTP 500 `application/json` response
+	JSON500 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type TemplatesCopy500JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object TemplatesCopy500JSONResponseBodyObject `json:"object"`
+	}
+}
+
+// GetJSON201 returns the response for an HTTP 201 `application/json` response
+func (r TemplatesCopyResponse) GetJSON201() *Template {
+	return r.JSON201
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r TemplatesCopyResponse) GetJSON400() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type TemplatesCopy400JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object TemplatesCopy400JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r TemplatesCopyResponse) GetJSON401() *TemplatesCopy401JSONResponseBody {
+	return r.JSON401
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r TemplatesCopyResponse) GetJSON404() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type TemplatesCopy404JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object TemplatesCopy404JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON404
+}
+
+// GetJSON422 returns the response for an HTTP 422 `application/json` response
+func (r TemplatesCopyResponse) GetJSON422() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type string `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object TemplatesCopy422JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON422
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r TemplatesCopyResponse) GetJSON429() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type TemplatesCopy429JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object TemplatesCopy429JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON429
+}
+
+// GetJSON500 returns the response for an HTTP 500 `application/json` response
+func (r TemplatesCopyResponse) GetJSON500() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type TemplatesCopy500JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object TemplatesCopy500JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON500
+}
+
+// GetBody returns the raw response body bytes
+func (r TemplatesCopyResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r TemplatesCopyResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r TemplatesCopyResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r TemplatesCopyResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type ThumbnailsGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *ThumbnailList
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type ThumbnailsGet400JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object ThumbnailsGet400JSONResponseBodyObject `json:"object"`
+	}
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type ThumbnailsGet401JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object ThumbnailsGet401JSONResponseBodyObject `json:"object"`
+	}
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *ThumbnailsGet403JSONResponseBody
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type ThumbnailsGet429JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object ThumbnailsGet429JSONResponseBodyObject `json:"object"`
+	}
+	// JSON500 the response for an HTTP 500 `application/json` response
+	JSON500 *struct {
+		// Error The error object which has information on the error encountered.
+		Error struct {
+			// Message A human readable message describing the error.
+			Message string `json:"message"`
+
+			// Type A stable machine-friendly identifier for the error.
+			Type ThumbnailsGet500JSONResponseBodyErrorType `json:"type"`
+		} `json:"error"`
+
+		// Object Always "error".
+		Object ThumbnailsGet500JSONResponseBodyObject `json:"object"`
+	}
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r ThumbnailsGetResponse) GetJSON200() *ThumbnailList {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r ThumbnailsGetResponse) GetJSON400() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type ThumbnailsGet400JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object ThumbnailsGet400JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r ThumbnailsGetResponse) GetJSON401() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type ThumbnailsGet401JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object ThumbnailsGet401JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON401
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r ThumbnailsGetResponse) GetJSON403() *ThumbnailsGet403JSONResponseBody {
+	return r.JSON403
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r ThumbnailsGetResponse) GetJSON429() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type ThumbnailsGet429JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object ThumbnailsGet429JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON429
+}
+
+// GetJSON500 returns the response for an HTTP 500 `application/json` response
+func (r ThumbnailsGetResponse) GetJSON500() *struct {
+	// Error The error object which has information on the error encountered.
+	Error struct {
+		// Message A human readable message describing the error.
+		Message string `json:"message"`
+
+		// Type A stable machine-friendly identifier for the error.
+		Type ThumbnailsGet500JSONResponseBodyErrorType `json:"type"`
+	} `json:"error"`
+
+	// Object Always "error".
+	Object ThumbnailsGet500JSONResponseBodyObject `json:"object"`
+} {
+	return r.JSON500
+}
+
+// GetBody returns the raw response body bytes
+func (r ThumbnailsGetResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r ThumbnailsGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ThumbnailsGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r ThumbnailsGetResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
 type TrackersListResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -92308,6 +103217,230 @@ func (r WebhooksListInvocationsResponse) ContentType() string {
 	return ""
 }
 
+type AccuracyStatementsListResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *struct {
+		Data    *AccuracyStatementList                           `json:"data,omitempty"`
+		Message *string                                          `json:"message,omitempty"`
+		Status  *AccuracyStatementsList200JSONResponseBodyStatus `json:"status,omitempty"`
+	}
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *string
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r AccuracyStatementsListResponse) GetJSON200() *struct {
+	Data    *AccuracyStatementList                           `json:"data,omitempty"`
+	Message *string                                          `json:"message,omitempty"`
+	Status  *AccuracyStatementsList200JSONResponseBodyStatus `json:"status,omitempty"`
+} {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r AccuracyStatementsListResponse) GetJSON400() *string {
+	return r.JSON400
+}
+
+// GetBody returns the raw response body bytes
+func (r AccuracyStatementsListResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r AccuracyStatementsListResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r AccuracyStatementsListResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r AccuracyStatementsListResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type AccuracyStatementsCreateResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON201 the response for an HTTP 201 `application/json` response
+	JSON201 *struct {
+		Data    *AccuracyStatement                                 `json:"data,omitempty"`
+		Message *string                                            `json:"message,omitempty"`
+		Status  *AccuracyStatementsCreate201JSONResponseBodyStatus `json:"status,omitempty"`
+	}
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *string
+}
+
+// GetJSON201 returns the response for an HTTP 201 `application/json` response
+func (r AccuracyStatementsCreateResponse) GetJSON201() *struct {
+	Data    *AccuracyStatement                                 `json:"data,omitempty"`
+	Message *string                                            `json:"message,omitempty"`
+	Status  *AccuracyStatementsCreate201JSONResponseBodyStatus `json:"status,omitempty"`
+} {
+	return r.JSON201
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r AccuracyStatementsCreateResponse) GetJSON400() *string {
+	return r.JSON400
+}
+
+// GetBody returns the raw response body bytes
+func (r AccuracyStatementsCreateResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r AccuracyStatementsCreateResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r AccuracyStatementsCreateResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r AccuracyStatementsCreateResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type AccuracyStatementsGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *struct {
+		Data    *AccuracyStatement                              `json:"data,omitempty"`
+		Message *string                                         `json:"message,omitempty"`
+		Status  *AccuracyStatementsGet200JSONResponseBodyStatus `json:"status,omitempty"`
+	}
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *string
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r AccuracyStatementsGetResponse) GetJSON200() *struct {
+	Data    *AccuracyStatement                              `json:"data,omitempty"`
+	Message *string                                         `json:"message,omitempty"`
+	Status  *AccuracyStatementsGet200JSONResponseBodyStatus `json:"status,omitempty"`
+} {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r AccuracyStatementsGetResponse) GetJSON400() *string {
+	return r.JSON400
+}
+
+// GetBody returns the raw response body bytes
+func (r AccuracyStatementsGetResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r AccuracyStatementsGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r AccuracyStatementsGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r AccuracyStatementsGetResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type AccuracyStatementsGenerateResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *struct {
+		Data    *AccuracyStatement                                   `json:"data,omitempty"`
+		Message *string                                              `json:"message,omitempty"`
+		Status  *AccuracyStatementsGenerate200JSONResponseBodyStatus `json:"status,omitempty"`
+	}
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *string
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r AccuracyStatementsGenerateResponse) GetJSON200() *struct {
+	Data    *AccuracyStatement                                   `json:"data,omitempty"`
+	Message *string                                              `json:"message,omitempty"`
+	Status  *AccuracyStatementsGenerate200JSONResponseBodyStatus `json:"status,omitempty"`
+} {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r AccuracyStatementsGenerateResponse) GetJSON400() *string {
+	return r.JSON400
+}
+
+// GetBody returns the raw response body bytes
+func (r AccuracyStatementsGenerateResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r AccuracyStatementsGenerateResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r AccuracyStatementsGenerateResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r AccuracyStatementsGenerateResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
 type StandardAPIGetLookupInfoResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -93975,6 +105108,311 @@ func (c *ClientWithResponses) ContactsGetWithResponse(ctx context.Context, id st
 	return ParseContactsGetResponse(rsp)
 }
 
+// CustomEnvelopesListWithResponse List Custom Envelopes
+//
+// Gets a list of custom envelopes for the user.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /print-mail/v1/custom_envelopes (the `CustomEnvelopesList` operationId).
+func (c *ClientWithResponses) CustomEnvelopesListWithResponse(ctx context.Context, params *CustomEnvelopesListParams, reqEditors ...RequestEditorFn) (*CustomEnvelopesListResponse, error) {
+	rsp, err := c.CustomEnvelopesList(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomEnvelopesListResponse(rsp)
+}
+
+// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartWithBodyWithResponse Create Custom Envelope
+//
+// Creates a new custom envelope. The artwork is reviewed after it is
+// uploaded: the custom envelope is returned with a `status` of `pending`
+// and moves to `approved` or `rejected` once the review finishes. Create a custom envelope via a multipart/form-data request. Accepts the
+// same fields as the JSON create body; use this content type to upload the
+// PDF file directly.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /print-mail/v1/custom_envelopes (the `CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart` operationId).
+func (c *ClientWithResponses) CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartWithBodyWithResponse(ctx context.Context, params *CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartResponse, error) {
+	rsp, err := c.CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartWithBody(ctx, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartResponse(rsp)
+}
+
+// CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartWithResponse Create Custom Envelope
+//
+// Creates a new custom envelope. The artwork is reviewed after it is
+// uploaded: the custom envelope is returned with a `status` of `pending`
+// and moves to `approved` or `rejected` once the review finishes. Create a custom envelope via a multipart/form-data request. Accepts the
+// same fields as the JSON create body; use this content type to upload the
+// PDF file directly.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /print-mail/v1/custom_envelopes (the `CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart` operationId).
+func (c *ClientWithResponses) CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartWithResponse(ctx context.Context, params *CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartParams, body CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartResponse, error) {
+	rsp, err := c.CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart(ctx, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartResponse(rsp)
+}
+
+// CustomEnvelopesGetWithResponse Get Custom Envelope
+//
+// Gets the information for a custom envelope by `id`. This should be a
+// unique identifying string starting with `custom_envelope_`.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /print-mail/v1/custom_envelopes/{id} (the `CustomEnvelopesGet` operationId).
+func (c *ClientWithResponses) CustomEnvelopesGetWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*CustomEnvelopesGetResponse, error) {
+	rsp, err := c.CustomEnvelopesGet(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomEnvelopesGetResponse(rsp)
+}
+
+// CustomEnvelopesListOrdersWithResponse List Custom Envelope Orders
+//
+// Gets a list of orders for the custom envelope by `id`.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /print-mail/v1/custom_envelopes/{id}/orders (the `CustomEnvelopesListOrders` operationId).
+func (c *ClientWithResponses) CustomEnvelopesListOrdersWithResponse(ctx context.Context, id string, params *CustomEnvelopesListOrdersParams, reqEditors ...RequestEditorFn) (*CustomEnvelopesListOrdersResponse, error) {
+	rsp, err := c.CustomEnvelopesListOrders(ctx, id, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomEnvelopesListOrdersResponse(rsp)
+}
+
+// CustomEnvelopesCreateOrderWithBodyWithResponse Create Custom Envelope Order
+//
+// Creates a batch order of custom envelopes. The minimum order quantity is
+// 5000.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /print-mail/v1/custom_envelopes/{id}/orders (the `CustomEnvelopesCreateOrder` operationId).
+func (c *ClientWithResponses) CustomEnvelopesCreateOrderWithBodyWithResponse(ctx context.Context, id string, params *CustomEnvelopesCreateOrderParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomEnvelopesCreateOrderResponse, error) {
+	rsp, err := c.CustomEnvelopesCreateOrderWithBody(ctx, id, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomEnvelopesCreateOrderResponse(rsp)
+}
+
+// CustomEnvelopesCreateOrderWithResponse Create Custom Envelope Order
+//
+// Creates a batch order of custom envelopes. The minimum order quantity is
+// 5000.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /print-mail/v1/custom_envelopes/{id}/orders (the `CustomEnvelopesCreateOrder` operationId).
+func (c *ClientWithResponses) CustomEnvelopesCreateOrderWithResponse(ctx context.Context, id string, params *CustomEnvelopesCreateOrderParams, body CustomEnvelopesCreateOrderJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomEnvelopesCreateOrderResponse, error) {
+	rsp, err := c.CustomEnvelopesCreateOrder(ctx, id, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomEnvelopesCreateOrderResponse(rsp)
+}
+
+// CustomEnvelopesCancelOrderWithResponse Cancel Custom Envelope Order
+//
+// Cancels the custom envelope order by `orderID` for the custom envelope
+// by `id`. Only orders whose status is `placed` can be cancelled. Note that
+// this operation cannot be undone.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /print-mail/v1/custom_envelopes/{id}/orders/{orderID} (the `CustomEnvelopesCancelOrder` operationId).
+func (c *ClientWithResponses) CustomEnvelopesCancelOrderWithResponse(ctx context.Context, id string, orderID string, params *CustomEnvelopesCancelOrderParams, reqEditors ...RequestEditorFn) (*CustomEnvelopesCancelOrderResponse, error) {
+	rsp, err := c.CustomEnvelopesCancelOrder(ctx, id, orderID, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomEnvelopesCancelOrderResponse(rsp)
+}
+
+// CustomEnvelopesGetOrderWithResponse Get Custom Envelope Order
+//
+// Gets a specific custom envelope order by custom envelope ID as `id` and
+// custom envelope order ID as `orderID`.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /print-mail/v1/custom_envelopes/{id}/orders/{orderID} (the `CustomEnvelopesGetOrder` operationId).
+func (c *ClientWithResponses) CustomEnvelopesGetOrderWithResponse(ctx context.Context, id string, orderID string, params *CustomEnvelopesGetOrderParams, reqEditors ...RequestEditorFn) (*CustomEnvelopesGetOrderResponse, error) {
+	rsp, err := c.CustomEnvelopesGetOrder(ctx, id, orderID, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomEnvelopesGetOrderResponse(rsp)
+}
+
+// CustomEnvelopesFillTestOrderWithResponse Fill Test Custom Envelope Order
+//
+// Fills the custom envelope order by `orderID` for the custom envelope by
+// `id`. This is only available in test mode and can be used to simulate
+// how a live order would be filled.
+//
+// Note: this will fail with a `custom_envelope_order_fill_failed_error` if
+// the order's status is not `in_progress`, and with a
+// `custom_envelope_order_fill_not_approved_error` if the custom envelope
+// has not been approved.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /print-mail/v1/custom_envelopes/{id}/orders/{orderID}/fills (the `CustomEnvelopesFillTestOrder` operationId).
+func (c *ClientWithResponses) CustomEnvelopesFillTestOrderWithResponse(ctx context.Context, id string, orderID string, params *CustomEnvelopesFillTestOrderParams, reqEditors ...RequestEditorFn) (*CustomEnvelopesFillTestOrderResponse, error) {
+	rsp, err := c.CustomEnvelopesFillTestOrder(ctx, id, orderID, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomEnvelopesFillTestOrderResponse(rsp)
+}
+
+// CustomEnvelopesProgressTestOrderWithResponse Progress Test Custom Envelope Order
+//
+// Moves the custom envelope order by `orderID` for the custom envelope by
+// `id` from `placed` to `in_progress`. This is only available in test mode
+// and can be used to simulate how a live order would be produced.
+//
+// Note: this will fail with a
+// `custom_envelope_order_progress_failed_error` if the order's status is
+// not `placed`.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /print-mail/v1/custom_envelopes/{id}/orders/{orderID}/progress (the `CustomEnvelopesProgressTestOrder` operationId).
+func (c *ClientWithResponses) CustomEnvelopesProgressTestOrderWithResponse(ctx context.Context, id string, orderID string, reqEditors ...RequestEditorFn) (*CustomEnvelopesProgressTestOrderResponse, error) {
+	rsp, err := c.CustomEnvelopesProgressTestOrder(ctx, id, orderID, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomEnvelopesProgressTestOrderResponse(rsp)
+}
+
+// CustomEnvelopesClearThresholdWithResponse Clear Custom Envelope Low-Inventory Threshold
+//
+// Clears the low-inventory threshold for the custom envelope by `id`. We
+// stop sending low-inventory alerts for the custom envelope.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /print-mail/v1/custom_envelopes/{id}/threshold (the `CustomEnvelopesClearThreshold` operationId).
+func (c *ClientWithResponses) CustomEnvelopesClearThresholdWithResponse(ctx context.Context, id string, params *CustomEnvelopesClearThresholdParams, reqEditors ...RequestEditorFn) (*CustomEnvelopesClearThresholdResponse, error) {
+	rsp, err := c.CustomEnvelopesClearThreshold(ctx, id, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomEnvelopesClearThresholdResponse(rsp)
+}
+
+// CustomEnvelopesSetThresholdWithBodyWithResponse Set Custom Envelope Low-Inventory Threshold
+//
+// Sets the low-inventory threshold for the custom envelope by `id`,
+// replacing any threshold that was set before. When the available quantity
+// drops to or below the threshold, we send a low-inventory alert email to
+// the Admins of your organization.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /print-mail/v1/custom_envelopes/{id}/threshold (the `CustomEnvelopesSetThreshold` operationId).
+func (c *ClientWithResponses) CustomEnvelopesSetThresholdWithBodyWithResponse(ctx context.Context, id string, params *CustomEnvelopesSetThresholdParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomEnvelopesSetThresholdResponse, error) {
+	rsp, err := c.CustomEnvelopesSetThresholdWithBody(ctx, id, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomEnvelopesSetThresholdResponse(rsp)
+}
+
+// CustomEnvelopesSetThresholdWithResponse Set Custom Envelope Low-Inventory Threshold
+//
+// Sets the low-inventory threshold for the custom envelope by `id`,
+// replacing any threshold that was set before. When the available quantity
+// drops to or below the threshold, we send a low-inventory alert email to
+// the Admins of your organization.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /print-mail/v1/custom_envelopes/{id}/threshold (the `CustomEnvelopesSetThreshold` operationId).
+func (c *ClientWithResponses) CustomEnvelopesSetThresholdWithResponse(ctx context.Context, id string, params *CustomEnvelopesSetThresholdParams, body CustomEnvelopesSetThresholdJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomEnvelopesSetThresholdResponse, error) {
+	rsp, err := c.CustomEnvelopesSetThreshold(ctx, id, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomEnvelopesSetThresholdResponse(rsp)
+}
+
+// DocumentsListWithResponse List Documents
+//
+// Gets a list of documents for the user.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /print-mail/v1/documents (the `DocumentsList` operationId).
+func (c *ClientWithResponses) DocumentsListWithResponse(ctx context.Context, params *DocumentsListParams, reqEditors ...RequestEditorFn) (*DocumentsListResponse, error) {
+	rsp, err := c.DocumentsList(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDocumentsListResponse(rsp)
+}
+
+// DocumentsCreateWithBodyWithResponse Create Document
+//
+// Creates a new document by rendering a template with merge data.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /print-mail/v1/documents (the `DocumentsCreate` operationId).
+func (c *ClientWithResponses) DocumentsCreateWithBodyWithResponse(ctx context.Context, params *DocumentsCreateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DocumentsCreateResponse, error) {
+	rsp, err := c.DocumentsCreateWithBody(ctx, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDocumentsCreateResponse(rsp)
+}
+
+// DocumentsCreateWithResponse Create Document
+//
+// Creates a new document by rendering a template with merge data.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /print-mail/v1/documents (the `DocumentsCreate` operationId).
+func (c *ClientWithResponses) DocumentsCreateWithResponse(ctx context.Context, params *DocumentsCreateParams, body DocumentsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*DocumentsCreateResponse, error) {
+	rsp, err := c.DocumentsCreate(ctx, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDocumentsCreateResponse(rsp)
+}
+
+// DocumentsGetWithResponse Get Document
+//
+// Gets the information for a document by `id`. This should be a unique
+// identifying string starting with `document_`.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /print-mail/v1/documents/{id} (the `DocumentsGet` operationId).
+func (c *ClientWithResponses) DocumentsGetWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*DocumentsGetResponse, error) {
+	rsp, err := c.DocumentsGet(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDocumentsGetResponse(rsp)
+}
+
 // EventsListWithResponse List Events
 //
 // Retrieve a paginated list of Events.
@@ -94005,7 +105443,7 @@ func (c *ClientWithResponses) LettersListWithResponse(ctx context.Context, param
 	return ParseLettersListResponse(rsp)
 }
 
-// LettersCreateJSONLettersCreateMultipartWithBodyWithResponse Create Letter Create Letter
+// LettersCreateJSONLettersCreateMultipartWithBodyWithResponse Create Letter
 //
 // Create a letter. Note that you can supply one of the following:
 // - HTML content for the letter
@@ -94026,7 +105464,7 @@ func (c *ClientWithResponses) LettersCreateJSONLettersCreateMultipartWithBodyWit
 	return ParseLettersCreateJSONLettersCreateMultipartResponse(rsp)
 }
 
-// LettersCreateJSONLettersCreateMultipartWithResponse Create Letter Create Letter
+// LettersCreateJSONLettersCreateMultipartWithResponse Create Letter
 //
 // Create a letter. Note that you can supply one of the following:
 // - HTML content for the letter
@@ -94443,7 +105881,7 @@ func (c *ClientWithResponses) PostcardsListWithResponse(ctx context.Context, par
 	return ParsePostcardsListResponse(rsp)
 }
 
-// PostcardsCreateJSONPostcardsCreateMultipartWithBodyWithResponse Create Postcard Create Postcard
+// PostcardsCreateJSONPostcardsCreateMultipartWithBodyWithResponse Create Postcard
 //
 // Create a postcard. Note that you can supply one of the following:
 // - HTML content for the front and back of the postcard
@@ -94464,7 +105902,7 @@ func (c *ClientWithResponses) PostcardsCreateJSONPostcardsCreateMultipartWithBod
 	return ParsePostcardsCreateJSONPostcardsCreateMultipartResponse(rsp)
 }
 
-// PostcardsCreateJSONPostcardsCreateMultipartWithResponse Create Postcard Create Postcard
+// PostcardsCreateJSONPostcardsCreateMultipartWithResponse Create Postcard
 //
 // Create a postcard. Note that you can supply one of the following:
 // - HTML content for the front and back of the postcard
@@ -94673,6 +106111,40 @@ func (c *ClientWithResponses) ReportsRunAdHocSampleWithResponse(ctx context.Cont
 	return ParseReportsRunAdHocSampleResponse(rsp)
 }
 
+// ReportsPreviewScheduleWithBodyWithResponse Preview a Report Schedule
+//
+// Work out when a schedule would actually run, without saving anything. Takes the same
+// fields as the `schedule` on a report, plus an optional `sqlQuery` so you can check
+// whether that query is schedulable at all (a parameterized query is not).
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /print-mail/v1/reports/schedule_previews (the `ReportsPreviewSchedule` operationId).
+func (c *ClientWithResponses) ReportsPreviewScheduleWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ReportsPreviewScheduleResponse, error) {
+	rsp, err := c.ReportsPreviewScheduleWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseReportsPreviewScheduleResponse(rsp)
+}
+
+// ReportsPreviewScheduleWithResponse Preview a Report Schedule
+//
+// Work out when a schedule would actually run, without saving anything. Takes the same
+// fields as the `schedule` on a report, plus an optional `sqlQuery` so you can check
+// whether that query is schedulable at all (a parameterized query is not).
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /print-mail/v1/reports/schedule_previews (the `ReportsPreviewSchedule` operationId).
+func (c *ClientWithResponses) ReportsPreviewScheduleWithResponse(ctx context.Context, body ReportsPreviewScheduleJSONRequestBody, reqEditors ...RequestEditorFn) (*ReportsPreviewScheduleResponse, error) {
+	rsp, err := c.ReportsPreviewSchedule(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseReportsPreviewScheduleResponse(rsp)
+}
+
 // ReportsDeleteReportWithResponse Delete Saved Report
 //
 // Delete a saved report definition. This action cannot be undone.
@@ -94766,6 +106238,21 @@ func (c *ClientWithResponses) ReportsRunSavedReportSampleWithResponse(ctx contex
 		return nil, err
 	}
 	return ParseReportsRunSavedReportSampleResponse(rsp)
+}
+
+// ReportsListReportExportsWithResponse List Report Exports
+//
+// Retrieve a list of the export jobs taken from a report, newest first.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /print-mail/v1/reports/{reportID}/exports (the `ReportsListReportExports` operationId).
+func (c *ClientWithResponses) ReportsListReportExportsWithResponse(ctx context.Context, reportID string, params *ReportsListReportExportsParams, reqEditors ...RequestEditorFn) (*ReportsListReportExportsResponse, error) {
+	rsp, err := c.ReportsListReportExports(ctx, reportID, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseReportsListReportExportsResponse(rsp)
 }
 
 // ReportsCreateReportExportWithBodyWithResponse Create a Report Export
@@ -95013,7 +106500,7 @@ func (c *ClientWithResponses) SelfMailersListWithResponse(ctx context.Context, p
 	return ParseSelfMailersListResponse(rsp)
 }
 
-// SelfMailersCreateJSONSelfMailersCreateMultipartWithBodyWithResponse Create Self Mailer Create Self Mailer
+// SelfMailersCreateJSONSelfMailersCreateMultipartWithBodyWithResponse Create Self Mailer
 //
 // Create a self-mailer. Note that you can supply one of the following:
 // - HTML content for the inside and outside of the self-mailer
@@ -95034,7 +106521,7 @@ func (c *ClientWithResponses) SelfMailersCreateJSONSelfMailersCreateMultipartWit
 	return ParseSelfMailersCreateJSONSelfMailersCreateMultipartResponse(rsp)
 }
 
-// SelfMailersCreateJSONSelfMailersCreateMultipartWithResponse Create Self Mailer Create Self Mailer
+// SelfMailersCreateJSONSelfMailersCreateMultipartWithResponse Create Self Mailer
 //
 // Create a self-mailer. Note that you can supply one of the following:
 // - HTML content for the inside and outside of the self-mailer
@@ -95139,7 +106626,7 @@ func (c *ClientWithResponses) SnapPacksListWithResponse(ctx context.Context, par
 	return ParseSnapPacksListResponse(rsp)
 }
 
-// SnapPacksCreateJSONSnapPacksCreateMultipartWithBodyWithResponse Create Snap Pack Create Snap Pack
+// SnapPacksCreateJSONSnapPacksCreateMultipartWithBodyWithResponse Create Snap Pack
 //
 // Create a snap pack. You can supply one of the following:
 // - HTML content for the inside and outside of the snap pack
@@ -95160,7 +106647,7 @@ func (c *ClientWithResponses) SnapPacksCreateJSONSnapPacksCreateMultipartWithBod
 	return ParseSnapPacksCreateJSONSnapPacksCreateMultipartResponse(rsp)
 }
 
-// SnapPacksCreateJSONSnapPacksCreateMultipartWithResponse Create Snap Pack Create Snap Pack
+// SnapPacksCreateJSONSnapPacksCreateMultipartWithResponse Create Snap Pack
 //
 // Create a snap pack. You can supply one of the following:
 // - HTML content for the inside and outside of the snap pack
@@ -95514,8 +107001,8 @@ func (c *ClientWithResponses) TemplateEditorSessionsListWithResponse(ctx context
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
 // Corresponds with POST /print-mail/v1/template_editor_sessions (the `TemplateEditorSessionsCreate` operationId).
-func (c *ClientWithResponses) TemplateEditorSessionsCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*TemplateEditorSessionsCreateResponse, error) {
-	rsp, err := c.TemplateEditorSessionsCreateWithBody(ctx, contentType, body, reqEditors...)
+func (c *ClientWithResponses) TemplateEditorSessionsCreateWithBodyWithResponse(ctx context.Context, params *TemplateEditorSessionsCreateParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*TemplateEditorSessionsCreateResponse, error) {
+	rsp, err := c.TemplateEditorSessionsCreateWithBody(ctx, params, contentType, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
@@ -95532,8 +107019,8 @@ func (c *ClientWithResponses) TemplateEditorSessionsCreateWithBodyWithResponse(c
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
 // Corresponds with POST /print-mail/v1/template_editor_sessions (the `TemplateEditorSessionsCreate` operationId).
-func (c *ClientWithResponses) TemplateEditorSessionsCreateWithResponse(ctx context.Context, body TemplateEditorSessionsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*TemplateEditorSessionsCreateResponse, error) {
-	rsp, err := c.TemplateEditorSessionsCreate(ctx, body, reqEditors...)
+func (c *ClientWithResponses) TemplateEditorSessionsCreateWithResponse(ctx context.Context, params *TemplateEditorSessionsCreateParams, body TemplateEditorSessionsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*TemplateEditorSessionsCreateResponse, error) {
+	rsp, err := c.TemplateEditorSessionsCreate(ctx, params, body, reqEditors...)
 	if err != nil {
 		return nil, err
 	}
@@ -95658,6 +107145,82 @@ func (c *ClientWithResponses) TemplatesUpdateWithResponse(ctx context.Context, i
 		return nil, err
 	}
 	return ParseTemplatesUpdateResponse(rsp)
+}
+
+// TemplatesCopyWithBodyWithResponse Copy Template
+//
+// Copy a template, including its template editor design and format
+// settings. The template is found by ID in your organization, in whichever
+// mode it's in. By default the copy is created in your organization, in the
+// mode of your API key, so an empty body duplicates the template. The copy
+// keeps the template's description and metadata.
+//
+// A test API key only finds test templates and can only copy into test
+// mode. A live API key can copy between test and live mode in either
+// direction.
+//
+// A template that uses trackers or a custom envelope can only be copied
+// within your organization and the same mode, where the copy uses the same
+// trackers and envelope. Images keep their URLs.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /print-mail/v1/templates/{id}/copy (the `TemplatesCopy` operationId).
+func (c *ClientWithResponses) TemplatesCopyWithBodyWithResponse(ctx context.Context, id string, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*TemplatesCopyResponse, error) {
+	rsp, err := c.TemplatesCopyWithBody(ctx, id, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseTemplatesCopyResponse(rsp)
+}
+
+// TemplatesCopyWithResponse Copy Template
+//
+// Copy a template, including its template editor design and format
+// settings. The template is found by ID in your organization, in whichever
+// mode it's in. By default the copy is created in your organization, in the
+// mode of your API key, so an empty body duplicates the template. The copy
+// keeps the template's description and metadata.
+//
+// A test API key only finds test templates and can only copy into test
+// mode. A live API key can copy between test and live mode in either
+// direction.
+//
+// A template that uses trackers or a custom envelope can only be copied
+// within your organization and the same mode, where the copy uses the same
+// trackers and envelope. Images keep their URLs.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /print-mail/v1/templates/{id}/copy (the `TemplatesCopy` operationId).
+func (c *ClientWithResponses) TemplatesCopyWithResponse(ctx context.Context, id string, body TemplatesCopyJSONRequestBody, reqEditors ...RequestEditorFn) (*TemplatesCopyResponse, error) {
+	rsp, err := c.TemplatesCopy(ctx, id, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseTemplatesCopyResponse(rsp)
+}
+
+// ThumbnailsGetWithResponse Get Thumbnails
+//
+// Gets the thumbnails of up to 100 resources.
+//
+// IDs that have no thumbnail yet, and IDs of resources that are deleted,
+// don't exist, or belong to another organization or mode, are left out of
+// `data` without an error. Poll until an ID appears with `status` of
+// `generated`.
+//
+// This endpoint is limited to 10 requests per minute.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /print-mail/v1/thumbnails (the `ThumbnailsGet` operationId).
+func (c *ClientWithResponses) ThumbnailsGetWithResponse(ctx context.Context, params *ThumbnailsGetParams, reqEditors ...RequestEditorFn) (*ThumbnailsGetResponse, error) {
+	rsp, err := c.ThumbnailsGet(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseThumbnailsGetResponse(rsp)
 }
 
 // TrackersListWithResponse List Trackers
@@ -96046,6 +107609,93 @@ func (c *ClientWithResponses) WebhooksListInvocationsWithResponse(ctx context.Co
 	return ParseWebhooksListInvocationsResponse(rsp)
 }
 
+// AccuracyStatementsListWithResponse List Accuracy Statements
+//
+// List the accuracy statements belonging to your organization.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /v1/accuracy_statements (the `AccuracyStatementsList` operationId).
+func (c *ClientWithResponses) AccuracyStatementsListWithResponse(ctx context.Context, params *AccuracyStatementsListParams, reqEditors ...RequestEditorFn) (*AccuracyStatementsListResponse, error) {
+	rsp, err := c.AccuracyStatementsList(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAccuracyStatementsListResponse(rsp)
+}
+
+// AccuracyStatementsCreateWithBodyWithResponse Create Accuracy Statement
+//
+// Create a new accuracy statement.
+//
+// The statement is created in `draft` status. Add addresses to it with
+// `POST /verifications/batch` (passing the ID as `accuracyStatement`),
+// then generate it with `POST /accuracy_statements/{id}/generate`.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /v1/accuracy_statements (the `AccuracyStatementsCreate` operationId).
+func (c *ClientWithResponses) AccuracyStatementsCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AccuracyStatementsCreateResponse, error) {
+	rsp, err := c.AccuracyStatementsCreateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAccuracyStatementsCreateResponse(rsp)
+}
+
+// AccuracyStatementsCreateWithResponse Create Accuracy Statement
+//
+// Create a new accuracy statement.
+//
+// The statement is created in `draft` status. Add addresses to it with
+// `POST /verifications/batch` (passing the ID as `accuracyStatement`),
+// then generate it with `POST /accuracy_statements/{id}/generate`.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /v1/accuracy_statements (the `AccuracyStatementsCreate` operationId).
+func (c *ClientWithResponses) AccuracyStatementsCreateWithResponse(ctx context.Context, body AccuracyStatementsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*AccuracyStatementsCreateResponse, error) {
+	rsp, err := c.AccuracyStatementsCreate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAccuracyStatementsCreateResponse(rsp)
+}
+
+// AccuracyStatementsGetWithResponse Get Accuracy Statement
+//
+// Retrieve a specific accuracy statement by its ID.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /v1/accuracy_statements/{id} (the `AccuracyStatementsGet` operationId).
+func (c *ClientWithResponses) AccuracyStatementsGetWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*AccuracyStatementsGetResponse, error) {
+	rsp, err := c.AccuracyStatementsGet(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAccuracyStatementsGetResponse(rsp)
+}
+
+// AccuracyStatementsGenerateWithResponse Generate Accuracy Statement
+//
+// Start generating a draft accuracy statement.
+//
+// The statement must be in `draft` status. Poll the statement with
+// `GET /accuracy_statements/{id}` until its status is `generated` or
+// `failed`.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /v1/accuracy_statements/{id}/generate (the `AccuracyStatementsGenerate` operationId).
+func (c *ClientWithResponses) AccuracyStatementsGenerateWithResponse(ctx context.Context, id string, reqEditors ...RequestEditorFn) (*AccuracyStatementsGenerateResponse, error) {
+	rsp, err := c.AccuracyStatementsGenerate(ctx, id, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAccuracyStatementsGenerateResponse(rsp)
+}
+
 // StandardAPIGetLookupInfoWithResponse performs a GET /v1/addver/ (the `StandardAPIGetLookupInfo` operationId) request.
 //
 // Returns your organization's current lookup usage and plan information.
@@ -96289,8 +107939,8 @@ func (c *ClientWithResponses) StandardAPIVerifyAddressWithResponse(ctx context.C
 // with any type of body and a specified content type.
 //
 // Verify a batch of US or Canadian addresses in a single request.
-// Each address can be freeform or structured, matching the same input formats
-// accepted by the single verification endpoint.
+// Each item is either a freeform string or the structured address fields
+// themselves.
 //
 // - Accepts up to 2,000 addresses per request.
 // - Uses 1 lookup per address (plus 1 more per address if geocoding).
@@ -96301,6 +107951,11 @@ func (c *ClientWithResponses) StandardAPIVerifyAddressWithResponse(ctx context.C
 // - If you are not subscribed and the batch would exceed your remaining free
 // lookups, the entire batch fails (nothing is verified). Size your batch to
 // the number of lookups you have left.
+// - To add the addresses to a draft accuracy statement (beta), pass its ID
+// as `accuracyStatement` and send every address as a structured object
+// with `inputID` and `accuracyStatementInclusion` (`include` or
+// `exclude`). Accuracy statements require a live API key and the feature
+// to be enabled for your organization.
 //
 // Returns a wrapper object for the known response body format(s).
 func (c *ClientWithResponses) StandardAPIVerifyBatchWithBodyWithResponse(ctx context.Context, params *StandardAPIVerifyBatchParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*StandardAPIVerifyBatchResponse, error) {
@@ -96315,8 +107970,8 @@ func (c *ClientWithResponses) StandardAPIVerifyBatchWithBodyWithResponse(ctx con
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
 // Verify a batch of US or Canadian addresses in a single request.
-// Each address can be freeform or structured, matching the same input formats
-// accepted by the single verification endpoint.
+// Each item is either a freeform string or the structured address fields
+// themselves.
 //
 // - Accepts up to 2,000 addresses per request.
 // - Uses 1 lookup per address (plus 1 more per address if geocoding).
@@ -96327,6 +107982,11 @@ func (c *ClientWithResponses) StandardAPIVerifyBatchWithBodyWithResponse(ctx con
 // - If you are not subscribed and the batch would exceed your remaining free
 // lookups, the entire batch fails (nothing is verified). Size your batch to
 // the number of lookups you have left.
+// - To add the addresses to a draft accuracy statement (beta), pass its ID
+// as `accuracyStatement` and send every address as a structured object
+// with `inputID` and `accuracyStatementInclusion` (`include` or
+// `exclude`). Accuracy statements require a live API key and the feature
+// to be enabled for your organization.
 func (c *ClientWithResponses) StandardAPIVerifyBatchWithResponse(ctx context.Context, params *StandardAPIVerifyBatchParams, body StandardAPIVerifyBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*StandardAPIVerifyBatchResponse, error) {
 	rsp, err := c.StandardAPIVerifyBatch(ctx, params, body, reqEditors...)
 	if err != nil {
@@ -96482,9 +108142,11 @@ func (c *ClientWithResponses) InternationalAPICompleteWithResponse(ctx context.C
 // InternationalAPIVerifyAddressWithBodyWithResponse performs a POST /v1/intl_addver/verifications (the `InternationalAPIVerifyAddress` operationId) request,
 // with any type of body and a specified content type.
 //
-// Verify and standardize an international address.
+// Verify and standardize an international address. Accepts two input formats:
 //
-// - Supports both structured and freeform address inputs.
+// 1. **Structured Address** — Verify and standardize a structured address (e.g., with `line1`, `city`, etc.).
+// 2. **Freeform Address** — Verify and standardize a freeform address written on a single line.
+//
 // - Specify `includeDetails=true` to get additional details as per the `IntlDetails` schema.
 // - Uses 1 lookup.
 //
@@ -96500,9 +108162,11 @@ func (c *ClientWithResponses) InternationalAPIVerifyAddressWithBodyWithResponse(
 // InternationalAPIVerifyAddressWithResponse performs a POST /v1/intl_addver/verifications (the `InternationalAPIVerifyAddress` operationId) request.
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
-// Verify and standardize an international address.
+// Verify and standardize an international address. Accepts two input formats:
 //
-// - Supports both structured and freeform address inputs.
+// 1. **Structured Address** — Verify and standardize a structured address (e.g., with `line1`, `city`, etc.).
+// 2. **Freeform Address** — Verify and standardize a freeform address written on a single line.
+//
 // - Specify `includeDetails=true` to get additional details as per the `IntlDetails` schema.
 // - Uses 1 lookup.
 func (c *ClientWithResponses) InternationalAPIVerifyAddressWithResponse(ctx context.Context, params *InternationalAPIVerifyAddressParams, body InternationalAPIVerifyAddressJSONRequestBody, reqEditors ...RequestEditorFn) (*InternationalAPIVerifyAddressResponse, error) {
@@ -96517,8 +108181,8 @@ func (c *ClientWithResponses) InternationalAPIVerifyAddressWithResponse(ctx cont
 // with any type of body and a specified content type.
 //
 // Verify a batch of international addresses in a single request.
-// Each address can be freeform or structured, matching the same input formats
-// accepted by the single verification endpoint.
+// Each address is either a freeform string or the structured address fields
+// themselves.
 //
 // - Accepts up to 2,000 addresses per request.
 // - Uses 1 lookup per address.
@@ -96543,8 +108207,8 @@ func (c *ClientWithResponses) InternationalAPIVerifyBatchWithBodyWithResponse(ct
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
 // Verify a batch of international addresses in a single request.
-// Each address can be freeform or structured, matching the same input formats
-// accepted by the single verification endpoint.
+// Each address is either a freeform string or the structured address fields
+// themselves.
 //
 // - Accepts up to 2,000 addresses per request.
 // - Uses 1 lookup per address.
@@ -99601,6 +111265,1553 @@ func ParseContactsGetResponse(rsp *http.Response) (*ContactsGetResponse, error) 
 
 			// Object Always "error".
 			Object ContactsGet500JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomEnvelopesListResponse parses an HTTP response from a CustomEnvelopesListWithResponse call
+func ParseCustomEnvelopesListResponse(rsp *http.Response) (*CustomEnvelopesListResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomEnvelopesListResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomEnvelopeList
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesList400JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesList400JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest CustomEnvelopesList401JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesList429JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesList429JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesList500JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesList500JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartResponse parses an HTTP response from a CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartWithResponse call
+func ParseCustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartResponse(rsp *http.Response) (*CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipartResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest CustomEnvelope
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart400JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart400JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart401JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart404JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart404JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type string `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart422JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart429JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart429JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart500JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesCreateJSONCustomEnvelopesCreateMultipart500JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomEnvelopesGetResponse parses an HTTP response from a CustomEnvelopesGetWithResponse call
+func ParseCustomEnvelopesGetResponse(rsp *http.Response) (*CustomEnvelopesGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomEnvelopesGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomEnvelope
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest CustomEnvelopesGet401JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesGet404JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesGet404JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type string `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesGet422JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesGet429JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesGet429JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesGet500JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesGet500JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomEnvelopesListOrdersResponse parses an HTTP response from a CustomEnvelopesListOrdersWithResponse call
+func ParseCustomEnvelopesListOrdersResponse(rsp *http.Response) (*CustomEnvelopesListOrdersResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomEnvelopesListOrdersResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomEnvelopeOrderList
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesListOrders400JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesListOrders400JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest CustomEnvelopesListOrders401JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesListOrders429JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesListOrders429JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesListOrders500JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesListOrders500JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomEnvelopesCreateOrderResponse parses an HTTP response from a CustomEnvelopesCreateOrderWithResponse call
+func ParseCustomEnvelopesCreateOrderResponse(rsp *http.Response) (*CustomEnvelopesCreateOrderResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomEnvelopesCreateOrderResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest CustomEnvelopeOrder
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesCreateOrder400JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesCreateOrder400JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest CustomEnvelopesCreateOrder401JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesCreateOrder404JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesCreateOrder404JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type string `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesCreateOrder422JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesCreateOrder429JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesCreateOrder429JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesCreateOrder500JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesCreateOrder500JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomEnvelopesCancelOrderResponse parses an HTTP response from a CustomEnvelopesCancelOrderWithResponse call
+func ParseCustomEnvelopesCancelOrderResponse(rsp *http.Response) (*CustomEnvelopesCancelOrderResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomEnvelopesCancelOrderResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomEnvelopeOrder
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest CustomEnvelopesCancelOrder401JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesCancelOrder404JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesCancelOrder404JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest CustomEnvelopesCancelOrder422JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesCancelOrder429JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesCancelOrder429JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesCancelOrder500JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesCancelOrder500JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomEnvelopesGetOrderResponse parses an HTTP response from a CustomEnvelopesGetOrderWithResponse call
+func ParseCustomEnvelopesGetOrderResponse(rsp *http.Response) (*CustomEnvelopesGetOrderResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomEnvelopesGetOrderResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomEnvelopeOrder
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest CustomEnvelopesGetOrder401JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesGetOrder404JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesGetOrder404JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type string `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesGetOrder422JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesGetOrder429JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesGetOrder429JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesGetOrder500JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesGetOrder500JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomEnvelopesFillTestOrderResponse parses an HTTP response from a CustomEnvelopesFillTestOrderWithResponse call
+func ParseCustomEnvelopesFillTestOrderResponse(rsp *http.Response) (*CustomEnvelopesFillTestOrderResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomEnvelopesFillTestOrderResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomEnvelopeOrder
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesFillTestOrder400JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesFillTestOrder400JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest CustomEnvelopesFillTestOrder401JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesFillTestOrder404JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesFillTestOrder404JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest CustomEnvelopesFillTestOrder422JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesFillTestOrder429JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesFillTestOrder429JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesFillTestOrder500JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesFillTestOrder500JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomEnvelopesProgressTestOrderResponse parses an HTTP response from a CustomEnvelopesProgressTestOrderWithResponse call
+func ParseCustomEnvelopesProgressTestOrderResponse(rsp *http.Response) (*CustomEnvelopesProgressTestOrderResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomEnvelopesProgressTestOrderResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomEnvelopeOrder
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesProgressTestOrder400JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesProgressTestOrder400JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest CustomEnvelopesProgressTestOrder401JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesProgressTestOrder404JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesProgressTestOrder404JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest CustomEnvelopesProgressTestOrder422JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesProgressTestOrder429JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesProgressTestOrder429JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesProgressTestOrder500JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesProgressTestOrder500JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomEnvelopesClearThresholdResponse parses an HTTP response from a CustomEnvelopesClearThresholdWithResponse call
+func ParseCustomEnvelopesClearThresholdResponse(rsp *http.Response) (*CustomEnvelopesClearThresholdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomEnvelopesClearThresholdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomEnvelope
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest CustomEnvelopesClearThreshold401JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesClearThreshold404JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesClearThreshold404JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type string `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesClearThreshold422JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesClearThreshold429JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesClearThreshold429JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesClearThreshold500JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesClearThreshold500JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomEnvelopesSetThresholdResponse parses an HTTP response from a CustomEnvelopesSetThresholdWithResponse call
+func ParseCustomEnvelopesSetThresholdResponse(rsp *http.Response) (*CustomEnvelopesSetThresholdResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomEnvelopesSetThresholdResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomEnvelope
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesSetThreshold400JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesSetThreshold400JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest CustomEnvelopesSetThreshold401JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesSetThreshold404JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesSetThreshold404JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type string `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesSetThreshold422JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesSetThreshold429JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesSetThreshold429JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type CustomEnvelopesSetThreshold500JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object CustomEnvelopesSetThreshold500JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDocumentsListResponse parses an HTTP response from a DocumentsListWithResponse call
+func ParseDocumentsListResponse(rsp *http.Response) (*DocumentsListResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DocumentsListResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest DocumentList
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type DocumentsList400JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object DocumentsList400JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest DocumentsList401JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type DocumentsList429JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object DocumentsList429JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type DocumentsList500JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object DocumentsList500JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDocumentsCreateResponse parses an HTTP response from a DocumentsCreateWithResponse call
+func ParseDocumentsCreateResponse(rsp *http.Response) (*DocumentsCreateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DocumentsCreateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest Document
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type DocumentsCreate400JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object DocumentsCreate400JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest DocumentsCreate401JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type DocumentsCreate404JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object DocumentsCreate404JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type string `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object DocumentsCreate422JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type DocumentsCreate429JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object DocumentsCreate429JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type DocumentsCreate500JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object DocumentsCreate500JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDocumentsGetResponse parses an HTTP response from a DocumentsGetWithResponse call
+func ParseDocumentsGetResponse(rsp *http.Response) (*DocumentsGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DocumentsGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Document
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest DocumentsGet401JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type DocumentsGet404JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object DocumentsGet404JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type string `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object DocumentsGet422JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type DocumentsGet429JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object DocumentsGet429JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type DocumentsGet500JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object DocumentsGet500JSONResponseBodyObject `json:"object"`
 		}
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
@@ -102834,6 +116045,134 @@ func ParseReportsRunAdHocSampleResponse(rsp *http.Response) (*ReportsRunAdHocSam
 	return response, nil
 }
 
+// ParseReportsPreviewScheduleResponse parses an HTTP response from a ReportsPreviewScheduleWithResponse call
+func ParseReportsPreviewScheduleResponse(rsp *http.Response) (*ReportsPreviewScheduleResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ReportsPreviewScheduleResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest SchedulePreview
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type ReportsPreviewSchedule400JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object ReportsPreviewSchedule400JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest ReportsPreviewSchedule401JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type ReportsPreviewSchedule404JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object ReportsPreviewSchedule404JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type string `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object ReportsPreviewSchedule422JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type ReportsPreviewSchedule429JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object ReportsPreviewSchedule429JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type ReportsPreviewSchedule500JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object ReportsPreviewSchedule500JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
 // ParseReportsDeleteReportResponse parses an HTTP response from a ReportsDeleteReportWithResponse call
 func ParseReportsDeleteReportResponse(rsp *http.Response) (*ReportsDeleteReportResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -103297,6 +116636,96 @@ func ParseReportsRunSavedReportSampleResponse(rsp *http.Response) (*ReportsRunSa
 
 			// Object Always "error".
 			Object ReportsRunSavedReportSample500JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseReportsListReportExportsResponse parses an HTTP response from a ReportsListReportExportsWithResponse call
+func ParseReportsListReportExportsResponse(rsp *http.Response) (*ReportsListReportExportsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ReportsListReportExportsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ReportExportList
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type ReportsListReportExports400JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object ReportsListReportExports400JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest ReportsListReportExports401JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type ReportsListReportExports429JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object ReportsListReportExports429JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type ReportsListReportExports500JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object ReportsListReportExports500JSONResponseBodyObject `json:"object"`
 		}
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
@@ -107921,6 +121350,243 @@ func ParseTemplatesUpdateResponse(rsp *http.Response) (*TemplatesUpdateResponse,
 	return response, nil
 }
 
+// ParseTemplatesCopyResponse parses an HTTP response from a TemplatesCopyWithResponse call
+func ParseTemplatesCopyResponse(rsp *http.Response) (*TemplatesCopyResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &TemplatesCopyResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest Template
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type TemplatesCopy400JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object TemplatesCopy400JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest TemplatesCopy401JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type TemplatesCopy404JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object TemplatesCopy404JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type string `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object TemplatesCopy422JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON422 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type TemplatesCopy429JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object TemplatesCopy429JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type TemplatesCopy500JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object TemplatesCopy500JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseThumbnailsGetResponse parses an HTTP response from a ThumbnailsGetWithResponse call
+func ParseThumbnailsGetResponse(rsp *http.Response) (*ThumbnailsGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ThumbnailsGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ThumbnailList
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type ThumbnailsGet400JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object ThumbnailsGet400JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type ThumbnailsGet401JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object ThumbnailsGet401JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest ThumbnailsGet403JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type ThumbnailsGet429JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object ThumbnailsGet429JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest struct {
+			// Error The error object which has information on the error encountered.
+			Error struct {
+				// Message A human readable message describing the error.
+				Message string `json:"message"`
+
+				// Type A stable machine-friendly identifier for the error.
+				Type ThumbnailsGet500JSONResponseBodyErrorType `json:"type"`
+			} `json:"error"`
+
+			// Object Always "error".
+			Object ThumbnailsGet500JSONResponseBodyObject `json:"object"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
 // ParseTrackersListResponse parses an HTTP response from a TrackersListWithResponse call
 func ParseTrackersListResponse(rsp *http.Response) (*TrackersListResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -110047,6 +123713,154 @@ func ParseWebhooksListInvocationsResponse(rsp *http.Response) (*WebhooksListInvo
 			return nil, err
 		}
 		response.JSON500 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseAccuracyStatementsListResponse parses an HTTP response from a AccuracyStatementsListWithResponse call
+func ParseAccuracyStatementsListResponse(rsp *http.Response) (*AccuracyStatementsListResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &AccuracyStatementsListResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			Data    *AccuracyStatementList                           `json:"data,omitempty"`
+			Message *string                                          `json:"message,omitempty"`
+			Status  *AccuracyStatementsList200JSONResponseBodyStatus `json:"status,omitempty"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest string
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseAccuracyStatementsCreateResponse parses an HTTP response from a AccuracyStatementsCreateWithResponse call
+func ParseAccuracyStatementsCreateResponse(rsp *http.Response) (*AccuracyStatementsCreateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &AccuracyStatementsCreateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest struct {
+			Data    *AccuracyStatement                                 `json:"data,omitempty"`
+			Message *string                                            `json:"message,omitempty"`
+			Status  *AccuracyStatementsCreate201JSONResponseBodyStatus `json:"status,omitempty"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest string
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseAccuracyStatementsGetResponse parses an HTTP response from a AccuracyStatementsGetWithResponse call
+func ParseAccuracyStatementsGetResponse(rsp *http.Response) (*AccuracyStatementsGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &AccuracyStatementsGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			Data    *AccuracyStatement                              `json:"data,omitempty"`
+			Message *string                                         `json:"message,omitempty"`
+			Status  *AccuracyStatementsGet200JSONResponseBodyStatus `json:"status,omitempty"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest string
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseAccuracyStatementsGenerateResponse parses an HTTP response from a AccuracyStatementsGenerateWithResponse call
+func ParseAccuracyStatementsGenerateResponse(rsp *http.Response) (*AccuracyStatementsGenerateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &AccuracyStatementsGenerateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest struct {
+			Data    *AccuracyStatement                                   `json:"data,omitempty"`
+			Message *string                                              `json:"message,omitempty"`
+			Status  *AccuracyStatementsGenerate200JSONResponseBodyStatus `json:"status,omitempty"`
+		}
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest string
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
 
 	}
 

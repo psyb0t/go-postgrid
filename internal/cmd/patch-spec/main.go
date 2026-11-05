@@ -1,6 +1,6 @@
-// patch-spec collapses anyOf schemas containing only identical references.
-// The four mail creation responses repeat their schema twice, causing
-// oapi-codegen to emit duplicate As, From and Merge methods.
+// patch-spec collapses anyOf schemas containing one reference or repetitions
+// of that reference. Singleton unions keep ordinary response fields accessible;
+// repeated branches would emit duplicate As, From and Merge methods.
 // It also names the inline text branch of the shared search parameter,
 // which otherwise produces methods referring to an undefined N0 type.
 package main
@@ -59,7 +59,7 @@ func collapseReferences(node *yaml.Node) {
 	}
 
 	branches := node.Content[1]
-	if branches.Kind != yaml.SequenceNode || len(branches.Content) < pairSize {
+	if branches.Kind != yaml.SequenceNode || len(branches.Content) == 0 {
 		return
 	}
 

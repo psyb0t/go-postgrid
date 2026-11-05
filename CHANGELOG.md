@@ -2,6 +2,12 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.2.0, 2026-11-05
+
+- Download the OpenAPI specification from PostGrid's public documentation instead of the unavailable Stainless bucket URL.
+- Collapse singleton reference unions as well as repeated references, preserving direct access to mail creation response fields.
+- Breaking: regenerated the current specification, retaining existing API paths and adding 15 paths. Several inline address union models and helper names changed with the upstream schema.
+
 ## v0.1.3, 2026-10-28
 
 - Updated Semgrep in the development image to 1.182.1 and refreshed its locked dependencies. certifi 2026.10.23 drops the emSign root CAs whose intermediate keys were compromised (GHSA-6q48-6c7w-9gw2).
