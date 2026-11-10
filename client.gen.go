@@ -29465,16 +29465,8 @@ type BoxChequeCreate struct {
 	// BankAccount The bank account (ID or reference) from which the cheque amount is drawn.
 	BankAccount string `json:"bankAccount"`
 
-	// From A contact provided in one of two ways:
-	//
-	// - an **inline contact body** with the same fields you would use to create a
-	// contact (there is no need to create the contact first), or
-	// - the **ID of an existing contact** (e.g. `contact_123`).
-	//
-	// You never send the full stored contact object (with `id`, `object`,
-	// `addressStatus`, `createdAt`, etc.) here — that shape is only ever returned
-	// in responses.
-	From ContactCreateOrID `json:"from"`
+	// From The sender of this cheque. Required unless `returnToMailbox` is supplied.
+	From *ContactCreateOrID `json:"from,omitempty"`
 
 	// LogoURL A URL to a logo for the cheque (optional).
 	LogoURL *string `json:"logoURL,omitempty"`
@@ -29490,6 +29482,9 @@ type BoxChequeCreate struct {
 
 	// Number The cheque number.
 	Number int32 `json:"number"`
+
+	// ReturnToMailbox Use a virtual mailbox as the return address instead of a sender contact. Supply an array with exactly one virtual mailbox ID, e.g. `["virtual_mailbox_abcdefg123456890"]`; PostGrid generates the return address from the physical mailbox assigned to it, and returned mail shows up as items of that virtual mailbox. Cannot be combined with `from`.
+	ReturnToMailbox *[]string `json:"returnToMailbox,omitempty"`
 
 	// To A contact provided in one of two ways:
 	//
@@ -29511,8 +29506,8 @@ type BoxCreate struct {
 	// Description An optional string describing this resource. Will be visible in the API and the dashboard.
 	Description *string `json:"description,omitempty"`
 
-	// From The 'from' (sender) of the entire box. Accepts inline ContactCreate or a contactID.
-	From ContactCreateOrID `json:"from"`
+	// From The 'from' (sender) of the entire box. Accepts inline ContactCreate or a contactID. Required unless `returnToMailbox` is supplied.
+	From *ContactCreateOrID `json:"from,omitempty"`
 
 	// MailingClass The mailing class of this order. If not provided, automatically set to `first_class`.
 	MailingClass *OrderMailingClass `json:"mailingClass,omitempty"`
@@ -29522,6 +29517,9 @@ type BoxCreate struct {
 
 	// Metadata See the section on Metadata.
 	Metadata *map[string]interface{} `json:"metadata,omitempty"`
+
+	// ReturnToMailbox Use a virtual mailbox as the return address instead of a sender contact. Supply an array with exactly one virtual mailbox ID, e.g. `["virtual_mailbox_abcdefg123456890"]`; PostGrid generates the return address from the physical mailbox assigned to it, and returned mail shows up as items of that virtual mailbox. Cannot be combined with `from`.
+	ReturnToMailbox *[]string `json:"returnToMailbox,omitempty"`
 
 	// SendDate This order will transition from `ready` to `printing` on the day after this date. You can use this parameter to schedule orders for a future date.
 	SendDate *time.Time `json:"sendDate,omitempty"`
@@ -30365,8 +30363,8 @@ type ChequeCreate struct {
 	// Envelope The envelope of the cheque. If a custom envelope ID is not specified, defaults to `standard`.
 	Envelope *ChequeCreate_Envelope `json:"envelope,omitempty"`
 
-	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-	From ContactCreateOrID `json:"from"`
+	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`. Required unless `returnToMailbox` is supplied.
+	From *ContactCreateOrID `json:"from,omitempty"`
 
 	// LetterHTML The raw HTML content for a letter attached to the cheque, if any. You can supply _either_ this, `letterTemplate`, or `letterPDF`, but not more than one.
 	LetterHTML *string `json:"letterHTML,omitempty"`
@@ -30406,6 +30404,9 @@ type ChequeCreate struct {
 
 	// ReturnEnvelope The return envelope (ID) sent out with the cheque, if any. Note that you must first order return envelopes using the Return Envelopes API.
 	ReturnEnvelope *string `json:"returnEnvelope,omitempty"`
+
+	// ReturnToMailbox Use a virtual mailbox as the return address instead of a sender contact. Supply an array with exactly one virtual mailbox ID, e.g. `["virtual_mailbox_abcdefg123456890"]`; PostGrid generates the return address from the physical mailbox assigned to it, and returned mail shows up as items of that virtual mailbox. Cannot be combined with `from`.
+	ReturnToMailbox *[]string `json:"returnToMailbox,omitempty"`
 
 	// SendDate This order will transition from `ready` to `printing` on the day after this date. You can use this parameter to schedule orders for a future date.
 	SendDate *time.Time `json:"sendDate,omitempty"`
@@ -30467,8 +30468,8 @@ type ChequeCreateMultiPart struct {
 	// Envelope The envelope of the cheque. If a custom envelope ID is not specified, defaults to `standard`.
 	Envelope *ChequeCreateMultiPart_Envelope `json:"envelope,omitempty"`
 
-	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-	From ContactCreateOrID `json:"from"`
+	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`. Required unless `returnToMailbox` is supplied.
+	From *ContactCreateOrID `json:"from,omitempty"`
 
 	// LetterHTML The raw HTML content for a letter attached to the cheque, if any. You can supply _either_ this, `letterTemplate`, or `letterPDF`, but not more than one.
 	LetterHTML *string `json:"letterHTML,omitempty"`
@@ -30508,6 +30509,9 @@ type ChequeCreateMultiPart struct {
 
 	// ReturnEnvelope The return envelope (ID) sent out with the cheque, if any. Note that you must first order return envelopes using the Return Envelopes API.
 	ReturnEnvelope *string `json:"returnEnvelope,omitempty"`
+
+	// ReturnToMailbox Use a virtual mailbox as the return address instead of a sender contact. Supply an array with exactly one virtual mailbox ID, e.g. `["virtual_mailbox_abcdefg123456890"]`; PostGrid generates the return address from the physical mailbox assigned to it, and returned mail shows up as items of that virtual mailbox. Cannot be combined with `from`.
+	ReturnToMailbox *[]string `json:"returnToMailbox,omitempty"`
 
 	// SendDate This order will transition from `ready` to `printing` on the day after this date. You can use this parameter to schedule orders for a future date.
 	SendDate *time.Time `json:"sendDate,omitempty"`
@@ -31670,8 +31674,8 @@ type LetterCreateFormMultiPart struct {
 	// Envelope The envelope (ID) for the letter. You can either specify a custom envelope ID or use the default `standard` envelope.
 	Envelope *string `json:"envelope,omitempty"`
 
-	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-	From ContactCreateOrID `json:"from"`
+	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`. Required unless `returnToMailbox` or `postageDiscountAuthorization` is supplied.
+	From *ContactCreateOrID `json:"from,omitempty"`
 
 	// Html The HTML content for the letter. You can supply _either_ this or `template` but not both.
 	Html *string `json:"html,omitempty"`
@@ -31707,6 +31711,9 @@ type LetterCreateFormMultiPart struct {
 
 	// ReturnEnvelope The return envelope (ID) sent out with the letter, if any.
 	ReturnEnvelope *string `json:"returnEnvelope,omitempty"`
+
+	// ReturnToMailbox Use a virtual mailbox as the return address instead of a sender contact. Supply an array with exactly one virtual mailbox ID, e.g. `["virtual_mailbox_abcdefg123456890"]`; PostGrid generates the return address from the physical mailbox assigned to it, and returned mail shows up as items of that virtual mailbox. Cannot be combined with `from` or `postageDiscountAuthorization`.
+	ReturnToMailbox *[]string `json:"returnToMailbox,omitempty"`
 
 	// SendDate This order will transition from `ready` to `printing` on the day after this date. You can use this parameter to schedule orders for a future date.
 	SendDate *time.Time `json:"sendDate,omitempty"`
@@ -31752,8 +31759,8 @@ type LetterCreateWithHTML struct {
 	// Envelope The envelope (ID) for the letter. You can either specify a custom envelope ID or use the default `standard` envelope.
 	Envelope *string `json:"envelope,omitempty"`
 
-	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-	From ContactCreateOrID `json:"from"`
+	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`. Required unless `returnToMailbox` or `postageDiscountAuthorization` is supplied.
+	From *ContactCreateOrID `json:"from,omitempty"`
 
 	// Html The HTML content for the letter. You can supply _either_ this or `template` but not both.
 	Html string `json:"html"`
@@ -31786,6 +31793,9 @@ type LetterCreateWithHTML struct {
 
 	// ReturnEnvelope The return envelope (ID) sent out with the letter, if any.
 	ReturnEnvelope *string `json:"returnEnvelope,omitempty"`
+
+	// ReturnToMailbox Use a virtual mailbox as the return address instead of a sender contact. Supply an array with exactly one virtual mailbox ID, e.g. `["virtual_mailbox_abcdefg123456890"]`; PostGrid generates the return address from the physical mailbox assigned to it, and returned mail shows up as items of that virtual mailbox. Cannot be combined with `from` or `postageDiscountAuthorization`.
+	ReturnToMailbox *[]string `json:"returnToMailbox,omitempty"`
 
 	// SendDate This order will transition from `ready` to `printing` on the day after this date. You can use this parameter to schedule orders for a future date.
 	SendDate *time.Time `json:"sendDate,omitempty"`
@@ -31820,8 +31830,8 @@ type LetterCreateWithPDF struct {
 	// Envelope The envelope (ID) for the letter. You can either specify a custom envelope ID or use the default `standard` envelope.
 	Envelope *string `json:"envelope,omitempty"`
 
-	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-	From ContactCreateOrID `json:"from"`
+	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`. Required unless `returnToMailbox` or `postageDiscountAuthorization` is supplied.
+	From *ContactCreateOrID `json:"from,omitempty"`
 
 	// MailingClass The mailing class of this order. If not provided, automatically set to `first_class`.
 	MailingClass *OrderMailingClass `json:"mailingClass,omitempty"`
@@ -31854,6 +31864,9 @@ type LetterCreateWithPDF struct {
 
 	// ReturnEnvelope The return envelope (ID) sent out with the letter, if any.
 	ReturnEnvelope *string `json:"returnEnvelope,omitempty"`
+
+	// ReturnToMailbox Use a virtual mailbox as the return address instead of a sender contact. Supply an array with exactly one virtual mailbox ID, e.g. `["virtual_mailbox_abcdefg123456890"]`; PostGrid generates the return address from the physical mailbox assigned to it, and returned mail shows up as items of that virtual mailbox. Cannot be combined with `from` or `postageDiscountAuthorization`.
+	ReturnToMailbox *[]string `json:"returnToMailbox,omitempty"`
 
 	// SendDate This order will transition from `ready` to `printing` on the day after this date. You can use this parameter to schedule orders for a future date.
 	SendDate *time.Time `json:"sendDate,omitempty"`
@@ -31896,8 +31909,8 @@ type LetterCreateWithTemplate struct {
 	// Envelope The envelope (ID) for the letter. You can either specify a custom envelope ID or use the default `standard` envelope.
 	Envelope *string `json:"envelope,omitempty"`
 
-	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-	From ContactCreateOrID `json:"from"`
+	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`. Required unless `returnToMailbox` or `postageDiscountAuthorization` is supplied.
+	From *ContactCreateOrID `json:"from,omitempty"`
 
 	// MailingClass The mailing class of this order. If not provided, automatically set to `first_class`.
 	MailingClass *OrderMailingClass `json:"mailingClass,omitempty"`
@@ -31927,6 +31940,9 @@ type LetterCreateWithTemplate struct {
 
 	// ReturnEnvelope The return envelope (ID) sent out with the letter, if any.
 	ReturnEnvelope *string `json:"returnEnvelope,omitempty"`
+
+	// ReturnToMailbox Use a virtual mailbox as the return address instead of a sender contact. Supply an array with exactly one virtual mailbox ID, e.g. `["virtual_mailbox_abcdefg123456890"]`; PostGrid generates the return address from the physical mailbox assigned to it, and returned mail shows up as items of that virtual mailbox. Cannot be combined with `from` or `postageDiscountAuthorization`.
+	ReturnToMailbox *[]string `json:"returnToMailbox,omitempty"`
 
 	// SendDate This order will transition from `ready` to `printing` on the day after this date. You can use this parameter to schedule orders for a future date.
 	SendDate *time.Time `json:"sendDate,omitempty"`
@@ -32500,6 +32516,9 @@ type PostcardCreateFormMultiPart struct {
 	// Pdf A 2 page PDF file upload or URL (front, then back). Cannot be combined with the HTML or template fields.
 	Pdf *PostcardCreateFormMultiPart_Pdf `json:"pdf,omitempty"`
 
+	// ReturnToMailbox Use a virtual mailbox as the return address instead of a sender contact. Supply an array with exactly one virtual mailbox ID, e.g. `["virtual_mailbox_abcdefg123456890"]`; PostGrid generates the return address from the physical mailbox assigned to it, and returned mail shows up as items of that virtual mailbox. Cannot be combined with `from` or `postageDiscountAuthorization`.
+	ReturnToMailbox *[]string `json:"returnToMailbox,omitempty"`
+
 	// SendDate This order will transition from `ready` to `printing` on the day after this date. You can use this parameter to schedule orders for a future date.
 	SendDate *time.Time `json:"sendDate,omitempty"`
 
@@ -32554,6 +32573,9 @@ type PostcardCreateWithHTML struct {
 	// If omitted, the organization default postcard paper is used when configured; otherwise `standard`.
 	Paper *PostcardPremiumPaperID `json:"paper,omitempty"`
 
+	// ReturnToMailbox Use a virtual mailbox as the return address instead of a sender contact. Supply an array with exactly one virtual mailbox ID, e.g. `["virtual_mailbox_abcdefg123456890"]`; PostGrid generates the return address from the physical mailbox assigned to it, and returned mail shows up as items of that virtual mailbox. Cannot be combined with `from` or `postageDiscountAuthorization`.
+	ReturnToMailbox *[]string `json:"returnToMailbox,omitempty"`
+
 	// SendDate This order will transition from `ready` to `printing` on the day after this date. You can use this parameter to schedule orders for a future date.
 	SendDate *time.Time `json:"sendDate,omitempty"`
 
@@ -32597,6 +32619,9 @@ type PostcardCreateWithPDFFile struct {
 	// Pdf A 2 page PDF file. The first page is the front of the postcard and the second page is the back (where the address will be stamped on).
 	Pdf BinaryFile `json:"pdf"`
 
+	// ReturnToMailbox Use a virtual mailbox as the return address instead of a sender contact. Supply an array with exactly one virtual mailbox ID, e.g. `["virtual_mailbox_abcdefg123456890"]`; PostGrid generates the return address from the physical mailbox assigned to it, and returned mail shows up as items of that virtual mailbox. Cannot be combined with `from` or `postageDiscountAuthorization`.
+	ReturnToMailbox *[]string `json:"returnToMailbox,omitempty"`
+
 	// SendDate This order will transition from `ready` to `printing` on the day after this date. You can use this parameter to schedule orders for a future date.
 	SendDate *time.Time `json:"sendDate,omitempty"`
 
@@ -32639,6 +32664,9 @@ type PostcardCreateWithPDFURL struct {
 
 	// Pdf A URL pointing to a 2 page PDF file. The first page is the front of the postcard and the second page is the back (where the address will be stamped on).
 	Pdf string `json:"pdf"`
+
+	// ReturnToMailbox Use a virtual mailbox as the return address instead of a sender contact. Supply an array with exactly one virtual mailbox ID, e.g. `["virtual_mailbox_abcdefg123456890"]`; PostGrid generates the return address from the physical mailbox assigned to it, and returned mail shows up as items of that virtual mailbox. Cannot be combined with `from` or `postageDiscountAuthorization`.
+	ReturnToMailbox *[]string `json:"returnToMailbox,omitempty"`
 
 	// SendDate This order will transition from `ready` to `printing` on the day after this date. You can use this parameter to schedule orders for a future date.
 	SendDate *time.Time `json:"sendDate,omitempty"`
@@ -32685,6 +32713,9 @@ type PostcardCreateWithTemplate struct {
 	// Not all premium paper options are enabled for all organizations.
 	// If omitted, the organization default postcard paper is used when configured; otherwise `standard`.
 	Paper *PostcardPremiumPaperID `json:"paper,omitempty"`
+
+	// ReturnToMailbox Use a virtual mailbox as the return address instead of a sender contact. Supply an array with exactly one virtual mailbox ID, e.g. `["virtual_mailbox_abcdefg123456890"]`; PostGrid generates the return address from the physical mailbox assigned to it, and returned mail shows up as items of that virtual mailbox. Cannot be combined with `from` or `postageDiscountAuthorization`.
+	ReturnToMailbox *[]string `json:"returnToMailbox,omitempty"`
 
 	// SendDate This order will transition from `ready` to `printing` on the day after this date. You can use this parameter to schedule orders for a future date.
 	SendDate *time.Time `json:"sendDate,omitempty"`
@@ -33341,8 +33372,8 @@ type SelfMailerCreateFormMultiPart struct {
 	// Description An optional string describing this resource. Will be visible in the API and the dashboard.
 	Description *string `json:"description,omitempty"`
 
-	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-	From ContactCreateOrID `json:"from"`
+	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`. Required unless `returnToMailbox` or `postageDiscountAuthorization` is supplied.
+	From *ContactCreateOrID `json:"from,omitempty"`
 
 	// InsideHTML The HTML content for the inside of the self-mailer. You can supply _either_ this or `insideTemplate` but not both.
 	InsideHTML *string `json:"insideHTML,omitempty"`
@@ -33378,6 +33409,9 @@ type SelfMailerCreateFormMultiPart struct {
 	// Pdf A 2 page PDF file upload or URL (inside, then outside). Cannot be combined with the HTML or template fields.
 	Pdf *SelfMailerCreateFormMultiPart_Pdf `json:"pdf,omitempty"`
 
+	// ReturnToMailbox Use a virtual mailbox as the return address instead of a sender contact. Supply an array with exactly one virtual mailbox ID, e.g. `["virtual_mailbox_abcdefg123456890"]`; PostGrid generates the return address from the physical mailbox assigned to it, and returned mail shows up as items of that virtual mailbox. Cannot be combined with `from` or `postageDiscountAuthorization`.
+	ReturnToMailbox *[]string `json:"returnToMailbox,omitempty"`
+
 	// SendDate This order will transition from `ready` to `printing` on the day after this date. You can use this parameter to schedule orders for a future date.
 	SendDate *time.Time `json:"sendDate,omitempty"`
 
@@ -33401,8 +33435,8 @@ type SelfMailerCreateWithHTML struct {
 	// Description An optional string describing this resource. Will be visible in the API and the dashboard.
 	Description *string `json:"description,omitempty"`
 
-	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-	From ContactCreateOrID `json:"from"`
+	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`. Required unless `returnToMailbox` or `postageDiscountAuthorization` is supplied.
+	From *ContactCreateOrID `json:"from,omitempty"`
 
 	// InsideHTML The HTML content for the inside of the self-mailer. You can supply _either_ this or `insideTemplate` but not both.
 	InsideHTML string `json:"insideHTML"`
@@ -33429,6 +33463,9 @@ type SelfMailerCreateWithHTML struct {
 	// If omitted, the organization default self-mailer paper is used when configured; otherwise `standard`.
 	Paper *SelfMailerPremiumPaperID `json:"paper,omitempty"`
 
+	// ReturnToMailbox Use a virtual mailbox as the return address instead of a sender contact. Supply an array with exactly one virtual mailbox ID, e.g. `["virtual_mailbox_abcdefg123456890"]`; PostGrid generates the return address from the physical mailbox assigned to it, and returned mail shows up as items of that virtual mailbox. Cannot be combined with `from` or `postageDiscountAuthorization`.
+	ReturnToMailbox *[]string `json:"returnToMailbox,omitempty"`
+
 	// SendDate This order will transition from `ready` to `printing` on the day after this date. You can use this parameter to schedule orders for a future date.
 	SendDate *time.Time `json:"sendDate,omitempty"`
 
@@ -33444,8 +33481,8 @@ type SelfMailerCreateWithPDFFile struct {
 	// Description An optional string describing this resource. Will be visible in the API and the dashboard.
 	Description *string `json:"description,omitempty"`
 
-	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-	From ContactCreateOrID `json:"from"`
+	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`. Required unless `returnToMailbox` or `postageDiscountAuthorization` is supplied.
+	From *ContactCreateOrID `json:"from,omitempty"`
 
 	// MailingClass The mailing class of this order. If not provided, automatically set to `first_class`.
 	MailingClass *OrderMailingClass `json:"mailingClass,omitempty"`
@@ -33469,6 +33506,9 @@ type SelfMailerCreateWithPDFFile struct {
 	// Pdf A 2 page PDF file. The first page is the inside of the self-mailer and the second page is the outside (where the address will be stamped on).
 	Pdf BinaryFile `json:"pdf"`
 
+	// ReturnToMailbox Use a virtual mailbox as the return address instead of a sender contact. Supply an array with exactly one virtual mailbox ID, e.g. `["virtual_mailbox_abcdefg123456890"]`; PostGrid generates the return address from the physical mailbox assigned to it, and returned mail shows up as items of that virtual mailbox. Cannot be combined with `from` or `postageDiscountAuthorization`.
+	ReturnToMailbox *[]string `json:"returnToMailbox,omitempty"`
+
 	// SendDate This order will transition from `ready` to `printing` on the day after this date. You can use this parameter to schedule orders for a future date.
 	SendDate *time.Time `json:"sendDate,omitempty"`
 
@@ -33484,8 +33524,8 @@ type SelfMailerCreateWithPDFURL struct {
 	// Description An optional string describing this resource. Will be visible in the API and the dashboard.
 	Description *string `json:"description,omitempty"`
 
-	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-	From ContactCreateOrID `json:"from"`
+	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`. Required unless `returnToMailbox` or `postageDiscountAuthorization` is supplied.
+	From *ContactCreateOrID `json:"from,omitempty"`
 
 	// MailingClass The mailing class of this order. If not provided, automatically set to `first_class`.
 	MailingClass *OrderMailingClass `json:"mailingClass,omitempty"`
@@ -33509,6 +33549,9 @@ type SelfMailerCreateWithPDFURL struct {
 	// Pdf A URL pointing to a 2 page PDF file. The first page is the inside of the self-mailer and the second page is the outside (where the address will be stamped on).
 	Pdf string `json:"pdf"`
 
+	// ReturnToMailbox Use a virtual mailbox as the return address instead of a sender contact. Supply an array with exactly one virtual mailbox ID, e.g. `["virtual_mailbox_abcdefg123456890"]`; PostGrid generates the return address from the physical mailbox assigned to it, and returned mail shows up as items of that virtual mailbox. Cannot be combined with `from` or `postageDiscountAuthorization`.
+	ReturnToMailbox *[]string `json:"returnToMailbox,omitempty"`
+
 	// SendDate This order will transition from `ready` to `printing` on the day after this date. You can use this parameter to schedule orders for a future date.
 	SendDate *time.Time `json:"sendDate,omitempty"`
 
@@ -33524,8 +33567,8 @@ type SelfMailerCreateWithTemplate struct {
 	// Description An optional string describing this resource. Will be visible in the API and the dashboard.
 	Description *string `json:"description,omitempty"`
 
-	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`.
-	From ContactCreateOrID `json:"from"`
+	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to`. Required unless `returnToMailbox` or `postageDiscountAuthorization` is supplied.
+	From *ContactCreateOrID `json:"from,omitempty"`
 
 	// InsideTemplate The template ID for the inside of the self-mailer. You can supply _either_ this or `insideHTML` but not both.
 	InsideTemplate string `json:"insideTemplate"`
@@ -33551,6 +33594,9 @@ type SelfMailerCreateWithTemplate struct {
 	// Not all premium paper options are enabled for all organizations.
 	// If omitted, the organization default self-mailer paper is used when configured; otherwise `standard`.
 	Paper *SelfMailerPremiumPaperID `json:"paper,omitempty"`
+
+	// ReturnToMailbox Use a virtual mailbox as the return address instead of a sender contact. Supply an array with exactly one virtual mailbox ID, e.g. `["virtual_mailbox_abcdefg123456890"]`; PostGrid generates the return address from the physical mailbox assigned to it, and returned mail shows up as items of that virtual mailbox. Cannot be combined with `from` or `postageDiscountAuthorization`.
+	ReturnToMailbox *[]string `json:"returnToMailbox,omitempty"`
 
 	// SendDate This order will transition from `ready` to `printing` on the day after this date. You can use this parameter to schedule orders for a future date.
 	SendDate *time.Time `json:"sendDate,omitempty"`
@@ -33681,8 +33727,8 @@ type SnapPackCreateFormMultiPart struct {
 	// Description An optional string describing this resource. Will be visible in the API and the dashboard.
 	Description *string `json:"description,omitempty"`
 
-	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to` contact.
-	From ContactCreateOrID `json:"from"`
+	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to` contact. Required unless `returnToMailbox` is supplied.
+	From *ContactCreateOrID `json:"from,omitempty"`
 
 	// InsideHTML The HTML content for the inside of the snap pack. You can supply _either_ this or `insideTemplate` but not both.
 	InsideHTML *string `json:"insideHTML,omitempty"`
@@ -33708,6 +33754,9 @@ type SnapPackCreateFormMultiPart struct {
 	// Pdf A URL or a multipart-uploaded two-page PDF (first page is the outside, second page is the inside) that matches the selected snap pack size.
 	Pdf *SnapPackCreateFormMultiPart_Pdf `json:"pdf,omitempty"`
 
+	// ReturnToMailbox Use a virtual mailbox as the return address instead of a sender contact. Supply an array with exactly one virtual mailbox ID, e.g. `["virtual_mailbox_abcdefg123456890"]`; PostGrid generates the return address from the physical mailbox assigned to it, and returned mail shows up as items of that virtual mailbox. Cannot be combined with `from`.
+	ReturnToMailbox *[]string `json:"returnToMailbox,omitempty"`
+
 	// SendDate This order will transition from `ready` to `printing` on the day after this date. You can use this parameter to schedule orders for a future date.
 	SendDate *time.Time `json:"sendDate,omitempty"`
 
@@ -33731,8 +33780,8 @@ type SnapPackCreateWithHTML struct {
 	// Description An optional string describing this resource. Will be visible in the API and the dashboard.
 	Description *string `json:"description,omitempty"`
 
-	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to` contact.
-	From ContactCreateOrID `json:"from"`
+	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to` contact. Required unless `returnToMailbox` is supplied.
+	From *ContactCreateOrID `json:"from,omitempty"`
 
 	// InsideHTML The HTML content for the inside of the snap pack. You can supply _either_ this or `insideTemplate` but not both.
 	InsideHTML string `json:"insideHTML"`
@@ -33749,6 +33798,9 @@ type SnapPackCreateWithHTML struct {
 	// OutsideHTML The HTML content for the outside of the snap pack. You can supply _either_ this or `outsideTemplate` but not both.
 	OutsideHTML string `json:"outsideHTML"`
 
+	// ReturnToMailbox Use a virtual mailbox as the return address instead of a sender contact. Supply an array with exactly one virtual mailbox ID, e.g. `["virtual_mailbox_abcdefg123456890"]`; PostGrid generates the return address from the physical mailbox assigned to it, and returned mail shows up as items of that virtual mailbox. Cannot be combined with `from`.
+	ReturnToMailbox *[]string `json:"returnToMailbox,omitempty"`
+
 	// SendDate This order will transition from `ready` to `printing` on the day after this date. You can use this parameter to schedule orders for a future date.
 	SendDate *time.Time `json:"sendDate,omitempty"`
 
@@ -33764,8 +33816,8 @@ type SnapPackCreateWithPDF struct {
 	// Description An optional string describing this resource. Will be visible in the API and the dashboard.
 	Description *string `json:"description,omitempty"`
 
-	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to` contact.
-	From ContactCreateOrID `json:"from"`
+	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to` contact. Required unless `returnToMailbox` is supplied.
+	From *ContactCreateOrID `json:"from,omitempty"`
 
 	// MailingClass The mailing class of this order. If not provided, automatically set to `first_class`.
 	MailingClass *OrderMailingClass `json:"mailingClass,omitempty"`
@@ -33778,6 +33830,9 @@ type SnapPackCreateWithPDF struct {
 
 	// Pdf A URL or a multipart-uploaded two-page PDF (first page is the outside, second page is the inside) that matches the selected snap pack size.
 	Pdf SnapPackCreateWithPDF_Pdf `json:"pdf"`
+
+	// ReturnToMailbox Use a virtual mailbox as the return address instead of a sender contact. Supply an array with exactly one virtual mailbox ID, e.g. `["virtual_mailbox_abcdefg123456890"]`; PostGrid generates the return address from the physical mailbox assigned to it, and returned mail shows up as items of that virtual mailbox. Cannot be combined with `from`.
+	ReturnToMailbox *[]string `json:"returnToMailbox,omitempty"`
 
 	// SendDate This order will transition from `ready` to `printing` on the day after this date. You can use this parameter to schedule orders for a future date.
 	SendDate *time.Time `json:"sendDate,omitempty"`
@@ -33802,8 +33857,8 @@ type SnapPackCreateWithTemplate struct {
 	// Description An optional string describing this resource. Will be visible in the API and the dashboard.
 	Description *string `json:"description,omitempty"`
 
-	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to` contact.
-	From ContactCreateOrID `json:"from"`
+	// From The contact information of the sender. You can pass contact information inline here just like you can for the `to` contact. Required unless `returnToMailbox` is supplied.
+	From *ContactCreateOrID `json:"from,omitempty"`
 
 	// InsideTemplate The template ID for the inside of the snap pack. You can supply _either_ this or `insideHTML` but not both.
 	InsideTemplate string `json:"insideTemplate"`
@@ -33819,6 +33874,9 @@ type SnapPackCreateWithTemplate struct {
 
 	// OutsideTemplate The template ID for the outside of the snap pack. You can supply _either_ this or `outsideHTML` but not both.
 	OutsideTemplate string `json:"outsideTemplate"`
+
+	// ReturnToMailbox Use a virtual mailbox as the return address instead of a sender contact. Supply an array with exactly one virtual mailbox ID, e.g. `["virtual_mailbox_abcdefg123456890"]`; PostGrid generates the return address from the physical mailbox assigned to it, and returned mail shows up as items of that virtual mailbox. Cannot be combined with `from`.
+	ReturnToMailbox *[]string `json:"returnToMailbox,omitempty"`
 
 	// SendDate This order will transition from `ready` to `printing` on the day after this date. You can use this parameter to schedule orders for a future date.
 	SendDate *time.Time `json:"sendDate,omitempty"`
@@ -61136,12 +61194,12 @@ type ClientInterface interface {
 	//
 	// To create a box. You must specify:
 	// - `to`: The recipient (contact or contact ID)
-	// - `from`: The sender (contact or contact ID)
+	// - `from`: The sender (contact or contact ID), or `returnToMailbox` to use a virtual mailbox as the return address instead
 	// - `cheques`: An array of cheques to go in the box
 	//
 	// For each cheque You must specify:
 	// - `to`: The recipient (contact or contact ID)
-	// - `from`: The sender (contact or contact ID)
+	// - `from`: The sender (contact or contact ID), or `returnToMailbox` to use a virtual mailbox as the return address instead
 	// - `bankAccount`: The bank account ID
 	// - `amount`: The amount to be sent
 	// - `number`: The cheque number
@@ -61158,12 +61216,12 @@ type ClientInterface interface {
 	//
 	// To create a box. You must specify:
 	// - `to`: The recipient (contact or contact ID)
-	// - `from`: The sender (contact or contact ID)
+	// - `from`: The sender (contact or contact ID), or `returnToMailbox` to use a virtual mailbox as the return address instead
 	// - `cheques`: An array of cheques to go in the box
 	//
 	// For each cheque You must specify:
 	// - `to`: The recipient (contact or contact ID)
-	// - `from`: The sender (contact or contact ID)
+	// - `from`: The sender (contact or contact ID), or `returnToMailbox` to use a virtual mailbox as the return address instead
 	// - `bankAccount`: The bank account ID
 	// - `amount`: The amount to be sent
 	// - `number`: The cheque number
@@ -63467,12 +63525,12 @@ func (c *Client) BoxesList(ctx context.Context, params *BoxesListParams, reqEdit
 //
 // To create a box. You must specify:
 // - `to`: The recipient (contact or contact ID)
-// - `from`: The sender (contact or contact ID)
+// - `from`: The sender (contact or contact ID), or `returnToMailbox` to use a virtual mailbox as the return address instead
 // - `cheques`: An array of cheques to go in the box
 //
 // For each cheque You must specify:
 // - `to`: The recipient (contact or contact ID)
-// - `from`: The sender (contact or contact ID)
+// - `from`: The sender (contact or contact ID), or `returnToMailbox` to use a virtual mailbox as the return address instead
 // - `bankAccount`: The bank account ID
 // - `amount`: The amount to be sent
 // - `number`: The cheque number
@@ -63499,12 +63557,12 @@ func (c *Client) BoxesCreateWithBody(ctx context.Context, contentType string, bo
 //
 // To create a box. You must specify:
 // - `to`: The recipient (contact or contact ID)
-// - `from`: The sender (contact or contact ID)
+// - `from`: The sender (contact or contact ID), or `returnToMailbox` to use a virtual mailbox as the return address instead
 // - `cheques`: An array of cheques to go in the box
 //
 // For each cheque You must specify:
 // - `to`: The recipient (contact or contact ID)
-// - `from`: The sender (contact or contact ID)
+// - `from`: The sender (contact or contact ID), or `returnToMailbox` to use a virtual mailbox as the return address instead
 // - `bankAccount`: The bank account ID
 // - `amount`: The amount to be sent
 // - `number`: The cheque number
@@ -76406,12 +76464,12 @@ type ClientWithResponsesInterface interface {
 	//
 	// To create a box. You must specify:
 	// - `to`: The recipient (contact or contact ID)
-	// - `from`: The sender (contact or contact ID)
+	// - `from`: The sender (contact or contact ID), or `returnToMailbox` to use a virtual mailbox as the return address instead
 	// - `cheques`: An array of cheques to go in the box
 	//
 	// For each cheque You must specify:
 	// - `to`: The recipient (contact or contact ID)
-	// - `from`: The sender (contact or contact ID)
+	// - `from`: The sender (contact or contact ID), or `returnToMailbox` to use a virtual mailbox as the return address instead
 	// - `bankAccount`: The bank account ID
 	// - `amount`: The amount to be sent
 	// - `number`: The cheque number
@@ -76428,12 +76486,12 @@ type ClientWithResponsesInterface interface {
 	//
 	// To create a box. You must specify:
 	// - `to`: The recipient (contact or contact ID)
-	// - `from`: The sender (contact or contact ID)
+	// - `from`: The sender (contact or contact ID), or `returnToMailbox` to use a virtual mailbox as the return address instead
 	// - `cheques`: An array of cheques to go in the box
 	//
 	// For each cheque You must specify:
 	// - `to`: The recipient (contact or contact ID)
-	// - `from`: The sender (contact or contact ID)
+	// - `from`: The sender (contact or contact ID), or `returnToMailbox` to use a virtual mailbox as the return address instead
 	// - `bankAccount`: The bank account ID
 	// - `amount`: The amount to be sent
 	// - `number`: The cheque number
@@ -104548,12 +104606,12 @@ func (c *ClientWithResponses) BoxesListWithResponse(ctx context.Context, params 
 //
 // To create a box. You must specify:
 // - `to`: The recipient (contact or contact ID)
-// - `from`: The sender (contact or contact ID)
+// - `from`: The sender (contact or contact ID), or `returnToMailbox` to use a virtual mailbox as the return address instead
 // - `cheques`: An array of cheques to go in the box
 //
 // For each cheque You must specify:
 // - `to`: The recipient (contact or contact ID)
-// - `from`: The sender (contact or contact ID)
+// - `from`: The sender (contact or contact ID), or `returnToMailbox` to use a virtual mailbox as the return address instead
 // - `bankAccount`: The bank account ID
 // - `amount`: The amount to be sent
 // - `number`: The cheque number
@@ -104576,12 +104634,12 @@ func (c *ClientWithResponses) BoxesCreateWithBodyWithResponse(ctx context.Contex
 //
 // To create a box. You must specify:
 // - `to`: The recipient (contact or contact ID)
-// - `from`: The sender (contact or contact ID)
+// - `from`: The sender (contact or contact ID), or `returnToMailbox` to use a virtual mailbox as the return address instead
 // - `cheques`: An array of cheques to go in the box
 //
 // For each cheque You must specify:
 // - `to`: The recipient (contact or contact ID)
-// - `from`: The sender (contact or contact ID)
+// - `from`: The sender (contact or contact ID), or `returnToMailbox` to use a virtual mailbox as the return address instead
 // - `bankAccount`: The bank account ID
 // - `amount`: The amount to be sent
 // - `number`: The cheque number

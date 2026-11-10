@@ -2,6 +2,11 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.3.0, 2026-11-10
+
+- Breaking: the `From` field changed from `ContactCreateOrID` to `*ContactCreateOrID` with `omitempty` on 17 create types, including `LetterCreateWithHTML`, `LetterCreateWithPDF`, `LetterCreateWithTemplate`, `ChequeCreate`, `BoxCreate`, `BoxChequeCreate`, `SelfMailerCreateWithHTML` and `SnapPackCreateWithHTML`. Callers that assign `From` must pass a pointer, for example `From: &contact`. The upstream spec now requires `from` only when `returnToMailbox` is not set.
+- Added the optional `ReturnToMailbox *[]string` field to 22 create types, including `PostcardCreateWithHTML`, `PostcardCreateWithPDFURL`, `LetterCreateWithHTML`, `ChequeCreate`, `BoxCreate` and `SnapPackCreateWithPDF`. It takes one virtual mailbox ID as the return address and cannot be combined with `From`.
+
 ## v0.2.0, 2026-11-05
 
 - Download the OpenAPI specification from PostGrid's public documentation instead of the unavailable Stainless bucket URL.
