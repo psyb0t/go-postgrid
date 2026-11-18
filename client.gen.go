@@ -1844,12 +1844,15 @@ func (e SubOrganizationListObject) Valid() bool {
 
 // Defines values for TargetedListBuildAutocompleteField.
 const (
-	TargetedListBuildAutocompleteFieldIndustry TargetedListBuildAutocompleteField = "industry"
+	TargetedListBuildAutocompleteFieldCityState TargetedListBuildAutocompleteField = "city_state"
+	TargetedListBuildAutocompleteFieldIndustry  TargetedListBuildAutocompleteField = "industry"
 )
 
 // Valid indicates whether the value is a known member of the TargetedListBuildAutocompleteField enum.
 func (e TargetedListBuildAutocompleteField) Valid() bool {
 	switch e {
+	case TargetedListBuildAutocompleteFieldCityState:
+		return true
 	case TargetedListBuildAutocompleteFieldIndustry:
 		return true
 	default:
@@ -29360,6 +29363,9 @@ type Box struct {
 	// ImbDate The last date that the IMB status was updated. See `imbStatus` for more details.
 	ImbDate *time.Time `json:"imbDate,omitempty"`
 
+	// ImbEvents Every IMB scan of this order, oldest first. `imbStatus`, `imbZIPCode` and `imbDate` hold the latest one. Not included when listing orders. Orders scanned before November 2026 only include the scans since then.
+	ImbEvents *[]OrderIMBEvent `json:"imbEvents,omitempty"`
+
 	// ImbStatus The Intelligent Mail Barcode (IMB) status of this order. Only populated for US-printed and US-destined orders. This is the most detailed way to track non-express/certified orders.
 	ImbStatus *OrderIMBStatus `json:"imbStatus,omitempty"`
 
@@ -29386,6 +29392,9 @@ type Box struct {
 
 	// Status See `OrderStatus` for more details on the status of this order.
 	Status OrderStatus `json:"status"`
+
+	// StatusEvents When this order entered each status, oldest first. Not included when listing orders. Orders created before November 2026 only include the status changes since then.
+	StatusEvents *[]OrderStatusEvent `json:"statusEvents,omitempty"`
 
 	// To The recipient of this order. This will be provided even if you delete the underlying contact.
 	To Contact `json:"to"`
@@ -30243,6 +30252,9 @@ type Cheque struct {
 	// ImbDate The last date that the IMB status was updated. See `imbStatus` for more details.
 	ImbDate *time.Time `json:"imbDate,omitempty"`
 
+	// ImbEvents Every IMB scan of this order, oldest first. `imbStatus`, `imbZIPCode` and `imbDate` hold the latest one. Not included when listing orders. Orders scanned before November 2026 only include the scans since then.
+	ImbEvents *[]OrderIMBEvent `json:"imbEvents,omitempty"`
+
 	// ImbStatus The Intelligent Mail Barcode (IMB) status of this order. Only populated for US-printed and US-destined orders. This is the most detailed way to track non-express/certified orders.
 	ImbStatus *OrderIMBStatus `json:"imbStatus,omitempty"`
 
@@ -30296,6 +30308,9 @@ type Cheque struct {
 
 	// Status See `OrderStatus` for more details on the status of this order.
 	Status OrderStatus `json:"status"`
+
+	// StatusEvents When this order entered each status, oldest first. Not included when listing orders. Orders created before November 2026 only include the status changes since then.
+	StatusEvents *[]OrderStatusEvent `json:"statusEvents,omitempty"`
 
 	// To The recipient of this order. This will be provided even if you delete the underlying contact.
 	To Contact `json:"to"`
@@ -31566,6 +31581,9 @@ type Letter struct {
 	// ImbDate The last date that the IMB status was updated. See `imbStatus` for more details.
 	ImbDate *time.Time `json:"imbDate,omitempty"`
 
+	// ImbEvents Every IMB scan of this order, oldest first. `imbStatus`, `imbZIPCode` and `imbDate` hold the latest one. Not included when listing orders. Orders scanned before November 2026 only include the scans since then.
+	ImbEvents *[]OrderIMBEvent `json:"imbEvents,omitempty"`
+
 	// ImbStatus The Intelligent Mail Barcode (IMB) status of this order. Only populated for US-printed and US-destined orders. This is the most detailed way to track non-express/certified orders.
 	ImbStatus *OrderIMBStatus `json:"imbStatus,omitempty"`
 
@@ -31618,6 +31636,9 @@ type Letter struct {
 
 	// Status See `OrderStatus` for more details on the status of this order.
 	Status OrderStatus `json:"status"`
+
+	// StatusEvents When this order entered each status, oldest first. Not included when listing orders. Orders created before November 2026 only include the status changes since then.
+	StatusEvents *[]OrderStatusEvent `json:"statusEvents,omitempty"`
 
 	// Template The template ID used for the letter. You can supply _either_ this or `html` but not both.
 	Template *string `json:"template,omitempty"`
@@ -32258,6 +32279,21 @@ type Note struct {
 // NoteType Type of note attached to the import process.
 type NoteType string
 
+// OrderIMBEvent defines model for OrderIMBEvent.
+type OrderIMBEvent struct {
+	// Date When the order was scanned.
+	Date *time.Time `json:"date,omitempty"`
+
+	// ScanCode The USPS scan code. Not present for every scan.
+	ScanCode *string `json:"scanCode,omitempty"`
+
+	// Status The IMB status this scan put the order in. See `OrderIMBStatus` for more details.
+	Status *OrderIMBStatus `json:"status,omitempty"`
+
+	// ZipCode The ZIP code of the USPS facility that scanned the order.
+	ZipCode *string `json:"zipCode,omitempty"`
+}
+
 // OrderIMBStatus defines model for OrderIMBStatus.
 type OrderIMBStatus string
 
@@ -32269,6 +32305,15 @@ type OrderPreviewSendPreference string
 
 // OrderStatus defines model for OrderStatus.
 type OrderStatus string
+
+// OrderStatusEvent defines model for OrderStatusEvent.
+type OrderStatusEvent struct {
+	// Date When the order entered this status.
+	Date *time.Time `json:"date,omitempty"`
+
+	// Status The status the order entered.
+	Status *OrderStatus `json:"status,omitempty"`
+}
 
 // ParsedAddress defines model for ParsedAddress.
 type ParsedAddress struct {
@@ -32402,6 +32447,9 @@ type Postcard struct {
 	// ImbDate The last date that the IMB status was updated. See `imbStatus` for more details.
 	ImbDate *time.Time `json:"imbDate,omitempty"`
 
+	// ImbEvents Every IMB scan of this order, oldest first. `imbStatus`, `imbZIPCode` and `imbDate` hold the latest one. Not included when listing orders. Orders scanned before November 2026 only include the scans since then.
+	ImbEvents *[]OrderIMBEvent `json:"imbEvents,omitempty"`
+
 	// ImbStatus The Intelligent Mail Barcode (IMB) status of this order. Only populated for US-printed and US-destined orders. This is the most detailed way to track non-express/certified orders.
 	ImbStatus *OrderIMBStatus `json:"imbStatus,omitempty"`
 
@@ -32444,6 +32492,9 @@ type Postcard struct {
 
 	// Status See `OrderStatus` for more details on the status of this order.
 	Status OrderStatus `json:"status"`
+
+	// StatusEvents When this order entered each status, oldest first. Not included when listing orders. Orders created before November 2026 only include the status changes since then.
+	StatusEvents *[]OrderStatusEvent `json:"statusEvents,omitempty"`
 
 	// To The recipient of this order. This will be provided even if you delete the underlying contact.
 	To Contact `json:"to"`
@@ -33301,6 +33352,9 @@ type SelfMailer struct {
 	// ImbDate The last date that the IMB status was updated. See `imbStatus` for more details.
 	ImbDate *time.Time `json:"imbDate,omitempty"`
 
+	// ImbEvents Every IMB scan of this order, oldest first. `imbStatus`, `imbZIPCode` and `imbDate` hold the latest one. Not included when listing orders. Orders scanned before November 2026 only include the scans since then.
+	ImbEvents *[]OrderIMBEvent `json:"imbEvents,omitempty"`
+
 	// ImbStatus The Intelligent Mail Barcode (IMB) status of this order. Only populated for US-printed and US-destined orders. This is the most detailed way to track non-express/certified orders.
 	ImbStatus *OrderIMBStatus `json:"imbStatus,omitempty"`
 
@@ -33340,6 +33394,9 @@ type SelfMailer struct {
 
 	// Status See `OrderStatus` for more details on the status of this order.
 	Status OrderStatus `json:"status"`
+
+	// StatusEvents When this order entered each status, oldest first. Not included when listing orders. Orders created before November 2026 only include the status changes since then.
+	StatusEvents *[]OrderStatusEvent `json:"statusEvents,omitempty"`
 
 	// To The recipient of this order. This will be provided even if you delete the underlying contact.
 	To Contact `json:"to"`
@@ -33648,6 +33705,9 @@ type SnapPack struct {
 	// ImbDate The last date that the IMB status was updated. See `imbStatus` for more details.
 	ImbDate *time.Time `json:"imbDate,omitempty"`
 
+	// ImbEvents Every IMB scan of this order, oldest first. `imbStatus`, `imbZIPCode` and `imbDate` hold the latest one. Not included when listing orders. Orders scanned before November 2026 only include the scans since then.
+	ImbEvents *[]OrderIMBEvent `json:"imbEvents,omitempty"`
+
 	// ImbStatus The Intelligent Mail Barcode (IMB) status of this order. Only populated for US-printed and US-destined orders. This is the most detailed way to track non-express/certified orders.
 	ImbStatus *OrderIMBStatus `json:"imbStatus,omitempty"`
 
@@ -33689,6 +33749,9 @@ type SnapPack struct {
 
 	// Status See `OrderStatus` for more details on the status of this order.
 	Status OrderStatus `json:"status"`
+
+	// StatusEvents When this order entered each status, oldest first. Not included when listing orders. Orders created before November 2026 only include the status changes since then.
+	StatusEvents *[]OrderStatusEvent `json:"statusEvents,omitempty"`
 
 	// To The recipient of this order. This will be provided even if you delete the underlying contact.
 	To Contact `json:"to"`
@@ -34395,7 +34458,7 @@ type TargetedListBuildAutocompleteItem struct {
 	// Type The field this suggestion corresponds to.
 	Type TargetedListBuildAutocompleteField `json:"type"`
 
-	// Value The suggested value (e.g., an industry name).
+	// Value The suggested value (e.g., an industry name, or "Chicago, IL").
 	Value string `json:"value"`
 }
 
@@ -62574,9 +62637,9 @@ type ClientInterface interface {
 
 	// TargetedListBuildsAutocompleteWithBody Autocomplete Filter Values
 	//
-	// Return a list of autocomplete suggestions for a given filter field
-	// (currently only `industry` is supported). Useful when building a UI
-	// around the `industries` company filter.
+	// Return a list of autocomplete suggestions for a given filter field:
+	// `industry` for the `industries` company filter, or `city_state` for the
+	// `cityStates` filter. Useful when building a UI around those filters.
 	//
 	// Takes any type of body and a specified content type.
 	//
@@ -62585,9 +62648,9 @@ type ClientInterface interface {
 
 	// TargetedListBuildsAutocomplete Autocomplete Filter Values
 	//
-	// Return a list of autocomplete suggestions for a given filter field
-	// (currently only `industry` is supported). Useful when building a UI
-	// around the `industries` company filter.
+	// Return a list of autocomplete suggestions for a given filter field:
+	// `industry` for the `industries` company filter, or `city_state` for the
+	// `cityStates` filter. Useful when building a UI around those filters.
 	//
 	// Takes a body of the `application/json` content type.
 	//
@@ -66227,9 +66290,9 @@ func (c *Client) TargetedListBuildsCreate(ctx context.Context, params *TargetedL
 
 // TargetedListBuildsAutocompleteWithBody Autocomplete Filter Values
 //
-// Return a list of autocomplete suggestions for a given filter field
-// (currently only `industry` is supported). Useful when building a UI
-// around the `industries` company filter.
+// Return a list of autocomplete suggestions for a given filter field:
+// `industry` for the `industries` company filter, or `city_state` for the
+// `cityStates` filter. Useful when building a UI around those filters.
 //
 // Takes any type of body and a specified content type.
 //
@@ -66248,9 +66311,9 @@ func (c *Client) TargetedListBuildsAutocompleteWithBody(ctx context.Context, con
 
 // TargetedListBuildsAutocomplete Autocomplete Filter Values
 //
-// Return a list of autocomplete suggestions for a given filter field
-// (currently only `industry` is supported). Useful when building a UI
-// around the `industries` company filter.
+// Return a list of autocomplete suggestions for a given filter field:
+// `industry` for the `industries` company filter, or `city_state` for the
+// `cityStates` filter. Useful when building a UI around those filters.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -77980,9 +78043,9 @@ type ClientWithResponsesInterface interface {
 
 	// TargetedListBuildsAutocompleteWithBodyWithResponse Autocomplete Filter Values
 	//
-	// Return a list of autocomplete suggestions for a given filter field
-	// (currently only `industry` is supported). Useful when building a UI
-	// around the `industries` company filter.
+	// Return a list of autocomplete suggestions for a given filter field:
+	// `industry` for the `industries` company filter, or `city_state` for the
+	// `cityStates` filter. Useful when building a UI around those filters.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -77991,9 +78054,9 @@ type ClientWithResponsesInterface interface {
 
 	// TargetedListBuildsAutocompleteWithResponse Autocomplete Filter Values
 	//
-	// Return a list of autocomplete suggestions for a given filter field
-	// (currently only `industry` is supported). Useful when building a UI
-	// around the `industries` company filter.
+	// Return a list of autocomplete suggestions for a given filter field:
+	// `industry` for the `industries` company filter, or `city_state` for the
+	// `cityStates` filter. Useful when building a UI around those filters.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -106916,9 +106979,9 @@ func (c *ClientWithResponses) TargetedListBuildsCreateWithResponse(ctx context.C
 
 // TargetedListBuildsAutocompleteWithBodyWithResponse Autocomplete Filter Values
 //
-// Return a list of autocomplete suggestions for a given filter field
-// (currently only `industry` is supported). Useful when building a UI
-// around the `industries` company filter.
+// Return a list of autocomplete suggestions for a given filter field:
+// `industry` for the `industries` company filter, or `city_state` for the
+// `cityStates` filter. Useful when building a UI around those filters.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -106933,9 +106996,9 @@ func (c *ClientWithResponses) TargetedListBuildsAutocompleteWithBodyWithResponse
 
 // TargetedListBuildsAutocompleteWithResponse Autocomplete Filter Values
 //
-// Return a list of autocomplete suggestions for a given filter field
-// (currently only `industry` is supported). Useful when building a UI
-// around the `industries` company filter.
+// Return a list of autocomplete suggestions for a given filter field:
+// `industry` for the `industries` company filter, or `city_state` for the
+// `cityStates` filter. Useful when building a UI around those filters.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //

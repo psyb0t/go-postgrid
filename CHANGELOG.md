@@ -2,6 +2,13 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.3.1, 2026-11-18
+
+- Added the optional `ImbEvents *[]OrderIMBEvent` and `StatusEvents *[]OrderStatusEvent` fields to `Letter`, `Postcard`, `Cheque`, `Box`, `SelfMailer` and `SnapPack`. They list every IMB scan and every status change of an order, oldest first. They are not included when listing orders.
+- Added the `OrderIMBEvent` type with `Date`, `ScanCode`, `Status` and `ZipCode` fields, and the `OrderStatusEvent` type with `Date` and `Status` fields.
+- Added the `TargetedListBuildAutocompleteFieldCityState` constant (`city_state`), so the targeted list autocomplete endpoint accepts the `cityStates` filter field as well as `industry`.
+- Raised the minimum Go version in `go.mod` from 1.26.10 to 1.26.11 and updated the development image to match. This fixes the `net/http` vulnerability GO-2026-6859 found by govulncheck.
+
 ## v0.3.0, 2026-11-10
 
 - Breaking: the `From` field changed from `ContactCreateOrID` to `*ContactCreateOrID` with `omitempty` on 17 create types, including `LetterCreateWithHTML`, `LetterCreateWithPDF`, `LetterCreateWithTemplate`, `ChequeCreate`, `BoxCreate`, `BoxChequeCreate`, `SelfMailerCreateWithHTML` and `SnapPackCreateWithHTML`. Callers that assign `From` must pass a pointer, for example `From: &contact`. The upstream spec now requires `from` only when `returnToMailbox` is not set.
